@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.jumbotron {
+  background: url("../img/Dronas Original.png") center no-repeat;
+  background-size: auto 100%;
+  min-height: 100vh;
+  background-attachment: fixed;
+  margin-top: 0;
+
+  .card {
+    background: rgba(255, 255, 255, 0.7);
+    font-family: "Work Sans", sans-serif;
+    color: #465359;
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    cursor: pointer;
+
+    .p-2 {
+      position: relative;
+
+      a {
+        position: absolute;
+        left: 2%;
+        top: 88%;
+        color: #465359;
+      }
+    }
+
+    .card-title {
+      font-size: 2.5em;
+    }
+  }
+
+  .card:hover {
+    // background: rgba(255, 255, 255, 0.9);
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .btn-light {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 50px;
+    border: none;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+    cursor: pointer;
+
+    img {
+      width: 100px;
+      -webkit-transition: 0.8s;
+      transition: 0.8s;
+      cursor: pointer;
+    }
+  }
+
+  // #bla {
+  //   width: 130px;
+  //   height: 30px;
+  // }
+
+  // #bla:hover {
+  //   width: 150px;
+  //   height: 40px;
+  // }
+
+  .btn-light:hover {
+    background: rgba(255, 255, 255, 0.9);
+
+    img:hover {
+      width: 120px;
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .jumbotron {
+    .card {
+      .p-2 {
+        a {
+          font-size: 1rem;
+        }
+      }
+      .card-title {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1150px) {
+  .jumbotron {
+    .card {
+      .p-2 {
+        a {
+          top: 97%;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 350px) {
+  .jumbotron img {
+    text-align: center;
+  }
+}
