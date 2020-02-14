@@ -4,12 +4,77 @@
   border: 0;
 }
 
-.jumbotron {
-  background: url("../img/Dronas Original.png") center no-repeat;
-  background-size: auto 100%;
-  min-height: 100vh;
-  background-attachment: fixed;
-  margin-top: 0;
+.slideshow {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideshow-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat 50% 50%;
+  background-size: cover;
+  animation-name: kenburns;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 36s;
+  opacity: 1;
+  transform: scale(1.4);
+}
+.slideshow-image:nth-child(1) {
+  animation-name: kenburns-1;
+  z-index: 1;
+}
+.slideshow-image:nth-child(2) {
+  animation-name: kenburns-2;
+  z-index: 0;
+}
+
+@keyframes kenburns-1 {
+  0% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  1.25% {
+    opacity: 1;
+  }
+  48.75% {
+    opacity: 1;
+  }
+  51.25% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  98.75% {
+    opacity: 0;
+    transform: scale(1.4097560976);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes kenburns-2 {
+  48.75% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  51.25% {
+    opacity: 1;
+  }
+  98.75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 .jumbotron .card {
   background: rgba(255, 255, 255, 0.7);
@@ -58,12 +123,40 @@
   width: 120px;
 }
 
+.text-center {
+  margin-left: 25px;
+  margin-right: 25px;
+  background: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+.text-center .row {
+  padding: 2%;
+}
+
+#btn-dark {
+  background: rgba(255, 255, 255, 0);
+}
+#btn-dark .btn {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@media all and (max-width: 1290px) {
+  .text-center .row {
+    padding: 4%;
+  }
+  .text-center .row .col-md-6 .text-justify h2 {
+    font-size: 1.5rem;
+  }
+  .text-center .row .col-md-6 .text-justify p {
+    font-size: 0.8rem;
+  }
+}
 @media all and (max-width: 1200px) {
   .jumbotron .card .p-2 a {
     font-size: 1rem;
   }
   .jumbotron .card .card-title {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 @media all and (max-width: 1150px) {
