@@ -146,8 +146,8 @@ $scale-base-1: (1 + $scale / 100%);
     background: rgba(255, 255, 255, 0.7);
     font-family: "Work Sans", sans-serif;
     color: #465359;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
     -webkit-transition: 0.8s;
     transition: 0.8s;
     cursor: pointer;
@@ -169,8 +169,8 @@ $scale-base-1: (1 + $scale / 100%);
   }
 
   .card:hover {
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 1%;
+    margin-right: 1%;
   }
   .btn-light {
     background-color: rgba(255, 255, 255, 0.7);
@@ -198,14 +198,21 @@ $scale-base-1: (1 + $scale / 100%);
 }
 
 .text-center {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 1%;
+  margin-right: 1%;
   background: rgba(255, 255, 255, 0.7);
   position: relative;
-  // padding: 20px;
 
   .row {
     padding: 2%;
+  }
+
+  .not-show {
+    display: none;
+  }
+
+  .show {
+    display: block;
   }
 }
 
@@ -214,18 +221,22 @@ $scale-base-1: (1 + $scale / 100%);
 
   .btn {
     background: rgba(255, 255, 255, 0.7);
+    // font-weight: 700;
+  }
+  .toggle-news {
+    // display: none;
+    background: rgba(206, 198, 198, 0.7);
   }
 }
 
+// RESPONSIVE PART:
 @media all and (max-width: 1290px) {
   .text-center {
     .row {
-      padding: 4%;
-
       .col-md-6 {
         .text-justify {
           h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
           }
           p {
             font-size: 0.8rem;
@@ -249,6 +260,13 @@ $scale-base-1: (1 + $scale / 100%);
       }
     }
   }
+  .text-center {
+    // margin-left: 2%;
+    // margin-right: 2%;
+    h2 {
+      font-size: 1.3rem;
+    }
+  }
 }
 
 @media all and (max-width: 1150px) {
@@ -262,18 +280,25 @@ $scale-base-1: (1 + $scale / 100%);
       }
     }
   }
+  .text-center {
+    // margin-left: 1%;
+    // margin-right: 1%;
+  }
 }
 
-// @media all and (max-width: 995px) {
-//   .text-center {
-//     margin-top: 8%;
-//     margin-right: 8%;
-
-//   }
-// }
+@media all and (max-width: 995px) {
+  .text-center {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
 
 @media all and (max-width: 350px) {
   .jumbotron img {
     text-align: center;
+  }
+  .text-center {
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }

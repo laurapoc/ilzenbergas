@@ -80,8 +80,8 @@
   background: rgba(255, 255, 255, 0.7);
   font-family: "Work Sans", sans-serif;
   color: #465359;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
   -webkit-transition: 0.8s;
   transition: 0.8s;
   cursor: pointer;
@@ -99,8 +99,8 @@
   font-size: 2.5em;
 }
 .jumbotron .card:hover {
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 .jumbotron .btn-light {
   background-color: rgba(255, 255, 255, 0.7);
@@ -124,13 +124,19 @@
 }
 
 .text-center {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 1%;
+  margin-right: 1%;
   background: rgba(255, 255, 255, 0.7);
   position: relative;
 }
 .text-center .row {
   padding: 2%;
+}
+.text-center .not-show {
+  display: none;
+}
+.text-center .show {
+  display: block;
 }
 
 #btn-dark {
@@ -139,13 +145,13 @@
 #btn-dark .btn {
   background: rgba(255, 255, 255, 0.7);
 }
+#btn-dark .toggle-news {
+  background: rgba(206, 198, 198, 0.7);
+}
 
 @media all and (max-width: 1290px) {
-  .text-center .row {
-    padding: 4%;
-  }
   .text-center .row .col-md-6 .text-justify h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .text-center .row .col-md-6 .text-justify p {
     font-size: 0.8rem;
@@ -158,6 +164,10 @@
   .jumbotron .card .card-title {
     font-size: 2rem;
   }
+
+  .text-center h2 {
+    font-size: 1.3rem;
+  }
 }
 @media all and (max-width: 1150px) {
   .jumbotron .card .p-2 a {
@@ -165,9 +175,20 @@
     font-size: 0.8rem;
   }
 }
+@media all and (max-width: 995px) {
+  .text-center {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
 @media all and (max-width: 350px) {
   .jumbotron img {
     text-align: center;
+  }
+
+  .text-center {
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }
 
