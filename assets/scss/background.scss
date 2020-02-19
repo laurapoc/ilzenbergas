@@ -107,19 +107,3 @@ $scale-base-1: (1 + $scale / 100%);
 }
 
 // *****************************************
-
-// main navigation bar:
-
-#main-nav {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  .collapse {
-    img {
-      cursor: pointer;
-    }
-    .dropdown-menu {
-      background: rgba(255, 255, 255, 0.7);
-     
-    }
-  }
-}

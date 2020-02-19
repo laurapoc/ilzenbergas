@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "MyriadPro";
+}
+
+#main-nav {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+}
+#main-nav .collapse img {
+  cursor: pointer;
+}
+#main-nav .collapse .dropdown-menu {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -77,15 +77,5 @@
     transform: scale(1);
   }
 }
-#main-nav {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7);
-}
-#main-nav .collapse img {
-  cursor: pointer;
-}
-#main-nav .collapse .dropdown-menu {
-  background: rgba(255, 255, 255, 0.7);
-}
 
-/*# sourceMappingURL=templates.css.map */
+/*# sourceMappingURL=background.css.map */

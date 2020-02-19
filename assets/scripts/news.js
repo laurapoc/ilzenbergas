@@ -1,37 +1,35 @@
-// const xhr = new XMLHttpRequest();
-// const url = "../../templates.html";
+// IMPORTING MAIN MENU
+fetch("./header.html")
+.then(response => {
+  console.log(response.text);
+  return response.text();
+})
+.then(text => {
+    document.querySelector("#header").innerHTML = text;
+});
 
-// xhr.responseType = "json";
-// xhr.onreadystatechange = () => {
-//   if (xhr.readyState === XMLHttpRequest.DONE) {
-
-    // document.body.append(
-    //     document.importNode(
-    //       document.querySelector('template').content,
-    //       true
-    //     )
-    //   )
-//   }
-// };
-
-// xhr.open("GET", url);
-// xhr.send();
-
-
+// IMPORTING BACKGROUND
+fetch("./background.html")
+.then(response => {
+  return response.text();
+})
+.then(text => {
+  document.querySelector("#background").innerHTML = text;
+});
 
 
-// let template = $(function template() {
-//   $("#t1").load("../../templates.html");
-//   alert("Load was performed.");
-  
-// });
 
-// console.log(template);
-
-  //get the imported document in doc:
-  let link = document.querySelector( 'link#templates' );
-  let doc = link.import;
-
-  //fetch template2 1 and 2:
-  let template1 = doc.querySelector( '#t1' );
- 
+// fetch("./header.html")
+//   .then(response => {
+//     return response.text();
+//   })
+//   .then(data => {
+//     document.querySelector("header").innerHTML = data;
+//   });
+// fetch("./footer.html")
+//   .then(response => {
+//     return response.text();
+//   })
+//   .then(data => {
+//     document.querySelector("footer").innerHTML = data;
+//   });
