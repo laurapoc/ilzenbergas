@@ -1,12 +1,15 @@
 let newsBtn = document.querySelector("#newsBtn");
-let restNews = document.querySelector("#btn-dark .btn");
 let showRows = document.querySelector(".not-show");
 
-
-
 newsBtn.addEventListener("click", function() {
-restNews.classList.toggle("toggle-news");
-showRows.classList.toggle("show");
-console.log(showRows);
+  // adding class "show"
+  showRows.classList.toggle("show");
+  console.log(showRows);
+  // changing button text
+  let btnText = newsBtn;
+  if (btnText.textContent === "Visos naujienos") {
+    btnText.textContent = "Suskleisti naujienas";
+  } else {
+    btnText.textContent = "Visos naujienos";
+  }
 });
-

@@ -1,0 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "MyriadPro";
+}
+
+/*# sourceMappingURL=news.css.map */

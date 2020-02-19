@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap&subset=latin-ext"
-      rel="stylesheet"
-    />
+
+    <link href="assets/fonts/MyriadPro-Regular.otf" rel="stylesheet" />
+    <link href="assets/fonts/MyriadPro-Bold.otf" rel="stylesheet" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
     <title>ilzenbergas.lt</title>
   </head>
   <body>
-    <!-- language and social media navbar:
-**************************************************** -->
     <!-- HEADER
     ******************************************* -->
     <div class="slideshow">
@@ -27,6 +24,7 @@
     <div class="container-xl" style="max-width: 1300px">
       <div class="jumbotron jumbotron-fluid container-fluid py-0">
         <!-- NAVBAR -->
+        <!-- language and social media navbar: -->
         <nav class="navbar navbar-expand-lg navbar-light bg-rgba(12, 38, 56, 0)">
           <div class="container-xl  justify-content-end">
             <ul class="navbar-nav flex-row">
@@ -58,13 +56,13 @@
 
         <div class=" flex-wrap flex-xlg-row d-flex justify-content-around">
           <!-- ILZENBERGO DVARAS CARD: -->
-          <div class="col-11 col-lg-6 px-0 mt-4">
+          <div class="col-12 col-lg-6 px-0 mt-4">
             <div class="card rounded-0">
               <div class="p-2" id="dvaras">
                 <img src="assets/img/_dvaras_original.png" class="card-img" width="100%" alt="dvaras" />
               </div>
               <div class="card-body">
-                <h5 class="card-title">Ilzenbergo dvaras</h5>
+                <h5 class="card-title text-center bg-transparent">Ilzenbergo dvaras</h5>
               </div>
             </div>
             <div class="flex-wrap flex-lg-row d-flex justify-content-between mx-2" id="dvaras_btns">
@@ -86,13 +84,13 @@
             </div>
           </div>
           <!-- ILZENBERGO DVARO UKIS CARD: -->
-          <div class="col-11 col-lg-6 px-0 mt-4">
+          <div class="col-12 col-lg-6 px-0 mt-4">
             <div class="card rounded-0">
               <div class="p-2" id="dvaras">
                 <img src="assets/img/_dvaro_ukio_deze.png" class="card-img" width="100%" alt="dvaro_ukio_deze" />
               </div>
               <div class="card-body">
-                <h5 class="card-title">Dvariškas maistas</h5>
+                <h5 class="card-title text-center bg-transparent">Dvariškas maistas</h5>
               </div>
             </div>
             <div class="flex-wrap d-flex justify-content-between mx-2" id="ukis_btns">
@@ -111,108 +109,138 @@
             </div>
           </div>
         </div>
-      
+        <!-- AWORDS: -->
+        <section>
+          <div class="text-center mt-4 ">
+            <h3 class="pt-3 mb-0">Apdovanojimai</h3>
+            <div class="row d-flex justify-content-center align-center pt-0">
+              <div class="img-responsive d-flex flex-column">
+                <img class="m-3 m-lg-4" src="assets/img/kulturos_paveldas2.png" alt="" />Kultūros paveldas
+              </div>
+              <div class="img-responsive d-flex flex-column">
+                <img class="m-3 m-lg-4" src="assets/img/Lntpa_AUTENTISKA_Gold2.png" alt="" />Autentiškai atkurtas
+              </div>
+              <div class="img-responsive d-flex flex-column">
+                <img class="m-3 m-lg-4" src="assets/img/Logo_EDEN2.png" alt="" />Eden III
+              </div>
+              <div class="img-responsive d-flex flex-column">
+                <img class="m-3 m-lg-4" src="assets/img/lt_gamtos_fondas2.png" alt="" />Baltiją tausojantis ūkis
+              </div>
+              <div class="img-responsive d-flex flex-column">
+                <img class="m-3 m-lg-4" src="assets/img/uz_darnia_pletra2.jpg" alt="" />Už darnią plėtrą
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <!-- NEWS: -->
-      
-      <div class="text-center mt-4">
-       
-        <!-- 1 new -->
-        <div class="row">
-          <div class="col-lg-6 ">
-            <img class="img-fluid" src="assets/img/mokytoja.jpg" alt="" />
+        <!-- NEWS: -->
+
+        <div class="text-center mt-4">
+          <h1 class="pt-4">Naujienos</h1>
+          <!-- 1 new -->
+          <div class="row">
+            <div class="col-lg-6 ">
+              <img class="img-fluid" src="assets/img/mokytoja.jpg" alt="" />
+            </div>
+            <div class=" col-lg-6 ">
+              <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
+                <h2 class="pt-3 pt-lg-0">Mokytoja sukūrė išmaniąją ekskursiją vaikams – Lietuvoje tokios tik kelios</h2>
+                <p>
+                  Išmaniosios technologijos pritaikomos vis plačiau. Nors Kultūros paso programoje daugiau nei pusantro
+                  tūkstančio ekskursijų vaikams, tačiau tokių, kokią sukūrė istorijos mokytoja iš Rokiškio rajono,
+                  beveik nėra. Interaktyvios, QR kodais paremtos edukacinės programos vaikams suteikia daug įspūdžių,
+                  skatina įsitraukimą ir savarankiškas informacijos paieškas – anot mokytojos, vaikai po ekskursijos
+                  išvyksta žibančiomis akimis.
+                </p>
+                <button type="button" class="btn btn-secondary d-flex align-self-end" onclick="window.location.href='news.html'">Plačiau</button>
+                <!-- ******************** -->
+                <!-- patikrinti ar type="submit" galima naudoti sioje situacijoje -->
+                <!-- <form action="news.html" method="get" target="_blank">
+                <button type="submit" class="btn btn-secondary d-flex align-self-end">Plačiau</button>
+              </form> -->
+              <!-- ********************* -->
+              </div>
+            </div>
           </div>
-          <div class=" col-lg-6 ">
-            <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
-              <h2 class="pt-3 pt-lg-0">Mokytoja sukūrė išmaniąją ekskursiją vaikams – Lietuvoje tokios tik kelios</h2>
-              <p>
-                Išmaniosios technologijos pritaikomos vis plačiau. Nors Kultūros paso programoje daugiau nei pusantro
-                tūkstančio ekskursijų vaikams, tačiau tokių, kokią sukūrė istorijos mokytoja iš Rokiškio rajono, beveik
-                nėra. Interaktyvios, QR kodais paremtos edukacinės programos vaikams suteikia daug įspūdžių, skatina
-                įsitraukimą ir savarankiškas informacijos paieškas – anot mokytojos, vaikai po ekskursijos išvyksta
-                žibančiomis akimis.
-              </p>
-              <button type="button" class="btn btn-secondary d-flex align-self-end">Plačiau</button>
-            </div>            
-          </div>
-        </div>
           <!-- 2 new -->
           <div class="row">
             <div class="col-lg-6 order-lg-2 ">
-              <img class="img-fluid" src="assets/img/mokytoja.jpg" alt="" />
+              <img class="img-fluid" src="assets/img/ruduo.jpg" alt="" />
             </div>
             <div class="col-lg-6 order-lg-1">
               <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
                 <h2 class="pt-3 pt-lg-0">Ilzenbergo dvaras laidoje „Gyvenu čia“</h2>
                 <p>
-                  Spalio 20 d. per Info TV kanalą  buvo parodyta jau trečioji 2019 m.  laida "Gyvenu čia" .
+                  Spalio 20 d. per Info TV kanalą buvo parodyta jau trečioji 2019 m. laida "Gyvenu čia" .
                 </p>
-                <p>Laidos tema - "Rokiškio kraštas". Vaizdingame dokumentiniame reportaže išvysite ne tik nuostabius Ilzenbergo dvaro vaizdus, bet ir išgirsite pasakojimą apie dvare vykstančias vaikų vasaros stovyklas, dvaro ūkį ir jame rankomis gaminamus natūralius maisto produktus. Laidos dėka sužinosite apie kitas puikias Rokiškio krašto lankytinas vietas, tradicinius renginius.</p>
+                <p>
+                  Laidos tema - "Rokiškio kraštas". Vaizdingame dokumentiniame reportaže išvysite ne tik nuostabius
+                  Ilzenbergo dvaro vaizdus, bet ir išgirsite pasakojimą apie dvare vykstančias vaikų vasaros stovyklas,
+                  dvaro ūkį ir jame rankomis gaminamus natūralius maisto produktus. Laidos dėka sužinosite apie kitas
+                  puikias Rokiškio krašto lankytinas vietas, tradicinius renginius.
+                </p>
                 <p>Tai - puikiausias gidas Jūsų savaitgalio išvykoms!</p>
-                <button type="button" class="btn btn-secondary d-flex align-self-end">Plačiau</button>
+                <button type="button" class="btn btn-secondary d-flex align-self-end" onclick="window.location.href='news.html'">Plačiau</button>
               </div>
-              
             </div>
           </div>
           <!-- 3 new -->
           <div class="not-show">
-          <div  class="row">
-            <div class="col-lg-6 ">
-              <img class="img-fluid" src="assets/img/mokytoja.jpg" alt="" />
-            </div>
-            <div class="col-lg-6 ">
-              <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
-                <h2 class="pt-3 pt-lg-0">Mokytoja sukūrė išmaniąją ekskursiją vaikams – Lietuvoje tokios tik kelios</h2>
-                <p>
-                  Išmaniosios technologijos pritaikomos vis plačiau. Nors Kultūros paso programoje daugiau nei pusantro
-                  tūkstančio ekskursijų vaikams, tačiau tokių, kokią sukūrė istorijos mokytoja iš Rokiškio rajono, beveik
-                  nėra. Interaktyvios, QR kodais paremtos edukacinės programos vaikams suteikia daug įspūdžių, skatina
-                  įsitraukimą ir savarankiškas informacijos paieškas – anot mokytojos, vaikai po ekskursijos išvyksta
-                  žibančiomis akimis.
-                </p>
-                <button type="button" class="btn btn-secondary d-flex align-self-end">Plačiau</button>
+            <div class="row">
+              <div class="col-lg-6 ">
+                <img class="img-fluid" src="assets/img/festival.jpg" alt="" />
               </div>
-              
-            </div>
-          </div>
-          <!-- 4 new -->
-          <div  class="row">
-            <div class="col-lg-6 order-lg-2">
-              <img class="img-fluid" src="assets/img/mokytoja.jpg" alt="" />
-            </div>
-            <div class="col-lg-6 order-lg-1">
-              <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
-                <h2 class="pt-3 pt-lg-0">Mokytoja sukūrė išmaniąją ekskursiją vaikams – Lietuvoje tokios tik kelios</h2>
-                <p>
-                  Išmaniosios technologijos pritaikomos vis plačiau. Nors Kultūros paso programoje daugiau nei pusantro
-                  tūkstančio ekskursijų vaikams, tačiau tokių, kokią sukūrė istorijos mokytoja iš Rokiškio rajono, beveik
-                  nėra. Interaktyvios, QR kodais paremtos edukacinės programos vaikams suteikia daug įspūdžių, skatina
-                  įsitraukimą ir savarankiškas informacijos paieškas – anot mokytojos, vaikai po ekskursijos išvyksta
-                  žibančiomis akimis.
-                </p>
-                <button type="button" class="btn btn-secondary d-flex align-self-end">Plačiau</button>
+              <div class="col-lg-6 ">
+                <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
+                  <h2 class="pt-3 pt-lg-0">Į Ilzenbergo dvarą ateina festivalis vaikams</h2>
+                  <p>
+                    Rugsėjo 13–14 d. vyks Ilzenbergo dvaro festivaliukas vaikams. Spektakliai vaikams – sudėtingas
+                    reikalas, todėl smagu, kad būtent tokioje erdvėje, tokioje vietoje rengiamas festivalis. Apie tai
+                    Nida ŠULCIENĖ pakalbino šio projekto vadovą Audronį IMBRASĄ. – Smagu būtų sužinoti ir apie Jus, kaip
+                    pagrindinį viso projekto „varikliuką“. – Nesu tikras, kiek svarbu šiame kontekste apie mane kalbėti,
+                    bet galiu paminėti keletą svarbiausių pastarųjų poros dešimtmečių savo veiklų. Įkūriau Lietuvos
+                    šokio informacijos centrą, kuriam vadovavau 20 metų, o žinomiausias šio centro projektas –
+                    tarptautinis šiuolaikinio…
+                  </p>
+                  <button type="button" class="btn btn-secondary d-flex align-self-end" onclick="window.location.href='news.html'" target = "_blank">Plačiau</button>
+                </div>
               </div>
-              
+            </div>
+            <!-- 4 new -->
+            <div class="row">
+              <div class="col-lg-6 order-lg-2">
+                <img class="img-fluid" src="assets/img/oak.jpg" alt="" />
+              </div>
+              <div class="col-lg-6 order-lg-1">
+                <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
+                  <h2 class="pt-3 pt-lg-0">
+                    3D technologijomis sukurta Stelmužės ąžuolo kamieno kopija – Ilzenbergo dvare
+                  </h2>
+                  <p>
+                    3D technologijomis šiais laikais perkelti į virtualią erdvę galima beveik viską. Jos plačiai
+                    naudojamos žaidimų ir virtualios realybės industrijoje, kuriant įvairius prototipus, žmogaus galūnių
+                    protezus ir daugelyje kitų sričių. Trimatis skeneris šiandien pažengė tiek, kad tik nuo fantazijos
+                    priklauso, ką juo nuveiksi. Ilzenbergo dvaras šią technologiją pasikinkė istorijai įprasminti –
+                    sukūrė tikslią Stelmužės ąžuolo kamino kopiją, rašoma pranešime žiniasklaidai.
+                  </p>
+                  <button type="button" class="btn btn-secondary d-flex align-self-end" onclick="window.location.href='news.html'" target = "_blank">Plačiau</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      
       </div>
       <div id="btn-dark" class="text-center">
         <button id="newsBtn" type="button" class="btn btn-outline-dark btn-lg">Visos naujienos</button>
       </div>
     </div>
-    </div>
-      <!-- ****************************************************** -->
-    </div>
-    
-    
+
+    <!-- ****************************************************** -->
 
     <script src="assets/scripts/jquery-3.4.1.js" type="text/javascript"></script>
     <script src="assets/scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="assets/scripts/bootstrap.bundle.min.js" type="text/javascript"></script>
-    <!-- <script src="assets/scripts/util.js" type="text/javascript"></script> -->
+    <script src="assets/scripts/bootstrap.bundle.js" type="text/javascript"></script>
     <script src="assets/scripts/custom.js" type="text/javascript"></script>
   </body>
 </html>

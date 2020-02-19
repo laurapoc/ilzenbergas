@@ -1,9 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "MyriadPro";
+  // color: #465359;
 }
-
+// header - slideshow
 $items: 2;
 $animation-time: 18s;
 $transition-time: 0.9s;
@@ -103,48 +105,10 @@ $scale-base-1: (1 + $scale / 100%);
   }
 }
 // ************************************************************************
-// perdarytas kodas:
-
-// *****************************************************************
-// Presentational stuff
-// h1 {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate3d(-50%, -50%, 0);
-//   z-index: 99;
-//   text-align: center;
-//   font-family: Raleway, sans-serif;
-//   font-weight: 300;
-//   text-transform: uppercase;
-//   background-color: rgba(255,255,255,.75);
-//   box-shadow: 0 1em 2em -1em rgba(0,0,0,.5);
-//   padding: 1em 2em;
-//   line-height: 1.5;
-
-//   small {
-//     display: block;
-//     text-transform: lowercase;
-//     font-size: .7em;
-
-//     &:first-child {
-//       border-bottom: 1px solid rgba(0,0,0,.25);
-//       padding-bottom: .5em;
-//     }
-
-//     &:last-child {
-//       border-top: 1px solid rgba(0,0,0,.25);
-//       padding-top: .5em;
-//     }
-//   }
-// }
-
-// ***********************************************************
-
+// MAIN CARDS
 .jumbotron {
   .card {
     background: rgba(255, 255, 255, 0.7);
-    font-family: "Work Sans", sans-serif;
     color: #465359;
     margin-left: 2%;
     margin-right: 2%;
@@ -165,6 +129,7 @@ $scale-base-1: (1 + $scale / 100%);
 
     .card-title {
       font-size: 2.5em;
+      font-weight: 400;
     }
   }
 
@@ -196,15 +161,43 @@ $scale-base-1: (1 + $scale / 100%);
     }
   }
 }
-
+// AWORDS
+section {
+  .text-center {
+    h3 {
+      font-weight: 700;
+    }
+    .row {
+      font-size: 0.875rem;
+      img {
+        width: auto;
+        box-shadow: 4px 0px 4px rgba(82, 80, 80, 0.7);
+      }
+    }
+  }
+}
+// NEWS
 .text-center {
   margin-left: 1%;
   margin-right: 1%;
   background: rgba(255, 255, 255, 0.7);
   position: relative;
-
+  h1 {
+    font-weight: 700;
+  }
   .row {
     padding: 2%;
+
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.2rem;
+    }
   }
 
   .not-show {
@@ -221,15 +214,11 @@ $scale-base-1: (1 + $scale / 100%);
 
   .btn {
     background: rgba(255, 255, 255, 0.7);
-    // font-weight: 700;
-  }
-  .toggle-news {
-    // display: none;
-    background: rgba(206, 198, 198, 0.7);
   }
 }
 
 // RESPONSIVE PART:
+// News:
 @media all and (max-width: 1290px) {
   .text-center {
     .row {
@@ -248,6 +237,7 @@ $scale-base-1: (1 + $scale / 100%);
 }
 
 @media all and (max-width: 1200px) {
+  // Main cards:
   .jumbotron {
     .card {
       .p-2 {
@@ -260,16 +250,21 @@ $scale-base-1: (1 + $scale / 100%);
       }
     }
   }
+  // News block
   .text-center {
-    // margin-left: 2%;
-    // margin-right: 2%;
-    h2 {
-      font-size: 1.3rem;
+    .row {
+      h2 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }
 
 @media all and (max-width: 1150px) {
+  // Main cards
   .jumbotron {
     .card {
       .p-2 {
@@ -280,20 +275,29 @@ $scale-base-1: (1 + $scale / 100%);
       }
     }
   }
-  .text-center {
-    // margin-left: 1%;
-    // margin-right: 1%;
-  }
 }
 
 @media all and (max-width: 995px) {
+  // Awords and news
   .text-center {
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 2%;
+    margin-right: 2%;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  // Awords
+  section {
+    .text-center {
+      .row {
+        font-size: 0.75rem;
+      }
+    }
   }
 }
 
 @media all and (max-width: 350px) {
+  // news
   .jumbotron img {
     text-align: center;
   }
