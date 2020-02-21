@@ -112,16 +112,16 @@
   cursor: pointer;
 }
 .jumbotron .btn-light img {
-  width: 100px;
+  width: 120px;
   -webkit-transition: 0.8s;
   transition: 0.8s;
   cursor: pointer;
 }
 .jumbotron .btn-light:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(179, 171, 73, 0.938);
 }
 .jumbotron .btn-light:hover img:hover {
-  width: 120px;
+  width: 130px;
 }
 
 section .text-center h3 {

@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "MyriadPro";
+}
+
+h1 {
+  color: blue;
+}
+
+#main-nav {
+  background: red;
+}
+#main-nav .collapse img {
+  cursor: pointer;
+  color: red;
+}
+
+/*# sourceMappingURL=css.map */
