@@ -13,6 +13,17 @@ fetch("./header.html")
     document.body.appendChild(newScript);
   });
 
+// IMPORTING FOOTER
+fetch("./footer.html")
+  .then(response => {
+    return response.text();
+  })
+  .then(text => {
+    document.querySelector("#footer").innerHTML = text;
+  });
+
+
+
 // IMPORTING BACKGROUND
 fetch("./background.html")
   .then(response => {
@@ -21,6 +32,9 @@ fetch("./background.html")
   .then(text => {
     document.querySelector("#background").innerHTML = text;
   });
+
+
+
 
 // CODE TEMPLATE FOR FETCHING FILES:
 // fetch("./header.html")

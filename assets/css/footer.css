@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "MyriadPro";
+}
+
+#footer-container {
+  position: relative;
+}
+#footer-container .card-footer {
+  background: rgba(255, 255, 255, 0.7);
+  line-height: 0.4;
+}
+#footer-container .card-footer .d-flex .contact-link {
+  text-decoration: none;
+  color: #212529;
+}
+#footer-container .card-footer .d-flex #map {
+  border: 4px groove;
+}
+
+@media all and (max-width: 720px) {
+  .container-xl .card-footer .d-flex .contact-dvaras {
+    font-size: 0.9rem;
+  }
+  .container-xl .card-footer .d-flex .contact-dvaras h5 {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

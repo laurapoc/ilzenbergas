@@ -8,6 +8,7 @@
 
     <link href="assets/css/background.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/header.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/footer.css" rel="stylesheet" type="text/css" />
 
     <link href="assets/fonts/MyriadPro-Regular.otf" rel="stylesheet" />
     <link href="assets/fonts/MyriadPro-Bold.otf" rel="stylesheet" />
@@ -21,9 +22,52 @@
 
     <div class="container-xl" style="max-width: 1300px">
       <div class="jumbotron jumbotron-fluid container-fluid py-0">
+        <!-- header -->
         <div id="header"></div>
+        <div id="space"></div>
+        <div id="content">
+          <!-- content -->
+          <div class="text-center mt-4">
+            <h1 class="pt-4">Naujienos</h1>
+            <!-- 1 new -->
+            <div class="row">
+              <div class="col-lg-6 ">
+                <img class="img-fluid" src="assets/img/mokytoja.jpg" alt="" />
+              </div>
+              <div class=" col-lg-6 ">
+                <div id="headingGroup" class="text-justify d-lg-block pt-md-0">
+                  <h2 class="pt-3 pt-lg-0">
+                    Mokytoja sukūrė išmaniąją ekskursiją vaikams – Lietuvoje tokios tik kelios
+                  </h2>
+                  <p>
+                    Išmaniosios technologijos pritaikomos vis plačiau. Nors Kultūros paso programoje daugiau nei
+                    pusantro tūkstančio ekskursijų vaikams, tačiau tokių, kokią sukūrė istorijos mokytoja iš Rokiškio
+                    rajono, beveik nėra. Interaktyvios, QR kodais paremtos edukacinės programos vaikams suteikia daug
+                    įspūdžių, skatina įsitraukimą ir savarankiškas informacijos paieškas – anot mokytojos, vaikai po
+                    ekskursijos išvyksta žibančiomis akimis.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-secondary d-flex align-self-end"
+                    onclick="window.location.href='news.html'"
+                  >
+                    Plačiau
+                  </button>
+                  <!-- ******************** -->
+                  <!-- patikrinti ar type="submit" galima naudoti sioje situacijoje -->
+                  <!-- <form action="news.html" method="get" target="_blank">
+                <button type="submit" class="btn btn-secondary d-flex align-self-end">Plačiau</button>
+              </form> -->
+                  <!-- ********************* -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- footer -->
+    <div id="footer"></div>
 
     <script src="assets/scripts/jquery-3.4.1.js" type="text/javascript"></script>
     <script src="assets/scripts/bootstrap.min.js" type="text/javascript"></script>

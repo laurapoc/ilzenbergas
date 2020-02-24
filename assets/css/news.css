@@ -5,4 +5,15 @@
   font-family: "MyriadPro";
 }
 
+#space {
+  height: 88px;
+}
+
+#content {
+  margin-left: 1%;
+  margin-right: 1%;
+  background: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
 /*# sourceMappingURL=news.css.map */
