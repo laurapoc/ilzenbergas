@@ -12,7 +12,7 @@
   background: rgba(255, 255, 255, 0.7);
   line-height: 0.4;
 }
-#footer-container .card-footer .d-flex .contact-link {
+#footer-container .card-footer .d-flex .contact-dvaras .contact-link {
   text-decoration: none;
   color: #212529;
 }
@@ -20,7 +20,7 @@
   border: 4px groove;
 }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 768px) {
   .container-xl .card-footer .d-flex .contact-dvaras {
     font-size: 0.9rem;
   }

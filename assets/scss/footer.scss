@@ -3,41 +3,40 @@
 *::after {
   box-sizing: border-box;
   font-family: "MyriadPro";
-  // color: #465359;
 }
 
 #footer-container {
-    position: relative;
-    
+  position: relative;
+
   .card-footer {
     background: rgba(255, 255, 255, 0.7);
     line-height: 0.4;
-    
 
     .d-flex {
-      .contact-link {
-        text-decoration: none;
-        color: #212529;
+      .contact-dvaras {
+        .contact-link {
+          text-decoration: none;
+          color: #212529;
+        }
       }
       #map {
         border: 4px groove;
-
       }
     }
   }
 }
 
-@media all and (max-width: 720px) {
-    .container-xl {
-        .card-footer {
-            .d-flex {
-                .contact-dvaras {
-                    font-size: 0.9rem;
-                    h5 {
-                        font-size: 1rem;
-                    }
-                }
-            }
+@media all and (max-width: 768px) {
+  .container-xl {
+    .card-footer {
+      .d-flex {
+        .contact-dvaras {
+          font-size: 0.9rem;
+          h5 {
+            font-size: 1rem;
+          }
         }
+      }
     }
+  }
 }
