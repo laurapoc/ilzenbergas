@@ -8,8 +8,41 @@
 #content {
   margin-left: 1%;
   margin-right: 1%;
-  background: rgba(255, 255, 255, 0.7);
   position: relative;
+}
+#content .text-center {
+  background: rgba(255, 255, 255, 0.7);
+}
+#content .text-center .row {
+  padding: 4%;
+}
+#content .text-center .row img {
+  width: 100%;
+}
+#content .text-center .row h2 {
+  font-weight: 700;
+}
+#content .text-center .row p {
+  font-size: 1.2rem;
+}
+#content .text-center .row #anotation {
+  font-weight: 700;
+}
+
+@media all and (max-width: 1290px) {
+  #content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #content .text-center .row .text-muted {
+    font-size: 0.8rem;
+  }
+  #content .text-center .row h2 {
+    font-size: 1.4rem;
+  }
+  #content .text-center .row p {
+    font-size: 1.1rem;
+  }
 }
 
 /*# sourceMappingURL=news.css.map */

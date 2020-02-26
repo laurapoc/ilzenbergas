@@ -19,6 +19,25 @@
 #footer-container .card-footer .d-flex #map {
   border: 4px groove;
 }
+#footer-container .card-footer .d-flex #hours .not-work {
+  height: 10px;
+  width: 10px;
+  background-color: #e6e4d0;
+  border-radius: 50%;
+  border: 1px solid grey;
+  display: inline-block;
+}
+#footer-container .card-footer .d-flex #hours .work {
+  height: 10px;
+  width: 10px;
+  background-color: #b3ab49;
+  border-radius: 50%;
+  border: 1px solid grey;
+  display: inline-block;
+}
+#footer-container .card-footer .d-flex #hours #info {
+  line-height: 1.2;
+}
 
 @media all and (max-width: 768px) {
   .container-xl .card-footer .d-flex .contact-dvaras {
@@ -29,4 +48,4 @@
   }
 }
 
-/*# sourceMappingURL=footer.css.map */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/footer.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;AAAA;EAGE;EACA;;;AAGF;EACE;;AAEA;EACE;EACA;;AAII;EACE;EACA;;AAGJ;EACE;;AAGA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEF;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;;;AAOV;EAIQ;IACE;;EACA;IACE%22,%22file%22:%22footer.css%22%7D */
