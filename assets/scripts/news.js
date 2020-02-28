@@ -39,6 +39,14 @@ $(function () {
   });
 
 
+  $('[data-fancybox="gallery"]').fancybox({
+    loop: true,
+    animationDuration: 500,
+    protect: true
+    
+  });
+
+
 // CODE TEMPLATE FOR FETCHING FILES:
 // fetch("./header.html")
 //   .then(response => {
