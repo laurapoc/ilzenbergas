@@ -33,12 +33,8 @@ fetch("./background.html")
     document.querySelector("#background").innerHTML = text;
   });
 
-// MDB Lightbox Init
-$(function () {
-  $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
-  });
 
-
+// photo gallery
   $('[data-fancybox="gallery"]').fancybox({
     loop: true,
     animationDuration: 500,

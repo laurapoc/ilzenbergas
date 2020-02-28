@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "MyriadPro";
+  // color: #465359;
+}
+
+#contact-content {
+  margin-top: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  line-height: 0.4;
+
+  .contact-dvaras {
+    .contact-link {
+      text-decoration: none;
+      color: #212529;
+    }
+  }
+
+  #hours {
+    .not-work {
+      height: 10px;
+      width: 10px;
+      background-color: rgb(230, 228, 208);
+      border-radius: 50%;
+      border: 1px solid grey;
+      display: inline-block;
+    }
+    .work {
+      height: 10px;
+      width: 10px;
+      background-color: rgb(179, 171, 73);
+      border-radius: 50%;
+      border: 1px solid grey;
+      display: inline-block;
+    }
+
+    #info {
+      line-height: 1.2;
+    //   width: 40%;
+    //   margin: auto;
+    }
+  }
+  #map {
+    border: 4px groove;
+    height: 500px;
+    width: 50%;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 768px) {
+  #contact-content {
+    #hours {
+      #info {
+        line-height: 1.2;
+        width: 70%;
+        margin: auto;
+      }
+    }
+  }
+}
