@@ -3,7 +3,6 @@
 *::after {
   box-sizing: border-box;
   font-family: "MyriadPro";
-  // color: #465359;
 }
 
 #contact-content {
@@ -41,8 +40,8 @@
 
     #info {
       line-height: 1.2;
-    //   width: 40%;
-    //   margin: auto;
+      width: 60%;
+      //   margin: auto;
     }
   }
   #map {
@@ -54,13 +53,26 @@
   }
 }
 
+@media all and (max-width: 992px) {
+  #contact-content {
+    #hours {
+      #info {
+        width: 80%;
+        margin: auto;
+      }
+    }
+    #map {
+      height: 250px;
+      width: 90%;
+      margin: auto;
+    }
+  }
+}
+
 @media all and (max-width: 768px) {
   #contact-content {
     #hours {
       #info {
-        line-height: 1.2;
-        width: 70%;
-        margin: auto;
       }
     }
   }

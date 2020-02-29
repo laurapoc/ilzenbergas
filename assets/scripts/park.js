@@ -1,4 +1,4 @@
-let pageName = "contacts";
+let pageName = "park";
 // IMPORTING MAIN MENU
 fetch("./header.html")
   .then(response => {
@@ -14,6 +14,15 @@ fetch("./header.html")
     document.body.appendChild(newScript);
   });
 
+// IMPORTING FOOTER
+fetch("./footer.html")
+  .then(response => {
+    return response.text();
+  })
+  .then(text => {
+    document.querySelector("#footer").innerHTML = text;
+  });
+
 
 
 // IMPORTING BACKGROUND
@@ -24,4 +33,4 @@ fetch("./background.html")
   .then(text => {
     document.querySelector("#background").innerHTML = text;
   });
- 
+

@@ -1,3 +1,4 @@
+let pageName = "news";
 // IMPORTING MAIN MENU
 fetch("./header.html")
   .then(response => {
@@ -41,7 +42,7 @@ fetch("./background.html")
     protect: true
     
   });
-
+ 
 
 // CODE TEMPLATE FOR FETCHING FILES:
 // fetch("./header.html")

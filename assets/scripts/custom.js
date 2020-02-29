@@ -1,3 +1,4 @@
+let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
 let showRows = document.querySelector(".not-show");
 
@@ -13,3 +14,4 @@ newsBtn.addEventListener("click", function() {
     btnText.textContent = "Visos naujienos";
   }
 });
+ 
