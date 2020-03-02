@@ -14,6 +14,34 @@ fetch("./header.html")
     document.body.appendChild(newScript);
   });
 
+// IMPORTING LEFT SIDE MENU
+fetch("./sidebar.html")
+.then(response => {
+  return response.text();
+})
+.then(text => {
+  $("#sidebar").html(text);
+})
+.then(text => {
+  let newScript = document.createElement("script");
+  newScript.src = "./assets/scripts/sidebar.js";
+  document.body.appendChild(newScript);
+});
+
+// IMPORTING GALLERY
+fetch("./gallery.html")
+  .then(response => {
+    return response.text();
+  })
+  .then(text => {
+    $("#gallery").html(text);
+  })
+  .then(text => {
+    let newScript = document.createElement("script");
+    newScript.src = "./assets/scripts/gallery.js";
+    document.body.appendChild(newScript);
+  });
+
 // IMPORTING FOOTER
 fetch("./footer.html")
   .then(response => {

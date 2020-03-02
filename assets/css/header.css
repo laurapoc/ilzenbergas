@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
+  font-family: "Myriad Pro SemiCond";
 }
 
 #main-nav {
@@ -14,6 +14,11 @@
 
 #space {
   height: 88px;
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
 }
 
 /*# sourceMappingURL=header.css.map */

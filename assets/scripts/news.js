@@ -14,6 +14,20 @@ fetch("./header.html")
     document.body.appendChild(newScript);
   });
 
+// IMPORTING GALLERY
+fetch("./gallery.html")
+  .then(response => {
+    return response.text();
+  })
+  .then(text => {
+    $("#gallery").html(text);
+  })
+  .then(text => {
+    let newScript = document.createElement("script");
+    newScript.src = "./assets/scripts/gallery.js";
+    document.body.appendChild(newScript);
+  });
+
 // IMPORTING FOOTER
 fetch("./footer.html")
   .then(response => {
@@ -22,8 +36,6 @@ fetch("./footer.html")
   .then(text => {
     document.querySelector("#footer").innerHTML = text;
   });
-
-
 
 // IMPORTING BACKGROUND
 fetch("./background.html")
@@ -34,15 +46,13 @@ fetch("./background.html")
     document.querySelector("#background").innerHTML = text;
   });
 
-
 // photo gallery
-  $('[data-fancybox="gallery"]').fancybox({
-    loop: true,
-    animationDuration: 500,
-    protect: true
-    
-  });
- 
+// $('[data-fancybox="gallery"]').fancybox({
+//   loop: true,
+//   animationDuration: 500,
+//   protect: true
+
+// });
 
 // CODE TEMPLATE FOR FETCHING FILES:
 // fetch("./header.html")

@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
+  font-family: "Myriad Pro SemiCond";
 }
 
 #contact-content {
@@ -38,7 +38,7 @@
   width: 60%;
 }
 #contact-content #map {
-  border: 4px groove;
+  border: 1px solid;
   height: 500px;
   width: 50%;
   margin: auto;
@@ -55,6 +55,10 @@
     width: 90%;
     margin: auto;
   }
+}
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
 }
 
 /*# sourceMappingURL=contacts.css.map */

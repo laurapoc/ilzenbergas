@@ -2,8 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
-  // color: #465359;
+  font-family: "Myriad Pro SemiCond";
 }
 // header - slideshow
 $items: 2;
@@ -139,7 +138,6 @@ $scale-base-1: (1 + $scale / 100%);
   }
   .btn-light {
     background-color: rgba(255, 255, 255, 0.7);
-    height: 50px;
     border: none;
     -webkit-transition: 0.8s;
     transition: 0.8s;
@@ -186,7 +184,10 @@ section {
     font-weight: 700;
   }
   .row {
-    padding: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 
     img {
       width: 100%;
@@ -222,6 +223,9 @@ section {
 
   .btn {
     background: rgba(255, 255, 255, 0.7);
+  }
+  .btn:hover {
+    background: rgba(179, 171, 73, 0.7);
   }
 }
 
@@ -320,4 +324,9 @@ section {
     padding-left: 2%;
     padding-right: 2%;
   }
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
 }

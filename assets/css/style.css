@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
+  font-family: "Myriad Pro SemiCond";
 }
 
 .slideshow {
@@ -105,7 +105,6 @@
 }
 .jumbotron .btn-light {
   background-color: rgba(255, 255, 255, 0.7);
-  height: 50px;
   border: none;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -145,7 +144,10 @@ section .text-center .row img {
   font-weight: 700;
 }
 .text-center .row {
-  padding: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 .text-center .row img {
   width: 100%;
@@ -177,6 +179,9 @@ section .text-center .row img {
 }
 #btn-dark .btn {
   background: rgba(255, 255, 255, 0.7);
+}
+#btn-dark .btn:hover {
+  background: rgba(179, 171, 73, 0.7);
 }
 
 @media all and (max-width: 1290px) {
@@ -234,5 +239,9 @@ section .text-center .row img {
     padding-right: 2%;
   }
 }
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/style.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;AAAA;EAGE;EACA;;;AAYF;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA,oBAnBW;EAoBX;EACA;;AAGE;EACE;EACA;;AAFF;EACE;EACA;;;AAMJ;EAyBE;IACE;IACA;;EAEF;IACE;;EAEF;IACE;;EAEF;IACE;IACA;;EAIA;IACE;IACA;;EAQF;IACE;IACA;;EAEF;IACE;;;AAxDN;EAyBE;IACE;IACA;;EAEF;IACE;;EAEF;IACE;;EAEF;IACE;IACA;;;AA2BJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAEA;EACE;EACA;EACA;EACA;;AAIJ;EACE;EACA;;AAIJ;EACE;EACA;;AAEF;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIJ;EACE;;AAEA;EACE;;;AAOF;EACE;;AAEF;EACE;;AACA;EACE;EACA;;;AAMR;EACE;EACA;EACA;EACA;;AACA;EACE;;AAEF;EACE;;AAEA;EACE;;AAEF;EACE;EACA;EACA;EACA;;AACA;EACE;;AAGJ;EACE;;AAEF;EACE;;AAIJ;EACE;;AAGF;EACE;;;AAIJ;EACE;;AAEA;EACE;;;AAMJ;EAKU;IACE;;EAEF;IACE;;;AAQZ;EAKQ;IACE;;EAGJ;IACE;;;EAOF;IACE;;EAEF;IACE;;;AAMR;EAKQ;IACE;IACA;;;AAOV;EAEE;IACE;IACA;;EAEA;IACE;;EAIA;IACE;;;EAOF;IACE;;;AAMR;EAEE;IACE;;;EAEF;IACE;IACA%22,%22file%22:%22style.css%22%7D */
+/*# sourceMappingURL=style.css.map */

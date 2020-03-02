@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Myriad Pro SemiCond";
+}
+
+#sidebar-menu {
+  font-size: 1rem;
+  font-weight: 700;
+}
+#sidebar-menu button {
+  background: rgba(179, 171, 73, 0.7);
+  border: 2px solid grey;
+  color: #465359;
+  margin-top: 2%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 1%;
+  outline: 0;
+  box-shadow: none;
+}
+#sidebar-menu .active {
+  background: rgba(179, 171, 73, 0.7);
+}
+#sidebar-menu #menu-parent {
+  width: 15rem;
+}
+#sidebar-menu .nav-item {
+  border: 2px solid grey;
+  margin-top: 4%;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2%;
+}
+#sidebar-menu .nav-item .nav-link {
+  color: #465359;
+}
+#sidebar-menu .nav-item:hover {
+  background: rgba(179, 171, 73, 0.7);
+}
+
+@media all and (max-width: 992px) {
+  #sidebar-menu #menu-parent {
+    width: 100%;
+  }
+  #sidebar-menu .nav-item {
+    margin-top: 1%;
+  }
+}
+
+/*# sourceMappingURL=sidebar.css.map */

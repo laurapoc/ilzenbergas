@@ -2,11 +2,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
-  // color: #465359;
+  font-family: "Myriad Pro SemiCond";
 }
 
 #content {
+  margin-top: 4%;
   margin-left: 1%;
   margin-right: 1%;
   position: relative;
@@ -35,16 +35,6 @@
   }
   #news-link {
     margin-left: 1%;
-  }
-  .d-flex {
-    padding: 4%;
-    .photo {
-      width: calc(25% - 2%);
-      max-width: 350px;
-      margin: 1%;
-      max-height: 150px;
-      overflow: hidden;
-    }
   }
 
   .btn-outline-dark {
@@ -82,24 +72,15 @@
     #news-link {
       margin-left: 2%;
     }
-    .d-flex {
-      .photo {
-        width: calc(33.3333% - 2%);
-        max-width: 300px;
-        max-height: 150px;
-        overflow: hidden;
-      }
-    }
+
   }
 }
 
-@media all and (max-width: 900px) {
-  #content {
-    .d-flex {
-      .photo {
-        width: calc(50% - 2%);
-      }
-    }
+
+
+@media all and (max-width: 768px) {
+  #news-link {
+    margin-left: 3%;
   }
 }
 
@@ -108,16 +89,11 @@
     #news-link {
       margin-left: 3%;
     }
-    .d-flex {
-      .photo {
-        width: calc(100% - 2%);
-      }
-    }
+
   }
 }
 
-@media all and (max-width: 768px) {
-  #news-link {
-    margin-left: 3%;
-  }
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
 }

@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
+  font-family: "Myriad Pro SemiCond";
 }
 
 #footer-container {
@@ -20,7 +20,7 @@
         }
       }
       #map {
-        border: 4px groove;
+        border: 1px solid;
       }
       #hours {
         .not-work {
@@ -62,4 +62,9 @@
       }
     }
   }
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
 }

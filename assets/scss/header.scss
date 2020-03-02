@@ -2,8 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
-  // color: #465359;
+  font-family: "Myriad Pro SemiCond";
+  
 }
 
 // main navigation bar:
@@ -17,4 +17,9 @@
 }
 #space {
   height: 88px;
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
 }

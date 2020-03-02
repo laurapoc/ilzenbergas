@@ -36,7 +36,7 @@ if (url.includes("park")) {
   document.querySelector("#park").src = "assets/img/round_icons/parkas_yelow.png";
 }
 
-// let id = window.location.href.split("/").pop();
-// console.log (id)
-// const activeImage = document.querySelector("#" + id);
-// activeImage.src = "";
+// hiding menu items after clicking
+$('.nav-link').on('click',function() {
+  $('.navbar-collapse').collapse('hide');
+});

@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Myriad Pro SemiCond";
+}
+
+.d-flex {
+  .photo {
+    max-width: 350px;
+    margin: 1%;
+    max-height: 150px;
+    overflow: hidden;
+  }
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
+}
+
+@media all and (max-width: 1100px) {
+  .d-flex {
+    .photo {
+      width: calc(33.3333% - 2%);
+      max-width: 300px;
+      max-height: 150px;
+      overflow: hidden;
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  .d-flex {
+    .photo {
+      width: calc(50% - 2%);
+    }
+  }
+}
+
+@media all and (max-width: 670px) {
+  .d-flex {
+    .photo {
+      width: calc(100% - 2%);
+    }
+  }
+}

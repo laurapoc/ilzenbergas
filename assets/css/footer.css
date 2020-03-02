@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "MyriadPro";
+  font-family: "Myriad Pro SemiCond";
 }
 
 #footer-container {
@@ -17,7 +17,7 @@
   color: #212529;
 }
 #footer-container .card-footer .d-flex #map {
-  border: 4px groove;
+  border: 1px solid;
 }
 #footer-container .card-footer .d-flex #hours .not-work {
   height: 10px;
@@ -46,6 +46,10 @@
   .container-xl .card-footer .d-flex .contact-dvaras h5 {
     font-size: 1rem;
   }
+}
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
 }
 
 /*# sourceMappingURL=footer.css.map */
