@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Myriad Pro SemiCond";
+}
+
+#park-content {
+  margin-top: 4%;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+}
+#park-content h3,
+#park-content h4,
+#park-content h5 {
+  font-weight: 700;
+}
+#park-content p {
+  font-size: 1.2rem;
+}
+
+#park-map img {
+  width: 100%;
+}
+
+#master-logo img {
+  padding: 1%;
+  width: auto;
+  height: 15vh;
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
+}
+
+/*# sourceMappingURL=park_templ1.css.map */

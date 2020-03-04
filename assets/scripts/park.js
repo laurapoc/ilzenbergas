@@ -14,19 +14,54 @@ fetch("./header.html")
     document.body.appendChild(newScript);
   });
 
-// IMPORTING LEFT SIDE MENU
-fetch("./sidebar.html")
+// // IMPORTING LEFT SIDE MENU
+// fetch("./sidebar.html")
+// .then(response => {
+//   return response.text();
+// })
+// .then(text => {
+//   $("#sidebar").html(text);
+// })
+// .then(text => {
+//   let newScript = document.createElement("script");
+//   newScript.src = "./assets/scripts/sidebar.js";
+//   document.body.appendChild(newScript);
+// });
+
+
+// // IMPORTING park templ1
+// fetch("./park_templ1.html")
+// .then(response => {
+//   return response.text();
+// })
+// .then(text => {
+//   $("#park-templ1").html(text);
+// })
+// .then(text => {
+//   let newScript = document.createElement("script");
+//   newScript.src = "./assets/scripts/park_templ1.js";
+//   document.body.appendChild(newScript);
+// });
+
+// fetch park templates function:
+
+function importTemplate(templateUrl, templateId, jsLocation) {
+fetch(templateUrl)
 .then(response => {
   return response.text();
 })
 .then(text => {
-  $("#sidebar").html(text);
+  $(templateId).html(text);
 })
 .then(text => {
   let newScript = document.createElement("script");
-  newScript.src = "./assets/scripts/sidebar.js";
+  newScript.src = jsLocation;
   document.body.appendChild(newScript);
-});
+})
+};
+
+importTemplate("./park_templ1.html", "#park-templ1", "./assets/scripts/park_templ1.js");
+
 
 // IMPORTING GALLERY
 fetch("./gallery.html")

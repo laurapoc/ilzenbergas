@@ -1,1 +1,7 @@
 http://35.159.40.122/demo/index.html
+
+ instrukcijos:
+https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-connecting-to-linux-unix-instance-using-sftp
+
+O va čia reikia sukelti visą turinį (fileZilla): 
+/opt/bitnami/apps/wordpress/htdocs/demo

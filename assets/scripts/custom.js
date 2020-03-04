@@ -1,3 +1,4 @@
+// alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
 let showRows = document.querySelector(".not-show");
