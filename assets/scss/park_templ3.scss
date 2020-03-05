@@ -6,23 +6,22 @@
 }
 
 .width-class {
-    width: 100%;
-}
 
-#carouselExampleFade {
-text-align: center;
-margin: 0 auto;
-
-.carousel-item {
-    img {
-        margin: 0 auto;
-        padding: 1%;
-        border: 3px solid grey;
+  #carouselExampleFade {
+    // text-align: center;
+    // margin: 0 auto;
+    .carousel-inner {
+      .carousel-item {
+        img {
+          margin: 0 auto;
+          padding: 1%;
+          border: 3px solid grey;
+        }
+      }
     }
-}
+  }
 }
 @font-face {
   font-family: "Myriad Pro SemiCond";
   src: url("../fonts/MyriadPro-SemiCn.otf");
 }
-

@@ -20,6 +20,10 @@
   font-weight: 700;
 }
 
+#park_templ3 {
+  width: 100%;
+}
+
 @media all and (max-width: 992px) {
   #park-content p {
     font-size: 1.1rem;
