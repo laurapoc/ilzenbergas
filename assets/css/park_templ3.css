@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Myriad Pro SemiCond";
+}
+
+.width-class {
+  width: 100%;
+}
+
+#carouselExampleFade {
+  text-align: center;
+  margin: 0 auto;
+}
+#carouselExampleFade .carousel-item img {
+  margin: 0 auto;
+  padding: 1%;
+  border: 3px solid grey;
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
+}
+
+/*# sourceMappingURL=park_templ3.css.map */

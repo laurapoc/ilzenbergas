@@ -1,4 +1,5 @@
 function importTemplate(templateUrl, templateId, jsLocation) {
+  console.log(templateUrl, templateId, jsLocation);
   fetch(templateUrl)
     .then(response => {
       return response.text();
@@ -12,5 +13,7 @@ function importTemplate(templateUrl, templateId, jsLocation) {
         newScript.src = jsLocation;
         document.body.appendChild(newScript);
       }
+    }).catch( e => {
+      console.log(e);
     });
 }
