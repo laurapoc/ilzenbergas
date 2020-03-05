@@ -1,50 +1,19 @@
 let pageName = "news";
+
 // IMPORTING MAIN MENU
-fetch("./header.html")
-  .then(response => {
-    console.log(response.text);
-    return response.text();
-  })
-  .then(text => {
-    $("#header").html(text);
-  })
-  .then(text => {
-    let newScript = document.createElement("script");
-    newScript.src = "./assets/scripts/header.js";
-    document.body.appendChild(newScript);
-  });
+importTemplate("./header.html", "#header", "./assets/scripts/header.js");
 
-// IMPORTING GALLERY
-fetch("./gallery.html")
-  .then(response => {
-    return response.text();
-  })
-  .then(text => {
-    $("#gallery").html(text);
-  })
-  .then(text => {
-    let newScript = document.createElement("script");
-    newScript.src = "./assets/scripts/gallery.js";
-    document.body.appendChild(newScript);
-  });
 
-// IMPORTING FOOTER
-fetch("./footer.html")
-  .then(response => {
-    return response.text();
-  })
-  .then(text => {
-    document.querySelector("#footer").innerHTML = text;
-  });
+  // IMPORTING GALLERY
+importTemplate("./gallery.html", "#gallery", "./assets/scripts/gallery.js");
 
-// IMPORTING BACKGROUND
-fetch("./background.html")
-  .then(response => {
-    return response.text();
-  })
-  .then(text => {
-    document.querySelector("#background").innerHTML = text;
-  });
+
+  // IMPORTING FOOTER
+importTemplate("./footer.html", "#footer", null);
+
+
+  // IMPORTING BACKGROUND
+importTemplate("./background.html", "#background", null);
 
 // photo gallery
 // $('[data-fancybox="gallery"]').fancybox({
