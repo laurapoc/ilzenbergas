@@ -1,23 +1,29 @@
 let pageName = "park";
 
-let templateToLoad = "park_templ2";
+let templateToLoad = "park_templ1";
 let selectedMenuItem = "a";
 
 // IMPORTING MAIN MENU
 importTemplate("./header.html", "#header", "./assets/scripts/header.js");
 
-// IMPORTING park templ1
-// importTemplate("./park_templ1.html", "#park_templ1", "./assets/scripts/park_templ1.js");
-
-// IMPORTING park templ2
-// importTemplate("./park_templ2.html", "#park_templ2", "./assets/scripts/park_templ2.js");
-importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
-
-// IMPORTING park templ3
-// importTemplate("./park_templ3.html", "#park_templ3", "./assets/scripts/park_templ3.js");
+// IMPORTING ONE OF PARK TEMPLATES
+importTemplate("./" + templateToLoad + ".html", "#park-content", "./assets/scripts/" + templateToLoad + ".js");
 
 // IMPORTING FOOTER
 importTemplate("./footer.html", "#footer", null);
 
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
+
+function loadSelectedTemplate(template, menuId) {
+  setTimeout(
+    () => {
+      templateToLoad = template;
+      selectedMenuItem = menuId;
+      let contentLocation = document.querySelector("#park-content");
+      contentLocation.textContent = "";
+      importTemplate("./" + templateToLoad + ".html", "#park-content", "./assets/scripts/" + templateToLoad + ".js");
+    },
+    500
+  );
+}
