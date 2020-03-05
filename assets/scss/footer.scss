@@ -10,9 +10,11 @@
 
   .card-footer {
     background: rgba(255, 255, 255, 0.7);
-    line-height: 0.4;
 
     .d-flex {
+      h5, p {
+        margin: 0;
+      }
       .contact-dvaras {
         .contact-link {
           text-decoration: none;

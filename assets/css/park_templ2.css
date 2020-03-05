@@ -5,14 +5,8 @@
   font-family: "Myriad Pro SemiCond";
 }
 
-#park-map img {
-  width: 100%;
-}
-
-#master-logo img {
-  padding: 1%;
-  width: auto;
-  height: 15vh;
+#open-seasons {
+  font-size: 1.1rem;
 }
 
 @font-face {
@@ -20,4 +14,4 @@
   src: url("../fonts/MyriadPro-SemiCn.otf");
 }
 
-/*# sourceMappingURL=park_templ1.css.map */
+/*# sourceMappingURL=park_templ2.css.map */

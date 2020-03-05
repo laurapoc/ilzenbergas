@@ -10,7 +10,9 @@
 }
 #footer-container .card-footer {
   background: rgba(255, 255, 255, 0.7);
-  line-height: 0.4;
+}
+#footer-container .card-footer .d-flex h5, #footer-container .card-footer .d-flex p {
+  margin: 0;
 }
 #footer-container .card-footer .d-flex .contact-dvaras .contact-link {
   text-decoration: none;
