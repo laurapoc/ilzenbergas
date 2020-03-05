@@ -6,8 +6,11 @@ let selectedMenuItem = "a";
 // IMPORTING MAIN MENU
 importTemplate("./header.html", "#header", "./assets/scripts/header.js");
 
+// // IMPORTING LEFT SIDE MENU
+importTemplate("./sidebar.html", "#sidebar", "./assets/scripts/sidebar.js");
+
 // IMPORTING ONE OF PARK TEMPLATES
-importTemplate("./" + templateToLoad + ".html", "#park-content", "./assets/scripts/" + templateToLoad + ".js");
+importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
 
 // IMPORTING FOOTER
 importTemplate("./footer.html", "#footer", null);
@@ -16,14 +19,10 @@ importTemplate("./footer.html", "#footer", null);
 importTemplate("./background.html", "#background", null);
 
 function loadSelectedTemplate(template, menuId) {
-  setTimeout(
-    () => {
-      templateToLoad = template;
-      selectedMenuItem = menuId;
-      let contentLocation = document.querySelector("#park-content");
-      contentLocation.textContent = "";
-      importTemplate("./" + templateToLoad + ".html", "#park-content", "./assets/scripts/" + templateToLoad + ".js");
-    },
-    500
-  );
+  let previousTemplate = templateToLoad;
+  templateToLoad = template;
+  selectedMenuItem = menuId;
+  let contentLocation = document.querySelector("#" + previousTemplate);
+  contentLocation.textContent = "";
+  importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
 }

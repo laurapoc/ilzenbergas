@@ -62,7 +62,7 @@ function menuItemClick(event) {
   console.log(event.target.data);
   selectedMenuItem = event.target.id;
   selectedTemplate = event.target.data.templateToUse;
-  //refreshMenuItems();
+  refreshMenuItems();
   loadSelectedTemplate(selectedTemplate, selectedMenuItem);
 }
 
