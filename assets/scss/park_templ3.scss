@@ -17,9 +17,13 @@
         }
       }
     }
+
   }
 }
 @font-face {
   font-family: "Myriad Pro SemiCond";
   src: url("../fonts/MyriadPro-SemiCn.otf");
 }
+
+.carousel-control-prev {margin-left: 40px;}
+.carousel-control-next {margin-right: 40px;}

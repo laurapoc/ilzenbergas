@@ -12,6 +12,8 @@ importTemplate("./sidebar.html", "#sidebar", "./assets/scripts/sidebar.js");
 // IMPORTING ONE OF PARK TEMPLATES
 importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
 
+
+
 // IMPORTING FOOTER
 importTemplate("./footer.html", "#footer", null);
 
@@ -24,5 +26,7 @@ function loadSelectedTemplate(template, menuId) {
   selectedMenuItem = menuId;
   let contentLocation = document.querySelector("#" + previousTemplate);
   contentLocation.textContent = "";
+  let galleryLocation = document.querySelector("#gallery");
+  galleryLocation.textContent = "";
   importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
 }
