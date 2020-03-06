@@ -19,24 +19,33 @@ $("div.dropdown li.dropdown").hover(
 
 // CHANGE ICONS COLOR ON HOVER
 let img = document.querySelectorAll(".nav-link img");
-
 img.forEach(element => {
-  element.addEventListener("mousemove", function(event) {
+  changeIconColor(element);
+});
+
+// CHANGE MAP-ICON'S COLOR ON HOVER
+
+function changeIconColor(htmlElement) {
+  htmlElement.addEventListener("mousemove", function(event) {
     event.target.src = event.target.src.replace("_grey", "_yelow");
   });
-  element.addEventListener("mouseleave", function(event) {
+  htmlElement.addEventListener("mouseleave", function(event) {
     event.target.src = event.target.src.replace("_yelow", "_grey");
   });
-});
+}
+let mapIcon = document.querySelector("#map-icon img");
+changeIconColor(mapIcon);
 
 // changing header icons color
 console.log("Page name: ", pageName);
 let url = pageName;
 if (url.includes("park")) {
   document.querySelector("#park").src = "assets/img/round_icons/parkas_yelow.png";
+} else if (url.includes("map")) {
+  document.querySelector("#map").src = "assets/img/round_icons/map_yelow.png";
 }
 
 // hiding menu items after clicking
-$('.nav-link').on('click',function() {
-  $('.navbar-collapse').collapse('hide');
+$(".nav-link").on("click", function() {
+  $(".navbar-collapse").collapse("hide");
 });
