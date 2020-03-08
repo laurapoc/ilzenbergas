@@ -7,13 +7,20 @@
 
 #master-logo {
   img {
-    padding: 1%;
-    width: auto;
-    height: 15vh;
+    width: 70%;
+    height: auto;
   }
 }
 
 @font-face {
   font-family: "Myriad Pro SemiCond";
   src: url("../fonts/MyriadPro-SemiCn.otf");
+}
+
+@media all and (max-width: 768px) {
+  #master-logo {
+    img {
+      width: 100%;
+    }
+  }
 }
