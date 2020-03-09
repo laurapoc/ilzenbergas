@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Myriad Pro SemiCond";
+}
+
+.width-class {
+
+  #carouselExampleFade {
+    .carousel-inner {
+      .carousel-item {
+        img {
+          margin: 0 auto;
+          padding: 1%;
+          border: 3px solid grey;
+        }
+      }
+    }
+
+  }
+}
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
+}
+
+.carousel-control-prev {margin-left: 40px;}
+.carousel-control-next {margin-right: 40px;}

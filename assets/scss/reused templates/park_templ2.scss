@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Myriad Pro SemiCond";
+}
+
+#open-seasons {
+    font-size: 1.1rem;
+}
+
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
+}

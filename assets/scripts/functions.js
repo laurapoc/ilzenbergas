@@ -1,5 +1,5 @@
 function importTemplate(templateUrl, templateId, jsLocation) {
-  console.log(templateUrl, templateId, jsLocation);
+  // console.log(templateUrl, templateId, jsLocation);
   fetch(templateUrl)
     .then(response => {
       return response.text();
@@ -14,24 +14,24 @@ function importTemplate(templateUrl, templateId, jsLocation) {
         document.body.appendChild(newScript);
       }
     }).catch( e => {
-      console.log(e);
+      // console.log(e);
     });
 }
 
 // Used in sidebar.js:
 const parkMenuItems = [
-  { text: "500 metų menanti istorija", id: "a", templateToUse: "park_templ1" },
-  { text: "Parko-muziejaus lankymas", id: "b", templateToUse: "park_templ2" },
-  { text: "Rūmų interjeras XIX a.", id: "c", templateToUse: "park_templ3" },
-  { text: "Akmens mūrai  XIX a.", id: "d", templateToUse: "park_templ3" },
-  { text: "500 metų ąžuolas ILZENBERG", id: "e", templateToUse: "park_templ1" },
-  { text: "Skulptūrų parkas", id: "f", templateToUse: "park_templ2" },
-  { text: "Stelmužė ir stelmužiukai", id: "g", templateToUse: "park_templ1" },
-  { text: "Meilės sala, Meilės tiltas", id: "h", templateToUse: "park_templ3" },
-  { text: "Kalvystė", id: "i", templateToUse: "park_templ3" },
-  { text: "Patrankų aikštelė", id: "j", templateToUse: "park_templ3" },
-  { text: "Parko gyvūnai", id: "k", templateToUse: "park_templ3" },
-  { text: "Apylinkės. Pėsčiųjų žygiai", id: "l", templateToUse: "park_templ2" }
+  { text: "500 metų menanti istorija", id: "a", templateToUse: "basis_templ1" },
+  { text: "Parko-muziejaus lankymas", id: "b", templateToUse: "basis_templ2" },
+  { text: "Rūmų interjeras XIX a.", id: "c", templateToUse: "basis_templ3" },
+  { text: "Akmens mūrai  XIX a.", id: "d", templateToUse: "basis_templ3" },
+  { text: "500 metų ąžuolas ILZENBERG", id: "e", templateToUse: "basis_templ1" },
+  { text: "Skulptūrų parkas", id: "f", templateToUse: "basis_templ2" },
+  { text: "Stelmužė ir stelmužiukai", id: "g", templateToUse: "basis_templ1" },
+  { text: "Meilės sala, Meilės tiltas", id: "h", templateToUse: "basis_templ3" },
+  { text: "Kalvystė", id: "i", templateToUse: "basis_templ3" },
+  { text: "Patrankų aikštelė", id: "j", templateToUse: "basis_templ3" },
+  { text: "Parko gyvūnai", id: "k", templateToUse: "basis_templ3" },
+  { text: "Apylinkės. Pėsčiųjų žygiai", id: "l", templateToUse: "basis_templ2" }
 ];
 
 // changing sidebars menu items
@@ -59,7 +59,7 @@ function setUpMenuItem(menuItem, template, parent) {
 }
 
 function menuItemClick(event) {
-  console.log(event.target.data);
+  // console.log(event.target.data);
   selectedMenuItem = event.target.id;
   selectedTemplate = event.target.data.templateToUse;
   refreshMenuItems();

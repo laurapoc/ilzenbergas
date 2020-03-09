@@ -1,6 +1,6 @@
 let pageName = "park";
 
-let templateToLoad = "park_templ1";
+let templateToLoad = "basis_templ1";
 let selectedMenuItem = "a";
 
 // IMPORTING MAIN MENU

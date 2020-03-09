@@ -43,6 +43,8 @@ if (url.includes("park")) {
   document.querySelector("#park").src = "assets/img/round_icons/parkas_yelow.png";
 } else if (url.includes("map")) {
   document.querySelector("#map").src = "assets/img/round_icons/map_yelow.png";
+} else if (url.includes("events")) {
+  document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
 }
 
 // hiding menu items after clicking

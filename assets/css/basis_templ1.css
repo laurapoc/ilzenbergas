@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Myriad Pro SemiCond";
+}
+
+#master-logo img {
+  width: 70%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Myriad Pro SemiCond";
+  src: url("../fonts/MyriadPro-SemiCn.otf");
+}
+@media all and (max-width: 768px) {
+  #master-logo img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=basis_templ1.css.map */
