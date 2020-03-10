@@ -2,6 +2,7 @@
 .fc {
   direction: ltr;
   text-align: left;
+  font-family: "Myriad Pro SemiCond";
 }
 
 .fc-rtl {
@@ -114,6 +115,7 @@ hr.fc-divider {
 
 .fc th {
   text-align: center;
+  background: rgb(179, 171, 73);
 }
 
 .fc th,
@@ -563,7 +565,7 @@ TODO: more distinction between this file and common.css
 .fc-unthemed .fc-popover,
 .fc-unthemed .fc-list-view,
 .fc-unthemed .fc-list-heading td {
-  border-color: #ddd;
+  border-color: grey;
 }
 
 .fc-unthemed .fc-popover {
@@ -690,14 +692,14 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.4em 0.65em;
+ 
   font-size: 1em;
   line-height: 1.5;
   border-radius: 0.25em;
 }
 
 .fc-button:hover {
-  color: #212529;
+  color: #779abd;
   text-decoration: none;
 }
 
@@ -720,7 +722,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 
 .fc-button-primary:hover {
   color: #fff;
-  background-color: #1e2b37;
+  background-color: rgb(179, 171, 73);
   border-color: #1a252f;
 }
 
@@ -731,15 +733,15 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 
 .fc-button-primary:disabled {
   color: #fff;
-  background-color: #2C3E50;
-  border-color: #2C3E50;
+  background-color: rgb(179, 171, 73);
+  border-color: rgb(76, 91, 106);
 }
 
 .fc-button-primary:not(:disabled):active,
 .fc-button-primary:not(:disabled).fc-button-active {
   color: #fff;
-  background-color: #1a252f;
-  border-color: #151e27;
+  background-color: rgb(179, 171, 73);
+  border-color:rgb(179, 171, 73);
 }
 
 .fc-button-primary:not(:disabled):active:focus,
@@ -750,8 +752,8 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 
 /* icons within buttons */
 .fc-button .fc-icon {
-  vertical-align: middle;
-  font-size: 1.5em;
+  /* vertical-align: middle;
+  font-size: 1.5em; */
 }
 
 /* Buttons Groups
@@ -817,7 +819,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 }
 
 .fc-toolbar.fc-header-toolbar {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .fc-toolbar.fc-footer-toolbar {
@@ -883,8 +885,10 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 .fc tbody,
 .fc-row {
     border-color: #ccc !important;
-    background: #fff !important;
+    /* background: #fff !important; */
   }
+
+
 
   /* kill the overlaid, absolutely-positioned components */
   /* common... */

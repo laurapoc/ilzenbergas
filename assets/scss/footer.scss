@@ -2,11 +2,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Myriad Pro SemiCond";
+  // 
 }
 
 #footer-container {
   position: relative;
+  font-family: "Myriad Pro SemiCond";
 
   .card-footer {
     background: rgba(255, 255, 255, 0.7);

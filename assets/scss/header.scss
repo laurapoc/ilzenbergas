@@ -2,13 +2,14 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Myriad Pro SemiCond";
+  // font-family: "Myriad Pro SemiCond";
   
 }
 
 // main navigation bar:
 
 #main-nav {
+  font-family: "Myriad Pro SemiCond";
   background: rgba(255, 255, 255, 0);
 
   .navbar-toggler {
