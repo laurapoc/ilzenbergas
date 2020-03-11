@@ -267,7 +267,7 @@ temporary rendered events).
 
 .fc-event,
 .fc-event-dot {
-  background-color: #3788d8;
+  background-color: rgb(179, 171, 73);
   /* default BACKGROUND color */
 }
 
@@ -460,6 +460,13 @@ be a descendant of the grid when it is being dragged.
   margin: 1px 2px 0;
   /* spacing between events and edges */
   padding: 0 1px;
+  background: rgb(161, 159, 159);
+  border-color: grey;
+  border-radius: 0%;
+}
+
+.fc-day-grid-event:hover {
+  background: rgb(179, 171, 73);
 }
 
 tr:first-child > td > .fc-day-grid-event {
@@ -474,12 +481,14 @@ tr:first-child > td > .fc-day-grid-event {
 
 .fc-day-grid-event .fc-content {
   /* force events to be one-line tall */
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
 }
 
 .fc-day-grid-event .fc-time {
   font-weight: bold;
+
+  
 }
 
 /* resizer (cursor devices) */
@@ -566,6 +575,7 @@ TODO: more distinction between this file and common.css
 .fc-unthemed .fc-list-view,
 .fc-unthemed .fc-list-heading td {
   border-color: grey;
+
 }
 
 .fc-unthemed .fc-popover {
@@ -575,11 +585,19 @@ TODO: more distinction between this file and common.css
 .fc-unthemed .fc-divider,
 .fc-unthemed .fc-popover .fc-header,
 .fc-unthemed .fc-list-heading td {
-  background: #eee;
+  background: rgb(161, 159, 159);
+
 }
 
+.fc-unthemed .fc-divider,
+.fc-unthemed .fc-popover .fc-header,
+.fc-unthemed .fc-list-heading td:hover {
+  /* color:rgb(179, 171, 73); */
+  color:white;
+  
+}
 .fc-unthemed td.fc-today {
-  background: #fcf8e3;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .fc-unthemed .fc-disabled-day {
@@ -710,7 +728,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 }
 
 .fc-button:disabled {
-  opacity: 0.65;
+  opacity: 1;
 }
 
 /* "primary" coloring */
@@ -807,7 +825,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 /* List View
 --------------------------------------------------------------------------------------------------*/
 .fc-unthemed .fc-list-item:hover td {
-  background-color: #f5f5f5;
+  background-color: rgba(179, 171, 73, 0.7);
 }
 
 /* Toolbar
@@ -816,6 +834,12 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media all and (max-width: 500px) {
+  .fc-toolbar {
+    display: block;
+  }
 }
 
 .fc-toolbar.fc-header-toolbar {
