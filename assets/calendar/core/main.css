@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .fc {
   direction: ltr;
-  text-align: left;
+  text-align: center;
   font-family: "Myriad Pro SemiCond";
 }
 
@@ -18,8 +18,8 @@ body .fc {
 --------------------------------------------------------------------------------------------------*/
 .fc-highlight {
   /* when user is selecting cells */
-  background: #bce8f1;
-  opacity: 0.3;
+  background: rgb(179, 171, 73);
+  opacity: 0.5;
 }
 
 .fc-bgevent {
@@ -260,7 +260,7 @@ temporary rendered events).
   display: block;
   /* make the <a> tag block */
   font-size: 0.85em;
-  line-height: 1.4;
+  line-height: 1;
   border-radius: 3px;
   border: 1px solid #3788d8;
 }
@@ -514,10 +514,15 @@ a.fc-more {
   font-size: 0.85em;
   cursor: pointer;
   text-decoration: none;
+  border: 1px solid grey;
+  background: rgb(161, 159, 159);
+  border-color: grey;
+  border-radius: 0%;
 }
 
 a.fc-more:hover {
   text-decoration: underline;
+  background: rgb(179, 171, 73);
 }
 
 .fc-limited {
@@ -597,7 +602,7 @@ TODO: more distinction between this file and common.css
   
 }
 .fc-unthemed td.fc-today {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(207, 203, 203, 0.651);
 }
 
 .fc-unthemed .fc-disabled-day {

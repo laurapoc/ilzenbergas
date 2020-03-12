@@ -2,12 +2,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  // 
+  
 }
 
 #footer-container {
   position: relative;
   font-family: "Myriad Pro SemiCond";
+  line-height: 1.2;
 
   .card-footer {
     background: rgba(255, 255, 255, 0.7);
