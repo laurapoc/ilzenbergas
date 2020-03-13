@@ -861,7 +861,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 }
 
 .fc-toolbar h2 {
-  font-size: 1.75em;
+  font-size: 1.2em;
   margin: 0;
 }
 
@@ -1085,10 +1085,8 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 }
 
 /* show and hide classes for header buttons */
-.show {
-  display: block;
+.fc-prev-button, .fc-dayGridMonth-button {
+  margin-bottom: 1%;
+  border: 1px solid grey;
 }
 
-.hide {
-  display: none;
-}
