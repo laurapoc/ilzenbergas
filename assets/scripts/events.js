@@ -11,6 +11,13 @@ importTemplate("./background.html", "#background", null);
 
 // CALENDAR:
 
+let dayNumber = document.querySelectorAll(".fc-day-number");
+console.log(dayNumber);
+// dayNumber.addEventListener("click", dayNumberClick);
+// function dayNumberClick() {
+//   console.log(dayNumber);
+// }
+
 document.addEventListener("DOMContentLoaded", function() {
   let calendarEl = document.getElementById("calendar");
   let initialLocaleCode = "lt";
@@ -55,7 +62,17 @@ document.addEventListener("DOMContentLoaded", function() {
   y = today.getFullYear();
   m = today.getMonth();
   d = today.getDate();
-  let calendar = new FullCalendar.Calendar(calendarEl, {
+
+  let listView = "listWeek";
+  let monthView = "dayGridMonth";
+
+  let headerProperties = {
+    left: "title",
+    center: "listWeek, dayGridMonth",
+    right: "prev, today, next"
+  };
+
+  let calendarProperties = {
     firstDay: 1,
     locale: initialLocaleCode,
     plugins: ["dayGrid", "list", "timeGrid", "interaction"],
@@ -73,11 +90,9 @@ document.addEventListener("DOMContentLoaded", function() {
       meridiem: false, //lowercase, short, narrow, false (display of AM/PM)
       hour12: false //true, false
     },
-    header: {
-      left: "title",
-      center: "",
-      right: "prev, today, next"
-    },
+
+    header: headerProperties,
+
     contentHeight: "auto",
     events: eventsList,
     eventRender: function(info) {
@@ -85,18 +100,55 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     dateClick: function(info) {
       console.log("date clicked");
-
+    },
+    navLinkDayClick: function(date, jsEvent) {
+      console.log(date, jsEvent);
+      calendar.gotoDate(date);
+      calendar.changeView("dayGrid");
+      if ($(window).width() < 765) {
+        console.log("less than 765");
+        $(".fc-dayGridMonth-button").hide();
+        let buttonWeek = $(".fc-listWeek-button").show();
+        buttonWeek.click(function() {
+          $(".fc-dayGridMonth-button").hide();
+          $(".fc-listWeek-button").hide();
+        });
+      } else {
+        console.log("more then 765");
+        $(".fc-listWeek-button").hide();
+        let buttonMonth = $(".fc-dayGridMonth-button").show();
+        buttonMonth.click(function() {
+          $(".fc-dayGridMonth-button").hide();
+          $(".fc-listWeek-button").hide();
+        });
+      }
     },
     eventClick: function(info) {
       console.log("event clicked");
-
     },
     windowResize: function(view) {
       // alert('The calendar has adjusted to a window resize');
-      let adjustedView = $(window).width() < 765 ? "listWeek" : "dayGridMonth";
-      calendar.changeView(adjustedView);
+      if ($(window).width() < 765) {
+        calendarProperties.defaultView = listView;
+      } else {
+        calendarProperties.defaultView = monthView;
+      }
+
+      //calendar.changeView(adjustedView);
+
+      calendar.destroy();
+
+      calendar = new FullCalendar.Calendar(calendarEl, calendarProperties);
+
+      calendar.render();
+      $(".fc-dayGridMonth-button").hide();
+      $(".fc-listWeek-button").hide();
     }
-  });
+  };
+
+  let calendar = new FullCalendar.Calendar(calendarEl, calendarProperties);
 
   calendar.render();
+  $(".fc-dayGridMonth-button").hide();
+  $(".fc-listWeek-button").hide();
 });

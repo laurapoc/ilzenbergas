@@ -602,7 +602,7 @@ TODO: more distinction between this file and common.css
   
 }
 .fc-unthemed td.fc-today {
-  background: rgba(207, 203, 203, 0.651);
+  background: rgba(179, 176, 176, 0.651);
 }
 
 .fc-unthemed .fc-disabled-day {
@@ -1082,4 +1082,13 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
     display: none;
     /* don't display any button-related controls */
   }
+}
+
+/* show and hide classes for header buttons */
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
