@@ -9,6 +9,52 @@ importTemplate("./footer.html", "#footer", null);
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
+// 1. susirasti template'a, kuri klonuosiu
+const eventProperties = [
+  {
+    contentImage: "assets/img/calendar/jazzu.jpg",
+    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
+    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
+     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
+      Sed debitis itaque eaque est eligendi temporibus.
+`,
+    price: "30 eur",
+    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+  },
+  {
+    contentImage: "assets/img/calendar/piano.jpg",
+    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
+    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
+     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
+      Sed debitis itaque eaque est eligendi temporibus.
+`,
+    price: "40 eur",
+    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+  },
+  {
+    contentImage: "assets/img/calendar/foje.png",
+
+    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
+    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
+     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
+      Sed debitis itaque eaque est eligendi temporibus.
+`,
+    price: "20 eur",
+    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+  },
+  {
+    contentImage: "assets/img/calendar/jazzu-1.jpg",
+    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
+    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
+     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
+      Sed debitis itaque eaque est eligendi temporibus.
+`,
+    price: "25 eur",
+    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+  }
+];
+// loadEvent();
+
 // CALENDAR:
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -17,38 +63,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let eventsList = [
       {
-        title: "Koncertas",
+        title: "Foje",
         start: "2020-03-11T19:00",
         end: "2020-03-11T23:00",
-        info: "some more info"
+        info: "some more info",
+        id: 2
       },
       {
-        title: "dar vienas koncertas",
+        title: "Fortepijono koncertas",
         start: "2020-03-13T12:00",
         end: "2020-03-13T17:00",
-        info: "papildoma informacija"
+        info: "papildoma informacija",
+        id: 1
       },
       {
         title: "Jazzu",
         start: "2020-03-13T19:00",
         end: "2020-03-13T23:00",
-        info: "papildomas trumpas aprašymas apie koncertą, laiką ar pan."
+        info: "papildomas trumpas aprašymas apie koncertą, laiką ar pan.",
+        id: 0
       },
 
       {
         title: "Jazzu",
-        date: "2020-06-06",
-        info: "jazzu aprašymas"
-      },
-      {
-        title: "something else",
-        date: "2020-06-02",
-        info: "some more info"
-      },
-      {
-        title: "some concert",
-        date: "2020-06-07",
-        info: "some more info"
+        start: "2020-06-06T19:00",
+        end: "2020-06-06T23:00",
+        info: "jazzu aprašymas",
+        id: 3
       }
     ],
     today = new Date();
@@ -119,8 +160,10 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     },
     // event click:
+
     eventClick: function(info) {
       console.log("event clicked");
+      loadEvent(eventProperties[info.event.id]);
     },
     // Change view on windows resize:
     windowResize: function(view) {
@@ -143,3 +186,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
   calendar.render();
 });
+
+function loadEvent(eventContent) {
+  let eventTemplate = document.querySelector("#event-info");
+  // 2. susirasti prie ko kabinsiu template'a
+  let eventParent = document.querySelector("#event-parent");
+  eventParent.textContent = "";
+  // 3. klonuojam template'a
+  let clone = eventTemplate.content.cloneNode(true);
+  // 4. manipuliuoju template'o turiniu:
+  let imageTag = clone.getElementById("event-picture");
+  imageTag.src = eventContent.contentImage;
+  let price = clone.getElementById("event-price");
+  price.textContent = eventContent.price;
+  let buyButton = clone.getElementById("buy-button");
+  buyButton.href = eventContent.buyButton;
+  console.log(buyButton);
+  let eventText = clone.getElementById("event-text");
+  eventText.textContent = eventContent.eventText;
+  // "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptatibus, ipsa esse non exercitationem consectetur similique atque nam placeat provident?";
+  // priskiriam turini prie nurodyto tevo:
+  eventParent.appendChild(clone);
+}

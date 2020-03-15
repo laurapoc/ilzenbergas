@@ -9,25 +9,23 @@
     <link href="assets/css/footer.css" rel="stylesheet" type="text/css" />
 
     <link href="assets/css/events.css" rel="stylesheet" type="text/css" />
-    <link href='assets/calendar/core/main.css' rel='stylesheet' type="text/css"/>
-    <link href='assets/calendar/daygrid/main.css' rel='stylesheet' type="text/css"/>
-    <link href='assets/calendar/timegrid/main.css' rel='stylesheet' type="text/css"/>
-    <link href='assets/calendar/list/main.css' rel='stylesheet' type="text/css"/>
-
-
+    <link href="assets/calendar/core/main.css" rel="stylesheet" type="text/css" />
+    <link href="assets/calendar/daygrid/main.css" rel="stylesheet" type="text/css" />
+    <link href="assets/calendar/timegrid/main.css" rel="stylesheet" type="text/css" />
+    <link href="assets/calendar/list/main.css" rel="stylesheet" type="text/css" />
 
     <!-- <script src="https://kit.fontawesome.com/b52cc7db39.js" crossorigin="anonymous"></script> -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
 
-    <script src='assets/calendar/core/main.js'></script>
-    <script src='assets/calendar/core/locales-all.min.js'></script>
-    <script src='assets/calendar/list/main.js'></script>
-    <script src='assets/calendar/daygrid/main.js'></script>
-    <script src='assets/calendar/moment/main.js'></script>
-    <script src='assets/calendar/timegrid/main.js'></script>
-    <script src='assets/calendar/interaction/main.js'></script>
+    <script src="assets/calendar/core/main.js"></script>
+    <script src="assets/calendar/core/locales-all.min.js"></script>
+    <script src="assets/calendar/list/main.js"></script>
+    <script src="assets/calendar/daygrid/main.js"></script>
+    <script src="assets/calendar/moment/main.js"></script>
+    <script src="assets/calendar/timegrid/main.js"></script>
+    <script src="assets/calendar/interaction/main.js"></script>
 
     <title>ilzenbergas.lt/renginiai</title>
   </head>
@@ -43,19 +41,26 @@
         <!-- content -->
         <div id="events-content">
           <div class="d-lg-flex">
-            <div id='calendar' class="col-lg-7"></div>
-            <div class="col-lg-5">
-              <img id="event-picture" class="pt-2" src="assets/img/calendar/jazzu.jpg" alt="jazzu_foto">
+            <div id="calendar" class="col-lg-7"></div>
+            <div id="event-parent" class="col-lg-5">
+              <!-- <img id="event-picture" class="pt-2" src="assets/img/calendar/jazzu.jpg" alt="jazzu_foto"> -->
             </div>
           </div>
           <div class="px-3 pt-4 pt-lg-3 ">some other content</div>
           <!-- ********************************** -->
 
-          
           <!-- *************************** -->
         </div>
       </div>
     </div>
+    <template id="event-info">
+      <img id="event-picture" class="pt-2" src="" alt="event picture" />
+      <div class="d-flex justify-content-end pt-2">
+        <p id="event-price" class="mb-0"></p>
+        <a id="buy-button" class="btn btn-success mx-2 py-0" href="#" role="button" target="_blank">PIRKTI</a>
+      </div>
+      <p id="event-text" class="pt-3"></p>
+    </template>
 
     <!-- footer -->
     <div id="footer"></div>
