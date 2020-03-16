@@ -14,13 +14,13 @@
     <link href="assets/calendar/timegrid/main.css" rel="stylesheet" type="text/css" />
     <link href="assets/calendar/list/main.css" rel="stylesheet" type="text/css" />
 
-    <!-- <script src="https://kit.fontawesome.com/b52cc7db39.js" crossorigin="anonymous"></script> -->
+
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
 
     <script src="assets/calendar/core/main.js"></script>
-    <script src="assets/calendar/core/locales-all.min.js"></script>
+    <script src="assets/calendar/core/locales-all.js"></script>
     <script src="assets/calendar/list/main.js"></script>
     <script src="assets/calendar/daygrid/main.js"></script>
     <script src="assets/calendar/moment/main.js"></script>
@@ -40,13 +40,40 @@
 
         <!-- content -->
         <div id="events-content">
-          <div class="d-lg-flex">
-            <div id="calendar" class="col-lg-7"></div>
-            <div id="event-parent" class="col-lg-5">
-              <!-- <img id="event-picture" class="pt-2" src="assets/img/calendar/jazzu.jpg" alt="jazzu_foto"> -->
+          <div class="flex-column">
+            <div class="d-lg-flex">
+              <div id="calendar" class="col-lg-7 align-self-start"></div>
+              <div id="event-parent" class="col-lg-5 pt-4 mt-lg-2 align-self-stretch">
+                <!-- <img id="event-picture" class="pt-2" src="assets/img/calendar/jazzu.jpg" alt="jazzu_foto"> -->
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="px-3 pt-4 pt-lg-3 ">
+                <iframe
+                  width="425"
+                  height="344"
+                  src="https://www.youtube.com/embed/F9Bo89m2f6g"
+                  frameborder="0"
+                  allowfullscreen
+                 
+                >
+                </iframe>
+              </div>
+              <div class="px-3 pt-4 pt-lg-3 ">
+                <iframe
+                  width="769"
+                  height="433"
+                  src="https://www.youtube.com/embed/68MNjuBwFuQ?list=RDEMdRM3ETeNwmlcB4t8WBTMhg"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                 
+                ></iframe>
+              </div>
             </div>
           </div>
-          <div class="px-3 pt-4 pt-lg-3 ">some other content</div>
+
+
           <!-- ********************************** -->
 
           <!-- *************************** -->
@@ -59,7 +86,7 @@
         <p id="event-price" class="mb-0"></p>
         <a id="buy-button" class="btn btn-success mx-2 py-0" href="#" role="button" target="_blank">PIRKTI</a>
       </div>
-      <p id="event-text" class="pt-3"></p>
+      <p id="event-text" class="text-justify pt-3"></p>
     </template>
 
     <!-- footer -->

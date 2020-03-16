@@ -9,6 +9,7 @@ importTemplate("./footer.html", "#footer", null);
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
+
 // 1. susirasti template'a, kuri klonuosiu
 const eventProperties = [
   {
@@ -19,7 +20,7 @@ const eventProperties = [
       Sed debitis itaque eaque est eligendi temporibus.
 `,
     price: "30 eur",
-    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+    buyButton: "https://www.tiketa.lt/"
   },
   {
     contentImage: "assets/img/calendar/piano.jpg",
@@ -33,14 +34,13 @@ const eventProperties = [
   },
   {
     contentImage: "assets/img/calendar/foje.png",
-
     eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
     impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
      tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
       Sed debitis itaque eaque est eligendi temporibus.
 `,
     price: "20 eur",
-    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+    buyButton: "https://www.tiketa.lt/"
   },
   {
     contentImage: "assets/img/calendar/jazzu-1.jpg",

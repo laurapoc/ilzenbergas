@@ -1090,3 +1090,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   border: 1px solid grey;
 }
 
+/* no event mesage box: */
+.fc-list-empty-wrap1 {
+  border: 2px solid grey;
+}
