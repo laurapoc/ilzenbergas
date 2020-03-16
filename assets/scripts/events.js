@@ -9,7 +9,6 @@ importTemplate("./footer.html", "#footer", null);
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
-
 // 1. susirasti template'a, kuri klonuosiu
 const eventProperties = [
   {
@@ -34,10 +33,12 @@ const eventProperties = [
   },
   {
     contentImage: "assets/img/calendar/foje.png",
-    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
-    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
-     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
-      Sed debitis itaque eaque est eligendi temporibus.
+    eventText: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Ipsum quo corporis dicta vitae non corrupti iste quaerat perspiciatis, ducimus eos,
+      delectus magnam voluptatibus commodi quisquam facere nostrum eveniet dolores?
+       Voluptates incidunt qui veritatis molestiae nostrum alias doloremque temporibus quas consequatur optio corrupti,
+        voluptatibus, dolores ullam voluptatem minus. Ut qui ipsum ipsa quo numquam temporibus impedit maiores perferendis reiciendis officiis. Rerum nemo id, architecto incidunt repellendus voluptate. Alias inventore et voluptates, autem non sed sit ab suscipit vitae repellat ea perspiciatis hic aut! Veritatis ipsum odio quos voluptas suscipit voluptatibus maiores tempora laudantium dolor, ad ratione animi id nulla deserunt? In voluptatibus reiciendis quia. Nam quas sapiente ut eius recusandae fugit nemo maxime tempora rerum laudantium, amet quae obcaecati error quis alias nesciunt saepe commodi libero fugiat perferendis adipisci fuga voluptatum dicta cum. Quas, nam minima eveniet repellendus labore tenetur sapiente saepe repellat quia cum laudantium, nemo, cumque officia sequi itaque quos ullam voluptatum magnam? Commodi fugit beatae ut. Deserunt ducimus id ex numquam illum iusto nihil qui nesciunt et dolores odio, rem, veniam vel, mollitia dicta dignissimos voluptate molestiae! Nemo vel tenetur non quidem. Ab voluptatum facere dicta nesciunt temporibus saepe reiciendis itaque? Adipisci iste perferendis iure assumenda. Similique, earum!
+
 `,
     price: "20 eur",
     buyButton: "https://www.tiketa.lt/"

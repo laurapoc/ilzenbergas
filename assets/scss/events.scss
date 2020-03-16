@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  
+
   // line-height: 1.2;
 }
 
@@ -42,7 +42,7 @@
   iframe {
     top: 0;
     left: 0;
-    width: 250px;
+    width: 100%;
     height: auto;
   }
 }
@@ -56,10 +56,8 @@
   #events-content {
     .d-lg-flex {
       height: 500px;
-
     }
   }
-  
 }
 
 @media all and (max-width: 992px) {
@@ -70,6 +68,9 @@
         // margin-top: 3%;
       }
     }
+    iframe {
+      // width: 250px;
+
+    }
   }
-  
 }
