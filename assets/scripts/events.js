@@ -9,7 +9,6 @@ importTemplate("./footer.html", "#footer", null);
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
-// 1. susirasti template'a, kuri klonuosiu
 const eventProperties = [
   {
     contentImage: "assets/img/calendar/jazzu.jpg",
@@ -19,7 +18,16 @@ const eventProperties = [
       Sed debitis itaque eaque est eligendi temporibus.
 `,
     price: "30 eur",
-    buyButton: "https://www.tiketa.lt/"
+    buyButton: "https://www.tiketa.lt/",
+    extendedContent: `JAZZU-Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
+      nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
+       At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
+        dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
+         nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
+          Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
+           Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
+    `
   },
   {
     contentImage: "assets/img/calendar/piano.jpg",
@@ -29,19 +37,35 @@ const eventProperties = [
       Sed debitis itaque eaque est eligendi temporibus.
 `,
     price: "40 eur",
-    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+    buyButton: "https://ozas.lt/paslauga/tiketa-lt/",
+    extendedContent: `PIANO-Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
+     nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
+      At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
+       dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
+        nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
+         Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
+          Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
+   `
   },
   {
     contentImage: "assets/img/calendar/foje.png",
     eventText: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
      Ipsum quo corporis dicta vitae non corrupti iste quaerat perspiciatis, ducimus eos,
       delectus magnam voluptatibus commodi quisquam facere nostrum eveniet dolores?
-       Voluptates incidunt qui veritatis molestiae nostrum alias doloremque temporibus quas consequatur optio corrupti,
-        voluptatibus, dolores ullam voluptatem minus. Ut qui ipsum ipsa quo numquam temporibus impedit maiores perferendis reiciendis officiis. Rerum nemo id, architecto incidunt repellendus voluptate. Alias inventore et voluptates, autem non sed sit ab suscipit vitae repellat ea perspiciatis hic aut! Veritatis ipsum odio quos voluptas suscipit voluptatibus maiores tempora laudantium dolor, ad ratione animi id nulla deserunt? In voluptatibus reiciendis quia. Nam quas sapiente ut eius recusandae fugit nemo maxime tempora rerum laudantium, amet quae obcaecati error quis alias nesciunt saepe commodi libero fugiat perferendis adipisci fuga voluptatum dicta cum. Quas, nam minima eveniet repellendus labore tenetur sapiente saepe repellat quia cum laudantium, nemo, cumque officia sequi itaque quos ullam voluptatum magnam? Commodi fugit beatae ut. Deserunt ducimus id ex numquam illum iusto nihil qui nesciunt et dolores odio, rem, veniam vel, mollitia dicta dignissimos voluptate molestiae! Nemo vel tenetur non quidem. Ab voluptatum facere dicta nesciunt temporibus saepe reiciendis itaque? Adipisci iste perferendis iure assumenda. Similique, earum!
 
 `,
     price: "20 eur",
-    buyButton: "https://www.tiketa.lt/"
+    buyButton: "https://www.tiketa.lt/",
+    extendedContent: `FOJE-Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
+     nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
+      At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
+       dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
+        nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
+         Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
+          Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
+   `
   },
   {
     contentImage: "assets/img/calendar/jazzu-1.jpg",
@@ -51,7 +75,49 @@ const eventProperties = [
       Sed debitis itaque eaque est eligendi temporibus.
 `,
     price: "25 eur",
-    buyButton: "https://ozas.lt/paslauga/tiketa-lt/"
+    buyButton: "https://ozas.lt/paslauga/tiketa-lt/",
+    extendedContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
+     nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
+      At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
+       dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
+        nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
+         Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
+          Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
+   `
+  }
+];
+
+const youtubeVideos = [
+  {
+    youtubeEmbededVideo: `<iframe
+  width="769"
+  height="433"
+  src="https://www.youtube.com/embed/rQi_ys11yfE"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>`
+  },
+  {
+    youtubeEmbededVideo: `<iframe
+width="769"
+height="433"
+src="https://www.youtube.com/embed/68MNjuBwFuQ?list=RDEMdRM3ETeNwmlcB4t8WBTMhg"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen
+></iframe>`
+  },
+  {
+    youtubeEmbededVideo: `<iframe
+width="769"
+height="433"
+src="https://www.youtube.com/embed/CyFF5Ka9pss"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen
+></iframe>`
   }
 ];
 // loadEvent();
@@ -189,6 +255,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function loadEvent(eventContent) {
+  // 1. susirasti template'a, kuri klonuosiu
   let eventTemplate = document.querySelector("#event-info");
   // 2. susirasti prie ko kabinsiu template'a
   let eventParent = document.querySelector("#event-parent");
@@ -205,7 +272,45 @@ function loadEvent(eventContent) {
   console.log(buyButton);
   let eventText = clone.getElementById("event-text");
   eventText.textContent = eventContent.eventText;
-  // "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum voluptatibus, ipsa esse non exercitationem consectetur similique atque nam placeat provident?";
+
   // priskiriam turini prie nurodyto tevo:
   eventParent.appendChild(clone);
+
+  // papildomo turinio template'as:
+  let extendedEventContentTemplate = document.getElementById("event-more-info");
+  let extendedContentParent = document.getElementById("event-more-content-parent");
+  extendedContentParent.textContent = "";
+  let cloneExtendedContent = extendedEventContentTemplate.content.cloneNode(true);
+  let paragraphTag = cloneExtendedContent.getElementById("extended-text");
+  paragraphTag.textContent = eventContent.extendedContent;
+  extendedContentParent.appendChild(cloneExtendedContent);
+}
+// youtube video clone:
+let youtubeEmbededVideoTemplate = document.getElementById("youtube-link-template");
+let youtubeEmbededVideoParent = document.getElementById("youtube-link-parent");
+youtubeEmbededVideoParent.textContent = "";
+
+youtubeVideos.forEach(youtubeVideo => {
+  let cloneVideo = youtubeEmbededVideoTemplate.content.cloneNode(true);
+  let innerDivTag = cloneVideo.querySelector("div");
+  
+  innerDivTag.innerHTML = youtubeVideo.youtubeEmbededVideo;
+  youtubeEmbededVideoParent.appendChild(cloneVideo);
+});
+
+
+
+function toggleExtendedContent() {
+  // toggle text content
+  let extendedContentOnButton = document.querySelector(".toggle-extended-text");
+  extendedContentOnButton.classList.toggle("show");
+  // toggle button text content
+  let buttonOfExtendedContent = document.getElementById("button-extend-content");
+  console.log(buttonOfExtendedContent.innerText);
+  if (buttonOfExtendedContent.innerText === "Plačiau") {
+    buttonOfExtendedContent.innerText = "Suskleisti";
+    console.log(buttonOfExtendedContent.innerText);
+  } else {
+    buttonOfExtendedContent.innerText = "Plačiau";
+  }
 }

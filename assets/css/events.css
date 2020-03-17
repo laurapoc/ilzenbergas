@@ -15,19 +15,41 @@
   padding: 2%;
   line-height: 1.2;
 }
-#events-content .d-lg-flex {
-  height: 550px;
-}
 #events-content #calendar {
   width: 100%;
+  height: auto;
   overflow: visible;
   line-height: 1;
 }
 #events-content #event-picture {
-  width: 100%;
+  max-width: 100%;
+}
+#events-content #event-text {
+  margin-bottom: 1%;
 }
 #events-content #event-price {
   font-size: 1.5rem;
+}
+#events-content #buy-button {
+  background: #b3ab49;
+  border: 1px solid grey;
+}
+#events-content #buy-button:hover {
+  background: #918a3f;
+}
+#events-content #button-extend-content {
+  background: #6c757d;
+}
+#events-content #button-extend-content:hover {
+  background: #b3ab49;
+  border: 1px solid grey;
+  box-shadow: none;
+}
+#events-content .toggle-extended-text {
+  display: none;
+}
+#events-content .show {
+  display: block;
 }
 #events-content iframe {
   top: 0;
@@ -39,16 +61,6 @@
 @font-face {
   font-family: "Myriad Pro SemiCond";
   src: url("../fonts/MyriadPro-SemiCn.otf");
-}
-@media all and (max-width: 110px) {
-  #events-content .d-lg-flex {
-    height: 500px;
-  }
-}
-@media all and (max-width: 992px) {
-  #events-content .d-lg-flex {
-    height: auto;
-  }
 }
 
 /*# sourceMappingURL=events.css.map */
