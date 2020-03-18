@@ -9,157 +9,53 @@ importTemplate("./footer.html", "#footer", null);
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
-const eventProperties = [
-  {
-    contentImage: "assets/img/calendar/jazzu.jpg",
-    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
-    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
-     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
-      Sed debitis itaque eaque est eligendi temporibus.
-`,
-    price: "30 eur",
-    buyButton: "https://www.tiketa.lt/",
-    extendedContent: `JAZZU-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-     Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
-      nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
-       At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
-        dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
-         nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
-          Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
-           Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
-    `
-  },
-  {
-    contentImage: "assets/img/calendar/piano.jpg",
-    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
-    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
-     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
-      Sed debitis itaque eaque est eligendi temporibus.
-`,
-    price: "40 eur",
-    buyButton: "https://ozas.lt/paslauga/tiketa-lt/",
-    extendedContent: `PIANO-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
-     nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
-      At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
-       dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
-        nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
-         Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
-          Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
-   `
-  },
-  {
-    contentImage: "assets/img/calendar/foje.png",
-    eventText: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-     Ipsum quo corporis dicta vitae non corrupti iste quaerat perspiciatis, ducimus eos,
-      delectus magnam voluptatibus commodi quisquam facere nostrum eveniet dolores?
+// IMPORTING EVENTS AND VIDEO DATA:
+fetch("./assets/json/objects_data.json")
+  .then(response => response.json())
+  .then(dataObject => {
+    console.log(dataObject);
+    loadCalendar(dataObject);
+  })
+  .catch(e => {
+    console.log(e);
+  });
 
-`,
-    price: "20 eur",
-    buyButton: "https://www.tiketa.lt/",
-    extendedContent: `FOJE-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
-     nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
-      At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
-       dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
-        nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
-         Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
-          Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
-   `
-  },
-  {
-    contentImage: "assets/img/calendar/jazzu-1.jpg",
-    eventText: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, 
-    impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores,
-     tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid.
-      Sed debitis itaque eaque est eligendi temporibus.
-`,
-    price: "25 eur",
-    buyButton: "https://ozas.lt/paslauga/tiketa-lt/",
-    extendedContent: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt,
-     nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis!
-      At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione,
-       dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima,
-        nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! Debitis dignissimos nisi quia.
-         Cupiditate deleniti atque perspiciatis libero deserunt sit aperiam labore quia exercitationem eveniet.
-          Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!
-   `
-  }
-];
+// IMPORTING YOUTUBE VIDEO DATA:
+fetch("./assets/json/video_data.json")
+  .then(response => response.json())
+  .then(videoData => {
+    console.log(videoData);
+    loadVideoData(videoData);
+  })
+  .catch(e => {
+    console.log(e);
+  });
 
-const youtubeVideos = [
-  {
-    youtubeEmbededVideo: `<iframe
-  width="769"
-  height="433"
-  src="https://www.youtube.com/embed/rQi_ys11yfE"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>`
-  },
-  {
-    youtubeEmbededVideo: `<iframe
-width="769"
-height="433"
-src="https://www.youtube.com/embed/68MNjuBwFuQ?list=RDEMdRM3ETeNwmlcB4t8WBTMhg"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen
-></iframe>`
-  },
-  {
-    youtubeEmbededVideo: `<iframe
-width="769"
-height="433"
-src="https://www.youtube.com/embed/CyFF5Ka9pss"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen
-></iframe>`
-  }
-];
-// loadEvent();
+function loadVideoData(videoData) {
+  console.log(videoData);
+  // youtube video clone:
+  let youtubeEmbededVideoTemplate = document.getElementById("youtube-link-template");
+  let youtubeEmbededVideoParent = document.getElementById("youtube-link-parent");
+  youtubeEmbededVideoParent.textContent = "";
+
+  videoData.videos.forEach(youtubeVideo => {
+    let cloneVideo = youtubeEmbededVideoTemplate.content.cloneNode(true);
+    let innerDivTag = cloneVideo.querySelector("div");
+
+    innerDivTag.innerHTML = youtubeVideo.youtubeEmbededVideo;
+    youtubeEmbededVideoParent.appendChild(cloneVideo);
+  });
+}
 
 // CALENDAR:
 
-document.addEventListener("DOMContentLoaded", function() {
+function loadCalendar(dataObject) {
   let calendarEl = document.getElementById("calendar");
   let initialLocaleCode = "lt";
 
-  let eventsList = [
-      {
-        title: "Foje",
-        start: "2020-03-11T19:00",
-        end: "2020-03-11T23:00",
-        info: "some more info",
-        id: 2
-      },
-      {
-        title: "Fortepijono koncertas",
-        start: "2020-03-13T12:00",
-        end: "2020-03-13T17:00",
-        info: "papildoma informacija",
-        id: 1
-      },
-      {
-        title: "Jazzu",
-        start: "2020-03-13T19:00",
-        end: "2020-03-13T23:00",
-        info: "papildomas trumpas aprašymas apie koncertą, laiką ar pan.",
-        id: 0
-      },
+  let eventsList = dataObject.events;
 
-      {
-        title: "Jazzu",
-        start: "2020-06-06T19:00",
-        end: "2020-06-06T23:00",
-        info: "jazzu aprašymas",
-        id: 3
-      }
-    ],
-    today = new Date();
+  let today = new Date();
   y = today.getFullYear();
   m = today.getMonth();
   d = today.getDate();
@@ -230,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     eventClick: function(info) {
       console.log("event clicked");
-      loadEvent(eventProperties[info.event.id]);
+      loadEvent(eventsList[info.event.id]);
     },
     // Change view on windows resize:
     windowResize: function(view) {
@@ -252,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let calendar = new FullCalendar.Calendar(calendarEl, calendarProperties);
 
   calendar.render();
-});
+}
 
 function loadEvent(eventContent) {
   // 1. susirasti template'a, kuri klonuosiu
@@ -285,20 +181,6 @@ function loadEvent(eventContent) {
   paragraphTag.textContent = eventContent.extendedContent;
   extendedContentParent.appendChild(cloneExtendedContent);
 }
-// youtube video clone:
-let youtubeEmbededVideoTemplate = document.getElementById("youtube-link-template");
-let youtubeEmbededVideoParent = document.getElementById("youtube-link-parent");
-youtubeEmbededVideoParent.textContent = "";
-
-youtubeVideos.forEach(youtubeVideo => {
-  let cloneVideo = youtubeEmbededVideoTemplate.content.cloneNode(true);
-  let innerDivTag = cloneVideo.querySelector("div");
-  
-  innerDivTag.innerHTML = youtubeVideo.youtubeEmbededVideo;
-  youtubeEmbededVideoParent.appendChild(cloneVideo);
-});
-
-
 
 function toggleExtendedContent() {
   // toggle text content

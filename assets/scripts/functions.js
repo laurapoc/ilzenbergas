@@ -14,7 +14,7 @@ function importTemplate(templateUrl, templateId, jsLocation) {
         document.body.appendChild(newScript);
       }
     }).catch( e => {
-      // console.log(e);
+      console.log(e);
     });
 }
 

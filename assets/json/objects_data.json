@@ -1,0 +1,51 @@
+{"events": [
+    {
+      "title": "Jazzu",
+        "start": "2020-03-13T19:00",
+        "end": "2020-03-13T23:00",
+        "info": "papildomas trumpas aprašymas apie koncertą, laiką ar pan.",
+        "id": 0,
+      "contentImage": "assets/img/calendar/jazzu.jpg",
+      "eventText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores, tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid. Sed debitis itaque eaque est eligendi temporibus.",
+      "price": "30 eur",
+      "buyButton": "https://www.tiketa.lt/",
+      "extendedContent": "JAZZU-Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt, nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis! At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione, dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima, nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! ebitis dignissimos nisi quia. Cupiditate deleniti atque perspiciatis libero deserunt sit periam labore quia exercitationem eveniet. Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!"
+    },
+    {
+      "title": "Fortepijono koncertas",
+        "start": "2020-03-13T12:00",
+        "end": "2020-03-13T17:00",
+        "info": "papildoma informacija",
+        "id": 1,
+      "contentImage": "assets/img/calendar/piano.jpg",
+      "eventText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores, tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid. Sed debitis itaque eaque est eligendi temporibus.",
+      "price": "40 eur",
+      "buyButton": "https://ozas.lt/paslauga/tiketa-lt/",
+      "extendedContent": "PIANO-Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt, nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis! At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione, dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima, nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! ebitis dignissimos nisi quia. Cupiditate deleniti atque perspiciatis libero deserunt sit periam labore quia exercitationem eveniet. Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!"
+    },
+    {
+      "title": "Foje",
+        "start": "2020-03-11T19:00",
+        "end": "2020-03-11T23:00",
+        "info": "some more info",
+        "id": 2,
+      "contentImage": "assets/img/calendar/foje.png",
+      "eventText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores.",
+      "price": "20 eur",
+      "buyButton": "https://www.tiketa.lt/",
+      "extendedContent": "FOJE-Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt, nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis! At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione, dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima, nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! ebitis dignissimos nisi quia. Cupiditate deleniti atque perspiciatis libero deserunt sit periam labore quia exercitationem eveniet. Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!"
+    },
+    {
+      "title": "Jazzu",
+        "start": "2020-06-06T19:00",
+        "end": "2020-06-06T23:00",
+        "info": "jazzu aprašymas",
+        "id": 3,
+      "contentImage": "assets/img/calendar/jazzu-1.jpg",
+      "eventText": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, impedit aliquam deleniti possimus in amet explicabo excepturi necessitatibus accusamus consectetur quasi perspiciatis blanditiis dolores, tenetur nostrum nulla. Veniam, quasi nesciunt placeat, cumque minima amet exercitationem maiores odit soluta repellat laboriosam rem impedit aliquid. Sed debitis itaque eaque est eligendi temporibus.",
+      "price": "25 eur",
+      "buyButton": "https://ozas.lt/paslauga/tiketa-lt/",
+      "extendedContent": "Lorem ipsum dolor sit amet consectetur adipisicing elit.Excepturi magni beatae necessitatibus? Sequi explicabo magnam omnis nesciunt, nisi animi vero natus provident nostrum et inventore unde totam, deserunt perspiciatis! At aliquid beatae atque veritatis hic minima! Recusandae cumque quasi explicabo quisquam ratione, dolorum soluta. Distinctio rem, architecto delectus quia consectetur voluptatum, placeat odit quo ex minima, nihil vel numquam labore provident dolorum mollitia accusantium ut ab nam commodi asperiores! ebitis dignissimos nisi quia. Cupiditate deleniti atque perspiciatis libero deserunt sit periam labore quia exercitationem eveniet. Magnam odit enim nesciunt porro omnis amet, tempore, est labore sunt nam, nemo error. Officia!"
+    }
+]}
+
