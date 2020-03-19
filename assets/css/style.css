@@ -171,9 +171,6 @@ section .text-center .row img {
 .text-center .not-show {
   display: none;
 }
-.text-center .show {
-  display: block;
-}
 
 #btn-dark {
   background: rgba(255, 255, 255, 0);

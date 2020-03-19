@@ -9,7 +9,7 @@ importTemplate("./footer.html", "#footer", null);
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
-// IMPORTING EVENTS AND VIDEO DATA:
+// IMPORTING EVENTS DATA:
 fetch("./assets/json/objects_data.json")
   .then(response => response.json())
   .then(dataObject => {
