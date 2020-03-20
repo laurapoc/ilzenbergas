@@ -35,6 +35,10 @@
 #content #news-link {
   margin-left: 1%;
 }
+#content #news-link #original-article-link {
+  font-size: larger;
+  padding-left: 2%;
+}
 #content .btn-outline-dark {
   background: rgba(255, 255, 255, 0.7);
   margin: 1%;

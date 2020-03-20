@@ -31,7 +31,7 @@ fetch("./assets/json/news_data.json")
 
 function loadNews(newsData) {
   console.log(newsData);
-  // CLONE NEWS TEMPLATES:
+  // CLONE SHORT NEWS TEMPLATE:
   let shortNewsTemplate = document.getElementById("short-new");
   let shortNewsParent = document.getElementById("news-parent");
   shortNewsParent.textContent = "";
