@@ -44,9 +44,23 @@ function setUpMenuItem(menuItem, template, parent) {
 }
 
 function menuItemClick(event) {
-  // console.log(event.target.data);
   selectedMenuItem = event.target.id;
   selectedTemplate = event.target.data.templateToUse;
+  gallerySource = [];
   refreshMenuItems();
   loadSelectedTemplate(selectedTemplate, selectedMenuItem);
 }
+
+function loadSelectedTemplate(template, menuId) {
+  let previousTemplate = templateToLoad;
+  templateToLoad = template;
+  selectedMenuItem = menuId;
+  let contentLocation = document.querySelector("#" + previousTemplate);
+  contentLocation.textContent = "";
+  let galleryLocation = document.querySelector("#gallery");
+  galleryLocation.textContent = "";
+
+  subTemplateData = parkMenuItems.find(element => element.id == menuId);
+  importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
+}
+

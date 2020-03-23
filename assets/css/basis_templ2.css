@@ -8,6 +8,14 @@
 #open-seasons {
   font-size: 1.1rem;
 }
+#open-seasons .repeating-line-card {
+  margin: 1%;
+  max-width: 50%;
+  text-align: center;
+}
+#open-seasons .repeating-line-card .season-card-content {
+  min-height: 113px;
+}
 
 @font-face {
   font-family: "Myriad Pro SemiCond";

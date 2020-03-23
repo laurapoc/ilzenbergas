@@ -1,4 +1,4 @@
-console.log("headers.js starts");
+
 // SHOW NAVBAR DROPDOWN'S MENU
 $("div.dropdown li.dropdown").hover(
   function() {
@@ -37,7 +37,6 @@ let mapIcon = document.querySelector("#map-icon img");
 changeIconColor(mapIcon);
 
 // changing header icons color
-console.log("Page name: ", pageName);
 let url = pageName;
 if (url.includes("park")) {
   document.querySelector("#park").src = "assets/img/round_icons/parkas_yelow.png";

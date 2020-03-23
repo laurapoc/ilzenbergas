@@ -4,8 +4,6 @@ let gallerySource = [];
 // IMPORTING MAIN MENU
 importTemplate("./header.html", "#header", "./assets/scripts/header.js");
 
-
-
 // IMPORTING FOOTER
 importTemplate("./footer.html", "#footer", null);
 
@@ -17,7 +15,7 @@ fetch("./assets/json/news_data.json")
   .then(response => response.json())
   .then(newsData => {
     let params = new URLSearchParams(document.location.search.substring(1));
-    let newsId = params.get("id"); 
+    let newsId = params.get("id");
     loadExtendedNews(newsData.news[newsId]);
     // IMPORTING GALLERY
     gallerySource = newsData.news[newsId].photoGallery;
@@ -27,13 +25,12 @@ fetch("./assets/json/news_data.json")
     let nextNewButton = document.getElementById("button-next");
     previousNewButton.onclick = function goToPrevNew() {
       console.log("prev button clicked");
-      window.location.href = "./news.html?id="+ 0;
+      window.location.href = "./news.html?id=" + 0;
     };
 
     nextNewButton.onclick = function goToPrevNew() {
       console.log("next button clicked");
-      window.location.href = "./news.html?id="+ 1;
-
+      window.location.href = "./news.html?id=" + 1;
     };
   })
   .catch(e => {
@@ -74,7 +71,7 @@ function loadExtendedNews(newsData) {
 function loadRepeatingParagraphBlock(paragraphData) {
   // CLONE REPEATING NEWS BLOCK TEMPLATE:
   let repeatingBlockTemplate = document.getElementById("repeating-paragraph-block");
-
+  console.log(repeatingBlockTemplate);
   let cloneRepBlock = repeatingBlockTemplate.content.cloneNode(true);
   let paragraphHeader = cloneRepBlock.querySelector(".paragraph-header");
   paragraphHeader.textContent = paragraphData.paragraphHeader;
