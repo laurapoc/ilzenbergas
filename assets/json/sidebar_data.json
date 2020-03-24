@@ -171,21 +171,7 @@
         }
       ],
       "lineCardArray": [
-        {
-          "topLineImage": "assets/img/remukai/summer.png",
-          "cardHeading": "SEZONO METU",
-          "strongParagraphArray": [
-            {
-              "strongParagraph": "gegužė - spalis"
-            },
-            {
-              "strongParagraph": "III - VII"
-            }
-          ],
-          "cardParagraph": "(treč.-sekm.)",
-          "bottomStrongParagraph": "10-19 val.",
-          "bottomLineImage": "assets/img/remukai/bottom-line.png"
-        },
+        
         {
           "topLineImage": "assets/img/remukai/winter.png",
           "cardHeading": "KITU METU",
@@ -197,7 +183,7 @@
               "strongParagraph": "VI - VII"
             }
           ],
-          "cardParagraph": "(šešt.-sekm.)",
+          "cardParagraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
           "bottomStrongParagraph": "10-19 val.",
           "bottomLineImage": "assets/img/remukai/bottom-line.png"
         },
@@ -209,6 +195,7 @@
               "strongParagraph": "visus metus"
             }
           ],
+          "cardParagraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
           "bottomStrongParagraph": "10-19 val.",
           "bottomLineImage": "assets/img/remukai/bottom-line.png"
         }
@@ -284,45 +271,17 @@
         }
       ],
       "lineCardArray": [
+        
         {
-          "topLineImage": "assets/img/remukai/summer.png",
-          "cardHeading": "SEZONO METU",
+          "topLineImage": "assets/img/remukai/bottom-line.png",
+          "cardHeading": "LOREM IPSUM",
           "strongParagraphArray": [
             {
-              "strongParagraph": "gegužė - spalis"
-            },
-            {
-              "strongParagraph": "III - VII"
+              "strongParagraph": "SOME TEXT"
             }
           ],
-          "cardParagraph": "(treč.-sekm.)",
-          "bottomStrongParagraph": "10-19 val.",
-          "bottomLineImage": "assets/img/remukai/bottom-line.png"
-        },
-        {
-          "topLineImage": "assets/img/remukai/winter.png",
-          "cardHeading": "KITU METU",
-          "strongParagraphArray": [
-            {
-              "strongParagraph": "lapkritis - balandis"
-            },
-            {
-              "strongParagraph": "VI - VII"
-            }
-          ],
-          "cardParagraph": "(šešt.-sekm.)",
-          "bottomStrongParagraph": "10-19 val.",
-          "bottomLineImage": "assets/img/remukai/bottom-line.png"
-        },
-        {
-          "topLineImage": "assets/img/remukai/more.png",
-          "cardHeading": "ŠVENČIŲ DIENOMIS",
-          "strongParagraphArray": [
-            {
-              "strongParagraph": "visus metus"
-            }
-          ],
-          "bottomStrongParagraph": "10-19 val.",
+          "cardParagraph": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia consectetur quam commodi ullam a nam ab in rerum voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, blanditiis. Excepturi veniam commodi est omnis non quidem sapiente cupiditate ad.",
+          "bottomStrongParagraph": "something important",
           "bottomLineImage": "assets/img/remukai/bottom-line.png"
         }
       ],
@@ -331,15 +290,8 @@
           "paragrapHeading": "Parko lankymo mokestis",
           "paragraphToExtendContent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat quo consequatur reprehenderit dignissimos optio dolore minus labore. Voluptatem voluptate fuga at quam expedita illo consequuntur esse doloremque harum officia modi nemo quasi assumenda voluptatibus aspernatur itaque inventore asperiores, optio earum debitis, iure laudantium dignissimos. Ratione et id repellat nobis libero repudiandae tenetur ipsum voluptatibus! Fugiat veritatis deleniti quas dolor cumque laudantium nostrum sequi accusantium, iusto corporis voluptates eius animi accusamus vitae saepe sapiente nobis incidunt deserunt error ab cupiditate officiis. Excepturi quo minus accusamus totam necessitatibus, laudantium deleniti corporis, nihil, doloremque impedit dicta repellat. Facilis aliquid ducimus saepe non?"
         }
-      ],
-      "photoGallery": [
-        { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
-        { "photoBig": "assets/img/news/mokiniai.jpg", "photoSmall": "assets/img/news/mokiniai_small.jpg" },
-        { "photoBig": "assets/img/news/paper.jpg", "photoSmall": "assets/img/news/paper_small.jpg" },
-        { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
-        { "photoBig": "assets/img/news/mokiniai.jpg", "photoSmall": "assets/img/news/mokiniai_small.jpg" },
-        { "photoBig": "assets/img/news/paper.jpg", "photoSmall": "assets/img/news/paper_small.jpg" }
       ]
+
     }
   ]
 }
