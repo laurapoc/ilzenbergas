@@ -118,8 +118,43 @@
     },
 
 
-    { "text": "Rūmų interjeras XIX a.", "id": "c", "templateToUse": "basis_templ3" },
-    { "text": "Akmens mūrai  XIX a.", "id": "d", "templateToUse": "basis_templ3" },
+    { "text": "Rūmų interjeras XIX a.",
+      "id": "c",
+      "templateToUse": "basis_templ3",
+      "mainHeading": "RŪMŲ INTERJERAS XIX AMŽIUJE",
+      "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+      "carouselItemArray": [
+        {
+          "slidepicture": "assets/img/interjeras/interjeras1-compressor.jpg",
+          "slideDescription": "First slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+          "slideDescription": "Second slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+          "slideDescription": "Third slide"
+        }
+      ]
+
+    },
+    { "text": "Akmens mūrai  XIX a.",
+      "id": "d",
+      "templateToUse": "basis_templ3",
+      "mainHeading": "AKMENS MŪRAI",
+      "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+      "carouselItemArray": [
+        {
+          "slidepicture": "assets/img/interjeras/akmens_murai1.jpg",
+          "slideDescription": "First slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/akmens_murai2.jpg",
+          "slideDescription": "Ilzenbergo dvaro rekonstrukcija"
+        }
+      ]
+    },
 
     {
       "text": "500 metų ąžuolas ILZENBERG",
@@ -148,8 +183,6 @@
           "paragraph": "Dvaro parkas-muziejus ribojasi su ūkinės paskirties žemės sklypais, - jie nuo pavasario iki vėlyvo rudens džiugina ryškia žaluma ir kviečia pasisveikinti su netoliese gyvenančiomis avimis, vištomis, karvėmis."
         }
       ],
-      "additionalInfo": "ISTORINIAI DVARO VALDYTOJAI",
-      "additionalPhoto": "assets/img/masters/Dvaro valdytojai.png",
       "photoGallery": [
         { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
         { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" },
@@ -160,7 +193,8 @@
       ]
     },
 
-    { "text": "Skulptūrų parkas", "id": "f",
+    { "text": "Skulptūrų parkas",
+      "id": "f",
       "templateToUse": "basis_templ2",
       "mainHeading": "PARKAS-MUZIEJUS",
       "pageContentHeading": "Parko lankymas",
@@ -255,10 +289,98 @@
         { "photoBig": "assets/img/news/paper.jpg", "photoSmall": "assets/img/news/paper_small.jpg" }
       ]
     },
-    { "text": "Meilės sala, Meilės tiltas", "id": "h", "templateToUse": "basis_templ3" },
-    { "text": "Kalvystė", "id": "i", "templateToUse": "basis_templ3" },
-    { "text": "Patrankų aikštelė", "id": "j", "templateToUse": "basis_templ3" },
-    { "text": "Parko gyvūnai", "id": "k", "templateToUse": "basis_templ3" },
+    { "text": "Meilės sala, Meilės tiltas",
+      "id": "h",
+      "templateToUse": "basis_templ3",
+      "mainHeading": "MEILĖS SALA",
+      "subheading": "Meilės tiltas jau pasirengęs nustebinti Ilzenbergo dvaro svečius.",
+      "carouselItemArray": [
+        {
+          "slidepicture": "assets/img/interjeras/meiles_sala1.jpg",
+          "slideDescription": "Meilės salos legenda"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/meiles_sala3.jpg",
+          "slideDescription": "Slide description"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/meiles_sala2.jpg",
+          "slideDescription": "Other description"
+        }
+
+      ]
+    },
+
+    { "text": "Kalvystė",
+      "id": "i",
+      "templateToUse": "basis_templ3",
+      "mainHeading": "RŪMŲ INTERJERAS XIX AMŽIUJE",
+      "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+      "carouselItemArray": [
+        {
+          "slidepicture": "assets/img/interjeras/interjeras1-compressor.jpg",
+          "slideDescription": "First slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+          "slideDescription": "Second slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+          "slideDescription": "Third slide"
+        }
+      ]
+    },
+
+    { "text": "Patrankų aikštelė",
+      "id": "j",
+      "templateToUse": "basis_templ3",
+      "mainHeading": "RŪMŲ INTERJERAS XIX AMŽIUJE",
+      "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+      "carouselItemArray": [
+        {
+          "slidepicture": "assets/img/interjeras/interjeras5.jpg",
+          "slideDescription": "First slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras1-compressor.jpg",
+          "slideDescription": "Second slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+          "slideDescription": "Third slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras4.jpg",
+          "slideDescription": "Forth slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+          "slideDescription": "Fifth slide"
+        }
+      ]
+    },
+
+    { "text": "Parko gyvūnai",
+      "id": "k",
+      "templateToUse": "basis_templ3",
+      "mainHeading": "RŪMŲ INTERJERAS XIX AMŽIUJE",
+      "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+      "carouselItemArray": [
+        {
+          "slidepicture": "assets/img/interjeras/interjeras1-compressor.jpg",
+          "slideDescription": "First slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+          "slideDescription": "Second slide"
+        },
+        {
+          "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+          "slideDescription": "Third slide"
+        }
+      ]
+    },
 
     { "text": "Apylinkės. Pėsčiųjų žygiai", "id": "l",
       "templateToUse": "basis_templ2",
