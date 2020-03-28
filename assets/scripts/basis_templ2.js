@@ -28,7 +28,10 @@ function loadBasisTempl2(sidebarData) {
 
   if (sidebarData.lineCardArray) {
     loadOrnamentedCards(sidebarData, cloneTemplate2);
-  }
+  };
+  if (sidebarData.largeLineCardArray) {
+    loadLargeOrnamentedCards(sidebarData, cloneTemplate2);
+  };
 
   loadHeadedParagraphs(sidebarData, cloneTemplate2);
 
@@ -72,3 +75,27 @@ function loadOrnamentedCards(sidebarData, cloneTemplate2) {
     });
 }
 
+function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
+  sidebarData.largeLineCardArray.forEach(element => {
+      let clone = cloneTemplate2.getElementById("large-ornamented-card").content.cloneNode(true);
+      let parent = cloneTemplate2.getElementById("large-card");
+      clone.querySelector(".card-top-image").src = element.largeTopLineImage;
+      clone.querySelector(".card-heading").textContent = element.largeCardHeading;
+      let cardStrongParParent = clone.querySelector(".season-card-content");
+      let insertBefore = clone.querySelector(".card-paragraph");
+      element.largeStrongParagraphArray.forEach(paragraph => {
+          let parEl = document.createElement("p");
+          parEl.textContent = paragraph.largeStrongParagraph;
+          parEl.classList.add("text-center");
+          parEl.classList.add("mb-0");
+          parEl.classList.add("font-weight-bold");
+          cardStrongParParent.insertBefore(parEl, insertBefore);
+      });
+      clone.querySelector(".card-paragraph").textContent = element.largeCardParagraph;
+      clone.querySelector(".bottom-strong-paragraph").textContent = element.largeBottomStrongParagraph;
+      clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
+      clone.querySelector(".card-bottom-line").src = element.largeBottomLineImage;
+      console.log(clone.querySelector(".card-bottom-line").src);
+      parent.appendChild(clone);
+  });
+}

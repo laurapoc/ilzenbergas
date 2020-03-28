@@ -124,14 +124,14 @@
   width: 130px;
 }
 
-section .text-center h3 {
+section .text-center h4 {
   font-weight: 700;
 }
 section .text-center .row {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 section .text-center .row img {
-  width: auto;
+  width: fit-content;
   box-shadow: 4px 0px 4px rgba(82, 80, 80, 0.7);
 }
 
@@ -224,7 +224,7 @@ section .text-center .row img {
   }
 
   section .text-center .row {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
 }
 @media all and (max-width: 350px) {

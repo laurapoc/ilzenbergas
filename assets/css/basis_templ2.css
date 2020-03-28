@@ -17,9 +17,34 @@
   min-height: 113px;
 }
 
+#large-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1%;
+  font-size: 1.1rem;
+}
+#large-card .repeating-line-card {
+  text-align: center;
+  width: calc(50% - 20px);
+}
+#large-card .repeating-line-card .season-card-content {
+  min-height: 200px;
+}
+#large-card .repeating-line-card .season-card-content #large-card-paragraph {
+  text-align: justify;
+}
+
 @font-face {
   font-family: "Myriad Pro SemiCond";
   src: url("../fonts/MyriadPro-SemiCn.otf");
+}
+@media all and (max-width: 1276px) {
+  #large-card .repeating-line-card {
+    width: 60%;
+  }
+  #large-card .repeating-line-card .season-card-content {
+    min-height: auto;
+  }
 }
 
 /*# sourceMappingURL=basis_templ2.css.map */

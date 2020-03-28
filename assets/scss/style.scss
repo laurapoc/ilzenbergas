@@ -163,13 +163,13 @@ $scale-base-1: (1 + $scale / 100%);
 // AWORDS
 section {
   .text-center {
-    h3 {
+    h4 {
       font-weight: 700;
     }
     .row {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       img {
-        width: auto;
+        width: fit-content;
         box-shadow: 4px 0px 4px rgba(82, 80, 80, 0.7);
       }
     }
@@ -307,7 +307,8 @@ section {
   section {
     .text-center {
       .row {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
+        
       }
     }
   }
