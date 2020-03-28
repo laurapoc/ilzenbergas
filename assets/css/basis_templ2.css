@@ -46,5 +46,21 @@
     min-height: auto;
   }
 }
+@media all and (max-width: 996px) {
+  #large-card .repeating-line-card {
+    width: 70%;
+  }
+  #large-card .repeating-line-card .season-card-content {
+    min-height: auto;
+  }
+}
+@media all and (max-width: 620px) {
+  #large-card .repeating-line-card {
+    width: 90%;
+  }
+  #large-card .repeating-line-card .season-card-content {
+    min-height: auto;
+  }
+}
 
 /*# sourceMappingURL=basis_templ2.css.map */

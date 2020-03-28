@@ -52,3 +52,24 @@
   }
 }
 }
+@media all and (max-width: 996px) {
+  #large-card {
+    .repeating-line-card {
+      width: 70%;
+      .season-card-content {
+        min-height: auto;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 620px) {
+  #large-card {
+    .repeating-line-card {
+      width: 90%;
+      .season-card-content {
+        min-height: auto;
+      }
+    }
+  }
+}
