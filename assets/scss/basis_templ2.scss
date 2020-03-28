@@ -6,69 +6,149 @@
 }
 
 #open-seasons {
-    font-size: 1.1rem;
-    .repeating-line-card {
-      margin: 1%;
-      max-width: 50%;
-      text-align: center;
-      .season-card-content {
-        min-height: 113px;        
-      }
+  font-size: 1.1rem;
+  .repeating-line-card {
+    margin: 1%;
+    max-width: 50%;
+    text-align: center;
+    .season-card-content {
+      min-height: 113px;
     }
+  }
 }
+// #large-card {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: 1%;
+//   // max-width: 50%;
+//   font-size: 1.1rem;
+//   .repeating-line-card {
+//     text-align: center;
+//     width: calc(50% - 20px);
+//     .season-card-content {
+//       min-height: 200px;
+//       #large-card-paragraph {
+//         text-align: justify;
+//       }
+//     }
+
+//   }
+// }
+
 #large-card {
   display: flex;
   flex-wrap: wrap;
-  margin: 1%;
-  // max-width: 50%;
   font-size: 1.1rem;
-  .repeating-line-card {
-    text-align: center;
+  justify-content: space-between;
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  .flip-card {
+    margin: 1%;
+    background-color: transparent;
     width: calc(50% - 20px);
-    .season-card-content {
-      min-height: 200px;
-      #large-card-paragraph {
-        text-align: justify;
+    min-height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      text-align: center;
+      width: calc(50% - 20px);
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      .season-card-content {
+        min-height: 200px;
+        #large-card-paragraph {
+          text-align: justify;
+        }
       }
     }
-    
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .active-flip {
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    transform: rotateY(180deg);
   }
 }
-
-
-
 @font-face {
   font-family: "Myriad Pro SemiCond";
   src: url("../fonts/MyriadPro-SemiCn.otf");
 }
 
 @media all and (max-width: 1276px) {
-#large-card {
-  .repeating-line-card {
-    width: 60%;
-    .season-card-content {
-      min-height: auto;
+  #large-card {
+    .flip-card {
+      min-height: 350px;
+      .flip-card-inner {
+        .season-card-content {
+          min-height: 280px;
+        }
+      }
     }
   }
 }
-}
-@media all and (max-width: 996px) {
+@media all and (max-width: 916px) {
   #large-card {
-    .repeating-line-card {
-      width: 70%;
-      .season-card-content {
-        min-height: auto;
+    font-size: 0.9rem;
+    .flip-card {
+      width: 60%;
+      min-height: 300px;
+      .flip-card-inner {
+        .season-card-content {
+          min-height: 230px;
+        }
       }
     }
   }
 }
 
-@media all and (max-width: 620px) {
+@media all and (max-width: 700px) {
   #large-card {
-    .repeating-line-card {
-      width: 90%;
-      .season-card-content {
-        min-height: auto;
+    min-height: fit-content;
+    .flip-card {
+      width: 80%;
+      margin: 2% 1%;
+
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  #large-card {
+    min-height: fit-content;
+    .flip-card {
+      width: 100%;
+      margin: 2% 1%;
+      min-height: 350px;
+      .flip-card-inner {
+        .season-card-content {
+          min-height: 280px;
+        }
       }
     }
   }

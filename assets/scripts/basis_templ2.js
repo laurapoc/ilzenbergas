@@ -99,3 +99,9 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
       parent.appendChild(clone);
   });
 }
+
+// CARD FLIP TOGGLE:
+function myFunction() {
+  let element = document.querySelector(".flip-card-inner");
+  element.classList.toggle("active-flip");
+}

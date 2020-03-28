@@ -20,18 +20,60 @@
 #large-card {
   display: flex;
   flex-wrap: wrap;
-  margin: 1%;
   font-size: 1.1rem;
+  justify-content: space-between;
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* Position the front and back side */
+  /* Style the front side (fallback if image is missing) */
+  /* Style the back side */
 }
-#large-card .repeating-line-card {
+#large-card .flip-card {
+  margin: 1%;
+  background-color: transparent;
+  width: calc(50% - 20px);
+  min-height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  /* This container is needed to position the front and back side */
+}
+#large-card .flip-card .flip-card-inner {
   text-align: center;
   width: calc(50% - 20px);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
-#large-card .repeating-line-card .season-card-content {
+#large-card .flip-card .flip-card-inner .season-card-content {
   min-height: 200px;
 }
-#large-card .repeating-line-card .season-card-content #large-card-paragraph {
+#large-card .flip-card .flip-card-inner .season-card-content #large-card-paragraph {
   text-align: justify;
+}
+#large-card .active-flip {
+  transform: rotateY(180deg);
+}
+#large-card .flip-card-front,
+#large-card .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+#large-card .flip-card-front {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+}
+#large-card .flip-card-back {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  transform: rotateY(180deg);
 }
 
 @font-face {
@@ -39,27 +81,45 @@
   src: url("../fonts/MyriadPro-SemiCn.otf");
 }
 @media all and (max-width: 1276px) {
-  #large-card .repeating-line-card {
+  #large-card .flip-card {
+    min-height: 350px;
+  }
+  #large-card .flip-card .flip-card-inner .season-card-content {
+    min-height: 280px;
+  }
+}
+@media all and (max-width: 916px) {
+  #large-card {
+    font-size: 0.9rem;
+  }
+  #large-card .flip-card {
     width: 60%;
+    min-height: 300px;
   }
-  #large-card .repeating-line-card .season-card-content {
-    min-height: auto;
-  }
-}
-@media all and (max-width: 996px) {
-  #large-card .repeating-line-card {
-    width: 70%;
-  }
-  #large-card .repeating-line-card .season-card-content {
-    min-height: auto;
+  #large-card .flip-card .flip-card-inner .season-card-content {
+    min-height: 230px;
   }
 }
-@media all and (max-width: 620px) {
-  #large-card .repeating-line-card {
-    width: 90%;
+@media all and (max-width: 700px) {
+  #large-card {
+    min-height: fit-content;
   }
-  #large-card .repeating-line-card .season-card-content {
-    min-height: auto;
+  #large-card .flip-card {
+    width: 80%;
+    margin: 2% 1%;
+  }
+}
+@media all and (max-width: 550px) {
+  #large-card {
+    min-height: fit-content;
+  }
+  #large-card .flip-card {
+    width: 100%;
+    margin: 2% 1%;
+    min-height: 350px;
+  }
+  #large-card .flip-card .flip-card-inner .season-card-content {
+    min-height: 280px;
   }
 }
 
