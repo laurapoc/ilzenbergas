@@ -54,6 +54,9 @@
 #large-card .flip-card .flip-card-inner .season-card-content #large-card-paragraph {
   text-align: justify;
 }
+#large-card .flip-card:hover {
+  cursor: pointer;
+}
 #large-card .active-flip {
   transform: rotateY(180deg);
 }

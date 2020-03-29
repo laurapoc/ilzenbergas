@@ -28,80 +28,102 @@ function loadBasisTempl2(sidebarData) {
 
   if (sidebarData.lineCardArray) {
     loadOrnamentedCards(sidebarData, cloneTemplate2);
-  };
+  }
   if (sidebarData.largeLineCardArray) {
     loadLargeOrnamentedCards(sidebarData, cloneTemplate2);
-  };
+  }
 
   loadHeadedParagraphs(sidebarData, cloneTemplate2);
-
 
   basisTemplate2Parent.appendChild(cloneTemplate2);
 }
 
-
 function loadHeadedParagraphs(sidebarData, cloneTemplate2) {
-    sidebarData.headedParagraphArray.forEach(headedP => {
-        let clone = cloneTemplate2.getElementById("headed-paragraph-template").content.cloneNode(true);
-        let paragraphParent = cloneTemplate2.getElementById("headed-paragraph-block");
-        clone.querySelector(".paragraph-heading").textContent = headedP.paragrapHeading;
-        clone.querySelector(".paragraph-to-extend-content").textContent = headedP.paragraphToExtendContent;
-        paragraphParent.appendChild(clone);
-    });
+  sidebarData.headedParagraphArray.forEach(headedP => {
+    let clone = cloneTemplate2.getElementById("headed-paragraph-template").content.cloneNode(true);
+    let paragraphParent = cloneTemplate2.getElementById("headed-paragraph-block");
+    clone.querySelector(".paragraph-heading").textContent = headedP.paragrapHeading;
+    clone.querySelector(".paragraph-to-extend-content").textContent = headedP.paragraphToExtendContent;
+    paragraphParent.appendChild(clone);
+  });
 }
 
 function loadOrnamentedCards(sidebarData, cloneTemplate2) {
-    sidebarData.lineCardArray.forEach(element => {
-        let clone = cloneTemplate2.getElementById("ornamented-card").content.cloneNode(true);
-        let parent = cloneTemplate2.getElementById("open-seasons");
-        clone.querySelector(".card-top-image").src = element.topLineImage;
-        clone.querySelector(".card-heading").textContent = element.cardHeading;
-        let cardStrongParParent = clone.querySelector(".season-card-content");
-        let insertBefore = clone.querySelector(".card-paragraph");
-        element.strongParagraphArray.forEach(paragraph => {
-            let parEl = document.createElement("p");
-            parEl.textContent = paragraph.strongParagraph;
-            parEl.classList.add("text-center");
-            parEl.classList.add("mb-0");
-            parEl.classList.add("font-weight-bold");
-            cardStrongParParent.insertBefore(parEl, insertBefore);
-        });
-        clone.querySelector(".card-paragraph").textContent = element.cardParagraph;
-        clone.querySelector(".bottom-strong-paragraph").textContent = element.bottomStrongParagraph;
-        clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
-        clone.querySelector(".card-bottom-line").src = element.bottomLineImage;
-        console.log(clone.querySelector(".card-bottom-line").src);
-        parent.appendChild(clone);
+  sidebarData.lineCardArray.forEach(element => {
+    let clone = cloneTemplate2.getElementById("ornamented-card").content.cloneNode(true);
+    let parent = cloneTemplate2.getElementById("open-seasons");
+    clone.querySelector(".card-top-image").src = element.topLineImage;
+    clone.querySelector(".card-heading").textContent = element.cardHeading;
+    let cardStrongParParent = clone.querySelector(".season-card-content");
+    let insertBefore = clone.querySelector(".card-paragraph");
+    element.strongParagraphArray.forEach(paragraph => {
+      let parEl = document.createElement("p");
+      parEl.textContent = paragraph.strongParagraph;
+      parEl.classList.add("text-center");
+      parEl.classList.add("mb-0");
+      parEl.classList.add("font-weight-bold");
+      cardStrongParParent.insertBefore(parEl, insertBefore);
     });
+    clone.querySelector(".card-paragraph").textContent = element.cardParagraph;
+    clone.querySelector(".bottom-strong-paragraph").textContent = element.bottomStrongParagraph;
+    clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
+    clone.querySelector(".card-bottom-line").src = element.bottomLineImage;
+    console.log(clone.querySelector(".card-bottom-line").src);
+    parent.appendChild(clone);
+  });
 }
 
 function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
   sidebarData.largeLineCardArray.forEach(element => {
-      let clone = cloneTemplate2.getElementById("large-ornamented-card").content.cloneNode(true);
-      let parent = cloneTemplate2.getElementById("large-card");
-      clone.querySelector(".card-top-image").src = element.largeTopLineImage;
-      clone.querySelector(".card-heading").textContent = element.largeCardHeading;
-      let cardStrongParParent = clone.querySelector(".season-card-content");
-      let insertBefore = clone.querySelector(".card-paragraph");
-      element.largeStrongParagraphArray.forEach(paragraph => {
-          let parEl = document.createElement("p");
-          parEl.textContent = paragraph.largeStrongParagraph;
-          parEl.classList.add("text-center");
-          parEl.classList.add("mb-0");
-          parEl.classList.add("font-weight-bold");
-          cardStrongParParent.insertBefore(parEl, insertBefore);
-      });
-      clone.querySelector(".card-paragraph").textContent = element.largeCardParagraph;
-      clone.querySelector(".bottom-strong-paragraph").textContent = element.largeBottomStrongParagraph;
-      clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
-      clone.querySelector(".card-bottom-line").src = element.largeBottomLineImage;
-      console.log(clone.querySelector(".card-bottom-line").src);
-      parent.appendChild(clone);
+    let clone = cloneTemplate2.getElementById("large-ornamented-card").content.cloneNode(true);
+    let parent = cloneTemplate2.getElementById("large-card");
+    clone.querySelector(".card-top-image").src = element.largeTopLineImage;
+    clone.querySelector(".card-heading").textContent = element.largeCardHeading;
+    let cardStrongParParent = clone.querySelector(".season-card-content");
+    let insertBefore = clone.querySelector(".card-paragraph");
+    element.largeStrongParagraphArray.forEach(paragraph => {
+      let parEl = document.createElement("p");
+      parEl.textContent = paragraph.largeStrongParagraph;
+      parEl.classList.add("text-center");
+      parEl.classList.add("mb-0");
+      parEl.classList.add("font-weight-bold");
+      cardStrongParParent.insertBefore(parEl, insertBefore);
+    });
+    clone.querySelector(".card-paragraph").textContent = element.largeCardParagraph;
+    clone.querySelector(".bottom-strong-paragraph").textContent = element.largeBottomStrongParagraph;
+    clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
+    clone.querySelector(".card-bottom-line").src = element.largeBottomLineImage;
+    console.log(clone.querySelector(".card-bottom-line").src);
+
+    // back card content:
+    clone.getElementById("back-heading").textContent = element.backCardHeading;
+    let backCardStrongParParent = clone.querySelector(".flip-card-back");
+    let insertParBefore = clone.getElementById("back-large-paragraph");
+    console.log(element.backCardParagraphArray);
+    element.backCardParagraphArray.forEach(paragraph => {
+      let backParEl = document.createElement("p");
+      backParEl.textContent = paragraph.backStrongParagraph;
+      backParEl.classList.add("text-center");
+      backParEl.classList.add("mb-0");
+      backParEl.classList.add("font-weight-bold");
+      backCardStrongParParent.insertBefore(backParEl, insertParBefore);
+    });
+clone.getElementById("back-large-paragraph").textContent = element.backCardParagraph;
+clone.getElementById("back-bottom-strong-info").textContent = element.backBottomStrongParagraph;
+clone.getElementById("back-bottom-strong-info").classList.add("font-weight-bold");
+
+
+    let flipCardDiv = clone.querySelector(".flip-card");
+    flipCardDiv.id = element.id;
+    flipCardDiv.addEventListener("click", event => {
+      flipCard(element.id);
+    });
+    parent.appendChild(clone);
   });
 }
 
 // CARD FLIP TOGGLE:
-function myFunction() {
-  let element = document.querySelector(".flip-card-inner");
+function flipCard(id) {
+  let element = document.getElementById(id).querySelector(".flip-card-inner");
   element.classList.toggle("active-flip");
 }

@@ -395,6 +395,7 @@
 
       "largeLineCardArray": [        
         {
+          "id": "card-a",
           "largeTopLineImage": "assets/img/remukai/xlarge_line.png",
           "largeCardHeading": "ILZENBERGO PIENO GARDUMYNAI",
           "largeStrongParagraphArray": [
@@ -403,10 +404,28 @@
             }
           ],
           "largeCardParagraph": "Skirtingų skonių natūralūs varškės sūriai. Brandintas sūris Ilzenberg. Užtepėlė Ilzenberg. Tikras sviestas. Rūgpienis. Airanas. Juoda ruginė duona. Šviesi duona. Dvariškas pievų medus. Dvariškas varškės pyragas. Dvariška žolelių arbata",
-          "largeBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui",
-          "largeBottomLineImage": "assets/img/remukai/xlarge_line.png"
+          "largeBottomStrongParagraph": "Skaitykite plačiau",
+          "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
+          "backCardHeading": "BACK INFO",
+          "backCardParagraphArray": [
+            {
+              "backStrongParagraph": "some text"
+            },
+            {
+              "backStrongParagraph": "some other text"
+            },
+            {
+              "backStrongParagraph": "some  more text"
+            },
+            {
+              "backStrongParagraph": "..."
+            }
+          ],
+          "backCardParagraph": "Ilgas ir išsamus aprašymas",
+          "backBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui"
         },
         {
+          "id": "card-b",
           "largeTopLineImage": "assets/img/remukai/xlarge_line.png",
           "largeCardHeading": "PRISILIETIMAS PRIE DVARIŠKO GYVENIMO",
           "largeStrongParagraphArray": [
@@ -437,9 +456,27 @@
           ],
           "largeCardParagraph": "",
           "largeBottomStrongParagraph": "vartai į parką šalia Kavinės-Krautuvėlės-Kasos",
-          "largeBottomLineImage": "assets/img/remukai/xlarge_line.png"
+          "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
+          "backCardHeading": "BACK INFO",
+          "backCardParagraphArray": [
+            {
+              "backStrongParagraph": "..."
+            },
+            {
+              "backStrongParagraph": "..."
+            },
+            {
+              "backStrongParagraph": "..."
+            },
+            {
+              "backStrongParagraph": "..."
+            }
+          ],
+          "backCardParagraph": "Ilgas ir išsamus aprašymas",
+          "backBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui"
         },
         {
+          "id": "card-c",
           "largeTopLineImage": "assets/img/remukai/xlarge_line.png",
           "largeCardHeading": "ILZENBERGO PIENO GARDUMYNAI",
           "largeStrongParagraphArray": [
@@ -449,7 +486,30 @@
           ],
           "largeCardParagraph": "Skirtingų skonių natūralūs varškės sūriai. Brandintas sūris Ilzenberg. Užtepėlė Ilzenberg. Tikras sviestas. Rūgpienis. Airanas. Juoda ruginė duona. Šviesi duona. Dvariškas pievų medus. Dvariškas varškės pyragas. Dvariška žolelių arbata",
           "largeBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui",
-          "largeBottomLineImage": "assets/img/remukai/xlarge_line.png"
+          "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
+          "backCardHeading": "BACK INFO",
+          "backCardParagraphArray": [
+            {
+              "backStrongParagraph": "some text"
+            },
+            {
+              "backStrongParagraph": "..."
+            },
+            {
+              "backStrongParagraph": "some text"
+            },
+            {
+              "backStrongParagraph": "..."
+            },
+            {
+              "backStrongParagraph": "some text"
+            },
+            {
+              "backStrongParagraph": "..."
+            }
+          ],
+          "backCardParagraph": "Ilgas ir išsamus aprašymas",
+          "backBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui"
         }
 
       ],
