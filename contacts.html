@@ -25,43 +25,35 @@
         <div id="header"></div>
         <!-- content -->
         <div id="contact-content">
-          <div class="d-flex flex-column align-items-center flex-lg-row flex-lg-fill justify-content-around flex-wrap p-2 p-lg-5">
+          <div
+            class="d-flex flex-column align-items-center flex-lg-row flex-lg-fill justify-content-around flex-wrap p-2 p-lg-5"
+          >
             <div class="col-12 col-lg-6 px-0">
-              <div class="contact-dvaras text-center text-lg-left p-2">
-                <h5>ILZENBERGO DVARAS</h5>
-                <p><a class="contact-link" href="tel:00370 696 44004">+370 696 44004</a></p>
-                <p><a class="contact-link" href="mailto:dvaras@ilzenbergas.lt">dvaras@ilzenbergas.lt</a></p>
-                <address>Ilzenbergo k. 4, Juodupės sen.</address>
-                <address>LT-42440 Rokiškio r.</address>
+              <div id="contact-template-parent">
+                <template id="contact-page-template">
+                  <div class="contact-dvaras text-center text-lg-left p-2">
+                    <h5 id="mansion-heading"></h5>
+                    <a id="phone-link" class="contact-link" href=""><p id="phone"></p></a>
+                    <a id="email-link" class="contact-link" href=""><p id="mail"></p></a>
+                    <address id="address"></address>
+                    <address id="region"></address>
+                  </div>
+                </template>
               </div>
 
-              <div class="contact-dvaras text-center text-lg-left p-2">
-                <h5>ILZENBERGO ŪKIS</h5>
-                <p><a class="contact-link" href="tel:00370 616 29375">+370 616 29375</a></p>
-                <p><a class="contact-link" href="mailto:ukis@ilzenbergas.lt">ukis@ilzenbergas.lt</a></p>
-                <address>Ilzenbergo k. 4, Juodupės sen.</address>
-                <address>LT-42440 Rokiškio r.</address>
-              </div>
               <div id="hours" class="p-2 text-center text-lg-left">
-                <h5>DARBO LAIKAS</h5>
-                <p>Gegužės-spalio mėn. III-VII</p>
-                <p>
-                  10.00-19.00 <span class="not-work"></span> <span class="not-work"></span>
-                  <span class="not-work"></span> <span class="work"></span> <span class="work"></span>
-                  <span class="work"></span>
-                  <span class="work"></span>
-                </p>
-                <p>Lapkričio-balandžio mėn. VI-VII</p>
-                <p>
-                  10.00-19.00 <span class="not-work"></span> <span class="not-work"></span>
-                  <span class="not-work"></span> <span class="not-work"></span> <span class="not-work"></span>
-                  <span class="work"></span>
-                  <span class="work"></span>
-                </p>
-                <p id="info">
-                  Šventinėmis dienomis parkas laukia lankytojų bet kurią savaitės dieną. Parko lankytojo bilietas - 4
-                  eur. Nemokamai dvare svečiuojasi vaikai iki 7 metų.
-                </p>
+                <h5 id="shedule-heading"></h5>
+                <div id="shedule-template-parent">
+                  <template id="shedule">
+                    <p id="season"></p>
+                    <div id="dot-parent"class="d-flex align-items-center justify-content-center justify-content-lg-start">
+                      <p id="working-hours" class="pr-2"></p>
+
+                    </div>
+                  </template>
+                </div>
+
+                <p id="info"></p>
               </div>
             </div>
 
@@ -89,6 +81,7 @@
     <script src="assets/scripts/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="assets/scripts/bootstrap.bundle.js" type="text/javascript"></script>
     <script src="assets/scripts/jquery.fancybox.min.js" type="text/javascript"></script>
+    <script src="assets/scripts/functions.js" type="text/javascript"></script>
     <script src="assets/scripts/contacts.js" type="text/javascript"></script>
   </body>
 </html>

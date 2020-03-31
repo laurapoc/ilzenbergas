@@ -404,7 +404,7 @@
             }
           ],
           "largeCardParagraph": "Skirtingų skonių natūralūs varškės sūriai. Brandintas sūris Ilzenberg. Užtepėlė Ilzenberg. Tikras sviestas. Rūgpienis. Airanas. Juoda ruginė duona. Šviesi duona. Dvariškas pievų medus. Dvariškas varškės pyragas. Dvariška žolelių arbata",
-          "largeBottomStrongParagraph": "Skaitykite plačiau",
+          "largeBottomStrongParagraph": "Plačiau",
           "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
           "backCardHeading": "BACK INFO",
           "backCardParagraphArray": [
@@ -422,7 +422,7 @@
             }
           ],
           "backCardParagraph": "Ilgas ir išsamus aprašymas",
-          "backBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui"
+          "backBottomStrongParagraph": "Grįžti"
         },
         {
           "id": "card-b",
@@ -455,7 +455,7 @@
             }
           ],
           "largeCardParagraph": "",
-          "largeBottomStrongParagraph": "vartai į parką šalia Kavinės-Krautuvėlės-Kasos",
+          "largeBottomStrongParagraph": "Plačiau",
           "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
           "backCardHeading": "BACK INFO",
           "backCardParagraphArray": [
@@ -473,7 +473,7 @@
             }
           ],
           "backCardParagraph": "Ilgas ir išsamus aprašymas",
-          "backBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui"
+          "backBottomStrongParagraph": "Grįžti"
         },
         {
           "id": "card-c",
@@ -485,7 +485,7 @@
             }
           ],
           "largeCardParagraph": "Skirtingų skonių natūralūs varškės sūriai. Brandintas sūris Ilzenberg. Užtepėlė Ilzenberg. Tikras sviestas. Rūgpienis. Airanas. Juoda ruginė duona. Šviesi duona. Dvariškas pievų medus. Dvariškas varškės pyragas. Dvariška žolelių arbata",
-          "largeBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui",
+          "largeBottomStrongParagraph": "Plačiau",
           "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
           "backCardHeading": "BACK INFO",
           "backCardParagraphArray": [
@@ -509,7 +509,7 @@
             }
           ],
           "backCardParagraph": "Ilgas ir išsamus aprašymas",
-          "backBottomStrongParagraph": "Užsakius iš anksto trukmė 30 min. 6 € asmeniui"
+          "backBottomStrongParagraph": "Grįžti"
         }
 
       ],

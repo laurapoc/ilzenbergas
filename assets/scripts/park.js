@@ -4,7 +4,7 @@ let templateToLoad = "basis_templ1";
 let selectedMenuItem = "a";
 let parkMenuItems = [];
 let subTemplateData = {};
-let sidebarData = {};
+// let sidebarData = {};
 let gallerySource = [];
 
 // IMPORTING TEMPLATES:
@@ -35,8 +35,3 @@ importTemplate("./footer.html", "#footer", null);
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
-// // CARD FLIP TOGGLE:
-// function myFunction() {
-//   let element = document.querySelector(".flip-card-inner");
-//   element.classList.toggle("active");
-// }

@@ -27,6 +27,7 @@
   border-radius: 50%;
   border: 1px solid grey;
   display: inline-block;
+  margin-right: 1%;
 }
 #contact-content #hours .work {
   height: 10px;
@@ -35,6 +36,7 @@
   border-radius: 50%;
   border: 1px solid grey;
   display: inline-block;
+  margin-right: 1%;
 }
 #contact-content #hours #info {
   line-height: 1.2;

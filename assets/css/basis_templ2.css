@@ -68,15 +68,22 @@
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
+  transform: rotateX(0deg);
 }
 #large-card .flip-card-front {
   background-color: rgba(255, 255, 255, 0.3);
   color: black;
 }
+#large-card .flip-card-front #front-strong-info:hover {
+  color: #b3ab49;
+}
 #large-card .flip-card-back {
   background-color: rgba(255, 255, 255, 0.3);
   color: black;
   transform: rotateY(180deg);
+}
+#large-card .flip-card-back #back-bottom-strong-info:hover {
+  color: #b3ab49;
 }
 
 @font-face {

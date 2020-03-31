@@ -1,0 +1,38 @@
+{
+    "contacts": [
+        {
+            "title": "ILZENBERGO DVARAS",
+            "phoneLink": "tel:00370 696 44004",
+            "phoneNumber": "+370 696 44004",
+            "mailLink": "mailto:dvaras@ilzenbergas.lt",
+            "mail": "dvaras@ilzenbergas.lt",
+            "address": "Ilzenbergo k. 4, Juodupės sen.",
+            "postCodeRegion": "LT-42440 Rokiškio r."
+        },
+        {
+            "title": "ILZENBERGO ŪKIS",
+            "phoneLink": "tel:00370 616 29375",
+            "phoneNumber": "+370 616 29375",
+            "mailLink": "mailto:ukis@ilzenbergas.lt",
+            "mail": "ukis@ilzenbergas.lt",
+            "address": "Ilzenbergo k. 4, Juodupės sen.",
+            "postCodeRegion": "LT-42440 Rokiškio r."
+        }
+    ],
+    "workSchedule": {
+        "heading": "DARBO LAIKAS",
+        "workTimeArray": [
+            {
+                "season": "Gegužės-spalio mėn. III-VII",
+                "workingHours": "10.00-19.00 ",
+                "dotsSpan": "0001111"
+            },
+            {
+                "season": "Lapkričio-balandžio mėn. VI-VII",
+                "workingHours": "10.00-19.00 ",
+                "dotsSpan": "0000011"
+            }
+        ],
+        "additionalInfo": "Šventinėmis dienomis parkas laukia lankytojų bet kurią savaitės dieną. Parko lankytojo bilietas - 4 eur. Nemokamai dvare svečiuojasi vaikai iki 7 metų."
+    }
+}

@@ -73,6 +73,9 @@
   .flip-card:hover {
     cursor: pointer;
   }
+
+
+
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .active-flip {
     transform: rotateY(180deg);
@@ -86,12 +89,17 @@
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    transform: rotateX(0deg);
   }
 
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: rgba(255, 255, 255, 0.3);
     color: black;
+
+    #front-strong-info:hover {
+      color:  rgb(179, 171, 73);
+    }
   }
 
   /* Style the back side */
@@ -99,6 +107,10 @@
     background-color: rgba(255, 255, 255, 0.3);
     color: black;
     transform: rotateY(180deg);
+
+    #back-bottom-strong-info:hover {
+      color:  rgb(179, 171, 73);
+    }
   }
 }
 @font-face {
