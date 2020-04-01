@@ -23,7 +23,7 @@ img.forEach(element => {
   changeIconColor(element);
 });
 
-// CHANGE MAP-ICON'S COLOR ON HOVER
+// CHANGE ICON'S COLOR ON HOVER
 
 function changeIconColor(htmlElement) {
   htmlElement.addEventListener("mousemove", function(event) {
@@ -44,6 +44,8 @@ if (url.includes("park")) {
   document.querySelector("#map").src = "assets/img/round_icons/map_yelow.png";
 } else if (url.includes("events")) {
   document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
+} else if (url.includes("excursions")) {
+  document.querySelector("#excursions").src = "assets/img/round_icons/ekskursijos_yelow.png";
 }
 
 // hiding menu items after clicking
