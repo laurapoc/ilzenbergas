@@ -150,7 +150,7 @@ section .text-center .row img {
   padding-top: 2%;
   padding-bottom: 2%;
 }
-.text-center .row img {
+.text-center .row #news-image {
   width: 100%;
 }
 .text-center .row a {
@@ -219,7 +219,7 @@ section .text-center .row img {
   .text-center h1 {
     font-size: 1.7rem;
   }
-  .text-center .row img {
+  .text-center .row #news-image {
     width: 80%;
   }
 

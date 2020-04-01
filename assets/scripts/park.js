@@ -30,7 +30,7 @@ fetch("./assets/json/sidebar_data.json")
   });
 
 // IMPORTING FOOTER
-importTemplate("./footer.html", "#footer", null);
+importTemplate("./footer.html", "#footer", "./assets/scripts/footer.js");
 
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
