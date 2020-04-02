@@ -46,6 +46,8 @@ if (url.includes("park")) {
   document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
 } else if (url.includes("excursions")) {
   document.querySelector("#excursions").src = "assets/img/round_icons/ekskursijos_yelow.png";
+} else if (url.includes("tastings")) {
+  document.querySelector("#tastings").src = "assets/img/round_icons/degustacijos_yelow.png";
 }
 
 // hiding menu items after clicking
