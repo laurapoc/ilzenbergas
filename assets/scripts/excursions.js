@@ -1,19 +1,20 @@
 let pageName = "excursions";
 
-let templateToLoad = "basis_templ1";
+let templateToLoad = "basis_templ2";
 let selectedMenuItem = "a";
-let parkMenuItems = [];
+let sideMenuItems = [];
 let subTemplateData = {};
 // let sidebarData = {};
 let gallerySource = [];
 
 // IMPORTING TEMPLATES:
-fetch("./assets/json/sidebar_data.json")
+fetch("./assets/json/excursions_data.json")
   .then(response => response.json())
   .then(sidebarData => {
+    console.log("excursion data");
     // clone template to create menu item
-    parkMenuItems = sidebarData.parkMenuItems;
-    sidebarData =  sidebarData.parkMenuItems;
+    sideMenuItems = sidebarData.sideMenuItems;
+    sidebarData =  sidebarData.sideMenuItems;
     // IMPORTING MAIN MENU
     importTemplate("./header.html", "#header", "./assets/scripts/header.js");
 
@@ -21,7 +22,7 @@ fetch("./assets/json/sidebar_data.json")
     importTemplate("./sidebar.html", "#sidebar", "./assets/scripts/sidebar.js");
 
     // IMPORTING ONE OF PARK TEMPLATES
-    subTemplateData = parkMenuItems[0];
+    subTemplateData = sideMenuItems[0];
     importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
     //loadBasisTempl1(sidebarData);
   })

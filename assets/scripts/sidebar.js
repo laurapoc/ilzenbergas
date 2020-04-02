@@ -5,12 +5,12 @@ let template = document.querySelector("#menu-item");
 let parent = document.querySelector("#side-menu");
 
 
-  parkMenuItems.forEach(menuItem => {
+  sideMenuItems.forEach(menuItem => {
     setUpMenuItem(menuItem, template, parent);
   });
 
 function refreshMenuItems() {
-  parkMenuItems.forEach(menuItem => {
+  sideMenuItems.forEach(menuItem => {
     let ancorELement = document.querySelector("#" + menuItem.id);
     // if selected menu item
     if (selectedMenuItem == menuItem.id) {
@@ -60,7 +60,7 @@ function loadSelectedTemplate(template, menuId) {
   let galleryLocation = document.querySelector("#gallery");
   galleryLocation.textContent = "";
 
-  subTemplateData = parkMenuItems.find(element => element.id == menuId);
+  subTemplateData = sideMenuItems.find(element => element.id == menuId);
   importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
 }
 

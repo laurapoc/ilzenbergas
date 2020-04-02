@@ -1,5 +1,5 @@
 {
-  "parkMenuItems": [
+  "sideMenuItems": [
     {
       "text": "500 metų menanti istorija",
       "id": "a",
@@ -521,8 +521,6 @@
       ]
 
     }
-  ],
-  "excursionsMenuItems": [
-    
   ]
+
 }
