@@ -29,8 +29,16 @@ function loadBasisTempl1(sidebarData) {
   if (sidebarData.additionalInfo && sidebarData.additionalPhoto) {
     let additionalInfo = cloneTemplate1.querySelector("#master-logo p");
     additionalInfo.textContent = sidebarData.additionalInfo;
+    url = pageName;
+    if (url.includes("restaurant")) {
+      cloneTemplate1.querySelector("#master-logo a").href = sidebarData.imageLink;
+      cloneTemplate1.querySelector("#master-logo a").target = "_blank";
+    };
     let additionalPhoto = cloneTemplate1.getElementById("additional-photo");
     additionalPhoto.src = sidebarData.additionalPhoto;
+    if (url.includes("restaurant")) {
+      additionalPhoto.style = "width: auto";
+    };
   } else {
     cloneTemplate1.getElementById("template1-content")
     .removeChild(cloneTemplate1.getElementById("master-logo"));
