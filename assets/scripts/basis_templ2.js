@@ -35,7 +35,19 @@ function loadBasisTempl2(sidebarData) {
 
   loadHeadedParagraphs(sidebarData, cloneTemplate2);
 
-  basisTemplate2Parent.appendChild(cloneTemplate2);
+  basisTemplate2Parent.appendChild(cloneTemplate2);  
+
+//   let heightsArray = [];
+//   document.querySelectorAll(".flip-card-front").forEach(cardFront => {
+//     // console.log("front", cardFront, cardFront.offsetHeight);
+//     heightsArray.push(cardFront.offsetHeight);
+//   });
+
+//   document.querySelectorAll(".flip-card-back").forEach(cardFront => {
+//     console.log("back", cardFront, cardFront.offsetHeight);
+//   });
+// console.log(heightsArray);
+
 }
 
 function loadHeadedParagraphs(sidebarData, cloneTemplate2) {
@@ -68,7 +80,7 @@ function loadOrnamentedCards(sidebarData, cloneTemplate2) {
     clone.querySelector(".bottom-strong-paragraph").textContent = element.bottomStrongParagraph;
     clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
     clone.querySelector(".card-bottom-line").src = element.bottomLineImage;
-    console.log(clone.querySelector(".card-bottom-line").src);
+
     parent.appendChild(clone);
   });
 }
@@ -80,38 +92,47 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
     clone.querySelector(".card-top-image").src = element.largeTopLineImage;
     clone.querySelector(".card-heading").textContent = element.largeCardHeading;
     let cardStrongParParent = clone.querySelector(".season-card-content");
+    url = pageName;
+    console.log(url);
+    if (url.includes("tasting")) {
+      parent.style = "font-size: 1rem";
+      cardStrongParParent.style = "min-height: 290px"; 
+      
+      clone.querySelector(".flip-card").style = "min-height: 350px";
+      
+    }
     let insertBefore = clone.querySelector(".card-paragraph");
     element.largeStrongParagraphArray.forEach(paragraph => {
       let parEl = document.createElement("p");
       parEl.textContent = paragraph.largeStrongParagraph;
       parEl.classList.add("text-center");
       parEl.classList.add("mb-0");
-      parEl.classList.add("font-weight-bold");
       cardStrongParParent.insertBefore(parEl, insertBefore);
     });
     clone.querySelector(".card-paragraph").textContent = element.largeCardParagraph;
     clone.querySelector(".bottom-strong-paragraph").textContent = element.largeBottomStrongParagraph;
     clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
     clone.querySelector(".card-bottom-line").src = element.largeBottomLineImage;
-    console.log(clone.querySelector(".card-bottom-line").src);
 
     // back card content:
     clone.getElementById("back-heading").textContent = element.backCardHeading;
     let backCardStrongParParent = clone.querySelector(".flip-card-back");
     let insertParBefore = clone.getElementById("back-large-paragraph");
-    console.log(element.backCardParagraphArray);
+
     element.backCardParagraphArray.forEach(paragraph => {
       let backParEl = document.createElement("p");
       backParEl.textContent = paragraph.backStrongParagraph;
       backParEl.classList.add("text-center");
       backParEl.classList.add("mb-0");
-      backParEl.classList.add("font-weight-bold");
+
       backCardStrongParParent.insertBefore(backParEl, insertParBefore);
     });
-clone.getElementById("back-large-paragraph").textContent = element.backCardParagraph;
-clone.getElementById("back-bottom-strong-info").textContent = element.backBottomStrongParagraph;
-clone.getElementById("back-bottom-strong-info").classList.add("font-weight-bold");
+    clone.getElementById("back-large-paragraph").textContent = element.backCardParagraph;
+    clone.getElementById("experiment-link").href = element.videoLinkHref;
+    clone.getElementById("link-to-experiment").textContent = element.linkToVideo;
 
+    clone.getElementById("back-bottom-strong-info").textContent = element.backBottomStrongParagraph;
+    clone.getElementById("back-bottom-strong-info").classList.add("font-weight-bold");
 
     let flipCardDiv = clone.querySelector(".flip-card");
     flipCardDiv.id = element.id;
@@ -119,6 +140,8 @@ clone.getElementById("back-bottom-strong-info").classList.add("font-weight-bold"
       flipCard(element.id);
     });
     parent.appendChild(clone);
+    //heights are known here
+    // console.log("clone", clone.offsetHeight);
   });
 }
 

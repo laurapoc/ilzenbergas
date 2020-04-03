@@ -44,15 +44,23 @@
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 #large-card .flip-card .flip-card-inner .season-card-content {
-  min-height: 200px;
+  min-height: 230px;
+}
+#large-card .flip-card .flip-card-inner .season-card-content .card-heading {
+  font-weight: 700;
 }
 #large-card .flip-card .flip-card-inner .season-card-content #large-card-paragraph {
   text-align: justify;
+}
+#large-card .flip-card .flip-card-back {
+  overflow-y: auto;
+}
+#large-card .flip-card .flip-card-back #back-heading {
+  font-weight: 700;
 }
 #large-card .flip-card:hover {
   cursor: pointer;

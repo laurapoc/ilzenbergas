@@ -13,47 +13,7 @@
         }
       ],
       "lineCardArray": [
-        {
-          "topLineImage": "assets/img/remukai/summer.png",
-          "cardHeading": "SEZONO METU",
-          "strongParagraphArray": [
-            {
-              "strongParagraph": "gegužė - spalis"
-            },
-            {
-              "strongParagraph": "III - VII"
-            }
-          ],
-          "cardParagraph": "(treč.-sekm.)",
-          "bottomStrongParagraph": "10-19 val.",
-          "bottomLineImage": "assets/img/remukai/bottom-line.png"
-        },
-        {
-          "topLineImage": "assets/img/remukai/winter.png",
-          "cardHeading": "KITU METU",
-          "strongParagraphArray": [
-            {
-              "strongParagraph": "lapkritis - balandis"
-            },
-            {
-              "strongParagraph": "VI - VII"
-            }
-          ],
-          "cardParagraph": "(šešt.-sekm.)",
-          "bottomStrongParagraph": "10-19 val.",
-          "bottomLineImage": "assets/img/remukai/bottom-line.png"
-        },
-        {
-          "topLineImage": "assets/img/remukai/more.png",
-          "cardHeading": "ŠVENČIŲ DIENOMIS",
-          "strongParagraphArray": [
-            {
-              "strongParagraph": "visus metus"
-            }
-          ],
-          "bottomStrongParagraph": "10-19 val.",
-          "bottomLineImage": "assets/img/remukai/bottom-line.png"
-        }
+
       ],
       "largeLineCardArray": [
         {

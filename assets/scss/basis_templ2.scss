@@ -16,26 +16,10 @@
     }
   }
 }
-// #large-card {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin: 1%;
-//   // max-width: 50%;
-//   font-size: 1.1rem;
-//   .repeating-line-card {
-//     text-align: center;
-//     width: calc(50% - 20px);
-//     .season-card-content {
-//       min-height: 200px;
-//       #large-card-paragraph {
-//         text-align: justify;
-//       }
-//     }
 
-//   }
-// }
 
 #large-card {
+  
   display: flex;
   flex-wrap: wrap;
   font-size: 1.1rem;
@@ -58,14 +42,24 @@
       position: relative;
       width: 100%;
       height: 100%;
-      text-align: center;
+      
       transition: transform 0.8s;
       transform-style: preserve-3d;
       .season-card-content {
-        min-height: 200px;
+        min-height: 230px;
+       
+        .card-heading {
+          font-weight: 700;
+        }
         #large-card-paragraph {
           text-align: justify;
         }
+      }
+    }
+    .flip-card-back {
+      overflow-y: auto;
+      #back-heading {
+        font-weight: 700;
       }
     }
   }

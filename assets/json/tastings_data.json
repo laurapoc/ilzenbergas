@@ -125,8 +125,8 @@
     {
       "text": "Eksperimentai",
       "id": "b",
-      "templateToUse": "basis_templ1",
-      "mainHeading": "EKSPERIMENTAI",
+      "templateToUse": "basis_templ2",
+      "mainHeading": "EKSPERIMENTAI VAIKAMS",
       "pageContentHeading": "",
       "subheading": "",
       "paragraphArray": [
@@ -134,21 +134,135 @@
           "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti, minus, aspernatur repellat est nostrum ratione maiores at vero aut sequi vel ducimus, facere expedita officia magnam velit. Temporibus perspiciatis, expedita dignissimos eligendi debitis fugit blanditiis repellendus facere magni reiciendis beatae voluptate quas, doloremque laborum. Quos aut culpa aliquam, laudantium quia magni, expedita architecto sunt quibusdam hic, officiis neque sit numquam! Assumenda quo distinctio qui eos amet obcaecati eius. Fuga explicabo accusamus cum reprehenderit dolor commodi laudantium temporibus deleniti nisi nam vitae rerum porro blanditiis quis officia iure accusantium eveniet quaerat sunt, nostrum iusto nobis eos? Dolores laudantium sint exercitationem vel officia id, reiciendis expedita magnam ratione fugit veniam rem quisquam corrupti nemo temporibus numquam molestias. Qui aliquid, dolor quo consectetur corporis temporibus veritatis asperiores nostrum incidunt esse dignissimos dolores minima quas maxime cupiditate rerum adipisci autem distinctio itaque. Nobis deserunt id voluptas temporibus voluptatibus totam blanditiis libero eum adipisci tenetur quo pariatur, error quibusdam. Aliquid atque repudiandae aliquam quae ad, vel facilis cumque quam dolorum odit tempore id alias, maiores eos. Vel tempora, minima cum sunt eos dolorem quaerat nihil ex inventore quas suscipit esse magni nam, nulla beatae, in qui earum voluptatibus eveniet maxime perferendis! Nulla accusantium ex exercitationem rerum eos quasi fuga, impedit accusamus tempora ipsa, necessitatibus sapiente numquam aperiam neque dignissimos at harum similique aliquam soluta voluptatem quibusdam cumque doloremque delectus nobis? Ullam molestias tempora eveniet commodi, sed eos tempore, quibusdam perferendis voluptates rerum delectus vitae mollitia, molestiae ducimus consequuntur quam soluta. Reprehenderit quam quas ipsam sint, maxime laudantium. Qui deleniti animi quasi voluptatem cum quos voluptatum ut ad, delectus veritatis quam fugiat eveniet reiciendis ex harum ipsum voluptas temporibus facilis aspernatur deserunt reprehenderit! Aut excepturi numquam doloribus error mollitia vero nobis ex tempora vitae, ducimus modi minus explicabo cum magnam dignissimos fuga? Ducimus, minus voluptatem."
         }
       ],
-      "additionalInfo": "",
-      "additionalPhoto": "",
+      "lineCardArray": [
+
+      ],
+      "largeLineCardArray": [        
+          {
+            "id": "card-a",
+            "largeTopLineImage": "assets/img/remukai/xlarge_line.png",
+            "largeCardHeading": "DRAMBLIO PASTA",
+            "largeStrongParagraphArray": [
+              {
+                "largeStrongParagraph": "Jums reikės:"
+              },
+              {
+                "largeStrongParagraph": "- 2 l talpos tuščio plastiko butelio ar kito aukšto indo"
+              },
+              {
+                "largeStrongParagraph": "- nedidelio piltuvėlio"
+              },
+              {
+                "largeStrongParagraph": "- lekštės ar kepimo skardos"
+              },
+              {
+                "largeStrongParagraph": "- stiklinės"
+              },
+              {
+                "largeStrongParagraph": "- 2 a.š. indų ploviklio"
+              },
+              {
+                "largeStrongParagraph": "- 120 ml (pusė puodelio) vandenilio peroksido "
+              },
+              {
+                "largeStrongParagraph": "- 2 v.š šilto vandens "
+              },
+              {
+                "largeStrongParagraph": "- 1 a.š sausų mielių "
+              },
+              {
+                "largeStrongParagraph": "- stiklskystų maistinių dažųinės"
+              }
+            ],
+            "largeCardParagraph": "",
+            "largeBottomStrongParagraph": "GAMINIMO EIGA:",
+            "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
+            "backCardHeading": "GAMINIMO EIGA:",
+            "backCardParagraphArray": [
+              {
+                "backStrongParagraph": "1. Tuščią butelį padėkite ant lėkštės ar kito plataus indo (tam geriausiai tiktų ir kepimui naudojama skarda)."
+              },
+              {
+                "backStrongParagraph": "2. Tuomet į butelį, naudodami piltuvėlį, supilkite 120 ml vandenilio peroksido, įpilkite 2 a.š indų ploviklio, taip pat įlašinkite porą lašų maistinių dažų ir butelį pakratykite, kad skysčiai susimaišytų."
+              },
+              {
+                "backStrongParagraph": "3. Į tuščią stiklinę įpilkite 2 šaukštus šilto vandens ir jame ištirpdykite arbatinį šaukštelį sausų mielių. "
+              },
+              {
+                "backStrongParagraph": "4. Tuomet staigiu judesiu visą stiklinės turinį supilkite į butelį ir greitai ištraukite piltuvėlį."
+              }
+            ],
+            "backCardParagraph": "",
+            "videoLinkHref": "https://www.youtube.com/watch?v=EWampwthZLQ",
+            "linkToVideo": "Nuoroda į video",            
+            "backBottomStrongParagraph": "Grįžti"
+          },
+          {
+            "id": "card-b",
+            "largeTopLineImage": "assets/img/remukai/xlarge_line.png",
+            "largeCardHeading": "MEDŪZA BUTELYJE",
+            "largeStrongParagraphArray": [
+              {
+                "largeStrongParagraph": "Jums reikės:"
+              },
+              {
+                "largeStrongParagraph": "- 1 paprasto plastikinio maišelio,"
+              },
+              {
+                "largeStrongParagraph": "- balto siūlo,"
+              },
+              {
+                "largeStrongParagraph": "- žirklių,"
+              },
+              {
+                "largeStrongParagraph": "- maistinių dažų (puikiai tiks tamsiai mėlyna ar žalia spalva),"
+              },
+              {
+                "largeStrongParagraph": "- 2 l talpos plastikinio butelio,"
+              },
+              {
+                "largeStrongParagraph": "- vandens (buteliui ir medūzai pripildyti)."
+              }
+            ],
+            "largeCardParagraph": "",
+            "largeBottomStrongParagraph": "GAMINIMO EIGA:",
+            "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
+            "backCardHeading": "GAMINIMO EIGA:",
+            "backCardParagraphArray": [
+              {
+                "backStrongParagraph": "1. Pirmiausia nukirpti plastikinio maišelio apačią."
+              },
+              {
+                "backStrongParagraph": "2. Tuomet iš maišelio iškirpkite kvadratą, ir imdami maišelį nuo centro suformuokit  tarsi balionėlį."
+              },
+              {
+                "backStrongParagraph": "3. Balionėlį suriškite su siūlu tik ne per stipriai, jog liktų ertmė, nes vėliau turėsite į medūzą pripilti vandens."
+              },
+              {
+                "backStrongParagraph": "4. Surišę balionėlį iš likusios maišelio  apatinės dalies iškarpykite 8 arba 10 juostelių, o jas padalinkite į dar mažesnes. Kad įspūdis būtų didesnis iškarpykite skirtingo ilgio – ilgesnes ir trumpesnes juosteles."
+              },
+              {
+                "backStrongParagraph": "5. Tuomet visą butelį pripildykite vandeniu ir įlašinkite porą lašų maistinių dažų."
+              },
+              {
+                "backStrongParagraph": "6. Butelį užsukite ir pakratykite, kad išsimaišytų."
+              },
+              {
+                "backStrongParagraph": "7. Pagamintą medūzą per paliktą ertmę pripildykite vandeniu ir sukiškite į butelį, jį užsukite ir pamatysite kaip medūza plaukioja."
+              }
+            ],
+            "backCardParagraph": "",
+            "videoLinkHref": "https://www.youtube.com/watch?time_continue=78&v=JANZJ1jiXNo",
+            "linkToVideo": "Nuoroda į video",            
+            "backBottomStrongParagraph": "Grįžti"
+          }
+  
+        ],
+      "headedParagraphArray": [
+
+      ],
       "photoGallery": [
-        { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
-        { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" },
-        {
-          "photoBig": "assets/img/test/1-Ilzenbergo-dvaro-rumai.jpg",
-          "photoSmall": "assets/img/test/1-Ilzenbergo-dvaro-rumai_small.jpg"
-        },
-        { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
-        {
-          "photoBig": "assets/img/test/1-Ilzenbergo-dvaro-rumai.jpg",
-          "photoSmall": "assets/img/test/1-Ilzenbergo-dvaro-rumai_small.jpg"
-        },
-        { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" }
+        
       ]
     }
   ]
