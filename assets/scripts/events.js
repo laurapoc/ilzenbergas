@@ -60,7 +60,7 @@ function loadCalendar(dataObject) {
   m = today.getMonth();
   d = today.getDate();
 
-  let listView = "listWeek";
+  let listView = "listYear";
   let monthView = "dayGridMonth";
 
   let headerProperties = {
@@ -74,7 +74,7 @@ function loadCalendar(dataObject) {
     firstDay: 1,
     locale: initialLocaleCode,
     plugins: ["dayGrid", "list", "timeGrid", "interaction"],
-    defaultView: $(window).width() < 765 ? "listWeek" : "dayGridMonth",
+    defaultView: $(window).width() < 765 ? "listYear" : "dayGridMonth",
     defaultDate: today,
     selectable: true,
     nowIndicator: true,
@@ -107,8 +107,8 @@ function loadCalendar(dataObject) {
       if ($(window).width() < 765) {
         // console.log("less than 765");
         // changing header properties list by reaching it with calendar.setOption()
-        (headerProperties.center = "listWeek"), calendar.setOption("header", headerProperties);
-        $(".fc-listWeek-button").click(function() {
+        (headerProperties.center = "listYear"), calendar.setOption("header", headerProperties);
+        $(".fc-listYear-button").click(function() {
           // changing header properties list by reaching it with calendar.setOption()
           (headerProperties.center = ""), calendar.setOption("header", headerProperties);
         });

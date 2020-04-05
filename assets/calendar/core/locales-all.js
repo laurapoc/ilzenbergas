@@ -866,7 +866,7 @@
         weekLabel: "SAV",
         allDayText: "Visą dieną",
         eventLimitText: "daugiau",
-        noEventsMessage: "Šią savaitę renginių nėra"
+        noEventsMessage: "Nurodytu laikotarpiu renginių nėra"
     };
 
     var _m42 = {

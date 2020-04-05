@@ -21,14 +21,14 @@
 }
 
 @media all and (max-width: 992px) {
-  #park-content p {
+  #restaurant-content p {
     font-size: 1.1rem;
   }
 
-  #excursions-content h3 {
+  #restaurant-content h3 {
     font-size: 1.5rem;
   }
-  #excursions-content h4 {
+  #restaurant-content h4 {
     font-size: 1.4rem;
   }
 }

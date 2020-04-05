@@ -96,8 +96,7 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
     console.log(url);
     if (url.includes("tasting")) {
       parent.style = "font-size: 1rem";
-      cardStrongParParent.style = "min-height: 290px"; 
-      
+      cardStrongParParent.style = "min-height: 290px";      
       clone.querySelector(".flip-card").style = "min-height: 350px";
       
     }
@@ -105,7 +104,11 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
     element.largeStrongParagraphArray.forEach(paragraph => {
       let parEl = document.createElement("p");
       parEl.textContent = paragraph.largeStrongParagraph;
-      parEl.classList.add("text-center");
+      if (url.includes("tasting")) {
+        parEl.classList.add("text-justify");
+        parEl.classList.add("px-2");
+      }
+      // parEl.classList.add("text-center");
       parEl.classList.add("mb-0");
       cardStrongParParent.insertBefore(parEl, insertBefore);
     });
@@ -122,7 +125,11 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
     element.backCardParagraphArray.forEach(paragraph => {
       let backParEl = document.createElement("p");
       backParEl.textContent = paragraph.backStrongParagraph;
-      backParEl.classList.add("text-center");
+      if (url.includes("tasting")) {
+        backParEl.classList.add("text-justify");
+        backParEl.classList.add("px-2");
+      }
+      
       backParEl.classList.add("mb-0");
 
       backCardStrongParParent.insertBefore(backParEl, insertParBefore);

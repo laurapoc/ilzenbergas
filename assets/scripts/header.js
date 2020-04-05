@@ -50,8 +50,14 @@ if (url.includes("park")) {
   document.querySelector("#tastings").src = "assets/img/round_icons/degustacijos_yelow.png";
 } else if (url.includes("restaurant")) {
   document.querySelector("#restaurant").src = "assets/img/round_icons/restoranas_yelow.png";
-}
-
+} else if (url.includes("accommodation")) {
+  document.querySelector("#accommodation").src = "assets/img/round_icons/nakvyne_yelow.png";
+  console.log("accommodation cklicked");
+} else if (url.includes("potato")) {
+  document.querySelector("#potato").src = "assets/img/round_icons/potato_yelow.png";
+  console.log("icon clicked");
+};
+ 
 // hiding menu items after clicking
 $(".nav-link").on("click", function() {
   $(".navbar-collapse").collapse("hide");
