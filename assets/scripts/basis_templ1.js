@@ -36,7 +36,9 @@ function loadBasisTempl1(sidebarData) {
     };
     let additionalPhoto = cloneTemplate1.getElementById("additional-photo");
     additionalPhoto.src = sidebarData.additionalPhoto;
-    if (url.includes("restaurant")) {
+    if (url.includes("park")) {
+      additionalPhoto.style = "width: 70%";
+    } else {
       additionalPhoto.style = "width: auto";
     };
   } else {
