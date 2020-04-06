@@ -11,7 +11,6 @@ let gallerySource = [];
 fetch("./assets/json/water_data.json")
   .then(response => response.json())
   .then(sidebarData => {
-    console.log("water data");
     // clone template to create menu item
     sideMenuItems = sidebarData.sideMenuItems;
     sidebarData =  sidebarData.sideMenuItems;

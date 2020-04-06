@@ -41,6 +41,13 @@ function setUpMenuItem(menuItem, template, parent) {
     ancorELement.classList.add("active");
     document.querySelector("#selected-menu-item").textContent = menuItem.text;
   }
+  url = pageName;
+    if (url.includes("water")) {
+      document.querySelector("#side-menu-item").style = "width: 12rem";
+    }
+    if (url.includes("potato")) {
+      document.querySelector("#side-menu-item").style = "width: 12rem";
+    }
 }
 
 function menuItemClick(event) {

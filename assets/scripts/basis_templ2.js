@@ -93,7 +93,6 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
     clone.querySelector(".card-heading").textContent = element.largeCardHeading;
     let cardStrongParParent = clone.querySelector(".season-card-content");
     url = pageName;
-    console.log(url);
     if (url.includes("tasting")) {
       parent.style = "font-size: 1rem";
       cardStrongParParent.style = "min-height: 290px";      

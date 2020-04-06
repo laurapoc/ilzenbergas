@@ -12,7 +12,6 @@ fetch("./assets/json/contacts_data.json")
 });
 
 function loadFooterContactsData(contactsData) {
-    console.log(contactsData);
     let clone;
   let template = document.getElementById("contact-page-template");
   let parent = document.getElementById("footer-contact-template-parent");
