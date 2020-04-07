@@ -119,12 +119,12 @@ $scale-base-1: (1 + $scale / 100%);
     .p-2 {
       position: relative;
 
-      a {
-        position: absolute;
-        left: 2%;
-        top: 88%;
-        color: #465359;
-      }
+      // a {
+      //   position: absolute;
+      //   left: 2%;
+      //   top: 88%;
+      //   color: #465359;
+      // }
     }
 
     .card-title {

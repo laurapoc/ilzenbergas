@@ -90,12 +90,6 @@
 .jumbotron .card .p-2 {
   position: relative;
 }
-.jumbotron .card .p-2 a {
-  position: absolute;
-  left: 2%;
-  top: 88%;
-  color: #465359;
-}
 .jumbotron .card .card-title {
   font-size: 2.5em;
   font-weight: 400;

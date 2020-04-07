@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="assets/css/contacts.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/background.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/farm_header.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/footer.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+    <title>ilzenbergas.lt/Dvaro ūkio kontaktai</title>
+  </head>
+  <body>
+    <!-- ******************************************* -->
+    <div id="background"></div>
+
+    <div class="container-xl" style="max-width: 1300px">
+      <div class="jumbotron jumbotron-fluid container-fluid p-0">
+        <!-- header -->
+        <div id="farm_header"></div>
+        <!-- content -->
+        <div id="contact-content">
+          <div
+            class="d-flex flex-column align-items-center flex-lg-row flex-lg-fill justify-content-around flex-wrap p-2 p-lg-5"
+          >
+            <div class="col-12 col-lg-6 px-0">
+              <div id="contact-template-parent">
+                <template id="contact-page-template">
+                  <div class="contact-dvaras text-center text-lg-left p-2">
+                    <h5 id="mansion-heading"></h5>
+                    <a id="phone-link" class="contact-link" href=""><p id="phone"></p></a>
+                    <a id="email-link" class="contact-link" href=""><p id="mail"></p></a>
+                    <address id="address"></address>
+                    <address id="region"></address>
+                  </div>
+                </template>
+              </div>
+
+              <div id="hours" class="p-2 text-center text-lg-left">
+                <h5 id="shedule-heading"></h5>
+                <div id="shedule-template-parent">
+                  <template id="shedule">
+                    <p id="season"></p>
+                    <div id="dot-parent"class="d-flex align-items-center justify-content-center justify-content-lg-start">
+                      <p id="working-hours" class="pr-2"></p>
+
+                    </div>
+                  </template>
+                </div>
+
+                <p id="info"></p>
+              </div>
+            </div>
+
+            <div id="map" class="col-12 col-lg-6">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://maps.google.com/maps?width=200&amp;height=150&amp;hl=en&amp;coord=56.1595953, 25.5245220&amp;q=Ilzenbergo%20k.%204%2C%20Juodup%C4%97s%20seni%C5%ABnija%2C%20Roki%C5%A1kio%20rajonas%2C%20ilzenbergas%2042440+(Ilzenbergas)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
+                frameborder="0"
+                scrolling="yes"
+                marginheight="0"
+                marginwidth="0"
+                ><a href="https://www.maps.ie/coordinates.html">find my location</a></iframe
+              >
+            </div>
+          </div>
+
+          <!-- *************************** -->
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/scripts/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="assets/scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/scripts/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/scripts/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="assets/scripts/jquery.fancybox.min.js" type="text/javascript"></script>
+    <script src="assets/scripts/functions.js" type="text/javascript"></script>
+    <script src="assets/scripts/farm_contacts.js" type="text/javascript"></script>
+  </body>
+</html>
