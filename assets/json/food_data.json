@@ -1,0 +1,173 @@
+{
+    "sideMenuItems": [
+      {
+        "text": "Dvaro virtuvėlės gaminiai",
+        "id": "a",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "DVARO VIRTUVĖLĖS GAMINIAI",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Pieno produktai",
+        "id": "b",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "PIENO PRODUKTAI",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Naminės vištos, kiaušiniai",
+        "id": "c",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "NAMINĖS VIŠTOS, KIAUŠINIAI",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai_1.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Galvijų mesa",
+        "id": "d",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "GALVIJŲ MĖSA",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai_1.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Duona, konditerija",
+        "id": "e",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "DUONA, KONDITERIJA",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai_1.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Grūdai, kruopos, miltai",
+        "id": "f",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "GRŪDAI, KRUOPOS, MILTAI",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai_1.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Uogos, vaisiai",
+        "id": "g",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "UOGOS, VAISIAI",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai_1.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Medus",
+        "id": "h",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "MEDUS",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/medus.png",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/kiausiniai_1.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,77 @@
+{
+  "sideMenuItems": [
+    {
+      "text": "Veikiantis išvien su gamta",
+      "id": "a",
+      "templateToUse": "basis_templ1",
+      "mainHeading": "Atviras savo valgytojams, veikiantis išvien su gamta",
+      "pageContentHeading": "",
+      "subheading": "",
+      "paragraphArray": [
+        {
+          "paragraph": "Vienintelis Baltijos šalyse pilnai atkurtas, ūkininkaujantis ir tęsiantis natūralios žemdirbystės tradicijas: augalai tręšiami natūraliomis organinėmis trąšomis, galvijai ir paukščiai šeriami pašaru užaugintu ir pagamintu ūkyje, laukai apsodinami taikant sėjomainą ir taip natūraliai išauginamas geras derlius. Pasaulio gamtos fondas 2019 m. ūkį pripažino nacionalinio konkurso nugalėtoju - Baltiją tausojančiu ūkiu."
+        },
+        {
+          "paragraph": "Ūkio vystoma augalininkystė, sodininkystė, gyvulininkystė, paukštininkystė yra įvertinta tarptautiniu ekologinio ūkio (EKO) sertifikatu. Tai išskirtinė vieta Lietuvoje, kur viename ūkyje galima pamatyti ir besiganančias karves, ir lesinėjančias vištas, ir svyrančias javų varpas, ir dvarišką sodą."
+        },
+        {
+          "paragraph": "2019 m. įveistas vienas didžiausių Lietuvos vynuogynų vilioja pasigrožėti kalvos reljefą atkartojančiomis vynmedžių eilėmis. Dvaro ūkis atviras lankymui visus metus. Valgytojai gali dalyvauti pažintinėse ekskursijose po ūkį ir produktų degustacijose.  Čia Lietuvoje plačiausias viename ūkyje ekologiškai išaugintų ir rankomis pagamintų natūralių produktų pasirinkimas."
+        }
+      ],
+      "additionalInfo": "",
+      "additionalPhoto": "",
+      "photoGallery": []
+    },
+
+    {
+      "text": "Užsisakykite į namus ",
+      "id": "b",
+      "templateToUse": "basis_templ1",
+      "mainHeading": "UŽSISAKYKITE PRODUKTUS Į NAMUS: krepselis.ilzenbergas.lt",
+      "pageContentHeading": "",
+      "subheading": "UŽSAKYMUS PRIIMAME IR PRODUKTUS PRISTATOME į:",
+      "paragraphArray": [
+        {
+          "paragraph": "Vilnių, Kauną, Panevėžį, Uteną, Šiaulius, Mažeikius, Tauragę, Klaipėdą, Palangą."
+        },
+        {
+          "paragraph": "ŽINGSNIAI:"
+        },
+        {
+          "paragraph": "1. EIKITE į https://krepselis.ilzenbergas.lt/"
+        },
+        {
+          "paragraph": "2. REGISTRUOKITĖS/prisijunkite prie savo paskyros:"
+        },
+        {
+          "paragraph": "3.  Išsirinkite ir UŽSISAKYKITE norimas prekes"
+        },
+        {
+          "paragraph": "..."
+        }
+      ],
+      "additionalInfo": "",
+      "additionalPhoto": "",
+      "photoGallery": [
+        
+      ]
+    },
+
+    {
+      "text": "Pristatymo žemėlapis ",
+      "id": "c",
+      "templateToUse": "basis_templ1",
+      "mainHeading": "",
+      "pageContentHeading": "",
+      "subheading": "",
+      "paragraphArray": [
+
+      ],
+      "additionalInfo": "PRISTATYMO ŽEMĖLAPIS",
+      "additionalPhoto": "assets/img/ILZENBERGO zemelapis.png",
+      "photoGallery": [
+
+      ]
+    }
+  ]
+}

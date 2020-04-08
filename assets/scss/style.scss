@@ -164,6 +164,26 @@ $scale-base-1: (1 + $scale / 100%);
       width: 130px;
     }
   }
+
+  //  .blaaa {
+  //   color: #455862;
+  //   img {
+  //     width: 25px;
+  //   }
+  //  }
+  // #ukis {
+  //   color: #455862;
+  //   img {
+  //     width: 32px;
+  //   }
+  // }
+  // #ukis:hover {
+  //   color: #455862;
+  //   font-size: 1.1rem;
+  //   img {
+  //     width: 33px;
+  //   }
+  // }
 }
 // AWORDS
 section {
@@ -218,7 +238,6 @@ section {
   .not-show {
     display: none;
   }
-
 }
 
 #btn-dark {
@@ -313,7 +332,6 @@ section {
     .text-center {
       .row {
         font-size: 0.6rem;
-        
       }
     }
   }
