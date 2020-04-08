@@ -1,0 +1,28 @@
+{
+    "sideMenuItems": [
+      {
+        "text": "Vynuogynas ILZENBERG",
+        "id": "a",
+        "templateToUse": "basis_templ1",
+        "mainHeading": "Vynuogynas ILZENBERG",
+        "pageContentHeading": "",
+        "subheading": "",
+        "paragraphArray": [
+          {
+            "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti, minus, aspernatur repellat est nostrum ratione maiores at vero aut sequi vel ducimus, facere expedita officia magnam velit. Temporibus perspiciatis, expedita dignissimos eligendi debitis fugit blanditiis repellendus facere magni reiciendis beatae voluptate quas, doloremque laborum. Quos aut culpa aliquam, laudantium quia magni, expedita architecto sunt quibusdam hic, officiis neque sit numquam! Assumenda quo distinctio qui eos amet obcaecati eius. Fuga explicabo accusamus cum reprehenderit dolor commodi laudantium temporibus deleniti nisi nam vitae rerum porro blanditiis quis officia iure accusantium eveniet quaerat sunt, nostrum iusto nobis eos? Dolores laudantium sint exercitationem vel officia id, reiciendis expedita magnam ratione fugit veniam rem quisquam corrupti nemo temporibus numquam molestias. Qui aliquid, dolor quo consectetur corporis temporibus veritatis asperiores nostrum incidunt esse dignissimos dolores minima quas maxime cupiditate rerum adipisci autem distinctio itaque. Nobis deserunt id voluptas temporibus voluptatibus totam blanditiis libero eum adipisci tenetur quo pariatur, error quibusdam. Aliquid atque repudiandae aliquam quae ad, vel facilis cumque quam dolorum odit tempore id alias, maiores eos. Vel tempora, minima cum sunt eos dolorem quaerat nihil ex inventore quas suscipit esse magni nam, nulla beatae, in qui earum voluptatibus eveniet maxime perferendis! Nulla accusantium ex exercitationem rerum eos quasi fuga, impedit accusamus tempora ipsa, necessitatibus sapiente numquam aperiam neque dignissimos at harum similique aliquam soluta voluptatem quibusdam cumque doloremque delectus nobis? Ullam molestias tempora eveniet commodi, sed eos tempore, quibusdam perferendis voluptates rerum delectus vitae mollitia, molestiae ducimus consequuntur quam soluta. Reprehenderit quam quas ipsam sint, maxime laudantium. Qui deleniti animi quasi voluptatem cum quos voluptatum ut ad, delectus veritatis quam fugiat eveniet reiciendis ex harum ipsum voluptas temporibus facilis aspernatur deserunt reprehenderit! Aut excepturi numquam doloribus error mollitia vero nobis ex tempora vitae, ducimus modi minus explicabo cum magnam dignissimos fuga? Ducimus, minus voluptatem."
+          }
+        ],
+        "additionalInfo": "",
+        "additionalPhoto": "",
+        "photoGallery": [
+          { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
+          { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" },
+          { "photoBig": "assets/img/test/1-Ilzenbergo-dvaro-rumai.jpg", "photoSmall": "assets/img/test/1-Ilzenbergo-dvaro-rumai_small.jpg" },
+          { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
+          { "photoBig": "assets/img/test/1-Ilzenbergo-dvaro-rumai.jpg", "photoSmall": "assets/img/test/1-Ilzenbergo-dvaro-rumai_small.jpg" },
+          { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" }
+        ]
+      }
+    ]
+  }
+  

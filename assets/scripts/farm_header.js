@@ -49,6 +49,8 @@ if (url.includes("water")) {
   document.querySelector("#open-farm").src = "assets/img/round_icons/ukis_yelow.png";
 } else if (url.includes("food")) {
   document.querySelector("#natural-food").src = "assets/img/round_icons/produktai_yelow.png";
+} else if (url.includes("wine")) {
+  document.querySelector("#wine").src = "assets/img/round_icons/vynas_yelow.png";
 }
 
 // hiding menu items after clicking
