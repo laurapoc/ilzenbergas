@@ -51,6 +51,12 @@ if (url.includes("water")) {
   document.querySelector("#natural-food").src = "assets/img/round_icons/produktai_yelow.png";
 } else if (url.includes("wine")) {
   document.querySelector("#wine").src = "assets/img/round_icons/vynas_yelow.png";
+} else if (url.includes("shoping")) {
+  document.querySelector("#shop-areas").src = "assets/img/round_icons/krautuves_yelow.png";
+} else if (url.includes("agriculture")) {
+  document.querySelector("#agriculture").src = "assets/img/round_icons/ukininkyste_yelow.png";
+} else if (url.includes("principles")) {
+  document.querySelector("#principles").src = "assets/img/round_icons/principai_yelow.png";
 }
 
 // hiding menu items after clicking

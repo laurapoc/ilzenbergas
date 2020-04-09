@@ -28,7 +28,7 @@
   .flip-card {
     margin: 1%;
     background-color: transparent;
-    width: calc(50% - 20px);
+    width: calc(32% - 10px);
     min-height: 300px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -115,6 +115,7 @@
 @media all and (max-width: 1276px) {
   #large-card {
     .flip-card {
+      width: 48%;
       min-height: 350px;
       .flip-card-inner {
         .season-card-content {

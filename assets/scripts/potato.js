@@ -18,7 +18,7 @@ fetch("./assets/json/potato_data.json")
     importTemplate("./header.html", "#header", "./assets/scripts/header.js");
 
     // // IMPORTING LEFT SIDE MENU
-    importTemplate("./sidebar.html", "#sidebar", "./assets/scripts/sidebar.js");
+    // importTemplate("./sidebar.html", "#sidebar", "./assets/scripts/sidebar.js");
 
     // IMPORTING ONE OF PARK TEMPLATES
     subTemplateData = sideMenuItems[0];

@@ -1,0 +1,47 @@
+{
+    "sideMenuItems": [
+      {
+        "text": "Gamtos pagalba išauginame",
+        "id": "a",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "GAMTOS PAGALBA IŠAUGINAME",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      },
+      {
+        "text": "Laiko patikrintos vertybės",
+        "id": "b",
+        "templateToUse": "basis_templ3",
+        "mainHeading": "LAIKO PATIKRINTOS VERTYBĖS",
+        "subheading": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo omnis tenetur itaque est nam quis repellat corrupti optio facilis eveniet.",
+        "carouselItemArray": [
+          {
+            "slidepicture": "assets/img/interjeras/ukio_produktai.jpg",
+            "slideDescription": "First slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras2-compressor.jpg",
+            "slideDescription": "Second slide"
+          },
+          {
+            "slidepicture": "assets/img/interjeras/interjeras3-compressor.jpg",
+            "slideDescription": "Third slide"
+          }
+        ]
+      }
+    ]
+  }
+  

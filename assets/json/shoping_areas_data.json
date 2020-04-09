@@ -1,0 +1,192 @@
+{
+    "sideMenuItems": [
+      {
+        "text": "Mūsų prekybos vietos",
+        "id": "a",
+        "templateToUse": "basis_templ2",
+        "mainHeading": "MŪSŲ PREKYBOS VIETOS",
+        "pageContentHeading": "",
+        "subheading": "",
+        "paragraphArray": [
+          {
+            "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deleniti, minus, aspernatur repellat est nostrum ratione maiores at vero aut sequi vel ducimus, facere expedita officia magnam velit. Temporibus perspiciatis, expedita dignissimos eligendi debitis fugit blanditiis repellendus facere magni reiciendis beatae voluptate quas, doloremque laborum. Quos aut culpa aliquam, laudantium quia magni, expedita architecto sunt quibusdam hic, officiis neque sit numquam! Assumenda quo distinctio qui eos amet obcaecati eius. Fuga explicabo accusamus cum reprehenderit dolor commodi laudantium temporibus deleniti nisi nam vitae rerum porro blanditiis quis officia iure accusantium eveniet quaerat sunt, nostrum iusto nobis eos? Dolores laudantium sint exercitationem vel officia id, reiciendis expedita magnam ratione fugit veniam rem quisquam corrupti nemo temporibus numquam molestias. Qui aliquid, dolor quo consectetur corporis temporibus veritatis asperiores nostrum incidunt esse dignissimos dolores minima quas maxime cupiditate rerum adipisci autem distinctio itaque. Nobis deserunt id voluptas temporibus voluptatibus totam blanditiis libero eum adipisci tenetur quo pariatur, error quibusdam. Aliquid atque repudiandae aliquam quae ad, vel facilis cumque quam dolorum odit tempore id alias, maiores eos. Vel tempora, minima cum sunt eos dolorem quaerat nihil ex inventore quas suscipit esse magni nam, nulla beatae, in qui earum voluptatibus eveniet maxime perferendis! Nulla accusantium ex exercitationem rerum eos quasi fuga, impedit accusamus tempora ipsa, necessitatibus sapiente numquam aperiam neque dignissimos at harum similique aliquam soluta voluptatem quibusdam cumque doloremque delectus nobis? Ullam molestias tempora eveniet commodi, sed eos tempore, quibusdam perferendis voluptates rerum delectus vitae mollitia, molestiae ducimus consequuntur quam soluta. Reprehenderit quam quas ipsam sint, maxime laudantium. Qui deleniti animi quasi voluptatem cum quos voluptatum ut ad, delectus veritatis quam fugiat eveniet reiciendis ex harum ipsum voluptas temporibus facilis aspernatur deserunt reprehenderit! Aut excepturi numquam doloribus error mollitia vero nobis ex tempora vitae, ducimus modi minus explicabo cum magnam dignissimos fuga? Ducimus, minus voluptatem."
+          }
+        ],
+        "lineCardArray": [
+          {
+            "topLineImage": "assets/img/remukai/summer.png",
+            "cardHeading": "SEZONO METU",
+            "strongParagraphArray": [
+              {
+                "strongParagraph": "gegužė - spalis"
+              },
+              {
+                "strongParagraph": "III - VII"
+              }
+            ],
+            "cardParagraph": "(treč.-sekm.)",
+            "bottomStrongParagraph": "10-19 val.",
+            "bottomLineImage": "assets/img/remukai/bottom-line.png"
+          },
+          {
+            "topLineImage": "assets/img/remukai/winter.png",
+            "cardHeading": "KITU METU",
+            "strongParagraphArray": [
+              {
+                "strongParagraph": "lapkritis - balandis"
+              },
+              {
+                "strongParagraph": "VI - VII"
+              }
+            ],
+            "cardParagraph": "(šešt.-sekm.)",
+            "bottomStrongParagraph": "10-19 val.",
+            "bottomLineImage": "assets/img/remukai/bottom-line.png"
+          },
+          {
+            "topLineImage": "assets/img/remukai/more.png",
+            "cardHeading": "ŠVENČIŲ DIENOMIS",
+            "strongParagraphArray": [
+              {
+                "strongParagraph": "visus metus"
+              }
+            ],
+            "bottomStrongParagraph": "10-19 val.",
+            "bottomLineImage": "assets/img/remukai/bottom-line.png"
+          }
+        ],
+        "largeLineCardArray": [        
+            {
+              "id": "card-a",
+              "largeTopLineImage": "assets/img/remukai/xlarge_line.png",
+              "largeCardHeading": "ILZENBERGO PIENO GARDUMYNAI",
+              "largeStrongParagraphArray": [
+                {
+                  "largeStrongParagraph": ""
+                }
+              ],
+              "largeCardParagraph": "Skirtingų skonių natūralūs varškės sūriai. Brandintas sūris Ilzenberg. Užtepėlė Ilzenberg. Tikras sviestas. Rūgpienis. Airanas. Juoda ruginė duona. Šviesi duona. Dvariškas pievų medus. Dvariškas varškės pyragas. Dvariška žolelių arbata",
+              "largeBottomStrongParagraph": "Plačiau",
+              "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
+              "backCardHeading": "BACK INFO",
+              "backCardParagraphArray": [
+                {
+                  "backStrongParagraph": "some text"
+                },
+                {
+                  "backStrongParagraph": "some other text"
+                },
+                {
+                  "backStrongParagraph": "some  more text"
+                },
+                {
+                  "backStrongParagraph": "..."
+                }
+              ],
+              "backCardParagraph": "Ilgas ir išsamus aprašymas",
+              "backBottomStrongParagraph": "Grįžti"
+            },
+            {
+              "id": "card-b",
+              "largeTopLineImage": "assets/img/remukai/xlarge_line.png",
+              "largeCardHeading": "PRISILIETIMAS PRIE DVARIŠKO GYVENIMO",
+              "largeStrongParagraphArray": [
+                {
+                  "largeStrongParagraph": "Susipažinsite su Ilzenbergo dvaro istorija, veikla, ūkiu."
+                },
+                {
+                  "largeStrongParagraph": "gegužės-rugsėjo mėn."
+                },
+                {
+                  "largeStrongParagraph": "VI-VII (šešt.-sekm.)"
+                },
+                {
+                  "largeStrongParagraph": ""
+                },
+                {
+                  "largeStrongParagraph": "trukmė 2 val."
+                },
+                {
+                  "largeStrongParagraph": "6 €* žmogui nuo 17 m"
+                },
+                {
+                  "largeStrongParagraph": "4 €* vaikui 7-16 m"
+                },
+                {
+                  "largeStrongParagraph": "Pradžios vieta:"
+                }
+              ],
+              "largeCardParagraph": "",
+              "largeBottomStrongParagraph": "Plačiau",
+              "largeBottomLineImage": "assets/img/remukai/xlarge_line.png",
+              "backCardHeading": "BACK INFO",
+              "backCardParagraphArray": [
+                {
+                  "backStrongParagraph": "..."
+                },
+                {
+                  "backStrongParagraph": "..."
+                },
+                {
+                  "backStrongParagraph": "..."
+                },
+                {
+                  "backStrongParagraph": "..."
+                }
+              ],
+              "backCardParagraph": "Ilgas ir išsamus aprašymas",
+              "backBottomStrongParagraph": "Grįžti"
+            }
+    
+          ],
+        "headedParagraphArray": [
+          {
+            "paragrapHeading": "Parko lankymo mokestis",
+            "paragraphToExtendContent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat quo consequatur reprehenderit dignissimos optio dolore minus labore. Voluptatem voluptate fuga at quam expedita illo consequuntur esse doloremque harum officia modi nemo quasi assumenda voluptatibus aspernatur itaque inventore asperiores, optio earum debitis, iure laudantium dignissimos. Ratione et id repellat nobis libero repudiandae tenetur ipsum voluptatibus! Fugiat veritatis deleniti quas dolor cumque laudantium nostrum sequi accusantium, iusto corporis voluptates eius animi accusamus vitae saepe sapiente nobis incidunt deserunt error ab cupiditate officiis. Excepturi quo minus accusamus totam necessitatibus, laudantium deleniti corporis, nihil, doloremque impedit dicta repellat. Facilis aliquid ducimus saepe non?"
+          },
+          {
+            "paragrapHeading": "Parko lankymo mokestis",
+            "paragraphToExtendContent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat quo consequatur reprehenderit dignissimos optio dolore minus labore. Voluptatem voluptate fuga at quam expedita illo consequuntur esse doloremque harum officia modi nemo quasi assumenda voluptatibus aspernatur itaque inventore asperiores, optio earum debitis, iure laudantium dignissimos. Ratione et id repellat nobis libero repudiandae tenetur ipsum voluptatibus! Fugiat veritatis deleniti quas dolor cumque laudantium nostrum sequi accusantium, iusto corporis voluptates eius animi accusamus vitae saepe sapiente nobis incidunt deserunt error ab cupiditate officiis. Excepturi quo minus accusamus totam necessitatibus, laudantium deleniti corporis, nihil, doloremque impedit dicta repellat. Facilis aliquid ducimus saepe non?"
+          }
+        ],
+        "photoGallery": [
+          { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" },
+          { "photoBig": "assets/img/test/1-Ilzenbergo-dvaro-rumai.jpg", "photoSmall": "assets/img/test/1-Ilzenbergo-dvaro-rumai_small.jpg" },
+          { "photoBig": "assets/img/test/07-Dvaro rumai_2.jpg", "photoSmall": "assets/img/test/07-Dvaro rumai_2_small.jpg" },
+          { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
+          { "photoBig": "assets/img/news/mokiniai.jpg", "photoSmall": "assets/img/news/mokiniai_small.jpg" },
+          { "photoBig": "assets/img/news/paper.jpg", "photoSmall": "assets/img/news/paper_small.jpg" }
+        ]
+      },
+      {
+        "text": "Internetinė parduotuvė",
+        "id": "b",
+        "templateToUse": "",
+        "href": "https://krepselis.ilzenbergas.lt/"
+      },
+      {
+        "text": "Partnerių prekybos vietos",
+        "id": "c",
+        "templateToUse": "basis_templ1",
+        "mainHeading": "PARTNERIŲ PREKYBOS VIETOS",
+        "pageContentHeading": "Lorem ipsum",
+        "subheading": "Lorem Ipsum",
+        "paragraphArray": [
+          {
+            "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat quo consequatur reprehenderit dignissimos optio dolore minus labore. Voluptatem voluptate fuga at quam expedita illo consequuntur esse doloremque harum officia modi nemo quasi assumenda voluptatibus aspernatur itaque inventore asperiores, optio earum debitis, iure laudantium dignissimos. Ratione et id repellat nobis libero repudiandae tenetur ipsum voluptatibus! Fugiat veritatis deleniti quas dolor cumque laudantium nostrum sequi accusantium, iusto corporis voluptates eius animi accusamus vitae saepe sapiente nobis incidunt deserunt error ab cupiditate officiis. Excepturi quo minus accusamus totam necessitatibus, laudantium deleniti corporis, nihil, doloremque impedit dicta repellat. Facilis aliquid ducimus saepe non?"
+          }
+        ],
+        "additionalInfo": "",
+        "additionalPhoto": "",
+        "photoGallery": [
+          { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
+          { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" },
+          { "photoBig": "assets/img/test/1-Ilzenbergo-dvaro-rumai.jpg", "photoSmall": "assets/img/test/1-Ilzenbergo-dvaro-rumai_small.jpg" },
+          { "photoBig": "assets/img/news/mokytoja.jpg", "photoSmall": "assets/img/news/mokytoja_small.jpg" },
+          { "photoBig": "assets/img/test/1-Ilzenbergo-dvaro-rumai.jpg", "photoSmall": "assets/img/test/1-Ilzenbergo-dvaro-rumai_small.jpg" },
+          { "photoBig": "assets/img/test/1_Dvaro rumai.jpg", "photoSmall": "assets/img/test/1_Dvaro rumai_small.jpg" }
+        ]
+      }
+    ]
+  }
+  

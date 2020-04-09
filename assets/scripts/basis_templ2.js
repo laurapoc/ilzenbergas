@@ -89,6 +89,10 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2) {
   sidebarData.largeLineCardArray.forEach(element => {
     let clone = cloneTemplate2.getElementById("large-ornamented-card").content.cloneNode(true);
     let parent = cloneTemplate2.getElementById("large-card");
+    // if (url.includes("water")) {
+    //   // clone.querySelector(".flip-card").style = "width: 30%";
+    //   console.log(clone.querySelector(".flip-card"));
+    // }
     clone.querySelector(".card-top-image").src = element.largeTopLineImage;
     clone.querySelector(".card-heading").textContent = element.largeCardHeading;
     let cardStrongParParent = clone.querySelector(".season-card-content");

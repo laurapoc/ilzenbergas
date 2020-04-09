@@ -4,13 +4,12 @@ let template = document.querySelector("#menu-item");
 // get parent - ul
 let parent = document.querySelector("#side-menu");
 
-
-  sideMenuItems.forEach(menuItem => {
-    setUpMenuItem(menuItem, template, parent);
-  });
+sideMenuItems.forEach((menuItem) => {
+  setUpMenuItem(menuItem, template, parent);
+});
 
 function refreshMenuItems() {
-  sideMenuItems.forEach(menuItem => {
+  sideMenuItems.forEach((menuItem) => {
     let ancorELement = document.querySelector("#" + menuItem.id);
     // if selected menu item
     if (selectedMenuItem == menuItem.id) {
@@ -24,8 +23,6 @@ function refreshMenuItems() {
     }
   });
 }
-
-
 
 function setUpMenuItem(menuItem, template, parent) {
   let clone = template.content.cloneNode(true);
@@ -41,21 +38,25 @@ function setUpMenuItem(menuItem, template, parent) {
     ancorELement.classList.add("active");
     document.querySelector("#selected-menu-item").textContent = menuItem.text;
   }
-  url = pageName;
-    if (url.includes("water")) {
-      document.querySelector("#side-menu-item").style = "width: 12rem";
-    }
-    if (url.includes("potato")) {
-      document.querySelector("#side-menu-item").style = "width: 12rem";
-    }
+  // url = pageName;
+  //   // if (url.includes("water")) {
+  //   //   // document.querySelector("#side-menu-item").style = "width: 12rem";
+  //   // }
+  //   if (url.includes("potato")) {
+  //     document.querySelector("#side-menu-item").style = "width: 12rem";
+  //   }
 }
 
 function menuItemClick(event) {
-  selectedMenuItem = event.target.id;
-  selectedTemplate = event.target.data.templateToUse;
-  gallerySource = [];
-  refreshMenuItems();
-  loadSelectedTemplate(selectedTemplate, selectedMenuItem);
+  if (event.target.data.href) {
+    window.location = event.target.data.href;
+  } else {
+    selectedMenuItem = event.target.id;
+    selectedTemplate = event.target.data.templateToUse;
+    gallerySource = [];
+    refreshMenuItems();
+    loadSelectedTemplate(selectedTemplate, selectedMenuItem);
+  }
 }
 
 function loadSelectedTemplate(template, menuId) {
@@ -67,7 +68,6 @@ function loadSelectedTemplate(template, menuId) {
   let galleryLocation = document.querySelector("#gallery");
   galleryLocation.textContent = "";
 
-  subTemplateData = sideMenuItems.find(element => element.id == menuId);
+  subTemplateData = sideMenuItems.find((element) => element.id == menuId);
   importTemplate("./" + templateToLoad + ".html", "#" + templateToLoad, "./assets/scripts/" + templateToLoad + ".js");
 }
-

@@ -18,7 +18,7 @@ fetch("./assets/json/wine_data.json")
     importTemplate("./farm_header.html", "#farm_header", "./assets/scripts/farm_header.js");
 
     // // IMPORTING LEFT SIDE MENU
-    importTemplate("./sidebar.html", "#sidebar", "./assets/scripts/sidebar.js");
+    // importTemplate("./sidebar.html", "#sidebar", "./assets/scripts/sidebar.js");
 
     // IMPORTING ONE OF PARK TEMPLATES
     subTemplateData = sideMenuItems[0];
