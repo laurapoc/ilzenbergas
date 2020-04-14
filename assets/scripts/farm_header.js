@@ -16,14 +16,6 @@ img.forEach((element) => {
 
 // CHANGE ICON'S COLOR ON HOVER
 
-function changeIconColor(htmlElement) {
-  htmlElement.addEventListener("mousemove", function (event) {
-    event.target.src = event.target.src.replace("_grey", "_yelow");
-  });
-  htmlElement.addEventListener("mouseleave", function (event) {
-    event.target.src = event.target.src.replace("_yelow", "_grey");
-  });
-}
 let mapIcon = document.querySelector("#map-icon img");
 changeIconColor(mapIcon);
 
@@ -56,7 +48,7 @@ if (url.includes("water")) {
 } else if (url.includes("agriculture")) {
   document.querySelector("#agriculture").src = "assets/img/round_icons/ukininkyste_yelow.png";
 } else if (url.includes("principles")) {
-  document.querySelector("#principles").src = "assets/img/round_icons/principai_yelow.png";
+  document.querySelector("#principles").src = "assets/img/round_icons/principai1_yelow.png";
 }
 
 // hiding menu items after clicking

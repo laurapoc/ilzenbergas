@@ -50,21 +50,20 @@ function loadNews(newsData) {
     buttonMore.onclick = function() {
       window.location.href = newsLink;
     };
-    // changing inner div's oreder:
+    // changing inner div's order:
     console.log(i);
     let order2 = cloneNews.querySelector(".dummy-class-1");
     let order1 = cloneNews.querySelector(".dummy-class-2");
-    if (i % 2 == 0) {
-      console.log(i + " IS EVEN");
-      console.log(newTitle.textContent);
-    } else {
-      console.log("ODD: ", order2, order1);
+    if (i % 2 == 1) {
       order2.classList.add("order-lg-2");
       order1.classList.add("order-lg-1");
-    }
+    };
     if (i > 1) {
       cloneNews.querySelector(".row").classList.add("not-show");
     }
     shortNewsParent.appendChild(cloneNews);
   });
 }
+
+mapIcon = document.querySelector("#map-icon img");
+changeIconColor(mapIcon);

@@ -1,6 +1,6 @@
 let pageName = "park";
 
-let templateToLoad = "basis_templ1";
+let templateToLoad = "basis_templ2";
 let selectedMenuItem = "a";
 let sideMenuItems = [];
 let subTemplateData = {};

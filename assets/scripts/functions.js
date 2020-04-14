@@ -18,3 +18,13 @@ function importTemplate(templateUrl, templateId, jsLocation) {
     });
 }
 
+// CHANGE ICONS COLOR ON HOVER
+
+function changeIconColor(htmlElement) {
+  htmlElement.addEventListener("mousemove", function (event) {
+    event.target.src = event.target.src.replace("_grey", "_yelow");
+  });
+  htmlElement.addEventListener("mouseleave", function (event) {
+    event.target.src = event.target.src.replace("_yelow", "_grey");
+  });
+}
