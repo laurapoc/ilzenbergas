@@ -32,14 +32,19 @@ let shownNews = [];
 //   });
 
 // IMPORTING NEWS ID DATA:
-fetch("./assets/json/news_id_data.json")
+fetch("./../ilzenbergasapi/wp-json/acf/v3/posts?categories=2")
   .then((response) => response.json())
+  .then((json) => {
+    console.log("ids:", json);
+    return json;
+  })
   .then((newsIdData) => {
     allNews = newsIdData;
     let pictureOnRight = false;
     let promiseArray = [];
     allNews.forEach((element, i) => {
       if (i < 2) {
+        console.log("element:", element);
         promiseArray.push(loadNewsItem(element, pictureOnRight));
         pictureOnRight = !pictureOnRight;
       }
@@ -69,10 +74,10 @@ async function loadMoreNews() {
   });
 }
 
-function loadNewsItem(newsId, pictureOnRight) {
+function loadNewsItem(newsItemRaw, pictureOnRight) {
   //fetch news data by id
-  return fetchNewsItem(newsId).then((newsItem) => {
-    shownNews.push({ newsId, pictureOnRight });
+    shownNews.push({ newsItemRaw, pictureOnRight });
+    const newsItem = newsItemRaw.acf;
     console.log("received newsItem:", newsItem);
     let shortNewsTemplate = document.getElementById("short-new");
     let shortNewsParent = document.getElementById("news-parent");
@@ -81,12 +86,12 @@ function loadNewsItem(newsId, pictureOnRight) {
     let newsImageTag = clonedNewsItem.querySelector("#news-image");
     newsImageTag.src = newsItem.newsImage;
     let anchorTag = clonedNewsItem.querySelector(".anchor-tag");
-    let newsLink = newsItem.linkToNewsPage + "?id=" + newsItem.id;
+    let newsLink = "./news.html?id=" + newsItem.id;
     anchorTag.href = newsLink;
     let newTitle = clonedNewsItem.querySelector(".unic-news-title");
     newTitle.textContent = newsItem.newsTitle;
     let shortNewsParagraph = clonedNewsItem.querySelector(".short-paragraph");
-    shortNewsParagraph.textContent = newsItem.shortNewstext;
+    shortNewsParagraph.innerHTML = newsItem.shortNewstext;
     let buttonMore = clonedNewsItem.querySelector(".btn-translate-more");
     buttonMore.onclick = function () {
       window.location.href = newsLink;
@@ -99,20 +104,19 @@ function loadNewsItem(newsId, pictureOnRight) {
       order1.classList.add("order-lg-1");
     }
     shortNewsParent.appendChild(clonedNewsItem);
-  });
 }
 
-function fetchNewsItem(newsId) {
-  return fetch("./assets/json/news_data.json")
-    .then((response) => response.json())
-    .then((allNewsData) => allNewsData.news.find((newsItem) => newsItem.id == newsId))
-    .then((newsItem) => {
-      return newsItem;
-    })
-    .catch((e) => {
-      console.log(e);
-    });
-}
+// function fetchNewsItem(newsId) {
+//   return fetch("./assets/json/news_data.json")
+//     .then((response) => response.json())
+//     .then((allNewsData) => allNewsData.news.find((newsItem) => newsItem.id == newsId))
+//     .then((newsItem) => {
+//       return newsItem;
+//     })
+//     .catch((e) => {
+//       console.log(e);
+//     });
+// }
 
 // function loadNews(newsData) {
 //   console.log(newsData);

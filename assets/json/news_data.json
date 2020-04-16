@@ -3,7 +3,6 @@
     {
       "id": 0,
       "newsImage": "assets/img/news/mokytoja.jpg",
-      "linkToNewsPage": "./news.html",
       "newsTitle": "Mokytoja sukūrė išmaniąją ekskursiją vaikams – Lietuvoje tokios tik kelios",
       "newArticleDate": "Parašyta 2019 Lapkričio 20 d.",
       "shortNewstext": "Išmaniosios technologijos pritaikomos vis plačiau. Nors Kultūros paso programoje daugiau nei pusantro tūkstančio ekskursijų vaikams, tačiau tokių, kokią sukūrė istorijos mokytoja iš Rokiškio rajono, beveik nėra. Interaktyvios, QR kodais paremtos edukacinės programos vaikams suteikia daug įspūdžių, skatina įsitraukimą ir savarankiškas informacijos paieškas – anot mokytojos, vaikai po ekskursijos išvyksta žibančiomis akimis.",
@@ -33,7 +32,6 @@
     {
       "id": 1,
       "newsImage": "assets/img/ruduo.jpg",
-      "linkToNewsPage": "./news.html",
       "newsTitle": "Ilzenbergo dvaras laidoje „Gyvenu čia“",
       "newArticleDate": "Parašyta 2019 Lapkričio 20 d.",
       "shortNewstext": "Spalio 20 d. per Info TV kanalą buvo parodyta jau trečioji 2019 m. laida \"Gyvenu čia\". Laidos tema - \"Rokiškio kraštas\". Vaizdingame dokumentiniame reportaže išvysite ne tik nuostabius Ilzenbergo dvaro vaizdus, bet ir išgirsite pasakojimą apie dvare vykstančias vaikų vasaros stovyklas, dvaro ūkį ir jame rankomis gaminamus natūralius maisto produktus. Laidos dėka sužinosite apie kitas puikias Rokiškio krašto lankytinas vietas, tradicinius renginius.",

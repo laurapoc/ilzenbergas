@@ -63,7 +63,7 @@ function loadExtendedNews(newsData) {
   let readMore = clone.querySelector("#news-link p");
   readMore.textContent = newsData.readMore;
   let readMoreHref = clone.getElementById("original-article-link");
-  readMoreHref.href = newsData.readMoreLink;
+  readMoreHref.href = "./news.html?id=" + newsData.id;
   readMoreHref.textContent = newsData.readMorelinktext;
   newsParent.appendChild(clone);
 }
