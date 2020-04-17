@@ -166,6 +166,9 @@ section .text-center .row img {
 .text-center .row p {
   font-size: 1.2rem;
 }
+.text-center .row p a {
+  color: #b3ab49;
+}
 .text-center .not-show {
   display: none;
 }
@@ -200,7 +203,7 @@ section .text-center .row img {
     font-size: 1.3rem;
   }
   .text-center .row p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media all and (max-width: 1150px) {
