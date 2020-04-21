@@ -1,8 +1,12 @@
+import { importTemplate } from "./functions.js";
+import { setupHeader } from "./header.js";
+
 let pageName = "map";
-console.log(pageName);
 
 // IMPORTING MAIN MENU
-importTemplate("./header.html", "#header", "./assets/scripts/header.js");
+importTemplate("./header.html", "header", null).then(() => {
+    setupHeader(pageName);
+  });
 
 // IMPORTING BACKGROUND
-importTemplate("./background.html", "#background", null);
+importTemplate("./background.html", "background", null);

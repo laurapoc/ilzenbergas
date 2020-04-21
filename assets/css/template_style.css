@@ -20,6 +20,10 @@
   font-weight: 700;
 }
 
+.hidden {
+  display: none;
+}
+
 @media all and (max-width: 992px) {
   #template-content p {
     font-size: 1.1rem;

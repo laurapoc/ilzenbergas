@@ -1,39 +1,13 @@
+import { getDataFromWp, categoryNews, acfPosts } from "./services/api.js";
+import { changeIconColor } from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
 let allNews = [];
 let shownNews = [];
 
-// IMPORTING NEWS DATA:
-// fetch("./assets/json/news_data.json")
-//   .then((response) => response.json())
-//   .then((newsData) => {
-//     console.log(newsData);
-//     loadNews(newsData);
-//     let showRows = document.querySelectorAll(".not-show");
-//     console.log(showRows);
-//     newsBtn.addEventListener("click", function () {
-//       // adding class "show"
-//       showRows.forEach((row) => {
-//         row.classList.toggle("not-show");
-//       });
-//       console.log(showRows);
-//       // changing button text
-//       let btnText = newsBtn;
-//       if (btnText.textContent === "Visos naujienos") {
-//         btnText.textContent = "Suskleisti naujienas";
-//       } else {
-//         btnText.textContent = "Visos naujienos";
-//       }
-//     });
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
-
 // IMPORTING NEWS ID DATA:
-fetch("./../ilzenbergasapi/wp-json/acf/v3/posts?categories=2")
-  .then((response) => response.json())
+getDataFromWp(acfPosts + "?" + categoryNews)
   .then((json) => {
     console.log("ids:", json);
     return json;
@@ -76,34 +50,34 @@ async function loadMoreNews() {
 
 function loadNewsItem(newsItemRaw, pictureOnRight) {
   //fetch news data by id
-    shownNews.push({ newsItemRaw, pictureOnRight });
-    const newsItem = newsItemRaw.acf;
-    console.log("received newsItem:", newsItem);
-    let shortNewsTemplate = document.getElementById("short-new");
-    let shortNewsParent = document.getElementById("news-parent");
+  shownNews.push({ newsItemRaw, pictureOnRight });
+  const newsItem = newsItemRaw.acf;
+  console.log("received newsItem:", newsItemRaw);
+  let shortNewsTemplate = document.getElementById("short-new");
+  let shortNewsParent = document.getElementById("news-parent");
 
-    let clonedNewsItem = shortNewsTemplate.content.cloneNode(true);
-    let newsImageTag = clonedNewsItem.querySelector("#news-image");
-    newsImageTag.src = newsItem.newsImage;
-    let anchorTag = clonedNewsItem.querySelector(".anchor-tag");
-    let newsLink = "./news.html?id=" + newsItem.id;
-    anchorTag.href = newsLink;
-    let newTitle = clonedNewsItem.querySelector(".unic-news-title");
-    newTitle.textContent = newsItem.newsTitle;
-    let shortNewsParagraph = clonedNewsItem.querySelector(".short-paragraph");
-    shortNewsParagraph.innerHTML = newsItem.shortNewstext;
-    let buttonMore = clonedNewsItem.querySelector(".btn-translate-more");
-    buttonMore.onclick = function () {
-      window.location.href = newsLink;
-    };
-    // changing inner div's order:
-    let order2 = clonedNewsItem.querySelector(".dummy-class-1");
-    let order1 = clonedNewsItem.querySelector(".dummy-class-2");
-    if (pictureOnRight) {
-      order2.classList.add("order-lg-2");
-      order1.classList.add("order-lg-1");
-    }
-    shortNewsParent.appendChild(clonedNewsItem);
+  let clonedNewsItem = shortNewsTemplate.content.cloneNode(true);
+  let newsImageTag = clonedNewsItem.querySelector("#news-image");
+  newsImageTag.src = newsItem.newsImage;
+  let anchorTag = clonedNewsItem.querySelector(".anchor-tag");
+  let newsLink = "./news.html?id=" + newsItemRaw.id;
+  anchorTag.href = newsLink;
+  let newTitle = clonedNewsItem.querySelector(".unic-news-title");
+  newTitle.textContent = newsItem.newsTitle;
+  let shortNewsParagraph = clonedNewsItem.querySelector(".short-paragraph");
+  shortNewsParagraph.innerHTML = newsItem.shortNewstext;
+  let buttonMore = clonedNewsItem.querySelector(".btn-translate-more");
+  buttonMore.onclick = function () {
+    window.location.href = newsLink;
+  };
+  // changing inner div's order:
+  let order2 = clonedNewsItem.querySelector(".dummy-class-1");
+  let order1 = clonedNewsItem.querySelector(".dummy-class-2");
+  if (pictureOnRight) {
+    order2.classList.add("order-lg-2");
+    order1.classList.add("order-lg-1");
+  }
+  shortNewsParent.appendChild(clonedNewsItem);
 }
 
 // function fetchNewsItem(newsId) {
@@ -153,5 +127,5 @@ function loadNewsItem(newsItemRaw, pictureOnRight) {
 //   });
 // }
 
-mapIcon = document.querySelector("#map-icon img");
+let mapIcon = document.querySelector("#map-icon img");
 changeIconColor(mapIcon);

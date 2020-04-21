@@ -1,25 +1,31 @@
-const pageName = "news";
+import { getDataFromWp, acfPosts, categoryNews } from "./services/api.js";
+import { loadGalleryContent } from "./gallery.js";
+import { importTemplate, waitForElement, changeIconColor } from "./functions.js";
+sessionStorage.setItem("page", "news");
 let gallerySource = [];
 
 // IMPORTING MAIN MENU
-importTemplate("./header.html", "#header", "./assets/scripts/header.js");
+importTemplate("./header.html", "header", "./assets/scripts/header.js");
 
 // IMPORTING FOOTER
-importTemplate("./footer.html", "#footer", "./assets/scripts/footer.js");
+importTemplate("./footer.html", "footer", "./assets/scripts/footer.js");
 
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "#background", null);
 
 // IMPORTING NEWS DATA:
-fetch("./assets/json/news_data.json")
-  .then(response => response.json())
-  .then(newsData => {
-    let params = new URLSearchParams(document.location.search.substring(1));
-    let newsId = params.get("id");
-    loadExtendedNews(newsData.news[newsId]);
+let params = new URLSearchParams(document.location.search.substring(1));
+let newsId = params.get("id");
+getDataFromWp(acfPosts + "/" + newsId)
+  .then((newsItem) => {
+    console.log(newsItem);
+    loadExtendedNews(newsItem.acf);
+
     // IMPORTING GALLERY
-    gallerySource = newsData.news[newsId].photoGallery;
-    importTemplate("./gallery.html", "#gallery", "./assets/scripts/gallery.js");
+    importTemplate("./gallery.html", "gallery", null).then(() => {
+      loadGalleryContent(newsItem.acf.photoGallery);
+    });
+
     // BUTTONS "NEXT" AND "PREVIOUS"
     let previousNewButton = document.getElementById("button-prev");
     let nextNewButton = document.getElementById("button-next");
@@ -33,7 +39,7 @@ fetch("./assets/json/news_data.json")
       window.location.href = "./news.html?id=" + 1;
     };
   })
-  .catch(e => {
+  .catch((e) => {
     console.log(e);
   });
 
@@ -50,15 +56,18 @@ function loadExtendedNews(newsData) {
   let articleTitle = clone.getElementById("article-header");
   articleTitle.textContent = newsData.newsTitle;
   let anotation = clone.getElementById("anotation");
-  anotation.textContent = newsData.shortNewstext;
+  anotation.innerHTML = newsData.shortNewstext;
   let extendedNewContent = clone.getElementById("extended-content-paragraph");
-  extendedNewContent.textContent = newsData.extendedNewsContent;
+  extendedNewContent.innerHTML = newsData.extendedNewsContent;
 
-  newsData.articleParagraphs.forEach(element => {
-    let cloneRepBlock = loadRepeatingParagraphBlock(element);
-    let repeatingBlockParent = clone.getElementById("repeating-block-parent");
-    repeatingBlockParent.appendChild(cloneRepBlock);
-  });
+  if (newsData.articleParagraphs) {
+    newsData.articleParagraphs.forEach((element) => {
+      let cloneRepBlock = loadRepeatingParagraphBlock(element);
+      let repeatingBlockParent = clone.getElementById("repeating-block-parent");
+      repeatingBlockParent.appendChild(cloneRepBlock);
+    });
+  }
+
 
   let readMore = clone.querySelector("#news-link p");
   readMore.textContent = newsData.readMore;
@@ -71,12 +80,12 @@ function loadExtendedNews(newsData) {
 function loadRepeatingParagraphBlock(paragraphData) {
   // CLONE REPEATING NEWS BLOCK TEMPLATE:
   let repeatingBlockTemplate = document.getElementById("repeating-paragraph-block");
-  console.log(repeatingBlockTemplate);
+  //console.log(repeatingBlockTemplate);
   let cloneRepBlock = repeatingBlockTemplate.content.cloneNode(true);
   let paragraphHeader = cloneRepBlock.querySelector(".paragraph-header");
   paragraphHeader.textContent = paragraphData.paragraphHeader;
   let paragraphText = cloneRepBlock.querySelector(".paragraph-text");
-  paragraphText.textContent = paragraphData.paragraphText;
+  paragraphText.innerHTML = paragraphData.paragraphText;
   return cloneRepBlock;
 }
 

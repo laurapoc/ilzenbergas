@@ -1,28 +1,29 @@
+import { waitForElement } from "./functions.js";
+
 // photo gallery
 $('[data-fancybox="gallery"]').fancybox({
   loop: true,
   animationDuration: 500,
-  protect: true
+  protect: true,
 });
 
-// IMPORTING GALLERY DATA:
-if(gallerySource) {
-  loadGalleryContent(gallerySource);
-};
+console.warn("must remove global scope usage, call loadGalleryContent directly");
 
-
-function loadGalleryContent(galleryData) {
+export function loadGalleryContent(galleryData) {
   // CLONE GALLERY CONTENT TEMPLATE:
-  let galleryTemplate = document.getElementById("photo-gallery-content");
-  let galleryParent = document.getElementById("gallery-parent");
-  galleryParent.textContent = "";
-  galleryData.forEach(element => {
-    let cloneGallery = galleryTemplate.content.cloneNode(true);
-    let bigPhoto = cloneGallery.getElementById("big-photo");
-    bigPhoto.href = element.photoBig;
-    let smallPhoto = cloneGallery.getElementById("small-photo");
-    smallPhoto.src = element.photoSmall;
-    galleryParent.appendChild(cloneGallery);
+  waitForElement("#photo-gallery-content", document.body).then(() => {
+    let galleryTemplate = document.getElementById("photo-gallery-content");
+    let galleryParent = document.getElementById("gallery-parent");
+    galleryParent.textContent = "";
+    if (galleryData) {
+      galleryData.forEach((element) => {
+        let cloneGallery = galleryTemplate.content.cloneNode(true);
+        let bigPhoto = cloneGallery.getElementById("big-photo");
+        bigPhoto.href = element.sizes.large;
+        let smallPhoto = cloneGallery.getElementById("small-photo");
+        smallPhoto.src = element.sizes.medium;
+        galleryParent.appendChild(cloneGallery);
+      });
+    }
   });
-  
-};
+}

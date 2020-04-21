@@ -1,10 +1,15 @@
+import { importTemplate } from "./functions.js";
+import { setupHeader } from "./farm_header.js";
+
 let pageName = "contacts";
 
 // IMPORTING MAIN MENU
-importTemplate("./farm_header.html", "#farm_header", "./assets/scripts/farm_header.js");
+importTemplate("./farm_header.html", "farm_header", null).then(() => {
+  setupHeader(pageName);
+});
 
 // IMPORTING BACKGROUND
-importTemplate("./background.html", "#background", null);
+importTemplate("./background.html", "background", null);
 
 // IMPORTING CONTACTS DATA
 fetch("./assets/json/contacts_data.json")
