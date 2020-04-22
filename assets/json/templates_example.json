@@ -60,10 +60,10 @@
             "cardHeading": "SEZONO METU",
             "strongParagraphArray": [
               {
-                "strongParagraph": "gegužė - spalis"
+                "paragraph": "gegužė - spalis"
               },
               {
-                "strongParagraph": "III - VII"
+                "paragraph": "III - VII"
               }
             ],
             "cardParagraph": "(treč.-sekm.)",
@@ -75,10 +75,10 @@
             "cardHeading": "KITU METU",
             "strongParagraphArray": [
               {
-                "strongParagraph": "lapkritis - balandis"
+                "paragraph": "lapkritis - balandis"
               },
               {
-                "strongParagraph": "VI - VII"
+                "paragraph": "VI - VII"
               }
             ],
             "cardParagraph": "(šešt.-sekm.)",
@@ -90,7 +90,7 @@
             "cardHeading": "ŠVENČIŲ DIENOMIS",
             "strongParagraphArray": [
               {
-                "strongParagraph": "visus metus"
+                "paragraph": "visus metus"
               }
             ],
             "bottomStrongParagraph": "10-19 val.",

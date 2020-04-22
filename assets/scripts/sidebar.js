@@ -18,9 +18,9 @@ export class SideBar {
   constructor(sideBarData, pageName) {
     console.log("Constructing sidebar:", sideBarData);
     this.sideBarData = sideBarData;
-    if(this.sideBarData.length == 1) {
-      document.getElementById("sidebar").classList.add("hidden");
-    }
+    // if(this.sideBarData.length == 1) {
+    //   document.getElementById("sidebar").classList.add("hidden");
+    // }
     this.selectedItem = sideBarData[0];
     this.pageName = pageName;
 
@@ -46,18 +46,19 @@ export class SideBar {
   }
 
   setUpMenuItem(menuItem, template, parent, selectedItem) {
+    let acf = menuItem.acf;
     let clone = template.content.cloneNode(true);
     // asign menu item text
     let ancorELement = clone.querySelectorAll("a")[0];
     let sidebarInstance = this;
     ancorELement.addEventListener("click", (event) => sidebarInstance.menuItemClick(event, sidebarInstance));
     // append child to parent
-    ancorELement.textContent = menuItem.text;
-    ancorELement.id = menuItem.id;
-    ancorELement.data = menuItem;
+    ancorELement.textContent = acf.text;
+    ancorELement.id = acf.id;
+    ancorELement.data = acf;
     if (menuItem.id == selectedItem.id) {
       ancorELement.classList.add("active");
-      document.querySelector("#selected-menu-item").textContent = menuItem.text;
+      document.querySelector("#selected-menu-item").textContent = acf.text;
     }
     parent.appendChild(clone);
   }
@@ -80,14 +81,14 @@ export class SideBar {
     contentLocation.textContent = "";
 
     this.templates.forEach((template) => {
-      if (template.name == menuItemData.templateToUse) {
-        template.loader(menuItemData, this.pageName);
+      if (template.name == menuItemData.acf.templateToUse) {
+        template.loader(menuItemData.acf, this.pageName);
       }
     });
     //load gallery if its defined
-    if (menuItemData.photoGallery){
-      console.log("loading gallery", menuItemData.photoGallery);
-      loadGalleryContent(menuItemData.photoGallery);
+    if (menuItemData.acf.photoGallery){
+      console.log("loading gallery", menuItemData.acf.photoGallery);
+      loadGalleryContent(menuItemData.acf.photoGallery);
     }
   }
 

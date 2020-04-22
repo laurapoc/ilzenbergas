@@ -19,6 +19,9 @@
 #template-content h5 {
   font-weight: 700;
 }
+#template-content .season-card-content p {
+  margin-bottom: 0;
+}
 
 .hidden {
   display: none;

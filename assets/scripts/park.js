@@ -1,17 +1,18 @@
 import { importTemplate } from "./functions.js";
 import { SideBar } from "./sidebar.js";
 import { setupHeader } from "./header.js";
+import { getDataFromWp, categoryPark, acfPosts } from "./services/api.js";
 
 let pageName = "park";
 
 // IMPORTING TEMPLATES:
-fetch("./assets/json/park_data.json")
-  .then((response) => response.json())
+getDataFromWp(acfPosts + "?" + categoryPark)
   .then((sidebarData) => {
+    console.log(sidebarData);
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {
-      new SideBar(sidebarData.sideMenuItems);
+      new SideBar(sidebarData);
     });
 
   })

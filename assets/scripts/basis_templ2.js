@@ -11,18 +11,18 @@ export function loadBasisTempl2(sidebarData, pageName) {
     // basisTemplate2Parent.textContent = "";
     let cloneTemplate2 = basisTemplate2.content.cloneNode(true);
     let mainTemplate2eading = cloneTemplate2.querySelector(".main-heading");
-    mainTemplate2eading.textContent = sidebarData.mainHeading;
+    mainTemplate2eading.innerHTML = sidebarData.mainHeading;
     let template2ContentHeading = cloneTemplate2.querySelector(".page-content-heading");
-    template2ContentHeading.textContent = sidebarData.pageContentHeading;
+    template2ContentHeading.innerHTML = sidebarData.pageContentHeading;
     let template2Subheading = cloneTemplate2.querySelector(".subheading");
-    template2Subheading.textContent = sidebarData.subheading;
+    template2Subheading.innerHTML = sidebarData.subheading;
 
     let lineImageCards = cloneTemplate2.getElementById("open-seasons");
     let paragraphParent = cloneTemplate2.getElementById("template2-content");
 
     sidebarData.paragraphArray.forEach((element) => {
       let paragraph = document.createElement("p");
-      paragraph.textContent = element.paragraph;
+      paragraph.innerHTML = element.paragraph;
       paragraphParent.insertBefore(paragraph, lineImageCards);
     });
 
@@ -54,8 +54,8 @@ function loadHeadedParagraphs(sidebarData, cloneTemplate2) {
   sidebarData.headedParagraphArray.forEach((headedP) => {
     let clone = cloneTemplate2.getElementById("headed-paragraph-template").content.cloneNode(true);
     let paragraphParent = cloneTemplate2.getElementById("headed-paragraph-block");
-    clone.querySelector(".paragraph-heading").textContent = headedP.paragrapHeading;
-    clone.querySelector(".paragraph-to-extend-content").textContent = headedP.paragraphToExtendContent;
+    clone.querySelector(".paragraph-heading").innerHTML = headedP.paragrapHeading;
+    clone.querySelector(".paragraph-to-extend-content").innerHTML = headedP.paragraphToExtendContent;
     paragraphParent.appendChild(clone);
   });
 }
@@ -67,18 +67,9 @@ function loadOrnamentedCards(sidebarData, cloneTemplate2) {
     clone.querySelector(".card-top-image").src = element.topLineImage;
     clone.querySelector(".card-heading").textContent = element.cardHeading;
     let cardStrongParParent = clone.querySelector(".season-card-content");
-    let insertBefore = clone.querySelector(".card-paragraph");
-    element.strongParagraphArray.forEach((paragraph) => {
-      let parEl = document.createElement("p");
-      parEl.textContent = paragraph.strongParagraph;
-      parEl.classList.add("text-center");
-      parEl.classList.add("mb-0");
-      parEl.classList.add("font-weight-bold");
-      cardStrongParParent.insertBefore(parEl, insertBefore);
-    });
-    clone.querySelector(".card-paragraph").textContent = element.cardParagraph;
-    clone.querySelector(".bottom-strong-paragraph").textContent = element.bottomStrongParagraph;
-    clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
+    clone.querySelector(".card-paragraph-content").innerHTML = element.paragraph;
+
+
     clone.querySelector(".card-bottom-line").src = element.bottomLineImage;
 
     parent.appendChild(clone);
@@ -104,7 +95,7 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
     let insertBefore = clone.querySelector(".card-paragraph");
     element.largeStrongParagraphArray.forEach((paragraph) => {
       let parEl = document.createElement("p");
-      parEl.textContent = paragraph.largeStrongParagraph;
+      parEl.innerHTML = paragraph.largeStrongParagraph;
       if (pageName.includes("tasting")) {
         parEl.classList.add("text-justify");
         parEl.classList.add("px-2");
@@ -113,8 +104,8 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
       parEl.classList.add("mb-0");
       cardStrongParParent.insertBefore(parEl, insertBefore);
     });
-    clone.querySelector(".card-paragraph").textContent = element.largeCardParagraph;
-    clone.querySelector(".bottom-strong-paragraph").textContent = element.largeBottomStrongParagraph;
+    clone.querySelector(".card-paragraph").innerHTML = element.largeCardParagraph;
+    clone.querySelector(".bottom-strong-paragraph").innerHTML = element.largeBottomStrongParagraph;
     clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
     clone.querySelector(".card-bottom-line").src = element.largeBottomLineImage;
 
@@ -125,7 +116,7 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
 
     element.backCardParagraphArray.forEach((paragraph) => {
       let backParEl = document.createElement("p");
-      backParEl.textContent = paragraph.backStrongParagraph;
+      backParEl.innerHTML = paragraph.backStrongParagraph;
       if (pageName.includes("tasting")) {
         backParEl.classList.add("text-justify");
         backParEl.classList.add("px-2");
@@ -135,9 +126,9 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
 
       backCardStrongParParent.insertBefore(backParEl, insertParBefore);
     });
-    clone.getElementById("back-large-paragraph").textContent = element.backCardParagraph;
+    clone.getElementById("back-large-paragraph").innerHTML = element.backCardParagraph;
     clone.getElementById("experiment-link").href = element.videoLinkHref;
-    clone.getElementById("link-to-experiment").textContent = element.linkToVideo;
+    clone.getElementById("link-to-experiment").innerHTML = element.linkToVideo;
 
     clone.getElementById("back-bottom-strong-info").textContent = element.backBottomStrongParagraph;
     clone.getElementById("back-bottom-strong-info").classList.add("font-weight-bold");
