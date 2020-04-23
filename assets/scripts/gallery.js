@@ -11,10 +11,9 @@ console.warn("must remove global scope usage, call loadGalleryContent directly")
 
 export function loadGalleryContent(galleryData) {
   // CLONE GALLERY CONTENT TEMPLATE:
+  let galleryParent = document.getElementById("gallery-parent");
   waitForElement("#photo-gallery-content", document.body).then(() => {
     let galleryTemplate = document.getElementById("photo-gallery-content");
-    let galleryParent = document.getElementById("gallery-parent");
-    galleryParent.textContent = "";
     if (galleryData) {
       galleryData.forEach((element) => {
         let cloneGallery = galleryTemplate.content.cloneNode(true);

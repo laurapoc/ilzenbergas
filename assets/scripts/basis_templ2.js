@@ -20,9 +20,9 @@ export function loadBasisTempl2(sidebarData, pageName) {
     let lineImageCards = cloneTemplate2.getElementById("open-seasons");
     let paragraphParent = cloneTemplate2.getElementById("template2-content");
 
-    sidebarData.paragraphArray.forEach((element) => {
+    sidebarData.t2_paragraphArray.forEach((element) => {
       let paragraph = document.createElement("p");
-      paragraph.innerHTML = element.paragraph;
+      paragraph.innerHTML = element.t2_paragraph;
       paragraphParent.insertBefore(paragraph, lineImageCards);
     });
 
@@ -67,11 +67,8 @@ function loadOrnamentedCards(sidebarData, cloneTemplate2) {
     clone.querySelector(".card-top-image").src = element.topLineImage;
     clone.querySelector(".card-heading").textContent = element.cardHeading;
     let cardStrongParParent = clone.querySelector(".season-card-content");
-    clone.querySelector(".card-paragraph-content").innerHTML = element.paragraph;
-
-
+    clone.querySelector(".card-paragraph-content").innerHTML = element.cardParagraph;
     clone.querySelector(".card-bottom-line").src = element.bottomLineImage;
-
     parent.appendChild(clone);
   });
 }
@@ -80,53 +77,56 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
   sidebarData.largeLineCardArray.forEach((element) => {
     let clone = cloneTemplate2.getElementById("large-ornamented-card").content.cloneNode(true);
     let parent = cloneTemplate2.getElementById("large-card");
-    // if (pageName.includes("water")) {
-    //   // clone.querySelector(".flip-card").style = "width: 30%";
-    //   console.log(clone.querySelector(".flip-card"));
-    // }
+    if (pageName == "water") {
+      // clone.querySelector(".flip-card").style = "width: 30%";
+      console.log(clone.querySelector(".flip-card"));
+    }
     clone.querySelector(".card-top-image").src = element.largeTopLineImage;
     clone.querySelector(".card-heading").textContent = element.largeCardHeading;
+    clone.querySelector(".repeated-strong-paragraph").innerHTML = element.largeStrongParagraph;
     let cardStrongParParent = clone.querySelector(".season-card-content");
-    if (pageName.includes("tasting")) {
+    if (pageName == "tastings") {
       parent.style = "font-size: 1rem";
       cardStrongParParent.style = "min-height: 290px";
       clone.querySelector(".flip-card").style = "min-height: 350px";
     }
-    let insertBefore = clone.querySelector(".card-paragraph");
-    element.largeStrongParagraphArray.forEach((paragraph) => {
-      let parEl = document.createElement("p");
-      parEl.innerHTML = paragraph.largeStrongParagraph;
-      if (pageName.includes("tasting")) {
-        parEl.classList.add("text-justify");
-        parEl.classList.add("px-2");
-      }
-      // parEl.classList.add("text-center");
-      parEl.classList.add("mb-0");
-      cardStrongParParent.insertBefore(parEl, insertBefore);
-    });
-    clone.querySelector(".card-paragraph").innerHTML = element.largeCardParagraph;
+    // let insertBefore = clone.querySelector(".bottom-strong-paragraph");
+    // element.largeStrongParagraphArray.forEach((paragraph) => {
+    //   let parEl = document.createElement("p");
+    //   parEl.innerHTML = paragraph.largeStrongParagraph;
+    //   console.log(pageName);
+    //   if (pageName == "tastings") {
+    //     parEl.classList.add("text-justify");
+    //     parEl.classList.add("px-2");
+    //   }
+    //   parEl.classList.add("mb-0");
+
+    //   cardStrongParParent.insertBefore(parEl, insertBefore);
+    // });
+
     clone.querySelector(".bottom-strong-paragraph").innerHTML = element.largeBottomStrongParagraph;
     clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
     clone.querySelector(".card-bottom-line").src = element.largeBottomLineImage;
 
     // back card content:
     clone.getElementById("back-heading").textContent = element.backCardHeading;
-    let backCardStrongParParent = clone.querySelector(".flip-card-back");
-    let insertParBefore = clone.getElementById("back-large-paragraph");
+    clone.getElementById("back-strong-info").innerHTML = element.backStrongParagraph;
+    // let backCardStrongParParent = clone.querySelector(".flip-card-back");
+    // let insertParBefore = clone.getElementById("experiment-link");
 
-    element.backCardParagraphArray.forEach((paragraph) => {
-      let backParEl = document.createElement("p");
-      backParEl.innerHTML = paragraph.backStrongParagraph;
-      if (pageName.includes("tasting")) {
-        backParEl.classList.add("text-justify");
-        backParEl.classList.add("px-2");
-      }
+    // element.backCardParagraphArray.forEach((paragraph) => {
+    //   let backParEl = document.createElement("p");
+    //   backParEl.innerHTML = paragraph.backStrongParagraph;
+    //   if (pageName == "tastings") {
+    //     backParEl.classList.add("text-justify");
+    //     backParEl.classList.add("px-2");
+    //   }
 
-      backParEl.classList.add("mb-0");
+    //   backParEl.classList.add("mb-0");
 
-      backCardStrongParParent.insertBefore(backParEl, insertParBefore);
-    });
-    clone.getElementById("back-large-paragraph").innerHTML = element.backCardParagraph;
+    //   backCardStrongParParent.insertBefore(backParEl, insertParBefore);
+    // });
+
     clone.getElementById("experiment-link").href = element.videoLinkHref;
     clone.getElementById("link-to-experiment").innerHTML = element.linkToVideo;
 

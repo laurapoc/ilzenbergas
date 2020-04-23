@@ -54,8 +54,8 @@ export class SideBar {
     ancorELement.addEventListener("click", (event) => sidebarInstance.menuItemClick(event, sidebarInstance));
     // append child to parent
     ancorELement.textContent = acf.text;
-    ancorELement.id = acf.id;
-    ancorELement.data = acf;
+    ancorELement.id = "id" + menuItem.id;
+    ancorELement.data = menuItem;
     if (menuItem.id == selectedItem.id) {
       ancorELement.classList.add("active");
       document.querySelector("#selected-menu-item").textContent = acf.text;
@@ -82,10 +82,14 @@ export class SideBar {
 
     this.templates.forEach((template) => {
       if (template.name == menuItemData.acf.templateToUse) {
+        console.log(this.pageName);
         template.loader(menuItemData.acf, this.pageName);
+
       }
     });
     //load gallery if its defined
+    let galleryParent = document.getElementById("gallery-parent");
+    galleryParent.textContent = "";
     if (menuItemData.acf.photoGallery){
       console.log("loading gallery", menuItemData.acf.photoGallery);
       loadGalleryContent(menuItemData.acf.photoGallery);
@@ -94,7 +98,7 @@ export class SideBar {
 
   refreshMenuItems(sidebarInstance) {
     sidebarInstance.sideBarData.forEach((menuItem) => {
-      let ancorELement = document.querySelector("#" + menuItem.id);
+      let ancorELement = document.querySelector("#id" + menuItem.id);
       // if selected menu item
       if (sidebarInstance.selectedItem.id == menuItem.id) {
         // class active

@@ -12,7 +12,7 @@ getDataFromWp(acfPosts + "?" + categoryPark)
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {
-      new SideBar(sidebarData);
+      new SideBar(sidebarData, pageName);
     });
 
   })

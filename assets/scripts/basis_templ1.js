@@ -12,23 +12,26 @@ export function loadBasisTempl1(sidebarData) {
   basisTemplate1Parent.textContent = "";
   let cloneTemplate1 = basisTemplate1.content.cloneNode(true);
   let mainTemplate1Heading = cloneTemplate1.querySelector(".main-heading");
-  mainTemplate1Heading.textContent = sidebarData.mainHeading;
+  mainTemplate1Heading.innerHTML = sidebarData.mainHeading;
   let template1ContentHeading = cloneTemplate1.querySelector(".page-content-heading");
-  template1ContentHeading.textContent = sidebarData.pageContentHeading;
+  template1ContentHeading.innerHTML = sidebarData.pageContentHeading;
   let template1Subheading = cloneTemplate1.querySelector(".subheading");
-  template1Subheading.textContent = sidebarData.subheading;
+  template1Subheading.innerHTML = sidebarData.subheading;
+  // console.log("paragrafas, kuris nesikartos ", cloneTemplate1.querySelector(".repeating-paragraph-block"));
+  // cloneTemplate1.querySelector(".repeating-paragraph-block").innerHTML = sidebarData.paragraph;
+  
 
-  sidebarData.paragraphArray.forEach(element => {
+  sidebarData.t1_paragraphArray.forEach(element => {
     
     let paragraph = document.createElement("p");
-    paragraph.textContent = element.paragraph;
+    paragraph.innerHTML = element.t1_paragraph;
     let paragraphParent = cloneTemplate1.getElementById("template1-content");
     let masterLogoTag = cloneTemplate1.getElementById("master-logo");
     paragraphParent.insertBefore(paragraph, masterLogoTag);
   });
   if (sidebarData.additionalInfo && sidebarData.additionalPhoto) {
     let additionalInfo = cloneTemplate1.querySelector("#master-logo p");
-    additionalInfo.textContent = sidebarData.additionalInfo;
+    additionalInfo.innerHTML = sidebarData.additionalInfo;
     // url = pageName;
     // if (url.includes("restaurant")) {
     //   cloneTemplate1.querySelector("#master-logo a").href = sidebarData.imageLink;
