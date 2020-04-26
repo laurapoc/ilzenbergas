@@ -1,10 +1,12 @@
 import { importTemplate, waitForElement } from "./functions.js";
 import { setupHeader } from "./header.js";
+import { categoryEvents } from "./services/api.js";
+import { getDataFromWp, acfPosts } from "./services/api.js";
 
 let pageName = "events";
 
 // IMPORTING MAIN MENU
-importTemplate("./header.html", "#header", null).then(() => {
+importTemplate("./header.html", "header", null).then(() => {
   setupHeader(pageName);
 });
 
@@ -14,51 +16,54 @@ importTemplate("./footer.html", "footer", "./assets/scripts/footer.js");
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "background", null);
 
-// IMPORTING EVENTS DATA:
-fetch("./assets/json/objects_data.json")
-  .then((response) => response.json())
-  .then((dataObject) => {
-    console.log(dataObject);
-    loadCalendar(dataObject);
-  })
-  .catch((e) => {
-    console.log(e);
-  });
+// Loading calendar (data via fetchEvents()) :
+loadCalendar();
 
 // IMPORTING YOUTUBE VIDEO DATA:
-fetch("./assets/json/video_data.json")
-  .then((response) => response.json())
-  .then((videoData) => {
-    console.log(videoData);
-    loadVideoData(videoData);
+getDataFromWp(acfPosts, [{ name: "category", value: categoryEvents }])
+  .then((eventsData) => {
+    loadVideoData(eventsData);
   })
   .catch((e) => {
     console.log(e);
   });
 
-function loadVideoData(videoData) {
-  console.log(videoData);
+function loadVideoData(eventsData) {
   // youtube video clone:
   let youtubeEmbededVideoTemplate = document.getElementById("youtube-link-template");
   let youtubeEmbededVideoParent = document.getElementById("youtube-link-parent");
   youtubeEmbededVideoParent.textContent = "";
 
-  videoData.videos.forEach((youtubeVideo) => {
+  let eventsWithVideo = eventsData.filter((event) => event.acf.youtubeEmbededVideo);
+
+  //reorder based on currentDate
+  let reorderedEvents = [];
+  let pastEvents = [];
+  let today = new Date();
+  eventsWithVideo.forEach((event) => {
+    let eventDateInNumber = Date.parse(event.acf.start);
+    if (eventDateInNumber >= today) {
+      reorderedEvents.push(event);
+    } else {
+      pastEvents.push(event);
+    }
+  });
+  reorderedEvents = reorderedEvents.concat(pastEvents);
+
+  reorderedEvents.forEach((event) => {
     let cloneVideo = youtubeEmbededVideoTemplate.content.cloneNode(true);
     let innerDivTag = cloneVideo.querySelector("div");
 
-    innerDivTag.innerHTML = youtubeVideo.youtubeEmbededVideo;
+    innerDivTag.innerHTML = event.acf.youtubeEmbededVideo;
     youtubeEmbededVideoParent.appendChild(cloneVideo);
   });
 }
 
 // CALENDAR:
 
-function loadCalendar(dataObject) {
+function loadCalendar() {
   let calendarEl = document.getElementById("calendar");
   let initialLocaleCode = "lt";
-
-  let eventsList = dataObject.events;
 
   let today = new Date();
   let y = today.getFullYear();
@@ -95,7 +100,7 @@ function loadCalendar(dataObject) {
     },
     header: headerProperties,
     contentHeight: "auto",
-    events: eventsList,
+    events: fetchEvents,
     // show event popup:
     eventRender: function (info) {
       $(info.el).tooltip({ title: info.event.extendedProps.info ? info.event.extendedProps.info : "default" });
@@ -106,7 +111,6 @@ function loadCalendar(dataObject) {
     },
     // day number click
     navLinkDayClick: function (date, jsEvent) {
-      console.log(date, jsEvent);
       calendar.gotoDate(date);
       calendar.changeView("dayGrid");
       if ($(window).width() < 765) {
@@ -130,8 +134,7 @@ function loadCalendar(dataObject) {
     // event click:
 
     eventClick: function (info) {
-      console.log("event clicked");
-      loadEvent(eventsList[info.event.id]);
+      loadEvent(info.event.extendedProps);
     },
     // Change view on windows resize:
     windowResize: function (view) {
@@ -155,6 +158,32 @@ function loadCalendar(dataObject) {
   calendar.render();
 }
 
+function fetchEvents(info, successCallback, failureCallback) {
+  let querryParams = [];
+  querryParams.push({ name: "category", value: categoryEvents });
+  //add filter for events based on time interval provided in info object
+  querryParams.push({ name: "filter[meta_query][0][key]", value: "start" });
+  querryParams.push({ name: "filter[meta_query][0][value]", value: info.start.toISOString() });
+  querryParams.push({ name: "filter[meta_query][0][compare]", value: ">" });
+
+  querryParams.push({ name: "filter[meta_query][1][key]", value: "start" });
+  querryParams.push({ name: "filter[meta_query][1][value]", value: info.end.toISOString() });
+  querryParams.push({ name: "filter[meta_query][1][compare]", value: "<" });
+
+  return getDataFromWp(acfPosts, querryParams)
+    .then((responseJson) => {
+      let events = [];
+      responseJson.forEach((event) => {
+        events.push({ ...event.acf, event });
+      });
+      successCallback(events);
+
+    })
+    .catch((reason) => {
+      failureCallback(reason);
+    });
+}
+
 function loadEvent(eventContent) {
   // 1. susirasti template'a, kuri klonuosiu
   let eventTemplate = document.querySelector("#event-info");
@@ -172,7 +201,7 @@ function loadEvent(eventContent) {
   buyButton.href = eventContent.buyButton;
   console.log(buyButton);
   let eventText = clone.getElementById("event-text");
-  eventText.textContent = eventContent.eventText;
+  eventText.innerHTML = eventContent.eventText;
 
   // priskiriam turini prie nurodyto tevo:
   eventParent.appendChild(clone);
@@ -183,13 +212,12 @@ function loadEvent(eventContent) {
   extendedContentParent.textContent = "";
   let cloneExtendedContent = extendedEventContentTemplate.content.cloneNode(true);
   let paragraphTag = cloneExtendedContent.getElementById("extended-text");
-  paragraphTag.textContent = eventContent.extendedContent;
+  paragraphTag.innerHTML = eventContent.extendedContent;
   extendedContentParent.appendChild(cloneExtendedContent);
 
   waitForElement(".toggle-extended-text", document).then(() => {
     document.getElementById("button-extend-content").addEventListener("click", toggleExtendedContent);
   });
-
 }
 
 function toggleExtendedContent(event) {

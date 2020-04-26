@@ -20,7 +20,7 @@
 #large-card {
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.1rem;
+  font-size: 1rem;
   justify-content: space-between;
   /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
   /* Do an horizontal flip when you move the mouse over the flip box container */

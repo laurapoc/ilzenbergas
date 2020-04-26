@@ -1,7 +1,7 @@
 {
     "contacts": [
         {
-            "title": "ILZENBERGO DVARAS",
+            "contactTitle": "ILZENBERGO DVARAS",
             "phoneLink": "tel:00370 696 44004",
             "phoneNumber": "+370 696 44004",
             "mailLink": "mailto:dvaras@ilzenbergas.lt",
@@ -10,7 +10,7 @@
             "postCodeRegion": "LT-42440 Rokiškio r."
         },
         {
-            "title": "ILZENBERGO ŪKIS",
+            "contactTitle": "ILZENBERGO ŪKIS",
             "phoneLink": "tel:00370 616 29375",
             "phoneNumber": "+370 616 29375",
             "mailLink": "mailto:ukis@ilzenbergas.lt",
@@ -20,7 +20,7 @@
         }
     ],
     "workSchedule": {
-        "heading": "DARBO LAIKAS",
+        "sheduleHeading": "DARBO LAIKAS",
         "workTimeArray": [
             {
                 "season": "Gegužės-spalio mėn. III-VII",

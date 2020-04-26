@@ -8,7 +8,6 @@ export function loadBasisTempl2(sidebarData, pageName) {
     let basisTemplate2 = document.getElementById("basis_templ2_template");
     let basisTemplate2Parent = document.getElementById("subtemplate");
     console.log("data, template, parent:", sidebarData, basisTemplate2, basisTemplate2Parent);
-    // basisTemplate2Parent.textContent = "";
     let cloneTemplate2 = basisTemplate2.content.cloneNode(true);
     let mainTemplate2eading = cloneTemplate2.querySelector(".main-heading");
     mainTemplate2eading.innerHTML = sidebarData.mainHeading;
@@ -78,8 +77,7 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
     let clone = cloneTemplate2.getElementById("large-ornamented-card").content.cloneNode(true);
     let parent = cloneTemplate2.getElementById("large-card");
     if (pageName == "water") {
-      // clone.querySelector(".flip-card").style = "width: 30%";
-      console.log(clone.querySelector(".flip-card"));
+      clone.querySelector(".flip-card").style = "width: 30%";
     }
     clone.querySelector(".card-top-image").src = element.largeTopLineImage;
     clone.querySelector(".card-heading").textContent = element.largeCardHeading;
@@ -90,20 +88,6 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
       cardStrongParParent.style = "min-height: 290px";
       clone.querySelector(".flip-card").style = "min-height: 350px";
     }
-    // let insertBefore = clone.querySelector(".bottom-strong-paragraph");
-    // element.largeStrongParagraphArray.forEach((paragraph) => {
-    //   let parEl = document.createElement("p");
-    //   parEl.innerHTML = paragraph.largeStrongParagraph;
-    //   console.log(pageName);
-    //   if (pageName == "tastings") {
-    //     parEl.classList.add("text-justify");
-    //     parEl.classList.add("px-2");
-    //   }
-    //   parEl.classList.add("mb-0");
-
-    //   cardStrongParParent.insertBefore(parEl, insertBefore);
-    // });
-
     clone.querySelector(".bottom-strong-paragraph").innerHTML = element.largeBottomStrongParagraph;
     clone.querySelector(".bottom-strong-paragraph").classList.add("font-weight-bold");
     clone.querySelector(".card-bottom-line").src = element.largeBottomLineImage;
@@ -111,22 +95,6 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
     // back card content:
     clone.getElementById("back-heading").textContent = element.backCardHeading;
     clone.getElementById("back-strong-info").innerHTML = element.backStrongParagraph;
-    // let backCardStrongParParent = clone.querySelector(".flip-card-back");
-    // let insertParBefore = clone.getElementById("experiment-link");
-
-    // element.backCardParagraphArray.forEach((paragraph) => {
-    //   let backParEl = document.createElement("p");
-    //   backParEl.innerHTML = paragraph.backStrongParagraph;
-    //   if (pageName == "tastings") {
-    //     backParEl.classList.add("text-justify");
-    //     backParEl.classList.add("px-2");
-    //   }
-
-    //   backParEl.classList.add("mb-0");
-
-    //   backCardStrongParParent.insertBefore(backParEl, insertParBefore);
-    // });
-
     clone.getElementById("experiment-link").href = element.videoLinkHref;
     clone.getElementById("link-to-experiment").innerHTML = element.linkToVideo;
 

@@ -32,7 +32,7 @@ function loadContactsData(contactsData) {
   clone = template.content.cloneNode(true);
   contactsData.contacts.forEach(contact => {
     clone = template.content.cloneNode(true);
-    clone.getElementById("mansion-heading").textContent = contact.title;
+    clone.getElementById("mansion-heading").textContent = contact.contactTitle;
     clone.getElementById("phone-link").href = contact.phoneLink;
     clone.getElementById("phone").textContent = contact.phoneNumber;
     clone.getElementById("email-link").href = contact.mailLink;
@@ -45,7 +45,7 @@ function loadContactsData(contactsData) {
 
 function loadSheduleHeading(contactsData) {
   let sheduleHeading = document.getElementById("shedule-heading");
-  sheduleHeading.textContent = contactsData.workSchedule.heading;
+  sheduleHeading.textContent = contactsData.workSchedule.sheduleHeading;
 }
 
 function loadShedule(contactsData) {
@@ -80,3 +80,4 @@ function loadShedule(contactsData) {
 function loadAdditionalInfo(contactsData) {
   document.getElementById("info").textContent = contactsData.workSchedule.additionalInfo;
 };
+
