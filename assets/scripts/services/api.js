@@ -3,6 +3,7 @@ export const acfPosts = "acf/v3/posts";
 export const categoryNews = "categories=2";
 export const categoryPark = "categories=3";
 export const categoryEvents = "5";
+export const categoryContacts = "categories=7";
 
 export function getDataFromWp(endpoint, props) {
     console.log(endpoint, props);

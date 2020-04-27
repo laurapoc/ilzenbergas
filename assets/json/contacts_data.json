@@ -19,7 +19,7 @@
             "postCodeRegion": "LT-42440 Rokiškio r."
         }
     ],
-    "workSchedule": {
+
         "sheduleHeading": "DARBO LAIKAS",
         "workTimeArray": [
             {
@@ -34,5 +34,5 @@
             }
         ],
         "additionalInfo": "Šventinėmis dienomis parkas laukia lankytojų bet kurią savaitės dieną. Parko lankytojo bilietas - 4 eur. Nemokamai dvare svečiuojasi vaikai iki 7 metų."
-    }
+
 }

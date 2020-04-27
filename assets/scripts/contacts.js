@@ -1,10 +1,12 @@
 import { importTemplate } from "./functions.js";
 import { setupHeader } from "./header.js";
+import { getDataFromWp, categoryContacts, acfPosts } from "./services/api.js";
+
 
 let pageName = "contacts";
 
 // IMPORTING MAIN MENU
-importTemplate("./header.html", "#header", null).then(() => {
+importTemplate("./header.html", "header", null).then(() => {
   setupHeader(pageName);
 });
 
@@ -12,17 +14,32 @@ importTemplate("./header.html", "#header", null).then(() => {
 importTemplate("./background.html", "background", null);
 
 // IMPORTING CONTACTS DATA
-fetch("./assets/json/contacts_data.json")
-  .then(response => response.json())
-  .then(contactsData => {
-    loadContactsData(contactsData);
-    loadSheduleHeading(contactsData);
-    loadShedule(contactsData);
-    loadAdditionalInfo(contactsData);
-  })
-  .catch(e => {
-    console.log(e);
-  });
+getDataFromWp(acfPosts + "?" + categoryContacts)
+.then((contactsData) => {
+  console.log(contactsData[0].acf);
+  loadContactsData(contactsData[0].acf);
+  loadSheduleHeading(contactsData[0].acf);
+  loadShedule(contactsData[0].acf);
+  loadAdditionalInfo(contactsData[0].acf);
+})
+.catch((e) => {
+  console.log(e);
+});
+
+
+
+// IMPORTING CONTACTS DATA
+// fetch("./assets/json/contacts_data.json")
+//   .then(response => response.json())
+//   .then(contactsData => {
+//     loadContactsData(contactsData);
+//     loadSheduleHeading(contactsData);
+//     loadShedule(contactsData);
+//     loadAdditionalInfo(contactsData);
+//   })
+//   .catch(e => {
+//     console.log(e);
+//   });
 
 function loadContactsData(contactsData) {
   let clone;
@@ -30,6 +47,7 @@ function loadContactsData(contactsData) {
   let parent = document.getElementById("contact-template-parent");
   parent.textContent = "";
   clone = template.content.cloneNode(true);
+  console.log(contactsData);
   contactsData.contacts.forEach(contact => {
     clone = template.content.cloneNode(true);
     clone.getElementById("mansion-heading").textContent = contact.contactTitle;
@@ -45,16 +63,16 @@ function loadContactsData(contactsData) {
 
 function loadSheduleHeading(contactsData) {
   let sheduleHeading = document.getElementById("shedule-heading");
-  sheduleHeading.textContent = contactsData.workSchedule.sheduleHeading;
+  sheduleHeading.textContent = contactsData.sheduleHeading;
 }
 
 function loadShedule(contactsData) {
-  let shedule = contactsData.workSchedule;
+  let shedule = contactsData.workTimeArray;
   let sheduleTemplate = document.getElementById("shedule");
   let sheduleTemplateParent = document.getElementById("shedule-template-parent");
   let cloneTemplate = sheduleTemplate.content.cloneNode(true);
   sheduleTemplateParent.textContent = "";
-  shedule.workTimeArray.forEach(workTime => {
+  shedule.forEach(workTime => {
     cloneTemplate = sheduleTemplate.content.cloneNode(true);
     cloneTemplate.getElementById("season").textContent = workTime.season;
     cloneTemplate.getElementById("working-hours").textContent = workTime.workingHours;
@@ -78,6 +96,6 @@ function loadShedule(contactsData) {
 };
 
 function loadAdditionalInfo(contactsData) {
-  document.getElementById("info").textContent = contactsData.workSchedule.additionalInfo;
+  document.getElementById("info").innerHTML = contactsData.additionalInfo;
 };
 

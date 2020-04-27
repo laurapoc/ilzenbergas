@@ -21,7 +21,7 @@ getDataFromWp(acfPosts + "?" + categoryPark)
   });
 
 // IMPORTING MAIN MENU
-importTemplate("./header.html", "#header", null).then(() => {
+importTemplate("./header.html", "header", null).then(() => {
   setupHeader(pageName);
 });
 
