@@ -50,13 +50,15 @@ export function loadBasisTempl2(sidebarData, pageName) {
 }
 
 function loadHeadedParagraphs(sidebarData, cloneTemplate2) {
-  sidebarData.headedParagraphArray.forEach((headedP) => {
-    let clone = cloneTemplate2.getElementById("headed-paragraph-template").content.cloneNode(true);
-    let paragraphParent = cloneTemplate2.getElementById("headed-paragraph-block");
-    clone.querySelector(".paragraph-heading").innerHTML = headedP.paragrapHeading;
-    clone.querySelector(".paragraph-to-extend-content").innerHTML = headedP.paragraphToExtendContent;
-    paragraphParent.appendChild(clone);
-  });
+  if (sidebarData.headedParagraphArray) {
+    sidebarData.headedParagraphArray.forEach((headedP) => {
+      let clone = cloneTemplate2.getElementById("headed-paragraph-template").content.cloneNode(true);
+      let paragraphParent = cloneTemplate2.getElementById("headed-paragraph-block");
+      clone.querySelector(".paragraph-heading").innerHTML = headedP.paragrapHeading;
+      clone.querySelector(".paragraph-to-extend-content").innerHTML = headedP.paragraphToExtendContent;
+      paragraphParent.appendChild(clone);
+    });
+  }
 }
 
 function loadOrnamentedCards(sidebarData, cloneTemplate2) {
@@ -85,7 +87,7 @@ function loadLargeOrnamentedCards(sidebarData, cloneTemplate2, pageName) {
     let cardStrongParParent = clone.querySelector(".season-card-content");
     if (pageName == "tastings") {
       parent.style = "font-size: 1rem";
-      cardStrongParParent.style = "min-height: 290px";
+      cardStrongParParent.style = "min-height: 280px";
       clone.querySelector(".flip-card").style = "min-height: 350px";
     }
     clone.querySelector(".bottom-strong-paragraph").innerHTML = element.largeBottomStrongParagraph;
