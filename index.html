@@ -53,7 +53,9 @@
                 /></a>
               </li>
               <li class="nav-item active pl-1 pr-1 pb-2">
-                <a id="map-icon" href="map.html"><img src="assets/img/round_icons/map_grey.png" height="30" alt="fb" /></a>
+                <a id="map-icon" href="map.html"
+                  ><img src="assets/img/round_icons/map_grey.png" height="30" alt="fb"
+                /></a>
               </li>
               <li class="nav-item active pl-1 pr-1 pb-2">
                 <a href="contacts.html"><img src="assets/img/Email-Icon-Circle-blue.png" height="30" alt="fb" /></a>
@@ -62,118 +64,44 @@
           </div>
         </nav>
 
-        <div class="flex-wrap flex-xlg-row d-flex justify-content-around">
-          <!-- ILZENBERGO DVARAS CARD: -->
-          <div class="col-12 col-lg-6 px-0 mt-1">
-            <div class="card rounded-0">
-              <div class="p-2" id="dvaras">
-                <img src="assets/img/dvaras_card-compressor.png" class="card-img img-fluid" width="100%" alt="dvaras" />
+        <div id="homepage-card-parent" class="flex-wrap flex-xlg-row d-flex justify-content-around">
+          <!-- MAIN CARDS: -->
+          <template id="homepage-card">
+            <div class="col-12 col-lg-6 px-0 mt-1">
+              <div id="main-card-picture" class="card rounded-0">
+                <div class="p-2" id="dvaras">
+                  <a id="image-header-link" href="" target="_blank">
+                    <img id="homepage-card-image" src="" class="card-img img-fluid" width="100%" alt="dvaro_ukio_deze"
+                  /></a>
+                </div>
+                <div class="card-body p-0">
+                  <a id="title-header-link" href="" target="_blank"
+                    ><h5 id="header-title" class="card-title text-center bg-transparent"></h5
+                  ></a>
+                </div>
               </div>
-              <div class="card-body p-0">
-                <h5 class="card-title text-center bg-transparent">Ilzenbergo dvaras</h5>
-              </div>
-            </div>
-            <div class="flex-wrap flex-lg-row d-flex justify-content-between mx-2 mx-md-3 mx-lg-2" id="dvaras_btns">
-              <a href="park.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img src="assets/img/icons/nauji/parko_lankymas.png" alt=""
-              /></a>
-              <a href="events.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img src="assets/img/icons/nauji/renginiai.png" alt=""
-              /></a>
-              <a href="excursions.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><div class="align-middle">
-                  <img id="icon" class="align-middle" src="assets/img/icons//nauji/ekskursijos.png" alt="" /></div
-              ></a>
-              <a href="tastings.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img src="assets/img/icons//nauji/degustacijos.png" alt=""
-              /></a>
-              <a href="accommodation.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img src="assets/img/icons/nauji/nakvyne.png" alt=""
-              /></a>
-              <a href="restaurant.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img src="assets/img/icons/nauji/restoranas.png" alt=""
-              /></a>
-              <a href="potato.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img src="assets/img/icons//nauji/bulve.png" alt=""
-              /></a>
-              <a
-                href="http://www.svajoniuplaneta.lt/ilzenbergas/"
-                target="_blank"
-                class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img src="assets/img/icons/nauji/stovykla.png" alt=""
-              /></a>
-            </div>
-          </div>
-          <!-- ILZENBERGO DVARO UKIS CARD: -->
-          <div class="col-12 col-lg-6 px-0 mt-1">
-            <div class="card rounded-0">
-              <div class="p-2" id="dvaras">
-                <a id="header-link-to-shop" href="https://krepselis.ilzenbergas.lt/" target="_blank">
-                <img
-                  src="assets/img/_dvaro_ukio_deze.png"
-                  class="card-img img-fluid"
-                  width="100%"
-                  alt="dvaro_ukio_deze"
+              <div
+                id="card-header-buttons"
+                class="flex-wrap flex-lg-row d-flex justify-content-between mx-2 mx-md-3 mx-lg-2"
+              ></div>
+              <template id="header-buttons-template">
+                <a id="link-to-page" href="" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
+                  ><img id="button-image" class="img-fluid" src="" alt=""
                 /></a>
-              </div>
-              <div class="card-body p-0">
-                <a id="header-link-to-shop" href="https://krepselis.ilzenbergas.lt/" target="_blank"><h5 class="card-title text-center bg-transparent">Dvariškas maistas</h5></a>
-              </div>
+              </template>
             </div>
-            <div class="flex-wrap flex-lg-row d-flex justify-content-between mx-2 mx-md-3 mx-lg-2" id="ukis_btns">
-              <a href="farm.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" src="assets/img/icons/nauji/ilzenbergo_ukis.png" alt=""
-              /></a>
-              <a href="farm_food.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" src="assets/img/icons/nauji/100_produktu.png" alt=""
-              /></a>
-              <a href="water.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" id="water" src="assets/img/icons/nauji/vanduo.png" alt=""
-              /></a>
-              <a href="farm_wine.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" src="assets/img/icons/nauji/vynuogynas.png" alt=""
-              /></a>
-              <a href="https://krepselis.ilzenbergas.lt/" target="_blank" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" src="assets/img/icons/nauji/e-shop.png" alt=""
-              /></a>
-              <a
-                href="shoping_areas.html"
-                class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" src="assets/img/icons/nauji/krautuveles.png" alt=""
-              /></a>
-              
-              <a href="agriculture.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" src="assets/img/icons/nauji/ukininkyste.png" alt=""
-              /></a>
-              <a href="principles.html" class="btn btn-light flex-grow-1 mt-1 mx-1 p-0 rounded-0"
-                ><img class="img-fluid" src="assets/img/icons/nauji/principai1.png" alt=""
-              /></a>
-
-            </div>
-          </div>
+          </template>
         </div>
         <!-- AWORDS: -->
         <section>
           <div class="text-center mt-4">
-            <h4 class="pt-1 mb-0">Apdovanojimai</h4>
-            <div class="row d-flex justify-content-center align-center pt-0 px-1 pb-1">
-              <!-- <div class="img-responsive d-flex flex-column">
-                <img class="mx-3 my-1 mx-lg-4" src="assets/img/apdovanojimai2.png" alt="" /></div> -->
-              <div class="img-responsive img-fluid d-flex flex-column">
-                <img class="mx-3 my-1 mx-lg-4" src="assets/img/kulturos_paveldas3.png" alt="" />Kultūros paveldas
-              </div>
-              <div class="img-responsive img-fluid d-flex flex-column">
-                <img class="mx-3 my-1 mx-lg-4" src="assets/img/Lntpa_AUTENTISKA_Gold3.png" alt="" />Autentiškai atkurtas
-              </div>
-              <div class="img-responsive img-fluid d-flex flex-column">
-                <img class="mx-3 my-1 mx-lg-4" src="assets/img/Logo_EDEN3.png" alt="" />Eden III
-              </div>
-              <div class="img-responsive img-fluid d-flex flex-column">
-                <img class="mx-3 my-1 mx-lg-4" src="assets/img/lt_gamtos_fondas3.png" alt="" />Baltiją tausojantis ūkis
-              </div>
-              <div class="img-responsive img-fluid d-flex flex-column">
-                <img class="mx-3 my-1 mx-lg-4" src="assets/img/uz_darnia_pletra3.jpg" alt="" />Už darnią plėtrą
-              </div>
+            <h4 id="awords-title" class="pt-1 mb-0">Apdovanojimai</h4>
+            <div id="awords-parent" class="row d-flex justify-content-center align-center pt-0 px-1 pb-1">
+              <template id="awords-template">
+                <div class="img-responsive img-fluid d-flex flex-column">
+                  <img id="awords-image" class="mx-3 my-1 mx-lg-4" src="" alt="" /><p id="awords-name" ></p>
+                </div>
+              </template>
             </div>
           </div>
         </section>
@@ -212,58 +140,6 @@
       </div>
     </template>
 
- <!-- ILZENBERGO DVARO UKIS CARD: -->
- <!-- <div class="col-12 col-lg-6 px-0 mt-1">
-  <div class="card rounded-0">
-    <div class="p-2" id="dvaras">
-      <a id="header-link-to-shop" href="https://krepselis.ilzenbergas.lt/" target="_blank">
-        <img
-          src="assets/img/_dvaro_ukio_deze.png"
-          class="card-img img-fluid"
-          width="100%"
-          alt="dvaro_ukio_deze"
-      /></a>
-    </div>
-    <div class="card-body p-0">
-      <a id="header-link-to-shop" href="https://krepselis.ilzenbergas.lt/" target="_blank"
-        ><h5 class="card-title text-center bg-transparent">Dvariškas maistas</h5></a
-      >
-    </div>
-  </div>
-  <div class="flex-wrap flex-lg-row d-flex justify-content-between mx-2 mx-md-3 mx-lg-2" id="ukis_btns">
-    <a id="ukis" href="#" target="_blank" class="btn btn-light flex-grow-1 m-1 px-0 rounded-0">
-        <img class="img-fluid" src="assets/img/round_icons/ukis_grey.png" width="30px" alt="" /> Ilzenbergo
-        ūkis
-    </a>
-
-    <a href="#" target="_blank" class="btn btn-light flex-grow-1 m-1 p-0 rounded-0 blaaa"
-      ><img class="img-fluid" src="assets/img/round_icons/produktai_grey.png" alt=""
-    /> 100 natūralių <br> maisto produktų</a>
-    <a href="water.html" class="btn btn-light flex-grow-1 m-1 px-0 rounded-0 blaaa"
-      ><img class="img-fluid" id="water" src="assets/img/round_icons/vanduo_grey.png" alt=""
-    /> Vanduo ILZENBERG</a>
-    <a href="#" target="_blank" class="btn btn-light flex-grow-1 m-1 px-0 rounded-0 blaaa"
-      ><img class="img-fluid" src="assets/img/round_icons/vynas_grey.png" alt=""
-    /> Vynuogynas ILZENBERG</a>
-    <a href="#" target="_blank" class="btn btn-light flex-grow-1 m-1 px-0 rounded-0 blaaa"
-      ><img class="img-fluid" src="assets/img/round_icons/e-prekyba_grey.png" alt=""
-    /> Interneto krautuvėlė</a>
-    <a
-      href="https://krepselis.ilzenbergas.lt/"
-      target="_blank"
-      class="btn btn-light flex-grow-1 m-1 px-0 rounded-0 blaaa"
-      ><img class="img-fluid" src="assets/img/round_icons/krautuves_grey.png" alt=""
-    /> Krautuvėlių vietos</a>
-
-    <a href="#" target="_blank" class="btn btn-light flex-grow-1 m-1 px-0 rounded-0 blaaa"
-      ><img class="img-fluid" src="assets/img/round_icons/ukininkyste_grey.png" alt=""
-    /> Augalininkystė Gyvulininkystė</a>
-    <a href="#" target="_blank" class="btn btn-light flex-grow-1 m-1 px-0 rounded-0 blaaa"
-      ><img class="img-fluid" src="assets/img/round_icons/principai_grey.png" alt=""
-    /> ūkininkavimo principų</a>
-  </div>
-</div>
-</div> -->
 
 
     <!-- ****************************************************** -->
@@ -272,8 +148,6 @@
     <script src="assets/scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="assets/scripts/bootstrap.bundle.min.js" type="text/javascript"></script>
     <script src="assets/scripts/bootstrap.bundle.js" type="text/javascript"></script>
-    <!-- <script src="assets/scripts/functions.js" type="text/javascript"></script> -->
     <script src="assets/scripts/custom.js" type="module"></script>
-
   </body>
 </html>

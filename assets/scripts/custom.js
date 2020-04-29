@@ -1,10 +1,32 @@
-import { getDataFromWp, categoryNews, acfPosts } from "./services/api.js";
+import { getDataFromWp, categoryNews, acfPosts, categoryHomepage } from "./services/api.js";
 import { changeIconColor } from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
 let allNews = [];
 let shownNews = [];
+
+// IMPORTING HOMEPAGE DATA
+getDataFromWp(acfPosts + "?" + categoryHomepage)
+.then((homepageData) => {
+  console.log("homepage", homepageData[0]);
+    loadHomepageMenu(homepageData[0].acf);
+    loadAwords(homepageData[0].acf);
+})
+.catch((e) => {
+  console.log(e);
+});
+
+// fetch("./assets/json/homepage_data.json")
+//   .then((response) => response.json())
+//   .then((homepageData) => {
+//     console.log(homepageData);
+//     loadHomepageMenu(homepageData);
+//     loadAwords(homepageData);
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
 
 // IMPORTING NEWS ID DATA:
 getDataFromWp(acfPosts + "?" + categoryNews)
@@ -80,52 +102,51 @@ function loadNewsItem(newsItemRaw, pictureOnRight) {
   shortNewsParent.appendChild(clonedNewsItem);
 }
 
-// function fetchNewsItem(newsId) {
-//   return fetch("./assets/json/news_data.json")
-//     .then((response) => response.json())
-//     .then((allNewsData) => allNewsData.news.find((newsItem) => newsItem.id == newsId))
-//     .then((newsItem) => {
-//       return newsItem;
-//     })
-//     .catch((e) => {
-//       console.log(e);
-//     });
-// }
-
-// function loadNews(newsData) {
-//   console.log(newsData);
-//   // CLONE SHORT NEWS TEMPLATE:
-
-//   shortNewsParent.textContent = "";
-//   newsData.news.forEach((newsItem, i) => {
-//     let cloneNews = shortNewsTemplate.content.cloneNode(true);
-//     let newsImageTag = cloneNews.getElementById("news-image");
-//     newsImageTag.src = newsItem.newsImage;
-//     let anchorTag = cloneNews.querySelector(".anchor-tag");
-//     let newsLink = newsItem.linkToNewsPage + "?id=" + newsItem.id;
-//     anchorTag.href = newsLink;
-//     let newTitle = cloneNews.querySelector(".unic-news-title");
-//     newTitle.textContent = newsItem.newsTitle;
-//     let shortNewsParagraph = cloneNews.querySelector(".short-paragraph");
-//     shortNewsParagraph.textContent = newsItem.shortNewstext;
-//     let buttonMore = cloneNews.querySelector(".btn-translate-more");
-//     buttonMore.onclick = function () {
-//       window.location.href = newsLink;
-//     };
-//     // changing inner div's order:
-//     console.log(i);
-//     let order2 = cloneNews.querySelector(".dummy-class-1");
-//     let order1 = cloneNews.querySelector(".dummy-class-2");
-//     if (i % 2 == 1) {
-//       order2.classList.add("order-lg-2");
-//       order1.classList.add("order-lg-1");
-//     }
-//     if (i > 1) {
-//       cloneNews.querySelector(".row").classList.add("not-show");
-//     }
-//     shortNewsParent.appendChild(cloneNews);
-//   });
-// }
-
 let mapIcon = document.querySelector("#map-icon img");
 changeIconColor(mapIcon);
+
+function loadHomepageMenu(homepageData) {
+  let template = document.getElementById("homepage-card");
+  let parent = document.getElementById("homepage-card-parent");
+  parent.textContent = "";
+  let clone = template.content.cloneNode(true);
+  console.log(homepageData);
+  homepageData.homepageCards.forEach((card) => {
+    clone = template.content.cloneNode(true);
+    let imageHedaerLink = clone.getElementById("image-header-link");
+    if (imageHedaerLink) {
+      imageHedaerLink.href = card.imageHeaderLink;
+    }
+    console.log(imageHedaerLink.href);
+    clone.getElementById("homepage-card-image").src = card.homepageCardImage;
+    let titleHeaderLink = clone.getElementById("title-header-link");
+    if (titleHeaderLink) {
+      titleHeaderLink.href = card.titleHeaderLink;
+    }
+    clone.getElementById("header-title").textContent = card.headerTitle;
+    let buttonsTemplate = clone.getElementById("header-buttons-template");
+    let buttonParent = clone.getElementById("card-header-buttons");
+    card.homepageMenuArray.forEach((element) => {
+      let clonedButton = buttonsTemplate.content.cloneNode(true);
+      clonedButton.getElementById("link-to-page").href = element.linkToPage;
+      clonedButton.getElementById("button-image").src = element.buttonImage;
+      buttonParent.appendChild(clonedButton);
+    });
+
+    parent.appendChild(clone);
+  });
+}
+
+function loadAwords(homepageData) {
+  let template = document.getElementById("awords-template");
+  let parent = document.getElementById("awords-parent");
+  parent.textContent = "";
+  let clone = template.content.cloneNode(true);
+  homepageData.awordsArray.forEach((aword) => {
+    clone = template.content.cloneNode(true);
+    clone.getElementById("awords-image").src = aword.awordsImage;
+    clone.getElementById("awords-name").textContent = aword.awordsName;
+    parent.appendChild(clone);
+  });
+  parent.appendChild(clone);
+}

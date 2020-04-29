@@ -35,11 +35,11 @@ export function loadBasisTempl1(sidebarData, pageName) {
     };
     let additionalPhoto = cloneTemplate1.getElementById("additional-photo");
     additionalPhoto.src = sidebarData.additionalPhoto;
-    // if (url.includes("park")) {
-    //   additionalPhoto.style = "width: 70%";
-    // } else {
-    //   additionalPhoto.style = "width: auto";
-    // };
+    if (pageName == "park") {
+      additionalPhoto.style = "width: 70%";
+    } else {
+      additionalPhoto.style = "width: auto";
+    };
   } else {
     cloneTemplate1.getElementById("template1-content").removeChild(cloneTemplate1.getElementById("master-logo"));
   }

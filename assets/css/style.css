@@ -94,7 +94,11 @@
   font-size: 2.5em;
   font-weight: 400;
 }
-.jumbotron .card #header-link-to-shop {
+.jumbotron .card #image-header-link {
+  text-decoration: none;
+  color: #465359;
+}
+.jumbotron .card #title-header-link {
   text-decoration: none;
   color: #465359;
 }
@@ -125,12 +129,12 @@
 section .text-center h4 {
   font-weight: 700;
 }
-section .text-center .row {
-  font-size: 0.75rem;
-}
 section .text-center .row img {
   width: fit-content;
   box-shadow: 4px 0px 4px rgba(82, 80, 80, 0.7);
+}
+section .text-center .row #awords-name {
+  font-size: 0.75rem;
 }
 
 .text-center {

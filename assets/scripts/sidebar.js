@@ -18,9 +18,9 @@ export class SideBar {
   constructor(sideBarData, pageName) {
     console.log("Constructing sidebar:", sideBarData);
     this.sideBarData = sideBarData;
-    // if(this.sideBarData.length == 1) {
-    //   document.getElementById("sidebar").classList.add("hidden");
-    // }
+    if(this.sideBarData.length == 1) {
+      document.getElementById("sidebar").classList.add("hidden");
+    }
     this.selectedItem = sideBarData[0];
     this.pageName = pageName;
 

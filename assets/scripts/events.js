@@ -20,8 +20,9 @@ importTemplate("./background.html", "background", null);
 loadCalendar();
 
 // IMPORTING YOUTUBE VIDEO DATA:
-getDataFromWp(acfPosts, [{ name: "category", value: categoryEvents }])
+getDataFromWp(acfPosts, [{ name: "categories", value: categoryEvents }])
   .then((eventsData) => {
+    console.log("videoEvents", eventsData);
     loadVideoData(eventsData);
   })
   .catch((e) => {
@@ -29,26 +30,33 @@ getDataFromWp(acfPosts, [{ name: "category", value: categoryEvents }])
   });
 
 function loadVideoData(eventsData) {
+  console.log(eventsData);
   // youtube video clone:
   let youtubeEmbededVideoTemplate = document.getElementById("youtube-link-template");
   let youtubeEmbededVideoParent = document.getElementById("youtube-link-parent");
   youtubeEmbededVideoParent.textContent = "";
 
   let eventsWithVideo = eventsData.filter((event) => event.acf.youtubeEmbededVideo);
+  console.log(eventsWithVideo);
 
   //reorder based on currentDate
   let reorderedEvents = [];
   let pastEvents = [];
   let today = new Date();
   eventsWithVideo.forEach((event) => {
+    console.log(event);
     let eventDateInNumber = Date.parse(event.acf.start);
     if (eventDateInNumber >= today) {
       reorderedEvents.push(event);
     } else {
+      console.log(event);
       pastEvents.push(event);
     }
   });
+ 
   reorderedEvents = reorderedEvents.concat(pastEvents);
+  console.log(reorderedEvents);
+  console.log(pastEvents);
 
   reorderedEvents.forEach((event) => {
     let cloneVideo = youtubeEmbededVideoTemplate.content.cloneNode(true);
@@ -160,7 +168,7 @@ function loadCalendar() {
 
 function fetchEvents(info, successCallback, failureCallback) {
   let querryParams = [];
-  querryParams.push({ name: "category", value: categoryEvents });
+  querryParams.push({ name: "categories", value: categoryEvents });
   //add filter for events based on time interval provided in info object
   querryParams.push({ name: "filter[meta_query][0][key]", value: "start" });
   querryParams.push({ name: "filter[meta_query][0][value]", value: info.start.toISOString() });

@@ -1,0 +1,106 @@
+{
+  "homepageCards": [
+    {
+        "imageHeaderLink": "",
+        "homepageCardImage": "assets/img/dvaras_card-compressor.png",
+        "titleHeaderLink": "",
+        "headerTitle": "Ilzenbergo dvaras",
+        "homepageMenuArray": [
+            {
+                "linkToPage": "park.html",
+                "buttonImage": "assets/img/icons/nauji/parko_lankymas.png"
+            },
+            {
+                "linkToPage": "events.html",
+                "buttonImage": "assets/img/icons/nauji/renginiai.png"
+            },
+            {
+                "linkToPage": "excursions.html",
+                "buttonImage": "assets/img/icons//nauji/ekskursijos.png"
+            },
+            {
+                "linkToPage": "tastings.html",
+                "buttonImage": "assets/img/icons//nauji/degustacijos.png"
+            },
+            {
+                "linkToPage": "accommodation.html",
+                "buttonImage": "assets/img/icons/nauji/nakvyne.png"
+            },
+            {
+                "linkToPage": "restaurant.html",
+                "buttonImage": "assets/img/icons/nauji/restoranas.png"
+            },
+            {
+                "linkToPage": "potato.html",
+                "buttonImage": "assets/img/icons//nauji/bulve.png"
+            },
+            {
+                "linkToPage": "http://www.svajoniuplaneta.lt/ilzenbergas/",
+                "buttonImage": "assets/img/icons/nauji/stovykla.png"
+            }  
+        ]
+      },
+    {
+      "imageHeaderLink": "https://krepselis.ilzenbergas.lt/",
+      "homepageCardImage": "assets/img/_dvaro_ukio_deze.png",
+      "titleHeaderLink": "https://krepselis.ilzenbergas.lt/",
+      "headerTitle": "Dvariškas maistas",
+      "homepageMenuArray": [
+          {
+              "linkToPage": "farm.html",
+              "buttonImage": "assets/img/icons/nauji/ilzenbergo_ukis.png"
+          },
+          {
+              "linkToPage": "farm_food.html",
+              "buttonImage": "assets/img/icons/nauji/100_produktu.png"
+          },
+          {
+              "linkToPage": "water.html",
+              "buttonImage": "assets/img/icons/nauji/vanduo.png"
+          },
+          {
+              "linkToPage": "farm_wine.html",
+              "buttonImage": "assets/img/icons/nauji/vynuogynas.png"
+          },
+          {
+              "linkToPage": "https://krepselis.ilzenbergas.lt/",
+              "buttonImage": "assets/img/icons/nauji/e-shop.png"
+          },
+          {
+              "linkToPage": "shoping_areas.html",
+              "buttonImage": "assets/img/icons/nauji/krautuveles.png"
+          },
+          {
+              "linkToPage": "agriculture.html",
+              "buttonImage": "assets/img/icons/nauji/ukininkyste.png"
+          },
+          {
+              "linkToPage": "principles.html",
+              "buttonImage": "assets/img/icons/nauji/principai1.png"
+          }
+      ]
+    }    
+  ],
+  "awordsArray": [
+      {
+          "awordsImage": "assets/img/kulturos_paveldas3.png",
+          "awordsName": "Kultūros paveldas"
+      },
+      {
+          "awordsImage": "assets/img/Lntpa_AUTENTISKA_Gold3.png",
+          "awordsName": "Autentiškai atkurtas"
+      },
+      {
+          "awordsImage": "assets/img/Logo_EDEN3.png",
+          "awordsName": "Eden III"
+      },
+      {
+          "awordsImage": "assets/img/lt_gamtos_fondas3.png",
+          "awordsName": "Baltiją tausojantis ūkis"
+      },
+      {
+          "awordsImage": "assets/img/uz_darnia_pletra3.jpg",
+          "awordsName": "Už darnią plėtrą"
+      }
+  ]
+}

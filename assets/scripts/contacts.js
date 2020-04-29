@@ -27,7 +27,6 @@ getDataFromWp(acfPosts + "?" + categoryContacts)
 });
 
 
-
 // IMPORTING CONTACTS DATA
 // fetch("./assets/json/contacts_data.json")
 //   .then(response => response.json())
