@@ -1,7 +1,7 @@
-import { getDataFromWp, categoryContacts, acfPosts } from "./services/api.js";
+import { getDataFromWp, acfContacts} from "./services/api.js";
 
 // IMPORTING CONTACTS DATA
-getDataFromWp(acfPosts + "?" + categoryContacts)
+getDataFromWp(acfContacts)
   .then((contactsData) => {
     console.log(contactsData[0].acf);
     loadFooterContactsData(contactsData[0].acf);

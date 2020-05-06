@@ -1,8 +1,7 @@
-import { getDataFromWp, acfPosts, categoryNews } from "./services/api.js";
+import { getDataFromWp, acfNews } from "./services/api.js";
 import { loadGalleryContent } from "./gallery.js";
-import { importTemplate, waitForElement, changeIconColor } from "./functions.js";
+import { importTemplate, setImageProperties } from "./functions.js";
 sessionStorage.setItem("page", "news");
-let gallerySource = [];
 
 // IMPORTING MAIN MENU
 importTemplate("./header.html", "header", "./assets/scripts/header.js");
@@ -16,7 +15,7 @@ importTemplate("./background.html", "#background", null);
 // IMPORTING NEWS DATA:
 let params = new URLSearchParams(document.location.search.substring(1));
 let newsId = params.get("id");
-getDataFromWp(acfPosts + "/" + newsId)
+getDataFromWp(acfNews + "/" + newsId)
   .then((newsItem) => {
     console.log(newsItem);
     loadExtendedNews(newsItem.acf);
@@ -50,7 +49,9 @@ function loadExtendedNews(newsData) {
   newsParent.textContent = "";
   let clone = newsTemplate.content.cloneNode(true);
   let newsTopImage = clone.getElementById("news-top-image");
-  newsTopImage.src = newsData.newsImage;
+  //newsTopImage.src = newsData.newsImage;
+  console.log(newsData.newsImage);
+  setImageProperties(newsTopImage, newsData.newsImage);
   let articleDate = clone.getElementById("article-date");
   articleDate.textContent = newsData.newArticleDate;
   let articleTitle = clone.getElementById("article-header");

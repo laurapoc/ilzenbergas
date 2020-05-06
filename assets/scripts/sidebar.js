@@ -6,32 +6,31 @@ import { importTemplate } from "./functions.js";
 import { loadGalleryContent } from "./gallery.js";
 
 export class SideBar {
-  sideBarData = [];
-  selectedItem = {};
-  templates = [
-    { name: "basis_templ1", loader: loadBasisTempl1 },
-    { name: "basis_templ2", loader: loadBasisTempl2 },
-    { name: "basis_templ3", loader: loadBasisTempl3 },
-  ];
-  pageName = "";
-
   constructor(sideBarData, pageName) {
     console.log("Constructing sidebar:", sideBarData);
+
+    this.sideBarData = [];
+    this.selectedItem = {};
+    this.templates = [
+      { name: "basis_templ1", loader: loadBasisTempl1 },
+      { name: "basis_templ2", loader: loadBasisTempl2 },
+      { name: "basis_templ3", loader: loadBasisTempl3 },
+    ];
+    this. pageName = "";
+
     this.sideBarData = sideBarData;
-    if(this.sideBarData.length == 1) {
+    if (this.sideBarData.length == 1) {
       document.getElementById("sidebar").classList.add("hidden");
+      document.querySelector("#subtemplate").classList.add("pl-lg-5");
     }
     this.selectedItem = sideBarData[0];
     this.pageName = pageName;
 
     let templatesToLoad = [];
     this.templates.forEach((template) =>
-      templatesToLoad.push(
-        importTemplate("./" + template.name + ".html", template.name, null)
-      )
+      templatesToLoad.push(importTemplate("./" + template.name + ".html", template.name, null))
     );
     templatesToLoad.push(importTemplate("./gallery.html", "gallery", null));
-    
 
     Promise.all(templatesToLoad).then(() => {
       // get template
@@ -84,13 +83,12 @@ export class SideBar {
       if (template.name == menuItemData.acf.templateToUse) {
         console.log(this.pageName);
         template.loader(menuItemData.acf, this.pageName);
-
       }
     });
     //load gallery if its defined
     let galleryParent = document.getElementById("gallery-parent");
     galleryParent.textContent = "";
-    if (menuItemData.acf.photoGallery){
+    if (menuItemData.acf.photoGallery) {
       console.log("loading gallery", menuItemData.acf.photoGallery);
       loadGalleryContent(menuItemData.acf.photoGallery);
     }

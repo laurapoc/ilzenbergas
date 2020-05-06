@@ -1,7 +1,7 @@
 import { importTemplate, waitForElement } from "./functions.js";
 import { setupHeader } from "./header.js";
-import { categoryEvents } from "./services/api.js";
-import { getDataFromWp, acfPosts } from "./services/api.js";
+// import { categoryEvents } from "./services/api.js";
+import { getDataFromWp, acfEvents } from "./services/api.js";
 
 let pageName = "events";
 
@@ -20,7 +20,7 @@ importTemplate("./background.html", "background", null);
 loadCalendar();
 
 // IMPORTING YOUTUBE VIDEO DATA:
-getDataFromWp(acfPosts, [{ name: "categories", value: categoryEvents }])
+getDataFromWp(acfEvents)
   .then((eventsData) => {
     console.log("videoEvents", eventsData);
     loadVideoData(eventsData);
@@ -168,7 +168,8 @@ function loadCalendar() {
 
 function fetchEvents(info, successCallback, failureCallback) {
   let querryParams = [];
-  querryParams.push({ name: "categories", value: categoryEvents });
+ 
+  querryParams.push({ name: "per_page", value: "40" });
   //add filter for events based on time interval provided in info object
   querryParams.push({ name: "filter[meta_query][0][key]", value: "start" });
   querryParams.push({ name: "filter[meta_query][0][value]", value: info.start.toISOString() });
@@ -178,7 +179,7 @@ function fetchEvents(info, successCallback, failureCallback) {
   querryParams.push({ name: "filter[meta_query][1][value]", value: info.end.toISOString() });
   querryParams.push({ name: "filter[meta_query][1][compare]", value: "<" });
 
-  return getDataFromWp(acfPosts, querryParams)
+  return getDataFromWp(acfEvents, querryParams)
     .then((responseJson) => {
       let events = [];
       responseJson.forEach((event) => {

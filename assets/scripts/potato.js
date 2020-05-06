@@ -1,12 +1,12 @@
 import { importTemplate } from "./functions.js";
 import { SideBar } from "./sidebar.js";
 import { setupHeader } from "./header.js";
-import { getDataFromWp, categoryPotato, acfPosts } from "./services/api.js";
+import { getDataFromWp, acfPotato } from "./services/api.js";
 
 let pageName = "potato";
 
 // IMPORTING TEMPLATES:
-getDataFromWp(acfPosts + "?" + categoryPotato)
+getDataFromWp(acfPotato)
   .then((sidebarData) => {
     console.log(sidebarData);
 

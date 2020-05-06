@@ -1,5 +1,5 @@
-import { getDataFromWp, categoryNews, acfPosts, categoryHomepage } from "./services/api.js";
-import { changeIconColor } from "./functions.js";
+import { getDataFromWp, acfHomepage, acfNews } from "./services/api.js";
+import { changeIconColor, setImageProperties } from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
@@ -7,7 +7,7 @@ let allNews = [];
 let shownNews = [];
 
 // IMPORTING HOMEPAGE DATA
-getDataFromWp(acfPosts + "?" + categoryHomepage)
+getDataFromWp(acfHomepage)
 .then((homepageData) => {
   console.log("homepage", homepageData[0]);
     loadHomepageMenu(homepageData[0].acf);
@@ -17,19 +17,10 @@ getDataFromWp(acfPosts + "?" + categoryHomepage)
   console.log(e);
 });
 
-// fetch("./assets/json/homepage_data.json")
-//   .then((response) => response.json())
-//   .then((homepageData) => {
-//     console.log(homepageData);
-//     loadHomepageMenu(homepageData);
-//     loadAwords(homepageData);
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
+
 
 // IMPORTING NEWS ID DATA:
-getDataFromWp(acfPosts + "?" + categoryNews)
+getDataFromWp(acfNews)
   .then((json) => {
     console.log("ids:", json);
     return json;
@@ -80,7 +71,7 @@ function loadNewsItem(newsItemRaw, pictureOnRight) {
 
   let clonedNewsItem = shortNewsTemplate.content.cloneNode(true);
   let newsImageTag = clonedNewsItem.querySelector("#news-image");
-  newsImageTag.src = newsItem.newsImage;
+  setImageProperties(newsImageTag, newsItem.newsImage);
   let anchorTag = clonedNewsItem.querySelector(".anchor-tag");
   let newsLink = "./news.html?id=" + newsItemRaw.id;
   anchorTag.href = newsLink;
@@ -118,7 +109,7 @@ function loadHomepageMenu(homepageData) {
       imageHedaerLink.href = card.imageHeaderLink;
     }
     console.log(imageHedaerLink.href);
-    clone.getElementById("homepage-card-image").src = card.homepageCardImage;
+    setImageProperties(clone.getElementById("homepage-card-image"), card.homepageCardImage);
     let titleHeaderLink = clone.getElementById("title-header-link");
     if (titleHeaderLink) {
       titleHeaderLink.href = card.titleHeaderLink;

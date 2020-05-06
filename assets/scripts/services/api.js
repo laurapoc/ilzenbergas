@@ -1,15 +1,23 @@
 const wpApiAddress = "./../ilzenbergasapi/wp-json/";
 export const acfPosts = "acf/v3/posts";
-export const categoryNews = "categories=2";
-export const categoryPark = "categories=3";
-export const categoryEvents = "5";
-export const categoryContacts = "categories=7";
-export const categoryExcursions = "categories=8";
-export const categoryTastings = "categories=9";
-export const categoryAccommodation = "categories=10";
-export const categoryRestaurant = "categories=11";
-export const categoryPotato = "categories=12";
-export const categoryHomepage = "categories=13";
+export const acfNews = "acf/v3/news";
+export const acfContacts = "acf/v3/contacts";
+export const acfPark = "acf/v3/park";
+export const acfEvents = "acf/v3/events";
+export const acfExcursions = "acf/v3/excursions";
+export const acfTastings = "acf/v3/tastings";
+export const acfAccommodation = "acf/v3/accommodation";
+export const acfHomepage = "acf/v3/homepage";
+export const acfRestaurant = "acf/v3/restaurant";
+export const acfPotato = "acf/v3/potato";
+export const acfFarm = "acf/v3/farm";
+export const acfProducts = "acf/v3/products";
+export const acfWater = "acf/v3/water";
+export const acfWine = "acf/v3/wine";
+export const acfShopping = "acf/v3/shopping";
+export const acfAgriculture = "acf/v3/agriculture";
+export const acfPrinciples = "acf/v3/principles";
+
 
 
 export function getDataFromWp(endpoint, props) {

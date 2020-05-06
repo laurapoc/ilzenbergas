@@ -37,6 +37,19 @@ export function importTemplate(templateUrl, templateId, jsLocation) {
     });
 }
 
+export function setImageProperties(imageTag, imageArray) {
+  imageTag.src = imageArray.sizes.thumbnail;
+  imageTag.srcset =
+    imageArray.sizes.medium +
+    " " +
+    imageArray.sizes["medium-width"] +
+    "w," +
+    imageArray.sizes.large +
+    " " +
+    imageArray.sizes["large-width"] +
+    "w";
+}
+
 // CHANGE ICONS COLOR ON HOVER
 
 export function changeIconColor(htmlElement) {

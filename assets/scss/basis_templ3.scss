@@ -7,18 +7,23 @@
 
 .width-class {
 
-  #carouselExampleFade {
-    .carousel-inner {
-      .carousel-item {
-        img {
-          margin: 0 auto;
-          padding: 1%;
-          border: 3px solid grey;
+  #height-setting {
+    position: relative;
+
+    #carouselExampleFade {
+      .carousel-inner {
+        .carousel-item {
+          img {
+            margin: 0 auto;
+            padding: 1%;
+            // border: 3px solid grey;
+          }
         }
       }
+  
     }
-
   }
+
 }
 @font-face {
   font-family: "Myriad Pro SemiCond";

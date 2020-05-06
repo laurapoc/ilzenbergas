@@ -1,17 +1,19 @@
 import { importTemplate } from "./functions.js";
 import { SideBar } from "./sidebar.js";
 import { setupHeader } from "./farm_header.js";
+import { getDataFromWp, acfProducts } from "./services/api.js";
+
 
 let pageName = "food";
 
 // IMPORTING TEMPLATES:
-fetch("./assets/json/food_data.json")
-  .then((response) => response.json())
+getDataFromWp(acfProducts)
   .then((sidebarData) => {
+    console.log(sidebarData);
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {
-      new SideBar(sidebarData.sideMenuItems, pageName);
+      new SideBar(sidebarData, pageName);
     });
 
   })

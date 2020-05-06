@@ -1,4 +1,4 @@
-import { waitForElement } from "./functions.js";
+import { waitForElement, setImageProperties } from "./functions.js";
 
 // photo gallery
 $('[data-fancybox="gallery"]').fancybox({

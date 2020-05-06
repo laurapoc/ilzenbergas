@@ -1,6 +1,6 @@
 import { importTemplate } from "./functions.js";
 import { setupHeader } from "./farm_header.js";
-import { getDataFromWp, categoryContacts, acfPosts } from "./services/api.js";
+import { getDataFromWp, acfContacts } from "./services/api.js";
 
 let pageName = "contacts";
 
@@ -13,7 +13,7 @@ importTemplate("./farm_header.html", "farm_header", null).then(() => {
 importTemplate("./background.html", "background", null);
 
 // IMPORTING CONTACTS DATA
-getDataFromWp(acfPosts + "?" + categoryContacts)
+getDataFromWp(acfContacts)
 .then((contactsData) => {
   console.log(contactsData[0].acf);
   loadContactsData(contactsData[0].acf);

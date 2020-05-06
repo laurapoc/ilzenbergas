@@ -1,6 +1,6 @@
 import { importTemplate } from "./functions.js";
 import { setupHeader } from "./header.js";
-import { getDataFromWp, categoryContacts, acfPosts } from "./services/api.js";
+import { getDataFromWp, acfContacts } from "./services/api.js";
 
 
 let pageName = "contacts";
@@ -14,7 +14,7 @@ importTemplate("./header.html", "header", null).then(() => {
 importTemplate("./background.html", "background", null);
 
 // IMPORTING CONTACTS DATA
-getDataFromWp(acfPosts + "?" + categoryContacts)
+getDataFromWp(acfContacts)
 .then((contactsData) => {
   console.log(contactsData[0].acf);
   loadContactsData(contactsData[0].acf);
@@ -27,18 +27,6 @@ getDataFromWp(acfPosts + "?" + categoryContacts)
 });
 
 
-// IMPORTING CONTACTS DATA
-// fetch("./assets/json/contacts_data.json")
-//   .then(response => response.json())
-//   .then(contactsData => {
-//     loadContactsData(contactsData);
-//     loadSheduleHeading(contactsData);
-//     loadShedule(contactsData);
-//     loadAdditionalInfo(contactsData);
-//   })
-//   .catch(e => {
-//     console.log(e);
-//   });
 
 function loadContactsData(contactsData) {
   let clone;
