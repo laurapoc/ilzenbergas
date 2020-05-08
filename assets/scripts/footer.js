@@ -3,7 +3,6 @@ import { getDataFromWp, acfContacts} from "./services/api.js";
 // IMPORTING CONTACTS DATA
 getDataFromWp(acfContacts)
   .then((contactsData) => {
-    console.log(contactsData[0].acf);
     loadFooterContactsData(contactsData[0].acf);
     loadSheduleHeading(contactsData[0].acf);
     loadShedule(contactsData[0].acf);
@@ -13,18 +12,6 @@ getDataFromWp(acfContacts)
     console.log(e);
   });
 
-// IMPORTING CONTACTS DATA:
-// fetch("./assets/json/contacts_data.json")
-// .then(response => response.json())
-// .then(contactsData => {
-//     loadFooterContactsData(contactsData);
-//     loadSheduleHeading(contactsData);
-//     loadShedule(contactsData);
-//     loadAdditionalInfo(contactsData);
-// })
-// .catch(e => {
-//     console.log(e);
-// });
 
 function loadFooterContactsData(contactsData) {
   let clone;

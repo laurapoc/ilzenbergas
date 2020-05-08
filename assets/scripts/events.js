@@ -22,7 +22,6 @@ loadCalendar();
 // IMPORTING YOUTUBE VIDEO DATA:
 getDataFromWp(acfEvents)
   .then((eventsData) => {
-    console.log("videoEvents", eventsData);
     loadVideoData(eventsData);
   })
   .catch((e) => {
@@ -30,33 +29,27 @@ getDataFromWp(acfEvents)
   });
 
 function loadVideoData(eventsData) {
-  console.log(eventsData);
   // youtube video clone:
   let youtubeEmbededVideoTemplate = document.getElementById("youtube-link-template");
   let youtubeEmbededVideoParent = document.getElementById("youtube-link-parent");
   youtubeEmbededVideoParent.textContent = "";
 
   let eventsWithVideo = eventsData.filter((event) => event.acf.youtubeEmbededVideo);
-  console.log(eventsWithVideo);
 
   //reorder based on currentDate
   let reorderedEvents = [];
   let pastEvents = [];
   let today = new Date();
   eventsWithVideo.forEach((event) => {
-    console.log(event);
     let eventDateInNumber = Date.parse(event.acf.start);
     if (eventDateInNumber >= today) {
       reorderedEvents.push(event);
     } else {
-      console.log(event);
       pastEvents.push(event);
     }
   });
  
   reorderedEvents = reorderedEvents.concat(pastEvents);
-  console.log(reorderedEvents);
-  console.log(pastEvents);
 
   reorderedEvents.forEach((event) => {
     let cloneVideo = youtubeEmbededVideoTemplate.content.cloneNode(true);
@@ -122,7 +115,6 @@ function loadCalendar() {
       calendar.gotoDate(date);
       calendar.changeView("dayGrid");
       if ($(window).width() < 765) {
-        // console.log("less than 765");
         // changing header properties list by reaching it with calendar.setOption()
         (headerProperties.center = "listYear"), calendar.setOption("header", headerProperties);
         $(".fc-listYear-button").click(function () {
@@ -130,7 +122,6 @@ function loadCalendar() {
           (headerProperties.center = ""), calendar.setOption("header", headerProperties);
         });
       } else {
-        // console.log("more then 765");
         // changing header properties list by reaching it with calendar.setOption()
         (headerProperties.center = "dayGridMonth"), calendar.setOption("header", headerProperties);
         $(".fc-dayGridMonth-button").click(function () {
@@ -236,10 +227,8 @@ function toggleExtendedContent(event) {
   extendedContentOnButton.classList.toggle("show");
   // toggle button text content
   let buttonOfExtendedContent = document.getElementById("button-extend-content");
-  console.log(buttonOfExtendedContent.innerText);
   if (buttonOfExtendedContent.innerText === "Plačiau") {
     buttonOfExtendedContent.innerText = "Suskleisti";
-    console.log(buttonOfExtendedContent.innerText);
   } else {
     buttonOfExtendedContent.innerText = "Plačiau";
   }

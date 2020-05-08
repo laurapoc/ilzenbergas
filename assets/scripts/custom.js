@@ -9,7 +9,6 @@ let shownNews = [];
 // IMPORTING HOMEPAGE DATA
 getDataFromWp(acfHomepage)
 .then((homepageData) => {
-  console.log("homepage", homepageData[0]);
     loadHomepageMenu(homepageData[0].acf);
     loadAwords(homepageData[0].acf);
 })
@@ -22,7 +21,6 @@ getDataFromWp(acfHomepage)
 // IMPORTING NEWS ID DATA:
 getDataFromWp(acfNews)
   .then((json) => {
-    console.log("ids:", json);
     return json;
   })
   .then((newsIdData) => {
@@ -31,7 +29,6 @@ getDataFromWp(acfNews)
     let promiseArray = [];
     allNews.forEach((element, i) => {
       if (i < 2) {
-        console.log("element:", element);
         promiseArray.push(loadNewsItem(element, pictureOnRight));
         pictureOnRight = !pictureOnRight;
       }
@@ -65,7 +62,6 @@ function loadNewsItem(newsItemRaw, pictureOnRight) {
   //fetch news data by id
   shownNews.push({ newsItemRaw, pictureOnRight });
   const newsItem = newsItemRaw.acf;
-  console.log("received newsItem:", newsItemRaw);
   let shortNewsTemplate = document.getElementById("short-new");
   let shortNewsParent = document.getElementById("news-parent");
 
@@ -101,14 +97,12 @@ function loadHomepageMenu(homepageData) {
   let parent = document.getElementById("homepage-card-parent");
   parent.textContent = "";
   let clone = template.content.cloneNode(true);
-  console.log(homepageData);
   homepageData.homepageCards.forEach((card) => {
     clone = template.content.cloneNode(true);
     let imageHedaerLink = clone.getElementById("image-header-link");
     if (imageHedaerLink) {
       imageHedaerLink.href = card.imageHeaderLink;
     }
-    console.log(imageHedaerLink.href);
     setImageProperties(clone.getElementById("homepage-card-image"), card.homepageCardImage);
     let titleHeaderLink = clone.getElementById("title-header-link");
     if (titleHeaderLink) {

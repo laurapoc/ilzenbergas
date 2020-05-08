@@ -9,7 +9,6 @@ let pageName = "food";
 // IMPORTING TEMPLATES:
 getDataFromWp(acfProducts)
   .then((sidebarData) => {
-    console.log(sidebarData);
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {

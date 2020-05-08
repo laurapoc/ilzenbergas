@@ -1,34 +1,46 @@
 const wpApiAddress = "./../ilzenbergasapi/wp-json/";
-export const acfPosts = "acf/v3/posts";
-export const acfNews = "acf/v3/news";
-export const acfContacts = "acf/v3/contacts";
-export const acfPark = "acf/v3/park";
-export const acfEvents = "acf/v3/events";
-export const acfExcursions = "acf/v3/excursions";
-export const acfTastings = "acf/v3/tastings";
-export const acfAccommodation = "acf/v3/accommodation";
-export const acfHomepage = "acf/v3/homepage";
-export const acfRestaurant = "acf/v3/restaurant";
-export const acfPotato = "acf/v3/potato";
-export const acfFarm = "acf/v3/farm";
-export const acfProducts = "acf/v3/products";
-export const acfWater = "acf/v3/water";
-export const acfWine = "acf/v3/wine";
-export const acfShopping = "acf/v3/shopping";
-export const acfAgriculture = "acf/v3/agriculture";
-export const acfPrinciples = "acf/v3/principles";
+export const acfPosts = "wp/v2/posts";
+export const acfNews = "wp/v2/news";
+export const acfContacts = "wp/v2/contacts";
+export const acfPark = "wp/v2/park";
+export const acfEvents = "wp/v2/events";
+export const acfExcursions = "wp/v2/excursions";
+export const acfTastings = "wp/v2/tastings";
+export const acfAccommodation = "wp/v2/accommodation";
+export const acfHomepage = "wp/v2/homepage";
+export const acfRestaurant = "wp/v2/restaurant";
+export const acfPotato = "wp/v2/potato";
+export const acfFarm = "wp/v2/farm";
+export const acfProducts = "wp/v2/products";
+export const acfWater = "wp/v2/water";
+export const acfWine = "wp/v2/wine";
+export const acfShopping = "wp/v2/shopping";
+export const acfAgriculture = "wp/v2/agriculture";
+export const acfPrinciples = "wp/v2/principles";
 
+export function getDataFromWp(endpoint, props, pagedResults) {
+  let finalDestination = wpApiAddress + endpoint;
+  let params = new URLSearchParams();
+  if (props) {
+    props.forEach((property) => {
+      params.append(property.name, property.value);
+    });
+    finalDestination = finalDestination + "?" + params.toString();
+  }
 
+  return fetch(finalDestination).then(async (response) => {
+    if (!pagedResults) {
+      pagedResults = [];
+    }
+    let rez = await response.json();
+    pagedResults = pagedResults.concat(rez);
 
-export function getDataFromWp(endpoint, props) {
-    console.log(endpoint, props);
-    let finalDestination = wpApiAddress + endpoint;
-    if (props){
-        let params = new URLSearchParams();
-        props.forEach(property => {
-            params.append(property.name, property.value); 
-        });
-        finalDestination = finalDestination + "?" + params.toString();
-    };
-    return fetch(finalDestination).then((response) => response.json());
+    let pages = response.headers.get("X-WP-TotalPages");
+    let currentPage = params.get("page") ? params.get("page") : 1;
+
+    if (pages > 1 && currentPage < pages) {
+      return getDataFromWp(endpoint, [{ name: "page", value: currentPage + 1 }], pagedResults);
+    }
+    return pagedResults;
+  });
 }

@@ -8,7 +8,6 @@ let pageName = "restaurant";
 // IMPORTING TEMPLATES:
 getDataFromWp(acfRestaurant)
   .then((sidebarData) => {
-    console.log(sidebarData);
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {

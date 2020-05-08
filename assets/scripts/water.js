@@ -9,7 +9,6 @@ let pageName = "water";
 // IMPORTING TEMPLATES:
 getDataFromWp(acfWater)
   .then((sidebarData) => {
-    console.log(sidebarData);
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {

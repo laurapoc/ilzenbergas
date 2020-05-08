@@ -8,7 +8,6 @@ let pageName = "farm";
 // IMPORTING TEMPLATES:
 getDataFromWp(acfFarm)
   .then((sidebarData) => {
-    console.log(sidebarData);
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {
@@ -20,21 +19,6 @@ getDataFromWp(acfFarm)
     console.log(e);
   });
 
-
-// // IMPORTING TEMPLATES:
-// fetch("./assets/json/farm_data.json")
-//   .then((response) => response.json())
-//   .then((sidebarData) => {
-
-//     // // IMPORTING LEFT SIDE MENU
-//     importTemplate("./sidebar.html", "sidebar", null).then(() => {
-//       new SideBar(sidebarData.sideMenuItems, pageName);
-//     });
-
-//   })
-//   .catch((e) => {
-//     console.log(e);
-//   });
 
 // IMPORTING MAIN MENU
 importTemplate("./farm_header.html", "farm_header", null).then(() => {

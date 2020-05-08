@@ -26,21 +26,36 @@ getDataFromWp(acfNews + "/" + newsId)
     });
 
     // BUTTONS "NEXT" AND "PREVIOUS"
-    let previousNewButton = document.getElementById("button-prev");
-    let nextNewButton = document.getElementById("button-next");
-    previousNewButton.onclick = function goToPrevNew() {
-      console.log("prev button clicked");
-      window.location.href = "./news.html?id=" + 0;
-    };
-
-    nextNewButton.onclick = function goToPrevNew() {
-      console.log("next button clicked");
-      window.location.href = "./news.html?id=" + 1;
-    };
+    getDataFromWp(acfNews).then((newsItems) => {
+      setUpNextPrevButtons(newsItems);
+    });
   })
   .catch((e) => {
     console.log(e);
   });
+
+function setUpNextPrevButtons(newsItems) {
+  let previousNewButton = document.getElementById("button-prev");
+  let nextNewButton = document.getElementById("button-next");
+  for (let i = 0; i < newsItems.length; i++) {
+    if (newsItems[i].id == newsId) {
+      if (i == 0) {
+        previousNewButton.style = "display: none";
+      } else {
+        previousNewButton.onclick = function goToPrevNew() {
+          window.location.href = "./news.html?id=" + newsItems[i - 1].id;
+        };
+      }
+      if (i == newsItems.length - 1) {
+        nextNewButton.style = "display: none";
+      } else {
+        nextNewButton.onclick = function goToPrevNew() {
+          window.location.href = "./news.html?id=" + newsItems[i + 1].id;
+        };
+      }
+    }
+  }
+}
 
 function loadExtendedNews(newsData) {
   // CLONE NEWS TEMPLATE:
@@ -49,7 +64,6 @@ function loadExtendedNews(newsData) {
   newsParent.textContent = "";
   let clone = newsTemplate.content.cloneNode(true);
   let newsTopImage = clone.getElementById("news-top-image");
-  //newsTopImage.src = newsData.newsImage;
   console.log(newsData.newsImage);
   setImageProperties(newsTopImage, newsData.newsImage);
   let articleDate = clone.getElementById("article-date");
@@ -69,7 +83,6 @@ function loadExtendedNews(newsData) {
     });
   }
 
-
   let readMore = clone.querySelector("#news-link p");
   readMore.textContent = newsData.readMore;
   let readMoreHref = clone.getElementById("original-article-link");
@@ -81,7 +94,6 @@ function loadExtendedNews(newsData) {
 function loadRepeatingParagraphBlock(paragraphData) {
   // CLONE REPEATING NEWS BLOCK TEMPLATE:
   let repeatingBlockTemplate = document.getElementById("repeating-paragraph-block");
-  //console.log(repeatingBlockTemplate);
   let cloneRepBlock = repeatingBlockTemplate.content.cloneNode(true);
   let paragraphHeader = cloneRepBlock.querySelector(".paragraph-header");
   paragraphHeader.textContent = paragraphData.paragraphHeader;
@@ -89,19 +101,3 @@ function loadRepeatingParagraphBlock(paragraphData) {
   paragraphText.innerHTML = paragraphData.paragraphText;
   return cloneRepBlock;
 }
-
-// CODE TEMPLATE FOR FETCHING FILES:
-// fetch("./header.html")
-//   .then(response => {
-//     return response.text();
-//   })
-//   .then(data => {
-//     document.querySelector("header").innerHTML = data;
-//   });
-// fetch("./footer.html")
-//   .then(response => {
-//     return response.text();
-//   })
-//   .then(data => {
-//     document.querySelector("footer").innerHTML = data;
-//   });

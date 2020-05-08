@@ -6,9 +6,8 @@ import { getDataFromWp, acfPark} from "./services/api.js";
 let pageName = "park";
 
 // IMPORTING TEMPLATES:
-getDataFromWp(acfPark, [{name: "per_page", value: "30"}])
+getDataFromWp(acfPark)
   .then((sidebarData) => {
-    console.log(sidebarData);
 
     // // IMPORTING LEFT SIDE MENU
     importTemplate("./sidebar.html", "sidebar", null).then(() => {

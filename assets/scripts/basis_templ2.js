@@ -1,4 +1,3 @@
-//loadBasisTempl2(subTemplateData);
 
 import { waitForElement } from "./functions.js";
 
@@ -7,7 +6,6 @@ export function loadBasisTempl2(sidebarData, pageName) {
   waitForElement("#basis_templ2_template").then(() => {
     let basisTemplate2 = document.getElementById("basis_templ2_template");
     let basisTemplate2Parent = document.getElementById("subtemplate");
-    console.log("data, template, parent:", sidebarData, basisTemplate2, basisTemplate2Parent);
     let cloneTemplate2 = basisTemplate2.content.cloneNode(true);
     let mainTemplate2eading = cloneTemplate2.querySelector(".main-heading");
     mainTemplate2eading.innerHTML = sidebarData.mainHeading;
@@ -37,16 +35,7 @@ export function loadBasisTempl2(sidebarData, pageName) {
     basisTemplate2Parent.appendChild(cloneTemplate2);
   });
 
-  //   let heightsArray = [];
-  //   document.querySelectorAll(".flip-card-front").forEach(cardFront => {
-  //     // console.log("front", cardFront, cardFront.offsetHeight);
-  //     heightsArray.push(cardFront.offsetHeight);
-  //   });
 
-  //   document.querySelectorAll(".flip-card-back").forEach(cardFront => {
-  //     console.log("back", cardFront, cardFront.offsetHeight);
-  //   });
-  // console.log(heightsArray);
 }
 
 function loadHeadedParagraphs(sidebarData, cloneTemplate2) {

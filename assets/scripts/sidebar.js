@@ -7,7 +7,6 @@ import { loadGalleryContent } from "./gallery.js";
 
 export class SideBar {
   constructor(sideBarData, pageName) {
-    console.log("Constructing sidebar:", sideBarData);
 
     this.sideBarData = [];
     this.selectedItem = {};
@@ -63,7 +62,6 @@ export class SideBar {
   }
 
   menuItemClick(event, sidebarInstance) {
-    console.log("clicked on: ", event.target.data);
     if (event.target.data.href) {
       window.location = event.target.data.href;
     } else {
@@ -81,7 +79,6 @@ export class SideBar {
 
     this.templates.forEach((template) => {
       if (template.name == menuItemData.acf.templateToUse) {
-        console.log(this.pageName);
         template.loader(menuItemData.acf, this.pageName);
       }
     });
@@ -89,7 +86,6 @@ export class SideBar {
     let galleryParent = document.getElementById("gallery-parent");
     galleryParent.textContent = "";
     if (menuItemData.acf.photoGallery) {
-      console.log("loading gallery", menuItemData.acf.photoGallery);
       loadGalleryContent(menuItemData.acf.photoGallery);
     }
   }
@@ -101,7 +97,7 @@ export class SideBar {
       if (sidebarInstance.selectedItem.id == menuItem.id) {
         // class active
         ancorELement.classList.add("active");
-        document.querySelector("#selected-menu-item").textContent = menuItem.text;
+        document.querySelector("#selected-menu-item").textContent = menuItem.acf.text;
       }
       // else remove class active
       else {

@@ -1,8 +1,3 @@
-// loadBasisTempl1(subTemplateData);
-
-// IMPORTING GALLERY
-// gallerySource = subTemplateData.photoGallery;
-// importTemplate("./gallery.html", "#gallery", "./assets/scripts/gallery.js");
 
 export function loadBasisTempl1(sidebarData, pageName) {
   // CLONE BASIS_TEMPL1 TEMPLATE:

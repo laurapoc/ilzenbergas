@@ -70,12 +70,10 @@ function htmlToElements(html) {
 //selector or exact Node to wait for
 export function waitForElement(selector, parent) {
   return new Promise(function (resolve, reject) {
-    // console.log("waiting for selector:", selector);
 
     var element = document.querySelector(selector);
 
     if (element) {
-      // console.log("Found selector match", element);
       resolve(element);
       return;
     }
@@ -85,7 +83,6 @@ export function waitForElement(selector, parent) {
         var nodes = Array.from(mutation.addedNodes);
         for (var node of nodes) {
           if (node.matches && node.matches(selector)) {
-            // console.log("Found selector match", node);
             observer.disconnect();
             resolve(node);
             return;
@@ -103,11 +100,9 @@ export function waitForElement(selector, parent) {
 
 export function waitForNode(node, parent) {
   return new Promise(function (resolve, reject) {
-    // console.log("waiting for node:", node, parent);
     let parentNode = document.querySelector("#" + parent);
 
     if (parentNode && parentNode.contains(node)) {
-      // console.log("Found node", node);
       resolve(node);
       return;
     }
@@ -116,10 +111,8 @@ export function waitForNode(node, parent) {
       mutations.forEach(function (mutation) {
         var nodes = Array.from(mutation.addedNodes);
         for (var addedNode of nodes) {
-          // console.log("testing", addedNode == node, addedNode, node);
 
           if (addedNode == node) {
-            // console.log("Found node", node);
             observer.disconnect();
             resolve(node);
             return;
