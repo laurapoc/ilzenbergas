@@ -127,3 +127,17 @@ export function waitForNode(node, parent) {
     }, timeout);
   });
 }
+
+// changing html lang value after flag cklicking:
+
+export function changeLangValue() {
+  let flag = document.querySelectorAll(".flag img");
+  let html = document.querySelector("html");
+  let htmlLanguage = html.lang;
+  flag.forEach((element) => {
+    element.addEventListener("click", () => {
+      htmlLanguage = element.alt;
+      console.log(htmlLanguage);
+    });
+  });
+}

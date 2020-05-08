@@ -1,4 +1,4 @@
-import { changeIconColor } from "./functions.js";
+import { changeIconColor, changeLangValue } from "./functions.js";
 
 // changing header icons color
 export function setupHeader(pageName) {
@@ -17,6 +17,9 @@ let img = document.querySelectorAll(".nav-link img");
 img.forEach((element) => {
   changeIconColor(element);
 });
+
+  // changing html lang value after flag cklicking:
+  changeLangValue();
 
 // CHANGE ICON'S COLOR ON HOVER
 

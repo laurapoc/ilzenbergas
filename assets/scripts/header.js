@@ -1,4 +1,4 @@
-import { changeIconColor } from "./functions.js";
+import { changeIconColor, changeLangValue } from "./functions.js";
 
 // changing header icons color
 export function setupHeader(pageName) {
@@ -18,6 +18,9 @@ export function setupHeader(pageName) {
     changeIconColor(element);
   });
 
+  // changing html lang value after flag cklicking:
+  changeLangValue();
+
   // CHANGE ICON'S COLOR ON HOVER
 
   let mapIcon = document.querySelector("#map-icon img");
@@ -25,32 +28,31 @@ export function setupHeader(pageName) {
 
   pageName = pageName;
   switch (pageName) {
-    case 'park':
+    case "park":
       document.querySelector("#park").src = "assets/img/round_icons/parkas_yelow.png";
       break;
-    case 'map':
+    case "map":
       document.querySelector("#map").src = "assets/img/round_icons/map_yelow.png";
       break;
-    case 'events':
+    case "events":
       document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
       break;
-    case 'excursions':
+    case "excursions":
       document.querySelector("#excursions").src = "assets/img/round_icons/ekskursijos_yelow.png";
       break;
-    case 'tastings':
+    case "tastings":
       document.querySelector("#tastings").src = "assets/img/round_icons/degustacijos_yelow.png";
       break;
-    case 'restaurant':
+    case "restaurant":
       document.querySelector("#restaurant").src = "assets/img/round_icons/restoranas_yelow.png";
       break;
-    case 'accommodation':
+    case "accommodation":
       document.querySelector("#accommodation").src = "assets/img/round_icons/nakvyne_yelow.png";
       break;
-    case 'potato':
+    case "potato":
       document.querySelector("#potato").src = "assets/img/round_icons/potato_yelow.png";
       break;
   }
-
 
   // hiding menu items after clicking
   $(".nav-link").on("click", function () {

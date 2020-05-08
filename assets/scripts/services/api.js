@@ -17,6 +17,7 @@ export const acfWine = "wp/v2/wine";
 export const acfShopping = "wp/v2/shopping";
 export const acfAgriculture = "wp/v2/agriculture";
 export const acfPrinciples = "wp/v2/principles";
+export const acfMaps = "wp/v2/maps";
 
 export function getDataFromWp(endpoint, props, pagedResults) {
   let finalDestination = wpApiAddress + endpoint;

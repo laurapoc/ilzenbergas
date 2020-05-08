@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,20 +18,21 @@
     <!-- ******************************************* -->
     <div id="background"></div>
 
-    <div class="container-xl" style="max-width: 1300px">
+    <div class="container-xl" style="max-width: 1300px;">
       <div class="jumbotron jumbotron-fluid container-fluid p-0">
         <!-- header -->
         <div id="header"></div>
         <!-- content -->
         <div id="map-content">
+          <template id="map-template">
             <div class="text-center py-3">
-                <h3>DVARVIETĖS PLANAS</h3>
-                <div class="py-3">
-                    <img src="assets/img/ILZENBERGO zemelapis.png" class="img-fluid" alt="park-map">
-                </div>
-                <p id="pdf-link">Planą atsispausdinti galite <a href="assets/img/ILZENBERGO zemelapis.pdf">čia</a>.</p>
+              <h3 id="map-heading"></h3>
+              <div class="py-3">
+                <img id="map-image" src="" class="img-fluid" alt="park-map" />
+              </div>
+              <a id="pdf-link" href="" target="_blank"></a>
             </div>
-
+          </template>
 
           <!-- *************************** -->
         </div>

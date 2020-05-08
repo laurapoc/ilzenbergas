@@ -1,5 +1,5 @@
 import { getDataFromWp, acfHomepage, acfNews } from "./services/api.js";
-import { changeIconColor, setImageProperties } from "./functions.js";
+import { changeIconColor, setImageProperties, changeLangValue } from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
@@ -8,15 +8,13 @@ let shownNews = [];
 
 // IMPORTING HOMEPAGE DATA
 getDataFromWp(acfHomepage)
-.then((homepageData) => {
+  .then((homepageData) => {
     loadHomepageMenu(homepageData[0].acf);
     loadAwords(homepageData[0].acf);
-})
-.catch((e) => {
-  console.log(e);
-});
-
-
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
 // IMPORTING NEWS ID DATA:
 getDataFromWp(acfNews)
@@ -39,6 +37,9 @@ getDataFromWp(acfNews)
   .catch((e) => {
     console.log(e);
   });
+
+// changing html lang value after flag cklicking:
+changeLangValue();
 
 async function loadMoreNews() {
   let pictureOnRight = false;
