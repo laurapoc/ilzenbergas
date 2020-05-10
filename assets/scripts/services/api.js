@@ -1,4 +1,8 @@
-const wpApiAddress = "./../ilzenbergasapi/wp-json/";
+const wpApiAddress = {
+  lt: "./../ilzenbergasapi/wp-json/",
+  en: "./../ilzenbergasapi/en/wp-json/",
+  lv: "./../ilzenbergasapi/lv/wp-json/"
+};
 export const acfPosts = "wp/v2/posts";
 export const acfNews = "wp/v2/news";
 export const acfContacts = "wp/v2/contacts";
@@ -20,7 +24,12 @@ export const acfPrinciples = "wp/v2/principles";
 export const acfMaps = "wp/v2/maps";
 
 export function getDataFromWp(endpoint, props, pagedResults) {
-  let finalDestination = wpApiAddress + endpoint;
+  let lang = sessionStorage.getItem("lang");
+  if (!lang) {
+    lang = "lt";
+    sessionStorage.setItem("lang", lang);
+  }
+  let finalDestination = wpApiAddress[lang] + endpoint;
   let params = new URLSearchParams();
   if (props) {
     props.forEach((property) => {

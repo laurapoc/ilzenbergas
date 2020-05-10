@@ -1,4 +1,4 @@
-import { importTemplate } from "./functions.js";
+import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { setupHeader } from "./farm_header.js";
 import { getDataFromWp, acfContacts } from "./services/api.js";
 
@@ -23,6 +23,11 @@ getDataFromWp(acfContacts)
 .catch((e) => {
   console.log(e);
 });
+
+// changing html lang value after flag cklicking:
+runTranslationMutation();
+changeLangValue();
+setupTranslations();
 
 function loadContactsData(contactsData) {
   let clone;

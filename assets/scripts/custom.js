@@ -1,10 +1,11 @@
 import { getDataFromWp, acfHomepage, acfNews } from "./services/api.js";
-import { changeIconColor, setImageProperties, changeLangValue } from "./functions.js";
+import { changeIconColor, setImageProperties, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
 let allNews = [];
 let shownNews = [];
+
 
 // IMPORTING HOMEPAGE DATA
 getDataFromWp(acfHomepage)
@@ -39,7 +40,9 @@ getDataFromWp(acfNews)
   });
 
 // changing html lang value after flag cklicking:
+runTranslationMutation();
 changeLangValue();
+setupTranslations();
 
 async function loadMoreNews() {
   let pictureOnRight = false;

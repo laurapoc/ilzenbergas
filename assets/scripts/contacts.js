@@ -1,7 +1,6 @@
-import { importTemplate } from "./functions.js";
+import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { setupHeader } from "./header.js";
 import { getDataFromWp, acfContacts } from "./services/api.js";
-
 
 let pageName = "contacts";
 
@@ -15,18 +14,21 @@ importTemplate("./background.html", "background", null);
 
 // IMPORTING CONTACTS DATA
 getDataFromWp(acfContacts)
-.then((contactsData) => {
-  console.log(contactsData[0].acf);
-  loadContactsData(contactsData[0].acf);
-  loadSheduleHeading(contactsData[0].acf);
-  loadShedule(contactsData[0].acf);
-  loadAdditionalInfo(contactsData[0].acf);
-})
-.catch((e) => {
-  console.log(e);
-});
+  .then((contactsData) => {
+    console.log(contactsData[0].acf);
+    loadContactsData(contactsData[0].acf);
+    loadSheduleHeading(contactsData[0].acf);
+    loadShedule(contactsData[0].acf);
+    loadAdditionalInfo(contactsData[0].acf);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 
-
+// changing html lang value after flag cklicking:
+runTranslationMutation();
+changeLangValue();
+setupTranslations();
 
 function loadContactsData(contactsData) {
   let clone;
@@ -35,7 +37,7 @@ function loadContactsData(contactsData) {
   parent.textContent = "";
   clone = template.content.cloneNode(true);
   console.log(contactsData);
-  contactsData.contacts.forEach(contact => {
+  contactsData.contacts.forEach((contact) => {
     clone = template.content.cloneNode(true);
     clone.getElementById("mansion-heading").textContent = contact.contactTitle;
     clone.getElementById("phone-link").href = contact.phoneLink;
@@ -59,7 +61,7 @@ function loadShedule(contactsData) {
   let sheduleTemplateParent = document.getElementById("shedule-template-parent");
   let cloneTemplate = sheduleTemplate.content.cloneNode(true);
   sheduleTemplateParent.textContent = "";
-  shedule.forEach(workTime => {
+  shedule.forEach((workTime) => {
     cloneTemplate = sheduleTemplate.content.cloneNode(true);
     cloneTemplate.getElementById("season").textContent = workTime.season;
     cloneTemplate.getElementById("working-hours").textContent = workTime.workingHours;
@@ -67,22 +69,20 @@ function loadShedule(contactsData) {
     let dotParent = cloneTemplate.getElementById("dot-parent");
     let dotsString = workTime.dotsSpan;
     let dot;
-    for(let i = 0; i < dotsString.length; i++) {
+    for (let i = 0; i < dotsString.length; i++) {
       dot = document.createElement("span");
-      if(dotsString[i] == 0) {
+      if (dotsString[i] == 0) {
         dot.classList.add("not-work");
       } else {
         dot.classList.add("work");
       }
       dotParent.appendChild(dot);
     }
-    
+
     sheduleTemplateParent.appendChild(cloneTemplate);
   });
-  
-};
+}
 
 function loadAdditionalInfo(contactsData) {
   document.getElementById("info").innerHTML = contactsData.additionalInfo;
-};
-
+}

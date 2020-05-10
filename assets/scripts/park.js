@@ -1,4 +1,4 @@
-import { importTemplate } from "./functions.js";
+import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { SideBar } from "./sidebar.js";
 import { setupHeader } from "./header.js";
 import { getDataFromWp, acfPark} from "./services/api.js";
@@ -18,6 +18,13 @@ getDataFromWp(acfPark)
   .catch((e) => {
     console.log(e);
   });
+
+
+// changing html lang value after flag cklicking:
+runTranslationMutation();
+changeLangValue();
+setupTranslations();
+
 
 // IMPORTING MAIN MENU
 importTemplate("./header.html", "header", null).then(() => {

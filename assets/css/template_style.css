@@ -21,6 +21,9 @@
 #template-content .season-card-content p {
   margin-bottom: 0;
 }
+#template-content iframe {
+  width: 100% !important;
+}
 
 .hidden {
   display: none;

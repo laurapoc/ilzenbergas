@@ -1,4 +1,10 @@
-import { importTemplate, waitForElement } from "./functions.js";
+import {
+  importTemplate,
+  waitForElement,
+  changeLangValue,
+  setupTranslations,
+  runTranslationMutation,
+} from "./functions.js";
 import { setupHeader } from "./header.js";
 // import { categoryEvents } from "./services/api.js";
 import { getDataFromWp, acfEvents } from "./services/api.js";
@@ -28,6 +34,11 @@ getDataFromWp(acfEvents)
     console.log(e);
   });
 
+// changing html lang value after flag cklicking:
+runTranslationMutation();
+changeLangValue();
+setupTranslations();
+
 function loadVideoData(eventsData) {
   // youtube video clone:
   let youtubeEmbededVideoTemplate = document.getElementById("youtube-link-template");
@@ -48,7 +59,7 @@ function loadVideoData(eventsData) {
       pastEvents.push(event);
     }
   });
- 
+
   reorderedEvents = reorderedEvents.concat(pastEvents);
 
   reorderedEvents.forEach((event) => {
@@ -64,7 +75,8 @@ function loadVideoData(eventsData) {
 
 function loadCalendar() {
   let calendarEl = document.getElementById("calendar");
-  let initialLocaleCode = "lt";
+  let initialLocaleCode = sessionStorage.getItem("lang");
+  initialLocaleCode = initialLocaleCode ? initialLocaleCode : "lt";
 
   let today = new Date();
   let y = today.getFullYear();
@@ -159,7 +171,7 @@ function loadCalendar() {
 
 function fetchEvents(info, successCallback, failureCallback) {
   let querryParams = [];
- 
+
   querryParams.push({ name: "per_page", value: "40" });
   //add filter for events based on time interval provided in info object
   querryParams.push({ name: "filter[meta_query][0][key]", value: "start" });
@@ -177,7 +189,6 @@ function fetchEvents(info, successCallback, failureCallback) {
         events.push({ ...event.acf, event });
       });
       successCallback(events);
-
     })
     .catch((reason) => {
       failureCallback(reason);
@@ -216,6 +227,7 @@ function loadEvent(eventContent) {
   extendedContentParent.appendChild(cloneExtendedContent);
 
   waitForElement(".toggle-extended-text", document).then(() => {
+    setupTranslations(eventParent);
     document.getElementById("button-extend-content").addEventListener("click", toggleExtendedContent);
   });
 }
@@ -227,9 +239,7 @@ function toggleExtendedContent(event) {
   extendedContentOnButton.classList.toggle("show");
   // toggle button text content
   let buttonOfExtendedContent = document.getElementById("button-extend-content");
-  if (buttonOfExtendedContent.innerText === "Plačiau") {
-    buttonOfExtendedContent.innerText = "Suskleisti";
-  } else {
-    buttonOfExtendedContent.innerText = "Plačiau";
-  }
+  buttonOfExtendedContent.classList.toggle("trans-moreAboutEvent");
+  buttonOfExtendedContent.classList.toggle("trans-lessAboutEvent");
+  setupTranslations(buttonOfExtendedContent.parentNode);
 }

@@ -1,4 +1,4 @@
-import { importTemplate, setImageProperties } from "./functions.js";
+import { importTemplate, setImageProperties, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { setupHeader } from "./farm_header.js";
 import { getDataFromWp, acfMaps } from "./services/api.js";
 
@@ -13,6 +13,12 @@ getDataFromWp(acfMaps)
 .catch((e) => {
   console.log(e);
 });
+
+
+// changing html lang value after flag cklicking:
+runTranslationMutation();
+changeLangValue();
+setupTranslations();
 
 // IMPORTING MAIN MENU
 importTemplate("./farm_header.html", "farm_header", null).then(() => {

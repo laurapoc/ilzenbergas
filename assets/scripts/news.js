@@ -1,10 +1,20 @@
 import { getDataFromWp, acfNews } from "./services/api.js";
 import { loadGalleryContent } from "./gallery.js";
-import { importTemplate, setImageProperties } from "./functions.js";
+import { setupHeader } from "./header.js";
+import {
+  importTemplate,
+  setImageProperties,
+  changeLangValue,
+  setupTranslations,
+  runTranslationMutation } from "./functions.js";
+
 sessionStorage.setItem("page", "news");
 
+let pageName = "news";
 // IMPORTING MAIN MENU
-importTemplate("./header.html", "header", "./assets/scripts/header.js");
+importTemplate("./header.html", "header", null).then(() => {
+  setupHeader(pageName);
+});
 
 // IMPORTING FOOTER
 importTemplate("./footer.html", "footer", "./assets/scripts/footer.js");
@@ -17,12 +27,12 @@ let params = new URLSearchParams(document.location.search.substring(1));
 let newsId = params.get("id");
 getDataFromWp(acfNews + "/" + newsId)
   .then((newsItem) => {
-    console.log(newsItem);
-    loadExtendedNews(newsItem.acf);
+    loadExtendedNews(newsItem);
+
 
     // IMPORTING GALLERY
     importTemplate("./gallery.html", "gallery", null).then(() => {
-      loadGalleryContent(newsItem.acf.photoGallery);
+      loadGalleryContent(newsItem[0].acf.photoGallery);
     });
 
     // BUTTONS "NEXT" AND "PREVIOUS"
@@ -33,6 +43,11 @@ getDataFromWp(acfNews + "/" + newsId)
   .catch((e) => {
     console.log(e);
   });
+
+// changing html lang value after flag cklicking:
+runTranslationMutation();
+changeLangValue();
+setupTranslations();
 
 function setUpNextPrevButtons(newsItems) {
   let previousNewButton = document.getElementById("button-prev");
@@ -57,26 +72,26 @@ function setUpNextPrevButtons(newsItems) {
   }
 }
 
-function loadExtendedNews(newsData) {
+function loadExtendedNews(newsItem) {
+  let ExtendednewsItem = newsItem[0].acf;
   // CLONE NEWS TEMPLATE:
   let newsTemplate = document.getElementById("extended-news-page");
   let newsParent = document.getElementById("news-page-parent");
   newsParent.textContent = "";
   let clone = newsTemplate.content.cloneNode(true);
   let newsTopImage = clone.getElementById("news-top-image");
-  console.log(newsData.newsImage);
-  setImageProperties(newsTopImage, newsData.newsImage);
+  setImageProperties(newsTopImage, ExtendednewsItem.newsImage);
   let articleDate = clone.getElementById("article-date");
-  articleDate.textContent = newsData.newArticleDate;
+  articleDate.textContent = ExtendednewsItem.newArticleDate;
   let articleTitle = clone.getElementById("article-header");
-  articleTitle.textContent = newsData.newsTitle;
+  articleTitle.textContent = ExtendednewsItem.newsTitle;
   let anotation = clone.getElementById("anotation");
-  anotation.innerHTML = newsData.shortNewstext;
+  anotation.innerHTML = ExtendednewsItem.shortNewstext;
   let extendedNewContent = clone.getElementById("extended-content-paragraph");
-  extendedNewContent.innerHTML = newsData.extendedNewsContent;
+  extendedNewContent.innerHTML = ExtendednewsItem.extendedNewsContent;
 
-  if (newsData.articleParagraphs) {
-    newsData.articleParagraphs.forEach((element) => {
+  if (ExtendednewsItem.articleParagraphs) {
+    ExtendednewsItem.articleParagraphs.forEach((element) => {
       let cloneRepBlock = loadRepeatingParagraphBlock(element);
       let repeatingBlockParent = clone.getElementById("repeating-block-parent");
       repeatingBlockParent.appendChild(cloneRepBlock);
@@ -84,10 +99,10 @@ function loadExtendedNews(newsData) {
   }
 
   let readMore = clone.querySelector("#news-link p");
-  readMore.textContent = newsData.readMore;
+  readMore.textContent = ExtendednewsItem.readMore;
   let readMoreHref = clone.getElementById("original-article-link");
-  readMoreHref.href = "./news.html?id=" + newsData.id;
-  readMoreHref.textContent = newsData.readMorelinktext;
+  readMoreHref.href = "./news.html?id=" + ExtendednewsItem.id;
+  readMoreHref.textContent = ExtendednewsItem.readMorelinktext;
   newsParent.appendChild(clone);
 }
 
