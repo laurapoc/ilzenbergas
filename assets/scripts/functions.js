@@ -158,9 +158,7 @@ export function changeLangValue() {
 export function setupTranslations(nodeToCheck) {
   let checkingNode = nodeToCheck ? nodeToCheck : document;
   if (checkingNode.nodeType == Node.ELEMENT_NODE || checkingNode.nodeType == Node.DOCUMENT_NODE) {
-    console.log("translating:", checkingNode);
     checkingNode.querySelectorAll("[class*='trans-']").forEach((element) => {
-      console.log("found ", element);
       translateElement(element);
     });
   }

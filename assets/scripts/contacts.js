@@ -15,7 +15,6 @@ importTemplate("./background.html", "background", null);
 // IMPORTING CONTACTS DATA
 getDataFromWp(acfContacts)
   .then((contactsData) => {
-    console.log(contactsData[0].acf);
     loadContactsData(contactsData[0].acf);
     loadSheduleHeading(contactsData[0].acf);
     loadShedule(contactsData[0].acf);
@@ -36,7 +35,6 @@ function loadContactsData(contactsData) {
   let parent = document.getElementById("contact-template-parent");
   parent.textContent = "";
   clone = template.content.cloneNode(true);
-  console.log(contactsData);
   contactsData.contacts.forEach((contact) => {
     clone = template.content.cloneNode(true);
     clone.getElementById("mansion-heading").textContent = contact.contactTitle;

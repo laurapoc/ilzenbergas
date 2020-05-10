@@ -49,6 +49,13 @@
   margin: auto;
   padding: 0;
 }
+#contact-content #map iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  scroll-behavior: auto;
+  margin: 0 auto;
+}
 
 @media all and (max-width: 992px) {
   #contact-content #hours #info {

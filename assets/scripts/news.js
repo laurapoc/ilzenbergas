@@ -20,7 +20,7 @@ importTemplate("./header.html", "header", null).then(() => {
 importTemplate("./footer.html", "footer", "./assets/scripts/footer.js");
 
 // IMPORTING BACKGROUND
-importTemplate("./background.html", "#background", null);
+importTemplate("./background.html", "background", null);
 
 // IMPORTING NEWS DATA:
 let params = new URLSearchParams(document.location.search.substring(1));
@@ -73,25 +73,25 @@ function setUpNextPrevButtons(newsItems) {
 }
 
 function loadExtendedNews(newsItem) {
-  let ExtendednewsItem = newsItem[0].acf;
+  let extendedNewsItem = newsItem[0].acf;
   // CLONE NEWS TEMPLATE:
   let newsTemplate = document.getElementById("extended-news-page");
   let newsParent = document.getElementById("news-page-parent");
   newsParent.textContent = "";
   let clone = newsTemplate.content.cloneNode(true);
   let newsTopImage = clone.getElementById("news-top-image");
-  setImageProperties(newsTopImage, ExtendednewsItem.newsImage);
+  setImageProperties(newsTopImage, extendedNewsItem.newsImage);
   let articleDate = clone.getElementById("article-date");
-  articleDate.textContent = ExtendednewsItem.newArticleDate;
+  articleDate.textContent = extendedNewsItem.newArticleDate;
   let articleTitle = clone.getElementById("article-header");
-  articleTitle.textContent = ExtendednewsItem.newsTitle;
+  articleTitle.textContent = extendedNewsItem.newsTitle;
   let anotation = clone.getElementById("anotation");
-  anotation.innerHTML = ExtendednewsItem.shortNewstext;
+  anotation.innerHTML = extendedNewsItem.shortNewstext;
   let extendedNewContent = clone.getElementById("extended-content-paragraph");
-  extendedNewContent.innerHTML = ExtendednewsItem.extendedNewsContent;
+  extendedNewContent.innerHTML = extendedNewsItem.extendedNewsContent;
 
-  if (ExtendednewsItem.articleParagraphs) {
-    ExtendednewsItem.articleParagraphs.forEach((element) => {
+  if (extendedNewsItem.articleParagraphs) {
+    extendedNewsItem.articleParagraphs.forEach((element) => {
       let cloneRepBlock = loadRepeatingParagraphBlock(element);
       let repeatingBlockParent = clone.getElementById("repeating-block-parent");
       repeatingBlockParent.appendChild(cloneRepBlock);
@@ -99,10 +99,13 @@ function loadExtendedNews(newsItem) {
   }
 
   let readMore = clone.querySelector("#news-link p");
-  readMore.textContent = ExtendednewsItem.readMore;
+  readMore.textContent = extendedNewsItem.readMore;
   let readMoreHref = clone.getElementById("original-article-link");
-  readMoreHref.href = "./news.html?id=" + ExtendednewsItem.id;
-  readMoreHref.textContent = ExtendednewsItem.readMorelinktext;
+  console.log(readMoreHref);
+  readMoreHref.href = extendedNewsItem.readMoreLink;
+  console.log(readMoreHref.href);
+  readMoreHref.textContent = extendedNewsItem.readMorelinktext;
+  console.log(readMoreHref.textContent);
   newsParent.appendChild(clone);
 }
 

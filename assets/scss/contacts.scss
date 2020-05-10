@@ -57,6 +57,14 @@
     width: 50%;
     margin: auto;
     padding: 0;
+
+    iframe {
+      width: 100% !important;
+      height: 100% !important;
+      border: 0;
+      scroll-behavior: auto;
+      margin: 0 auto;
+    }
   }
 }
 
