@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { changeIconColor, changeLangValue } from "./functions.js";
 
 // changing header icons color

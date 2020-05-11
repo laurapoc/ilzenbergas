@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { waitForElement, setImageProperties } from "./functions.js";
 
 // photo gallery

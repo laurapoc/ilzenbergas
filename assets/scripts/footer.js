@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { getDataFromWp, acfContacts} from "./services/api.js";
 
 // IMPORTING CONTACTS DATA

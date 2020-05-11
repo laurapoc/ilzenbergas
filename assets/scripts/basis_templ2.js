@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 import { waitForElement } from "./functions.js";
 
 export function loadBasisTempl2(sidebarData, pageName) {

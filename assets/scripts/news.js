@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { getDataFromWp, acfNews } from "./services/api.js";
 import { loadGalleryContent } from "./gallery.js";
 import { setupHeader } from "./header.js";
@@ -6,7 +7,8 @@ import {
   setImageProperties,
   changeLangValue,
   setupTranslations,
-  runTranslationMutation } from "./functions.js";
+  runTranslationMutation,
+} from "./functions.js";
 
 sessionStorage.setItem("page", "news");
 
@@ -28,7 +30,6 @@ let newsId = params.get("id");
 getDataFromWp(acfNews + "/" + newsId)
   .then((newsItem) => {
     loadExtendedNews(newsItem);
-
 
     // IMPORTING GALLERY
     importTemplate("./gallery.html", "gallery", null).then(() => {
@@ -52,24 +53,24 @@ setupTranslations();
 function setUpNextPrevButtons(newsItems) {
   let previousNewButton = document.getElementById("button-prev");
   let nextNewButton = document.getElementById("button-next");
-  for (let i = 0; i < newsItems.length; i++) {
-    if (newsItems[i].id == newsId) {
+  newsItems.forEach((newsItem, i, allItems) => {
+    if (newsItem.id == newsId) {
       if (i == 0) {
         previousNewButton.style = "display: none";
       } else {
-        previousNewButton.onclick = function goToPrevNew() {
-          window.location.href = "./news.html?id=" + newsItems[i - 1].id;
-        };
+        previousNewButton.addEventListener("click", () => goToPrevNew(allItems[i - 1].id));
       }
-      if (i == newsItems.length - 1) {
+      if (i == allItems.length - 1) {
         nextNewButton.style = "display: none";
       } else {
-        nextNewButton.onclick = function goToPrevNew() {
-          window.location.href = "./news.html?id=" + newsItems[i + 1].id;
-        };
+        nextNewButton.addEventListener("click", () => goToPrevNew(allItems[i + 1].id));
       }
     }
-  }
+  });
+}
+
+function goToPrevNew(id) {
+  window.location.href = "./news.html?id=" + id;
 }
 
 function loadExtendedNews(newsItem) {

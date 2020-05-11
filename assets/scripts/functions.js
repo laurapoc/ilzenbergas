@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 export const timeout = 1000;
 
 export function importTemplate(templateUrl, templateId, jsLocation) {
@@ -167,7 +168,7 @@ export function setupTranslations(nodeToCheck) {
 function translateElement(element) {
   let lang = sessionStorage.getItem("lang");
   lang = lang ? lang : "lt";
-  let translationClass = undefined;
+  let translationClass;
   if (element && element.classList) {
     element.classList.forEach((className) => {
       if (className.includes("trans-")) {

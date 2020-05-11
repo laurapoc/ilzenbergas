@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { setupHeader } from "./header.js";
 import { getDataFromWp, acfContacts } from "./services/api.js";

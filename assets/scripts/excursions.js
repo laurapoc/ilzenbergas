@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { SideBar } from "./sidebar.js";
 import { setupHeader } from "./header.js";

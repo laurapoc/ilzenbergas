@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import {
   importTemplate,
   waitForElement,
@@ -79,9 +80,6 @@ function loadCalendar() {
   initialLocaleCode = initialLocaleCode ? initialLocaleCode : "lt";
 
   let today = new Date();
-  let y = today.getFullYear();
-  let m = today.getMonth();
-  let d = today.getDate();
 
   let listView = "listYear";
   let monthView = "dayGridMonth";
@@ -128,17 +126,21 @@ function loadCalendar() {
       calendar.changeView("dayGrid");
       if ($(window).width() < 765) {
         // changing header properties list by reaching it with calendar.setOption()
-        (headerProperties.center = "listYear"), calendar.setOption("header", headerProperties);
+        headerProperties.center = "listYear";
+        calendar.setOption("header", headerProperties);
         $(".fc-listYear-button").click(function () {
           // changing header properties list by reaching it with calendar.setOption()
-          (headerProperties.center = ""), calendar.setOption("header", headerProperties);
+          headerProperties.center = "";
+          calendar.setOption("header", headerProperties);
         });
       } else {
         // changing header properties list by reaching it with calendar.setOption()
-        (headerProperties.center = "dayGridMonth"), calendar.setOption("header", headerProperties);
+        headerProperties.center = "dayGridMonth";
+        calendar.setOption("header", headerProperties);
         $(".fc-dayGridMonth-button").click(function () {
           // changing header properties list by reaching it with calendar.setOption()
-          (headerProperties.center = ""), calendar.setOption("header", headerProperties);
+          headerProperties.center = "";
+          calendar.setOption("header", headerProperties);
         });
       }
     },
@@ -186,7 +188,7 @@ function fetchEvents(info, successCallback, failureCallback) {
     .then((responseJson) => {
       let events = [];
       responseJson.forEach((event) => {
-        events.push({ ...event.acf, event });
+        events.push(Object.assign(event.acf, {event}));
       });
       successCallback(events);
     })

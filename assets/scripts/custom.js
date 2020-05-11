@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { getDataFromWp, acfHomepage, acfNews } from "./services/api.js";
 import { changeIconColor, setImageProperties, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 // alert("ok");
@@ -44,14 +45,14 @@ runTranslationMutation();
 changeLangValue();
 setupTranslations();
 
-async function loadMoreNews() {
+function loadMoreNews() {
   let pictureOnRight = false;
   const newsLength = shownNews.length;
   let promiseArray = [];
   let buttonToHide = document.getElementById("newsBtn");
   for (let i = newsLength; i < newsLength + 2; i++) {
     if (allNews[i]) {
-      promiseArray.push(await loadNewsItem(allNews[i], pictureOnRight));
+      promiseArray.push(loadNewsItem(allNews[i], pictureOnRight));
       pictureOnRight = !pictureOnRight;
     }
   }

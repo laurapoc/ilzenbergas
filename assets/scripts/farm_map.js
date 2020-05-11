@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { importTemplate, setImageProperties, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { setupHeader } from "./farm_header.js";
 import { getDataFromWp, acfMaps } from "./services/api.js";

@@ -1,4 +1,4 @@
-// alert("this is left side menu");
+/*jshint esversion: 6 */
 import { loadBasisTempl1 } from "./basis_templ1.js";
 import { loadBasisTempl2 } from "./basis_templ2.js";
 import { loadBasisTempl3 } from "./basis_templ3.js";

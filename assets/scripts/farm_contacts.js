@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
 import { setupHeader } from "./farm_header.js";
 import { getDataFromWp, acfContacts } from "./services/api.js";
@@ -80,8 +81,8 @@ function loadShedule(contactsData) {
     sheduleTemplateParent.appendChild(cloneTemplate);
   });
   
-};
+}
 
 function loadAdditionalInfo(contactsData) {
   document.getElementById("info").innerHTML = contactsData.additionalInfo;
-};
+}

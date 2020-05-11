@@ -1,4 +1,4 @@
-// loadBasisTemplate3(subTemplateData);
+/*jshint esversion: 6 */
 import { setImageProperties } from "./functions.js";
 
 export function loadBasisTempl3(sidebarData) {

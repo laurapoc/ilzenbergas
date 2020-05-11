@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 export function loadBasisTempl1(sidebarData, pageName) {
   // CLONE BASIS_TEMPL1 TEMPLATE:
   let basisTemplate1 = document.getElementById("basis_templ1_template");
@@ -27,14 +27,14 @@ export function loadBasisTempl1(sidebarData, pageName) {
     if (pageName == "restaurant") {
       cloneTemplate1.querySelector("#master-logo a").href = sidebarData.imageLink;
       cloneTemplate1.querySelector("#master-logo a").target = "_blank";
-    };
+    }
     let additionalPhoto = cloneTemplate1.getElementById("additional-photo");
     additionalPhoto.src = sidebarData.additionalPhoto;
     if (pageName == "park") {
       additionalPhoto.style = "width: 70%";
     } else {
       additionalPhoto.style = "width: auto";
-    };
+    }
   } else {
     cloneTemplate1.getElementById("template1-content").removeChild(cloneTemplate1.getElementById("master-logo"));
   }

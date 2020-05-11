@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 8 */
 const wpApiAddress = {
   lt: "./../ilzenbergasapi/wp-json/",
   en: "./../ilzenbergasapi/en/wp-json/",
