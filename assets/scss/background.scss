@@ -5,7 +5,7 @@
 }
 
 // header - slideshow
-$items: 2;
+$items: 4;
 $animation-time: 18s;
 $transition-time: 0.9s;
 $scale: 40%;
@@ -17,7 +17,7 @@ $scale-base-1: (1 + $scale / 100%);
   position: fixed;
   width: 100vw;
   height: 100vh;
-  // overflow: hidden;
+
 }
 
 .slideshow-image {

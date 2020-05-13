@@ -1,8 +1,8 @@
 /*jshint esversion: 8 */
 const wpApiAddress = {
-  lt: "./../ilzenbergasapi/wp-json/",
-  en: "./../ilzenbergasapi/en/wp-json/",
-  lv: "./../ilzenbergasapi/lv/wp-json/"
+  lt: "https://api.ilzenbergas.lt/wp-json/",
+  en: "https://api.ilzenbergas.lt/en/wp-json/",
+  lv: "https://api.ilzenbergas.lt/lv/wp-json/"
 };
 export const acfPosts = "wp/v2/posts";
 export const acfNews = "wp/v2/news";

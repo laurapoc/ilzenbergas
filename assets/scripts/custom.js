@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 import { getDataFromWp, acfHomepage, acfNews } from "./services/api.js";
-import { changeIconColor, setImageProperties, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
+import { changeIconColor, setImageProperties, changeLangValue, setupTranslations, runTranslationMutation, importTemplate } from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
@@ -140,3 +140,6 @@ function loadAwords(homepageData) {
   });
   parent.appendChild(clone);
 }
+
+// IMPORTING BACKGROUND
+importTemplate("./background.html", "background", null);

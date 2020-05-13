@@ -6,6 +6,7 @@ import {
   setupTranslations,
   runTranslationMutation,
 } from "./functions.js";
+import { loadGalleryContent } from "./gallery.js";
 import { setupHeader } from "./header.js";
 // import { categoryEvents } from "./services/api.js";
 import { getDataFromWp, acfEvents } from "./services/api.js";
@@ -30,6 +31,9 @@ loadCalendar();
 getDataFromWp(acfEvents)
   .then((eventsData) => {
     loadVideoData(eventsData);
+    console.log(eventsData);
+
+    
   })
   .catch((e) => {
     console.log(e);
@@ -62,6 +66,12 @@ function loadVideoData(eventsData) {
   });
 
   reorderedEvents = reorderedEvents.concat(pastEvents);
+  // IMPORTING GALLERY
+  importTemplate("./gallery.html", "gallery", null).then(() => {
+    reorderedEvents.forEach((element) => {
+      loadGalleryContent(element.acf.photoGallery);
+    });      
+  });
 
   reorderedEvents.forEach((event) => {
     let cloneVideo = youtubeEmbededVideoTemplate.content.cloneNode(true);
@@ -188,7 +198,7 @@ function fetchEvents(info, successCallback, failureCallback) {
     .then((responseJson) => {
       let events = [];
       responseJson.forEach((event) => {
-        events.push(Object.assign(event.acf, {event}));
+        events.push(Object.assign(event.acf, { event }));
       });
       successCallback(events);
     })
