@@ -30,7 +30,7 @@ export function loadBasisTempl1(sidebarData, pageName) {
     }
     let additionalPhoto = cloneTemplate1.getElementById("additional-photo");
     additionalPhoto.src = sidebarData.additionalPhoto;
-    if (pageName == "park") {
+    if (pageName == "park" || pageName == "restaurant") {
       additionalPhoto.style = "width: 70%";
     } else {
       additionalPhoto.style = "width: auto";

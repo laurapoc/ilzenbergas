@@ -10,7 +10,7 @@
   font-weight: 700;
 }
 #sidebar-menu button {
-  background: rgba(179, 171, 73, 0.7);
+  background: rgba(179, 171, 73, 0.8);
   border: 2px solid grey;
   color: #465359;
   margin-top: 2%;
@@ -22,7 +22,7 @@
   box-shadow: none;
 }
 #sidebar-menu .active {
-  background: rgba(179, 171, 73, 0.7);
+  background: rgba(179, 171, 73, 0.8);
 }
 #sidebar-menu #menu-parent {
   width: 15rem;
@@ -37,7 +37,7 @@
   color: #465359;
 }
 #sidebar-menu .nav-item:hover {
-  background: rgba(179, 171, 73, 0.7);
+  background: rgba(179, 171, 73, 0.8);
 }
 
 @media all and (max-width: 992px) {

@@ -10,7 +10,7 @@
   line-height: 1.2;
 }
 #footer-container .card-footer {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
 }
 #footer-container .card-footer .d-flex h5, #footer-container .card-footer .d-flex p, #footer-container .card-footer .d-flex address {
   margin: 0;

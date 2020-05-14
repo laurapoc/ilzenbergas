@@ -13,7 +13,7 @@
   position: relative;
 }
 #content .text-center {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
 }
 #content .text-center .row {
   padding-left: 4%;
@@ -40,11 +40,11 @@
   padding-left: 2%;
 }
 #content .btn-outline-dark {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   margin: 1%;
 }
 #content .btn-outline-dark:hover {
-  background: rgba(179, 171, 73, 0.7);
+  background: rgba(179, 171, 73, 0.8);
 }
 
 @media all and (max-width: 1290px) {
