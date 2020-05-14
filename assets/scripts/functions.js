@@ -207,7 +207,10 @@ const transLt = {
   restaurant: "Ilzenbergas.lt/restoranas",
   shoppingAreas: "Ilzenbergas.lt/krautuvėlių vietos",
   tastings: "Ilzenbergas.lt/degustacijos",
-  water: "Ilzenbergas.lt/vanduo"
+  water: "Ilzenbergas.lt/vanduo",
+  cookies: "Siekiant geresnių naršymo sąlygų, šioje svetainėje yra naudojami slapukai (angl. cookies).",
+  cookiesRead: "Sužinoti daugiau",
+  cookieClose: "Supratau",
 };
 const transEn = {
   news: "News",
@@ -235,7 +238,10 @@ const transEn = {
   restaurant: "Ilzenbergas.lt/restaurant",
   shoppingAreas: "Ilzenbergas.lt/shop locations",
   tastings: "Ilzenbergas.lt/tastings",
-  water: "Ilzenbergas.lt/water"
+  water: "Ilzenbergas.lt/water",
+  cookies: "To ensure better browsing experience this website uses cookies.",
+  cookiesRead: "Read more",
+  cookieClose: "Got it",
 };
 const transLv = {
   news: "Šviežums",
@@ -263,7 +269,10 @@ const transLv = {
   restaurant: "Ilzenbergas.lt/restorāns",
   shoppingAreas: "Ilzenbergas.lt/veikalu atrašanās vietas",
   tastings: "Ilzenbergas.lt/degustācijas",
-  water: "Ilzenbergas.lt/ūdens"
+  water: "Ilzenbergas.lt/ūdens",
+  cookies: "Šī vietne izmanto sīkfailus, lai uzlabotu jūsu pārlūkošanas pieredzi.",
+  cookiesRead: "Uzzināt vairāk",
+  cookieClose: "Sapratu",
 };
 
 export const translations = {
@@ -271,3 +280,14 @@ export const translations = {
   en: transEn,
   lv: transLv,
 };
+
+// show cookie baner:
+export function loadCookieBaner() {
+  if (localStorage.getItem("cookieSeen") != "shown") {
+    $(".cookie-banner").delay(2000).fadeIn();
+    localStorage.setItem("cookieSeen", "shown");
+  }
+  $(".close").click(function () {
+    $(".cookie-banner").fadeOut();
+  });
+}

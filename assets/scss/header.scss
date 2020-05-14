@@ -6,6 +6,38 @@
   
 }
 
+.cookie-banner {
+  position: fixed;
+  bottom: 40px;
+  left: auto;
+  right: 10%;
+  width: 40%;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(197, 194, 162);
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 300;
+  font-size: 1rem;
+
+  p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+  }
+}
+.close {
+  height: 40px;
+  background-color: rgb(43, 39, 39);
+  border: 1px solid black !important;
+  padding: 1% !important;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1.2rem !important;
+}
+
 // main navigation bar:
 
 #main-nav {
@@ -18,6 +50,25 @@
 }
 #space {
   height: 88px;
+}
+
+@media all and (max-width: 1150px) {
+  .cookie-banner {
+    width: 50%;
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+@media all and (max-width: 995px) {
+  .cookie-banner {
+    width: 60%;
+  }
+}
+@media all and (max-width: 350px) {
+  .cookie-banner {
+    width: 80%;
+  }
 }
 
 @font-face {

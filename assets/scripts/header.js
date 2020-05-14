@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { changeIconColor, changeLangValue } from "./functions.js";
+import { changeIconColor, changeLangValue, loadCookieBaner } from "./functions.js";
 
 // changing header icons color
 export function setupHeader(pageName) {
@@ -59,4 +59,7 @@ export function setupHeader(pageName) {
   $(".nav-link").on("click", function () {
     $(".navbar-collapse").collapse("hide");
   });
+
+  // show cookie banner:
+  loadCookieBaner();
 }

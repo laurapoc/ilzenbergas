@@ -5,6 +5,7 @@
   font-family: "Myriad Pro SemiCond";
   line-height: 1.2;
 }
+
 // header - slideshow
 $items: 2;
 $animation-time: 18s;
@@ -106,6 +107,38 @@ $scale-base-1: (1 + $scale / 100%);
 }
 // ************************************************************************
 // MAIN CARDS
+.cookie-banner {
+  position: fixed;
+  bottom: 40px;
+  left: auto;
+  right: 10%;
+  width: 40%;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(197, 194, 162);
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 300;
+  font-size: 1rem;
+
+  p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+  }
+}
+.close {
+  height: 40px;
+  background-color: rgb(43, 39, 39);
+  border: 1px solid black !important;
+  padding: 1% !important;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1.2rem !important;
+}
+
 .jumbotron {
   .card {
     background: rgba(255, 255, 255, 0.8);
@@ -118,7 +151,6 @@ $scale-base-1: (1 + $scale / 100%);
 
     .p-2 {
       position: relative;
-
     }
 
     .card-title {
@@ -162,7 +194,6 @@ $scale-base-1: (1 + $scale / 100%);
       width: 122px;
     }
   }
-
 }
 // AWORDS
 section {
@@ -282,6 +313,12 @@ section {
 }
 
 @media all and (max-width: 1150px) {
+  .cookie-banner {
+    width: 50%;
+    p {
+      font-size: 1rem;
+    }
+  }
   // Main cards
   .jumbotron {
     .card {
@@ -296,6 +333,9 @@ section {
 }
 
 @media all and (max-width: 995px) {
+  .cookie-banner {
+    width: 60%;
+  }
   // Awords and news
   .text-center {
     margin-left: 1%;
@@ -322,6 +362,10 @@ section {
 }
 
 @media all and (max-width: 350px) {
+  .cookie-banner {
+    width: 80%;
+  }
+
   // news
   .jumbotron img {
     text-align: center;
