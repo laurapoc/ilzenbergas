@@ -11,6 +11,14 @@
     margin: 1%;
     max-height: 150px;
     overflow: hidden;
+    position: relative;
+    top: 15%;
+    display: inline-block;
+
+    #small-photo {
+      position: relative;
+      bottom: 15%;
+    }
   }
 }
 

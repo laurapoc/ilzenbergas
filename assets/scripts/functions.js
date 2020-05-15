@@ -18,10 +18,6 @@ export function importTemplate(templateUrl, templateId, jsLocation) {
         templateAnchor.appendChild(node);
       });
 
-      if (templateId[0] == "#") {
-        console.warn("!!!!!!!!!!!!!!!!!!!!!!!please remove # from template ID " + templateId);
-      }
-
       return Promise.all(nodesToLoad);
     })
     .then((chainedPromise) => {
@@ -39,16 +35,27 @@ export function importTemplate(templateUrl, templateId, jsLocation) {
 }
 
 export function setImageProperties(imageTag, imageArray) {
-  imageTag.src = imageArray.sizes.thumbnail;
+  //imageTag.src = imageArray.sizes.large;
+  // imageTag.removeAttribute("src");
   imageTag.srcset =
+    imageArray.sizes.thumbnail +
+    " " +
+    imageArray.sizes["thumbnail-height"] +
+    "w, " +
     imageArray.sizes.medium +
     " " +
     imageArray.sizes["medium-width"] +
-    "w," +
+    "w, " +
+    imageArray.sizes.medium_large +
+    " " +
+    imageArray.sizes["medium_large-height"] +
+    "w, " +
     imageArray.sizes.large +
     " " +
     imageArray.sizes["large-width"] +
     "w";
+
+  imageTag.sizes = " (min-width: 400px) 85vw, (min-width: 800px) 600px, 800px";
 }
 
 // CHANGE ICONS COLOR ON HOVER
@@ -62,7 +69,7 @@ export function changeIconColor(htmlElement) {
   });
 }
 
-function htmlToElements(html) {
+export function htmlToElements(html) {
   var template = document.createElement("template");
   template.innerHTML = html.trim();
   return template.content.childNodes;
@@ -102,7 +109,6 @@ export function waitForNode(node, parent) {
   return new Promise(function (resolve, reject) {
     let parentNode = document.querySelector("#" + parent);
     parentNode = parentNode ? parentNode : document;
-
     if (parentNode && parentNode.contains(node)) {
       resolve(node);
       return;
@@ -123,7 +129,7 @@ export function waitForNode(node, parent) {
 
     observer.observe(parentNode, { childList: true, subtree: true });
     setTimeout(() => {
-      reject("Failed to load template" + node);
+      reject("Stopped waiting for" + node.id + " on parent " + parentNode.id);
     }, timeout);
   });
 }

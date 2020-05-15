@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { waitForElement, setImageProperties } from "./functions.js";
+import { waitForElement } from "./functions.js";
 
 // photo gallery
 $('[data-fancybox="gallery"]').fancybox({
@@ -7,8 +7,6 @@ $('[data-fancybox="gallery"]').fancybox({
   animationDuration: 500,
   protect: true,
 });
-
-console.warn("must remove global scope usage, call loadGalleryContent directly");
 
 export function loadGalleryContent(galleryData) {
   // CLONE GALLERY CONTENT TEMPLATE:

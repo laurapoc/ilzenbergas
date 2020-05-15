@@ -1,18 +1,27 @@
 /*jshint esversion: 6 */
 import { getDataFromWp, acfHomepage, acfNews } from "./services/api.js";
-import { changeIconColor, setImageProperties, changeLangValue, setupTranslations, runTranslationMutation, importTemplate, loadCookieBaner } from "./functions.js";
+import {
+  changeIconColor,
+  setImageProperties,
+  changeLangValue,
+  setupTranslations,
+  runTranslationMutation,
+  loadCookieBaner,
+  importTemplate,
+} from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
 let allNews = [];
 let shownNews = [];
 
-
 // IMPORTING HOMEPAGE DATA
 getDataFromWp(acfHomepage)
   .then((homepageData) => {
     loadHomepageMenu(homepageData[0].acf);
-    loadAwords(homepageData[0].acf);
+    loadAwards(homepageData[0].acf);
+  })
+  .then(() => {
   })
   .catch((e) => {
     console.log(e);
@@ -26,15 +35,17 @@ getDataFromWp(acfNews)
   .then((newsIdData) => {
     allNews = newsIdData;
     let pictureOnRight = false;
-    let promiseArray = [];
     allNews.forEach((element, i) => {
       if (i < 2) {
-        promiseArray.push(loadNewsItem(element, pictureOnRight));
+        loadNewsItem(element, pictureOnRight);
         pictureOnRight = !pictureOnRight;
       }
     });
-    Promise.all(promiseArray);
     newsBtn.addEventListener("click", loadMoreNews);
+  })
+  .then(() => {
+    document.querySelectorAll(".card-img").forEach((element) => (element.src += ""));
+    document.querySelectorAll(".news-image").forEach((element) => (element.src += ""));
   })
   .catch((e) => {
     console.log(e);
@@ -101,9 +112,8 @@ function loadHomepageMenu(homepageData) {
   let template = document.getElementById("homepage-card");
   let parent = document.getElementById("homepage-card-parent");
   parent.textContent = "";
-  let clone = template.content.cloneNode(true);
   homepageData.homepageCards.forEach((card) => {
-    clone = template.content.cloneNode(true);
+    let clone = template.content.cloneNode(true);
     let imageHedaerLink = clone.getElementById("image-header-link");
     if (imageHedaerLink) {
       imageHedaerLink.href = card.imageHeaderLink;
@@ -122,12 +132,20 @@ function loadHomepageMenu(homepageData) {
       clonedButton.getElementById("button-image").src = element.buttonImage;
       buttonParent.appendChild(clonedButton);
     });
+    // console.log(clone.querySelectorAll("img"));
+    // let watchers = [];
+    // clone.querySelectorAll("img").forEach(node => {
+    //   watchers.push(waitForNode(clone.getElementById("homepage-card-image"), parent.id).then(() => {
+    //     node.src += "";
+    //   }));
+    // });
 
     parent.appendChild(clone);
+    // Promise.all(watchers);
   });
 }
 
-function loadAwords(homepageData) {
+function loadAwards(homepageData) {
   let template = document.getElementById("awords-template");
   let parent = document.getElementById("awords-parent");
   parent.textContent = "";
@@ -143,7 +161,6 @@ function loadAwords(homepageData) {
 
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "background", null);
-
 
 // show cookie banner:
 loadCookieBaner();

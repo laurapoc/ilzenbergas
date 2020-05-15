@@ -41,6 +41,9 @@ getDataFromWp(acfNews + "/" + newsId)
       setUpNextPrevButtons(newsItems);
     });
   })
+  .then(() => {
+    document.querySelectorAll(".news-image").forEach((element) => (element.src += ""));
+  })
   .catch((e) => {
     console.log(e);
   });
