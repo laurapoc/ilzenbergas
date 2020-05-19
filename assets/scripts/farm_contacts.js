@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation } from "./functions.js";
+import { importTemplate, changeLangValue, setupTranslations, runTranslationMutation, setupPageHead } from "./functions.js";
 import { setupHeader } from "./farm_header.js";
 import { getDataFromWp, acfContacts } from "./services/api.js";
 
@@ -20,6 +20,7 @@ getDataFromWp(acfContacts)
   loadSheduleHeading(contactsData[0].acf);
   loadShedule(contactsData[0].acf);
   loadAdditionalInfo(contactsData[0].acf);
+  setupPageHead(contactsData[0]);
 })
 .catch((e) => {
   console.log(e);

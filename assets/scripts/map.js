@@ -5,6 +5,7 @@ import {
   changeLangValue,
   setupTranslations,
   runTranslationMutation,
+  setupPageHead
 } from "./functions.js";
 import { setupHeader } from "./header.js";
 import { getDataFromWp, acfMaps } from "./services/api.js";
@@ -16,6 +17,7 @@ getDataFromWp(acfMaps)
   .then((mapData) => {
     console.log(mapData);
     loadMapData(mapData[0].acf);
+    setupPageHead(mapData[0]);
   })
   .catch((e) => {
     console.log(e);

@@ -8,6 +8,7 @@ import {
   changeLangValue,
   setupTranslations,
   runTranslationMutation,
+  setupPageHead
 } from "./functions.js";
 
 sessionStorage.setItem("page", "news");
@@ -29,7 +30,9 @@ let params = new URLSearchParams(document.location.search.substring(1));
 let newsId = params.get("id");
 getDataFromWp(acfNews + "/" + newsId)
   .then((newsItem) => {
+    console.log(newsItem);
     loadExtendedNews(newsItem);
+    // setupPageHead(newsItem);
 
     // IMPORTING GALLERY
     importTemplate("./gallery.html", "gallery", null).then(() => {
@@ -77,6 +80,7 @@ function goToPrevNew(id) {
 }
 
 function loadExtendedNews(newsItem) {
+  console.log(newsItem);
   let extendedNewsItem = newsItem[0].acf;
   // CLONE NEWS TEMPLATE:
   let newsTemplate = document.getElementById("extended-news-page");

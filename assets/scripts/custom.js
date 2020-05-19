@@ -8,6 +8,7 @@ import {
   runTranslationMutation,
   loadCookieBaner,
   importTemplate,
+  setupPageHead,
 } from "./functions.js";
 // alert("ok");
 let pageName = "homepage";
@@ -20,9 +21,9 @@ getDataFromWp(acfHomepage)
   .then((homepageData) => {
     loadHomepageMenu(homepageData[0].acf);
     loadAwards(homepageData[0].acf);
+    setupPageHead(homepageData[0]);
   })
-  .then(() => {
-  })
+  .then(() => {})
   .catch((e) => {
     console.log(e);
   });
@@ -158,6 +159,12 @@ function loadAwards(homepageData) {
   });
   parent.appendChild(clone);
 }
+
+// function loadPageTitle(pageData) {
+//   let title = document.querySelector("title");
+//   title = pageData.rendered;
+//   console.log("page title: " ,title);
+// }
 
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "background", null);

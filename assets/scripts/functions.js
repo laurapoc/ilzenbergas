@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 export const timeout = 1000;
 
+
 export function importTemplate(templateUrl, templateId, jsLocation) {
   // console.log(templateUrl, templateId, jsLocation);
   return fetch(templateUrl)
@@ -192,93 +193,54 @@ const transLt = {
   awards: "Apdovanojimai",
   moreNews: "Daugiau naujienų",
   extendedNew: "Plačiau",
-  accommodation: "Ilzenbergas.lt/Jūsų veikla ir nakvynė",
-  agriculture: "Ilzenbergas.lt/Augalininkystė, gyvulininkystė",
-  contacts: "Ilzenbergas.lt/kontaktai",
-  events: "Ilzenbergas.lt/renginiai",
   buy: "PIRKTI",
   moreAboutEvent: "Plačiau",
   lessAboutEvent: "Suskleisti",
-  excursions: "Ilzenbergas.lt/ekskursijos",
-  farmFood: "Ilzenbergas.lt/100 natūralių maisto produktų",
-  map: "Ilzenbergas.lt/planas lankytojams",
-  wine: "Ilzenbergas.lt/vynuogynas ILZENBERG",
-  farm: "Ilzenbergas.lt/Ilzenbergo ūkis",
-  newsPage: "Ilzenbergas.lt/naujienos",
+  // newsPage: "Ilzenbergas.lt/naujienos",
   newsPrevious: "Ankstesnis",
   newsNext: "Sekantis",
-  park: "Ilzenbergas.lt/parko lankymas",
-  potato: "Ilzenbergas.lt/bulvės muziejus",
-  principles: "Ilzenbergas.lt/10 ūkininkavimo principų",
-  restaurant: "Ilzenbergas.lt/restoranas",
-  shoppingAreas: "Ilzenbergas.lt/krautuvėlių vietos",
-  tastings: "Ilzenbergas.lt/degustacijos",
-  water: "Ilzenbergas.lt/vanduo",
   cookies: "Siekiant geresnių naršymo sąlygų, šioje svetainėje yra naudojami slapukai (angl. cookies).",
   cookiesRead: "Sužinoti daugiau",
   cookieClose: "Supratau",
+  eventsTitle: "Ilzenbergo dvaras - Renginiai",
+  eventsMetaDescription: "Renginiai Ilzenbergo Dvare",
+  eventsKeywords: "Renginiai Šventės Koncertai Parodos"
 };
 const transEn = {
   news: "News",
   awards: "Awards",
   moreNews: "Load more news",
   extendedNew: "Show more",
-  accommodation: "Ilzenbergas.lt/Activities and accommodation",
-  agriculture: "Ilzenbergas.lt/Crop and animal production",
-  contacts: "Ilzenbergas.lt/contacts",
-  events: "Ilzenbergas.lt/events",
   buy: "BUY",
   moreAboutEvent: "Show more",
   lessAboutEvent: "Show less",
-  excursions: "Ilzenbergas.lt/excursions",
-  farmFood: "Ilzenbergas.lt/100 natural foods",
-  map: "Ilzenbergas.lt/plan for visitors",
-  wine: "Ilzenbergas.lt/vineyard ILZENBERG",
-  farm: "Ilzenbergas.lt/Ilzenberg farm",
-  newsPage: "Ilzenbergas.lt/news",
+  // newsPage: "Ilzenbergas.lt/news",
   newsPrevious: "Previous",
   newsNext: "Next",
-  park: "Ilzenbergas.lt/visiting the park",
-  potato: "Ilzenbergas.lt/potato museum",
-  principles: "Ilzenbergas.lt/10 principles of farming",
-  restaurant: "Ilzenbergas.lt/restaurant",
-  shoppingAreas: "Ilzenbergas.lt/shop locations",
-  tastings: "Ilzenbergas.lt/tastings",
-  water: "Ilzenbergas.lt/water",
   cookies: "To ensure better browsing experience this website uses cookies.",
   cookiesRead: "Read more",
   cookieClose: "Got it",
+  eventsTitle: "Ilzenberg manor - Events",
+  eventsMetaDescription: "Events at ilzenberg manor",
+  eventsKeywords: "Events Concerts Exhibitions"
 };
 const transLv = {
   news: "Šviežums",
   awards: "Apbalvojumi",
   moreNews: "Vairāk jaunumu",
   extendedNew: "Rādīt vairāk",
-  accommodation: "Ilzenbergas.lt/Jūsu aktivitātes un izmitināšana",
-  agriculture: "Ilzenbergas.lt/Augkopība un lopkopība",
-  contacts: "Ilzenbergas.lt/kontaktpersonas",
-  events: "Ilzenbergas.lt/notikumi",
   buy: "PIRKT",
   moreAboutEvent: "Rādīt vairāk",
   lessAboutEvent: "Rādīt mazāk",
-  excursions: "Ilzenbergas.lt/ekskursijas",
-  farmFood: "Ilzenbergas.lt/100 dabiski pārtikas produkti",
-  map: "Ilzenbergas.lt/apmeklētāju plāns",
-  wine: "Ilzenbergas.lt/vīna dārzs ILZENBERG",
-  farm: "Ilzenbergas.lt/Ilzenbergas saimniecība",
-  newsPage: "Ilzenbergas.lt/ziņas",
+  // newsPage: "Ilzenbergas.lt/ziņas",
   newsPrevious: "Iepriekšējās ziņas",
   newsNext: "Nākamās ziņas",
-  park: "Ilzenbergas.lt/apmeklējot parku",
-  potato: "Ilzenbergas.lt/kartupeļu muzejs",
-  principles: "Ilzenbergas.lt/10 zemkopības principi",
-  restaurant: "Ilzenbergas.lt/restorāns",
-  shoppingAreas: "Ilzenbergas.lt/veikalu atrašanās vietas",
-  tastings: "Ilzenbergas.lt/degustācijas",
-  water: "Ilzenbergas.lt/ūdens",
   cookies: "Šī vietne izmanto sīkfailus, lai uzlabotu jūsu pārlūkošanas pieredzi.",
   cookiesRead: "Uzzināt vairāk",
   cookieClose: "Sapratu",
+  eventsTitle: "Ilzenbergas muiža - Notikumi",
+  eventsMetaDescription: "Notikumi Ilzenbergas muižā",
+  eventsKeywords: "Notikumi Svinības Koncerti Izstādes"
 };
 
 export const translations = {
@@ -296,4 +258,11 @@ export function loadCookieBaner() {
   $(".close").click(function () {
     $(".cookie-banner").fadeOut();
   });
+}
+
+
+// // assigning page title
+export function setupPageHead(pageData) {
+  let title = document.querySelector("title");
+  title.textContent = pageData.title.rendered;
 }

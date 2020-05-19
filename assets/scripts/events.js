@@ -5,6 +5,8 @@ import {
   changeLangValue,
   setupTranslations,
   runTranslationMutation,
+  setupPageHead,
+  translations
 } from "./functions.js";
 import { loadGalleryContent } from "./gallery.js";
 import { setupHeader } from "./header.js";
@@ -31,9 +33,11 @@ loadCalendar();
 getDataFromWp(acfEvents)
   .then((eventsData) => {
     loadVideoData(eventsData);
-    console.log(eventsData);
-
-    
+    let lang = sessionStorage.getItem("lang");
+    lang = lang ? lang : "lt";
+    let metaData = { title: {rendered: translations[lang].eventsTitle}};
+    setupPageHead(metaData);
+        
   })
   .catch((e) => {
     console.log(e);

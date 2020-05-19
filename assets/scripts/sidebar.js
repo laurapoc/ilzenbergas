@@ -2,7 +2,7 @@
 import { loadBasisTempl1 } from "./basis_templ1.js";
 import { loadBasisTempl2 } from "./basis_templ2.js";
 import { loadBasisTempl3 } from "./basis_templ3.js";
-import { importTemplate } from "./functions.js";
+import { importTemplate, setupPageHead } from "./functions.js";
 import { loadGalleryContent } from "./gallery.js";
 
 export class SideBar {
@@ -80,6 +80,7 @@ export class SideBar {
     this.templates.forEach((template) => {
       if (template.name == menuItemData.acf.templateToUse) {
         template.loader(menuItemData.acf, this.pageName);
+        setupPageHead(menuItemData);
       }
     });
     //load gallery if its defined
