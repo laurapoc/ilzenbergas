@@ -32,7 +32,7 @@ getDataFromWp(acfNews + "/" + newsId)
   .then((newsItem) => {
     console.log(newsItem);
     loadExtendedNews(newsItem);
-    // setupPageHead(newsItem);
+    setupPageHead(newsItem[0]);
 
     // IMPORTING GALLERY
     importTemplate("./gallery.html", "gallery", null).then(() => {
@@ -80,8 +80,9 @@ function goToPrevNew(id) {
 }
 
 function loadExtendedNews(newsItem) {
-  console.log(newsItem);
+ 
   let extendedNewsItem = newsItem[0].acf;
+
   // CLONE NEWS TEMPLATE:
   let newsTemplate = document.getElementById("extended-news-page");
   let newsParent = document.getElementById("news-page-parent");
