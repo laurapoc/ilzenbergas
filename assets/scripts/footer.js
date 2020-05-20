@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { getDataFromWp, acfContacts} from "./services/api.js";
+import { getDataFromWp, acfContacts } from "./services/api.js";
 
 // IMPORTING CONTACTS DATA
 getDataFromWp(acfContacts)
@@ -12,7 +12,6 @@ getDataFromWp(acfContacts)
   .catch((e) => {
     console.log(e);
   });
-
 
 function loadFooterContactsData(contactsData) {
   let clone;
@@ -29,11 +28,9 @@ function loadFooterContactsData(contactsData) {
     clone.getElementById("mail").textContent = contact.mail;
     clone.getElementById("address").textContent = contact.address;
     clone.getElementById("region").textContent = contact.postCodeRegion;
-    if(clone.getElementById("additional-link")) {
+    if (clone.getElementById("additional-link")) {
       clone.getElementById("additional-link").href = contact.additionalLink;
       clone.getElementById("additional-link").textContent = contact.additionalLinkText;
-      console.log(clone.getElementById("additional-link").href);
-      console.log(clone.getElementById("additional-link").textContent);
     }
     parent.appendChild(clone);
   });

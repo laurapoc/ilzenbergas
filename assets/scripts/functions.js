@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 export const timeout = 1000;
 
-
 export function importTemplate(templateUrl, templateId, jsLocation) {
   // console.log(templateUrl, templateId, jsLocation);
   return fetch(templateUrl)
@@ -196,7 +195,6 @@ const transLt = {
   buy: "PIRKTI",
   moreAboutEvent: "Plačiau",
   lessAboutEvent: "Suskleisti",
-  // newsPage: "Ilzenbergas.lt/naujienos",
   newsPrevious: "Ankstesnis",
   newsNext: "Sekantis",
   cookies: "Siekiant geresnių naršymo sąlygų, šioje svetainėje yra naudojami slapukai (angl. cookies).",
@@ -204,7 +202,7 @@ const transLt = {
   cookieClose: "Supratau",
   eventsTitle: "Ilzenbergo dvaras - Renginiai",
   eventsMetaDescription: "Renginiai Ilzenbergo Dvare",
-  eventsKeywords: "Renginiai Šventės Koncertai Parodos"
+  eventsKeywords: "Renginiai Šventės Koncertai Parodos",
 };
 const transEn = {
   news: "News",
@@ -214,7 +212,6 @@ const transEn = {
   buy: "BUY",
   moreAboutEvent: "Show more",
   lessAboutEvent: "Show less",
-  // newsPage: "Ilzenbergas.lt/news",
   newsPrevious: "Previous",
   newsNext: "Next",
   cookies: "To ensure better browsing experience this website uses cookies.",
@@ -222,7 +219,7 @@ const transEn = {
   cookieClose: "Got it",
   eventsTitle: "Ilzenberg manor - Events",
   eventsMetaDescription: "Events at ilzenberg manor",
-  eventsKeywords: "Events Concerts Exhibitions"
+  eventsKeywords: "Events Concerts Exhibitions",
 };
 const transLv = {
   news: "Šviežums",
@@ -232,7 +229,6 @@ const transLv = {
   buy: "PIRKT",
   moreAboutEvent: "Rādīt vairāk",
   lessAboutEvent: "Rādīt mazāk",
-  // newsPage: "Ilzenbergas.lt/ziņas",
   newsPrevious: "Iepriekšējās ziņas",
   newsNext: "Nākamās ziņas",
   cookies: "Šī vietne izmanto sīkfailus, lai uzlabotu jūsu pārlūkošanas pieredzi.",
@@ -240,7 +236,7 @@ const transLv = {
   cookieClose: "Sapratu",
   eventsTitle: "Ilzenbergas muiža - Notikumi",
   eventsMetaDescription: "Notikumi Ilzenbergas muižā",
-  eventsKeywords: "Notikumi Svinības Koncerti Izstādes"
+  eventsKeywords: "Notikumi Svinības Koncerti Izstādes",
 };
 
 export const translations = {
@@ -260,9 +256,47 @@ export function loadCookieBaner() {
   });
 }
 
-
 // // assigning page title
 export function setupPageHead(pageData) {
-  let title = document.querySelector("title");
-  title.textContent = pageData.title.rendered;
+  let metaParent = document.querySelector("head");
+  if (pageData.title.rendered) {
+    let title = document.querySelector("title");
+    title.textContent = pageData.title.rendered;
+    let metaTitleTag = document.createElement("meta");
+    metaTitleTag.setAttribute("property", "og:title");
+    metaTitleTag.setAttribute("content", pageData.title.rendered);
+    metaParent.appendChild(metaTitleTag);
+  } else {
+    title.textContent = "ilzenbergas.lt";
+  }
+
+  if (pageData.acf.metaDescription) {
+    let metaDescriptionTag = document.createElement("meta");
+    metaDescriptionTag.setAttribute("name", "description");
+    metaDescriptionTag.setAttribute("content", pageData.acf.metaDescription);
+    let metaOgdescriptionTag = document.createElement("meta");
+    metaOgdescriptionTag.setAttribute("property", "og:description");
+    metaOgdescriptionTag.setAttribute("content", pageData.acf.metaDescription);
+    metaParent.appendChild(metaDescriptionTag);
+    metaParent.appendChild(metaOgdescriptionTag);
+  }
+  if (pageData.acf.keywords) {
+    let metaKeywordsTag = document.createElement("meta");
+    metaKeywordsTag.setAttribute("name", "keywords");
+    metaKeywordsTag.setAttribute("content", pageData.acf.keywords);
+    metaParent.appendChild(metaKeywordsTag);
+  }
+  let metaOgUrlTag = document.createElement("meta");
+  metaOgUrlTag.setAttribute("property", "og:url");
+  metaOgUrlTag.setAttribute("content", location.href);
+  let metaOgImageTag = document.createElement("meta");
+  metaOgImageTag.setAttribute("property", "og:image");
+  metaOgImageTag.setAttribute("content", "./img/dvaras_original.jpg");
+  let metaTwitterCardTag = document.createElement("meta");
+  metaTwitterCardTag.setAttribute("name", "twitter:card");
+  metaTwitterCardTag.setAttribute("content", "summary_large_image");
+  metaParent.appendChild(metaOgUrlTag);
+  metaParent.appendChild(metaOgImageTag);
+  metaParent.appendChild(metaTwitterCardTag);
+  console.log(document.querySelector("head"));
 }

@@ -154,17 +154,11 @@ function loadAwards(homepageData) {
   homepageData.awordsArray.forEach((aword) => {
     clone = template.content.cloneNode(true);
     clone.getElementById("awords-image").src = aword.awordsImage;
-    clone.getElementById("awords-name").textContent = aword.awordsName;
     parent.appendChild(clone);
   });
   parent.appendChild(clone);
 }
 
-// function loadPageTitle(pageData) {
-//   let title = document.querySelector("title");
-//   title = pageData.rendered;
-//   console.log("page title: " ,title);
-// }
 
 // IMPORTING BACKGROUND
 importTemplate("./background.html", "background", null);
