@@ -19,6 +19,10 @@
   text-decoration: none;
   color: #212529;
 }
+#footer-container .card-footer .d-flex .contact-dvaras #additional-link {
+  text-decoration: none;
+  color: #b3ab49;
+}
 #footer-container .card-footer .d-flex #map {
   border: 1px solid;
 }

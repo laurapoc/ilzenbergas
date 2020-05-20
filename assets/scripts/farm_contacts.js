@@ -46,6 +46,12 @@ function loadContactsData(contactsData) {
     clone.getElementById("mail").textContent = contact.mail;
     clone.getElementById("address").textContent = contact.address;
     clone.getElementById("region").textContent = contact.postCodeRegion;
+    if(clone.getElementById("additional-link")) {
+      clone.getElementById("additional-link").href = contact.additionalLink;
+      clone.getElementById("additional-link").textContent = contact.additionalLinkText;
+      console.log(clone.getElementById("additional-link").href);
+      console.log(clone.getElementById("additional-link").textContent);
+    }
     parent.appendChild(clone);
   });
 }
