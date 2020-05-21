@@ -130,7 +130,9 @@ function loadHomepageMenu(homepageData) {
     card.homepageMenuArray.forEach((element) => {
       let clonedButton = buttonsTemplate.content.cloneNode(true);
       clonedButton.getElementById("link-to-page").href = element.linkToPage;
-      clonedButton.getElementById("button-image").src = element.buttonImage;
+      let imageTag = clonedButton.getElementById("button-image"); 
+      imageTag.src = element.buttonImage.sizes.medium;
+      imageTag.setAttribute("alt", element.buttonImage.alt);
       buttonParent.appendChild(clonedButton);
     });
     // console.log(clone.querySelectorAll("img"));
@@ -153,7 +155,8 @@ function loadAwards(homepageData) {
   let clone = template.content.cloneNode(true);
   homepageData.awordsArray.forEach((aword) => {
     clone = template.content.cloneNode(true);
-    clone.getElementById("awords-image").src = aword.awordsImage;
+    clone.getElementById("awords-image").src = aword.awordsImage.sizes.medium;
+    clone.getElementById("awords-image").setAttribute("alt", aword.awordsImage.alt);
     parent.appendChild(clone);
   });
   parent.appendChild(clone);

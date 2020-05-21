@@ -56,6 +56,8 @@ export function setImageProperties(imageTag, imageArray) {
     "w";
 
   imageTag.sizes = " (min-width: 400px) 85vw, (min-width: 800px) 600px, 800px";
+  imageTag.alt = imageArray.alt;
+  console.log(imageTag.alt);
 }
 
 // CHANGE ICONS COLOR ON HOVER
