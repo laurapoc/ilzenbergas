@@ -57,7 +57,6 @@ export function setImageProperties(imageTag, imageArray) {
 
   imageTag.sizes = " (min-width: 400px) 85vw, (min-width: 800px) 600px, 800px";
   imageTag.alt = imageArray.alt;
-  console.log(imageTag.alt);
 }
 
 // CHANGE ICONS COLOR ON HOVER
@@ -158,7 +157,7 @@ export function changeLangValue() {
   flag.forEach((element) => {
     element.addEventListener("click", () => {
       // htmlLanguage = element.alt;
-      sessionStorage.setItem("lang", element.alt);
+      sessionStorage.setItem("lang", element.getAttribute("class").split("-")[1]);
       location.reload();
     });
   });
@@ -184,7 +183,13 @@ function translateElement(element) {
       }
     });
     if (translationClass) {
-      element.innerText = translations[lang][translationClass.replace("trans-", "")];
+      if (element.tagName == "IMG") {
+        console.log(element.alt);
+        element.alt = translations[lang][translationClass.replace("trans-", "")];
+        console.log(element.alt);
+      } else {
+        element.innerText = translations[lang][translationClass.replace("trans-", "")];
+      }
     }
   }
 }
@@ -205,6 +210,29 @@ const transLt = {
   eventsTitle: "Ilzenbergo dvaras - Renginiai",
   eventsMetaDescription: "Renginiai Ilzenbergo Dvare",
   eventsKeywords: "Renginiai Šventės Koncertai Parodos",
+  mapAlt: "Dvarvietės plano nuoroda",
+  contactsAlt: "Kontaktų nuoroda",
+  "lt-alt": "Puslapis lietuviškai",
+  "lv-alt": "Puslapis latviškai",
+  "en-alt": "Puslapis angliškai",
+  youtubeAlt: "Nuoroda į youtube",
+  facebookAlt: "Nuoroda į facebook",
+  parkAlt: "Parko lankymas nuoroda",
+  eventsAlt: "Renginiai nuoroda",
+  excursionsAlt: "Ekskursijos nuoroda",
+  tastingsAlt: "Degustacijos nuoroda",
+  accommodationAlt: "Veikla ir nakvynė nuoroda",
+  restaurantAlt: "Restoranas nuoroda",
+  potatoAlt: "Bulvės muziejus nuoroda",
+  campAlt: "Vaikų stovykla nuoroda",
+  farmAlt: "Ilzenbergo ūkis nuoroda",
+  foodAlt: "100 natūralių produktų nuoroda",
+  waterAlt: "Vanduo Ilzenberg nuoroda",
+  wineAlt: "Vynuogynas Ilzenberg nuoroda",
+  eShopAlt: "e-prekyba nuoroda",
+  areasAlt: "Krautuvėlių vietos nuoroda",
+  agricultureAlt: "Augalininkystė-gyvulininkystė nuoroda",
+  principlesAlt: "10 ūkininkavimo principų nuoroda"
 };
 const transEn = {
   news: "News",
@@ -222,6 +250,29 @@ const transEn = {
   eventsTitle: "Ilzenberg manor - Events",
   eventsMetaDescription: "Events at ilzenberg manor",
   eventsKeywords: "Events Concerts Exhibitions",
+  mapAlt: "Manor plan link",
+  contactsAlt: "Contact link",
+  "lt-alt": "Page in Lithuanian",
+  "lv-alt": "Page in Latvian",
+  "en-alt": "Page in English",
+  youtubeAlt: "Youtube link",
+  facebookAlt: "Facebook link",
+  parkAlt: "Visiting park link",
+  eventsAlt: "Events link",
+  excursionsAlt: "Excursions link",
+  tastingsAlt: "Tastings link",
+  accommodationAlt: "Activities and accommodation link",
+  restaurantAlt: "Restaurant link",
+  potatoAlt: "Potato museum link",
+  campAlt: "Children's camp link",
+  farmAlt: "Ilzenberg farm reference",
+  foodAlt: "Reference of 100 natural products",
+  waterAlt: "Water Ilzenberg reference",
+  wineAlt: "Ilzenberg vineyard reference",
+  eShopAlt: "e-shop link",
+  areasAlt: "Stack location reference",
+  agricultureAlt: "Crop and animal production",
+  principlesAlt: "10 farming principles reference"
 };
 const transLv = {
   news: "Šviežums",
@@ -239,6 +290,29 @@ const transLv = {
   eventsTitle: "Ilzenbergas muiža - Notikumi",
   eventsMetaDescription: "Notikumi Ilzenbergas muižā",
   eventsKeywords: "Notikumi Svinības Koncerti Izstādes",
+  mapAlt: "Muižas plāna atsauce",
+  contactsAlt: "Kontaktinformācija",
+  "lt-alt": "Vietne lietuviešu valodā",
+  "lv-alt": "Vietne latviešu valodā",
+  "en-alt": "Vietne angļu valodā",
+  youtubeAlt: "Saite uz youtube",
+  facebookAlt: "Saite uz facebook",
+  parkAlt: "Parka apmeklējuma atsauce",
+  eventsAlt: "Notikumu saite",
+  excursionsAlt: "Ekskursijas saite",
+  tastingsAlt: "Degustācijas saite",
+  accommodationAlt: "Aktivitātes un izmitināšanas vietas saite",
+  restaurantAlt: "Restorāns saite",
+  potatoAlt: "Kartupeļu muzeja saite",
+  campAlt: "Bērnu nometnes atsauce",
+  farmAlt: "Ilzenbergas saimniecības atsauce",
+  foodAlt: "Atsauce uz 100 dabīgiem produktiem",
+  waterAlt: "Ūdens Ilzenberga atsauce",
+  wineAlt: "Ilzenbergas vīna dārza atsauce",
+  eShopAlt: "el. tirdzniecības atsauce",
+  areasAlt: "Norāde uz steka atrašanās vietu",
+  agricultureAlt: "Augkopība un lopkopība",
+  principlesAlt: "Atsauce uz 10 lauksaimniecības principiem"
 };
 
 export const translations = {

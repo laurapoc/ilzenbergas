@@ -168,3 +168,5 @@ importTemplate("./background.html", "background", null);
 
 // show cookie banner:
 loadCookieBaner();
+
+
