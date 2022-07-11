@@ -32,6 +32,7 @@
 
 .close {
   height: 40px;
+  width: 80px;
   background-color: #2b2727;
   border: 1px solid black !important;
   padding: 1% !important;

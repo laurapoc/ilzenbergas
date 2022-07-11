@@ -19,8 +19,13 @@
       padding-right: 4%;
       padding-top: 4%;
 
-      img {
+      #news-top-image {
         width: 100%;
+      }
+
+      img {
+        // float: left;
+        padding: 1%;
       }
 
       h2 {
@@ -28,6 +33,7 @@
       }
       p {
         font-size: 1.2rem;
+    
       }
       #anotation {
         font-weight: 700;
@@ -78,11 +84,8 @@
     #news-link {
       margin-left: 2%;
     }
-
   }
 }
-
-
 
 @media all and (max-width: 768px) {
   #news-link {
@@ -92,10 +95,18 @@
 
 @media all and (max-width: 670px) {
   #content {
+    .text-center {
+      .row {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
     #news-link {
       margin-left: 3%;
     }
-
   }
 }
 

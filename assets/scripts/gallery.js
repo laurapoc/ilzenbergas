@@ -17,7 +17,6 @@ export function loadGalleryContent(galleryData) {
       galleryData.forEach((element) => {
         let cloneGallery = galleryTemplate.content.cloneNode(true);
         let bigPhoto = cloneGallery.getElementById("big-photo");
-        console.log(bigPhoto.href);
         bigPhoto.href = element.sizes.large;
         bigPhoto.setAttribute("alt", element.alt);
         let smallPhoto = cloneGallery.getElementById("small-photo");

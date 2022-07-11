@@ -11,7 +11,6 @@ import {
   setupPageHead,
 } from "./functions.js";
 // alert("ok");
-let pageName = "homepage";
 let newsBtn = document.querySelector("#newsBtn");
 let allNews = [];
 let shownNews = [];
@@ -43,10 +42,6 @@ getDataFromWp(acfNews)
       }
     });
     newsBtn.addEventListener("click", loadMoreNews);
-  })
-  .then(() => {
-    document.querySelectorAll(".card-img").forEach((element) => (element.src += ""));
-    document.querySelectorAll(".news-image").forEach((element) => (element.src += ""));
   })
   .catch((e) => {
     console.log(e);

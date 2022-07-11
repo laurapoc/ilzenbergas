@@ -8,7 +8,7 @@
 .width-class #height-setting {
   position: relative;
 }
-.width-class #height-setting #carouselExampleFade .carousel-inner .carousel-item img {
+.width-class #height-setting img {
   margin: 0 auto;
   padding: 1%;
 }

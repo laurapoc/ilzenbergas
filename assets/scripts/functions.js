@@ -57,6 +57,9 @@ export function setImageProperties(imageTag, imageArray) {
 
   imageTag.sizes = " (min-width: 400px) 85vw, (min-width: 800px) 600px, 800px";
   imageTag.alt = imageArray.alt;
+  setTimeout(() => {
+    imageTag.src += "";
+  }, 0);
 }
 
 // CHANGE ICONS COLOR ON HOVER
@@ -156,9 +159,15 @@ export function changeLangValue() {
   let flag = document.querySelectorAll(".flag img");
   flag.forEach((element) => {
     element.addEventListener("click", () => {
-      // htmlLanguage = element.alt;
-      sessionStorage.setItem("lang", element.getAttribute("class").split("-")[1]);
-      location.reload();
+      let lang = element.getAttribute("class").split("-")[1];
+      sessionStorage.setItem("lang", lang);
+      let path = window.location.pathname
+        .split("/")
+        .filter((value) => value !== "en" && value !== "lv" && value !== "lt")
+        .join("/");
+      let newLocation = "/" + lang + path;
+      console.log(path);
+      window.location.assign(newLocation);
     });
   });
 }
@@ -184,9 +193,7 @@ function translateElement(element) {
     });
     if (translationClass) {
       if (element.tagName == "IMG") {
-        console.log(element.alt);
         element.alt = translations[lang][translationClass.replace("trans-", "")];
-        console.log(element.alt);
       } else {
         element.innerText = translations[lang][translationClass.replace("trans-", "")];
       }
@@ -232,7 +239,7 @@ const transLt = {
   eShopAlt: "e-prekyba nuoroda",
   areasAlt: "Krautuvėlių vietos nuoroda",
   agricultureAlt: "Augalininkystė-gyvulininkystė nuoroda",
-  principlesAlt: "10 ūkininkavimo principų nuoroda"
+  principlesAlt: "10 ūkininkavimo principų nuoroda",
 };
 const transEn = {
   news: "News",
@@ -272,7 +279,7 @@ const transEn = {
   eShopAlt: "e-shop link",
   areasAlt: "Stack location reference",
   agricultureAlt: "Crop and animal production",
-  principlesAlt: "10 farming principles reference"
+  principlesAlt: "10 farming principles reference",
 };
 const transLv = {
   news: "Šviežums",
@@ -312,7 +319,7 @@ const transLv = {
   eShopAlt: "el. tirdzniecības atsauce",
   areasAlt: "Norāde uz steka atrašanās vietu",
   agricultureAlt: "Augkopība un lopkopība",
-  principlesAlt: "Atsauce uz 10 lauksaimniecības principiem"
+  principlesAlt: "Atsauce uz 10 lauksaimniecības principiem",
 };
 
 export const translations = {
@@ -346,7 +353,7 @@ export function setupPageHead(pageData) {
     title.textContent = "ilzenbergas.lt";
   }
 
-  if (pageData.acf.metaDescription) {
+  if (pageData.acf && pageData.acf.metaDescription) {
     let metaDescriptionTag = document.createElement("meta");
     metaDescriptionTag.setAttribute("name", "description");
     metaDescriptionTag.setAttribute("content", pageData.acf.metaDescription);
@@ -356,7 +363,7 @@ export function setupPageHead(pageData) {
     metaParent.appendChild(metaDescriptionTag);
     metaParent.appendChild(metaOgdescriptionTag);
   }
-  if (pageData.acf.keywords) {
+  if (pageData.acf && pageData.acf.keywords) {
     let metaKeywordsTag = document.createElement("meta");
     metaKeywordsTag.setAttribute("name", "keywords");
     metaKeywordsTag.setAttribute("content", pageData.acf.keywords);
@@ -374,5 +381,4 @@ export function setupPageHead(pageData) {
   metaParent.appendChild(metaOgUrlTag);
   metaParent.appendChild(metaOgImageTag);
   metaParent.appendChild(metaTwitterCardTag);
-  console.log(document.querySelector("head"));
 }

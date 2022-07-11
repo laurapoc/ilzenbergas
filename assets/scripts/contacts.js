@@ -49,8 +49,6 @@ function loadContactsData(contactsData) {
     if(clone.getElementById("additional-link")) {
       clone.getElementById("additional-link").href = contact.additionalLink;
       clone.getElementById("additional-link").textContent = contact.additionalLinkText;
-      console.log(clone.getElementById("additional-link").href);
-      console.log(clone.getElementById("additional-link").textContent);
     }
     
     parent.appendChild(clone);

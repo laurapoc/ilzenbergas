@@ -20,8 +20,11 @@
   padding-right: 4%;
   padding-top: 4%;
 }
-#content .text-center .row img {
+#content .text-center .row #news-top-image {
   width: 100%;
+}
+#content .text-center .row img {
+  padding: 1%;
 }
 #content .text-center .row h2 {
   font-weight: 700;
@@ -73,6 +76,10 @@
   }
 }
 @media all and (max-width: 670px) {
+  #content .text-center .row img {
+    width: 100%;
+    height: auto;
+  }
   #content #news-link {
     margin-left: 3%;
   }

@@ -2,7 +2,7 @@
 const wpApiAddress = {
   lt: "https://api.ilzenbergas.lt/wp-json/",
   en: "https://api.ilzenbergas.lt/en/wp-json/",
-  lv: "https://api.ilzenbergas.lt/lv/wp-json/"
+  lv: "https://api.ilzenbergas.lt/lv/wp-json/",
 };
 export const acfPosts = "wp/v2/posts";
 export const acfNews = "wp/v2/news";
@@ -27,7 +27,16 @@ export const acfMaps = "wp/v2/maps";
 export function getDataFromWp(endpoint, props, pagedResults) {
   let lang = sessionStorage.getItem("lang");
   if (!lang) {
-    lang = "lt";
+    //ilzenbergas.lt/en =>
+    let pathnamePieces = window.location.pathname.split("/");
+    pathnamePieces.forEach((element) => {
+      if (element === "en") {
+        lang = "en";
+      } else if (element === "lv") {
+        lang = "lv";
+      }
+    });
+    lang = lang ? lang : "lt";
     sessionStorage.setItem("lang", lang);
   }
   let finalDestination = wpApiAddress[lang] + endpoint;

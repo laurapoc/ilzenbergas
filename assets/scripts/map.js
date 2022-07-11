@@ -15,7 +15,6 @@ let pageName = "map";
 // IMPORTING MAP DATA
 getDataFromWp(acfMaps)
   .then((mapData) => {
-    console.log(mapData);
     loadMapData(mapData[0].acf);
     setupPageHead(mapData[0]);
   })
@@ -41,10 +40,8 @@ function loadMapData(mapData) {
   let template = document.getElementById("map-template");
   let parent = document.getElementById("map-content");
   clone = template.content.cloneNode(true);
-  console.log(mapData);
   clone.getElementById("map-heading").textContent = mapData.mapHeading;
   let mapImage = clone.getElementById("map-image");
-  console.log(mapData);
   setImageProperties(mapImage, mapData.mapImage);
   clone.getElementById("pdf-link").href = mapData.mapPdfLink;
   clone.getElementById("pdf-link").textContent = mapData.mapPdfLinkText;

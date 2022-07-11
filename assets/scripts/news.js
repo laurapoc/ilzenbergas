@@ -11,8 +11,6 @@ import {
   setupPageHead
 } from "./functions.js";
 
-sessionStorage.setItem("page", "news");
-
 let pageName = "news";
 // IMPORTING MAIN MENU
 importTemplate("./header.html", "header", null).then(() => {
@@ -30,7 +28,6 @@ let params = new URLSearchParams(document.location.search.substring(1));
 let newsId = params.get("id");
 getDataFromWp(acfNews + "/" + newsId)
   .then((newsItem) => {
-    console.log(newsItem);
     loadExtendedNews(newsItem);
     setupPageHead(newsItem[0]);
 
@@ -106,15 +103,21 @@ function loadExtendedNews(newsItem) {
       repeatingBlockParent.appendChild(cloneRepBlock);
     });
   }
-
+  extendedNewContent.querySelectorAll("img").forEach(element => {
+    
+    if (element.classList.contains("alignleft")) {
+      element.style = "float: left";
+    } else if (element.classList.contains("alignright")) {
+      element.style = "float: right";
+    } else if (element.classList.contains("aligncenter")) {
+      element.style = "float: left";
+    }
+  });
   let readMore = clone.querySelector("#news-link p");
   readMore.textContent = extendedNewsItem.readMore;
   let readMoreHref = clone.getElementById("original-article-link");
-  console.log(readMoreHref);
   readMoreHref.href = extendedNewsItem.readMoreLink;
-  console.log(readMoreHref.href);
   readMoreHref.textContent = extendedNewsItem.readMorelinktext;
-  console.log(readMoreHref.textContent);
   newsParent.appendChild(clone);
 }
 
@@ -126,5 +129,6 @@ function loadRepeatingParagraphBlock(paragraphData) {
   paragraphHeader.textContent = paragraphData.paragraphHeader;
   let paragraphText = cloneRepBlock.querySelector(".paragraph-text");
   paragraphText.innerHTML = paragraphData.paragraphText;
+
   return cloneRepBlock;
 }

@@ -95,7 +95,7 @@ function loadCalendar() {
 
   let today = new Date();
 
-  let listView = "listYear";
+  let listView = "listMonth";
   let monthView = "dayGridMonth";
 
   let headerProperties = {
@@ -109,7 +109,7 @@ function loadCalendar() {
     firstDay: 1,
     locale: initialLocaleCode,
     plugins: ["dayGrid", "list", "timeGrid", "interaction"],
-    defaultView: $(window).width() < 765 ? "listYear" : "dayGridMonth",
+    defaultView: $(window).width() < 765 ? "listMonth" : "dayGridMonth",
     defaultDate: today,
     selectable: true,
     nowIndicator: true,
@@ -140,9 +140,9 @@ function loadCalendar() {
       calendar.changeView("dayGrid");
       if ($(window).width() < 765) {
         // changing header properties list by reaching it with calendar.setOption()
-        headerProperties.center = "listYear";
+        headerProperties.center = "listMonth";
         calendar.setOption("header", headerProperties);
-        $(".fc-listYear-button").click(function () {
+        $(".fc-listMonth-button").click(function () {
           // changing header properties list by reaching it with calendar.setOption()
           headerProperties.center = "";
           calendar.setOption("header", headerProperties);
