@@ -35,9 +35,9 @@ export function setupHeader(pageName) {
     case "map":
       document.querySelector("#map").src = "assets/img/round_icons/map_yelow.png";
       break;
-    case "events":
-      document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
-      break;
+    // case "events":
+    //   document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
+    //   break;
     case "ekatamaranas":
       document.querySelector("#ekatamaranas").src = "assets/img/round_icons/vynas_yelow.png";
       break;
