@@ -38,6 +38,9 @@ export function setupHeader(pageName) {
     case "events":
       document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
       break;
+    case "ekatamaranas":
+      document.querySelector("#ekatamaranas").src = "assets/img/round_icons/vynas_yelow.png";
+      break;
     case "excursions":
       document.querySelector("#excursions").src = "assets/img/round_icons/ekskursijos_yelow.png";
       break;
