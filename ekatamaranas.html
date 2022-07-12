@@ -11,7 +11,6 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://api.ilzenbergas.lt">
     <link href="assets/css/template_style.css" rel="stylesheet" type="text/css" />
 
@@ -31,8 +30,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="assets/scripts/jquery.fancybox.min.js"></script>
+
     <link rel="icon" type="image/png" href="assets/img/round_icons/parkas_grey.png" />
-    <title class="trans-wine"></title>
+    <title class="trans-park"></title>
   </head>
   <body>
     <!-- ******************************************* -->
@@ -41,14 +41,28 @@
     <div class="container-xl" style="max-width: 1300px">
       <div class="jumbotron jumbotron-fluid container-fluid p-0">
         <!-- header -->
-        <div id="farm_header"></div>
+        <div id="header"></div>
 
         <!-- content -->
-        <div id="template-content" class="">
-      
-        
+        <div id="template-content">
+          <div class="d-lg-flex">
+            <!-- LEFT SIDE MENU: -->
+            <div id="sidebar"></div>
+            <div class="w-100">
+              
+              <!-- SUBTEMPLATES -->
+              <div id="basis_templ1"></div>
+              <div id="basis_templ2"></div>
+              <div id="basis_templ3"></div>
+
+              <!-- SUBTEMPLATE CONTENT -->
+              <div id="subtemplate"></div>
+            </div>
+          </div>
+          <!-- Gallery -->
+          <div id="gallery"></div>
           <!-- ********************************** -->
-	<h1 style="text-align:center; padding-top: 200px; padding-bottom:200px"> INFORMACIJA RUOŠIAMA</h1>
+
           <!-- *************************** -->
         </div>
       </div>
@@ -57,6 +71,6 @@
     <!-- footer -->
     <div id="footer"></div>
 
-    <script src="assets/scripts/farm_wine.js" type="module"></script>
+    <script src="assets/scripts/ekatamaranas.js" type="module"></script>
   </body>
 </html>
