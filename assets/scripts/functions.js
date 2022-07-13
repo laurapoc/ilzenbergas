@@ -174,7 +174,10 @@ export function changeLangValue() {
 
 export function setupTranslations(nodeToCheck) {
   let checkingNode = nodeToCheck ? nodeToCheck : document;
-  if (checkingNode.nodeType == Node.ELEMENT_NODE || checkingNode.nodeType == Node.DOCUMENT_NODE) {
+  if (
+    checkingNode.nodeType == Node.ELEMENT_NODE ||
+    checkingNode.nodeType == Node.DOCUMENT_NODE
+  ) {
     checkingNode.querySelectorAll("[class*='trans-']").forEach((element) => {
       translateElement(element);
     });
@@ -193,9 +196,11 @@ function translateElement(element) {
     });
     if (translationClass) {
       if (element.tagName == "IMG") {
-        element.alt = translations[lang][translationClass.replace("trans-", "")];
+        element.alt =
+          translations[lang][translationClass.replace("trans-", "")];
       } else {
-        element.innerText = translations[lang][translationClass.replace("trans-", "")];
+        element.innerText =
+          translations[lang][translationClass.replace("trans-", "")];
       }
     }
   }
@@ -211,7 +216,8 @@ const transLt = {
   lessAboutEvent: "Suskleisti",
   newsPrevious: "Ankstesnis",
   newsNext: "Sekantis",
-  cookies: "Siekiant geresnių naršymo sąlygų, šioje svetainėje yra naudojami slapukai (angl. cookies).",
+  cookies:
+    "Siekiant geresnių naršymo sąlygų, šioje svetainėje yra naudojami slapukai (angl. cookies).",
   cookiesRead: "Sužinoti daugiau",
   cookieClose: "Supratau",
   eventsTitle: "Ilzenbergo dvaras - Renginiai",
@@ -291,7 +297,8 @@ const transLv = {
   lessAboutEvent: "Rādīt mazāk",
   newsPrevious: "Iepriekšējās ziņas",
   newsNext: "Nākamās ziņas",
-  cookies: "Šī vietne izmanto sīkfailus, lai uzlabotu jūsu pārlūkošanas pieredzi.",
+  cookies:
+    "Šī vietne izmanto sīkfailus, lai uzlabotu jūsu pārlūkošanas pieredzi.",
   cookiesRead: "Uzzināt vairāk",
   cookieClose: "Sapratu",
   eventsTitle: "Ilzenbergas muiža - Notikumi",
@@ -382,3 +389,9 @@ export function setupPageHead(pageData) {
   metaParent.appendChild(metaOgImageTag);
   metaParent.appendChild(metaTwitterCardTag);
 }
+
+export const showAgeAlertModal = () => {
+  jQuery(function () {
+    jQuery("#exampleModalCenter").modal("show");
+  });
+};
