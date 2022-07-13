@@ -1,5 +1,9 @@
 /*jshint esversion: 6 */
-import { changeIconColor, changeLangValue, loadCookieBaner } from "./functions.js";
+import {
+  changeIconColor,
+  changeLangValue,
+  loadCookieBaner,
+} from "./functions.js";
 
 // changing header icons color
 export function setupHeader(pageName) {
@@ -30,31 +34,48 @@ export function setupHeader(pageName) {
   pageName = pageName;
   switch (pageName) {
     case "park":
-      document.querySelector("#park").src = "assets/img/round_icons/parkas_yelow.png";
+      document.querySelector("#park").src =
+        "assets/img/round_icons/parkas_yelow.png";
       break;
     case "map":
-      document.querySelector("#map").src = "assets/img/round_icons/map_yelow.png";
+      document.querySelector("#map").src =
+        "assets/img/round_icons/map_yelow.png";
       break;
-    // case "events":
-    //   document.querySelector("#events").src = "assets/img/round_icons/renginiai_yelow.png";
-    //   break;
+    case "events":
+      document.querySelector("#events").src =
+        "assets/img/round_icons/renginiai_yelow.png";
+      break;
     case "ekatamaranas":
-      document.querySelector("#ekatamaranas").src = "assets/img/round_icons/vynas_yelow.png";
+      document.querySelector("#ekatamaranas").src =
+        "assets/img/round_icons/vynas_yelow.png";
       break;
     case "excursions":
-      document.querySelector("#excursions").src = "assets/img/round_icons/ekskursijos_yelow.png";
+      document.querySelector("#excursions").src =
+        "assets/img/round_icons/ekskursijos_yelow.png";
       break;
     case "tastings":
-      document.querySelector("#tastings").src = "assets/img/round_icons/degustacijos_yelow.png";
+      document.querySelector("#tastings").src =
+        "assets/img/round_icons/degustacijos_yelow.png";
       break;
     case "restaurant":
-      document.querySelector("#restaurant").src = "assets/img/round_icons/restoranas_yelow.png";
+      document.querySelector("#restaurant").src =
+        "assets/img/round_icons/restoranas_yelow.png";
       break;
     case "accommodation":
-      document.querySelector("#accommodation").src = "assets/img/round_icons/nakvyne_yelow.png";
+      document.querySelector("#accommodation").src =
+        "assets/img/round_icons/nakvyne_yelow.png";
       break;
     case "potato":
-      document.querySelector("#potato").src = "assets/img/round_icons/potato_yelow.png";
+      document.querySelector("#potato").src =
+        "assets/img/round_icons/potato_yelow.png";
+      break;
+    case "potato":
+      document.querySelector("#potato").src =
+        "assets/img/round_icons/potato_yelow.png";
+      break;
+    case "vynas":
+      document.querySelector("#vynas").src =
+        "assets/img/round_icons/vynas_yelow.png";
       break;
   }
 
