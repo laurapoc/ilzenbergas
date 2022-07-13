@@ -403,7 +403,13 @@ export const showAgeAlertModal = () => {
   const isAgeValid = sessionStorage.getItem("ageValid");
   if (!isAgeValid) {
     jQuery(function () {
-      jQuery("#exampleModalCenter").modal("show");
+      jQuery("#exampleModalCenter").modal(
+        {
+          backdrop: "static",
+          keyboard: false,
+        },
+        "show"
+      );
     });
   }
   return;
