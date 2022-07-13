@@ -66,12 +66,6 @@
       href="assets/img/round_icons/parkas_grey.png"
     />
 
-    <!-- <script>
-      $(document).ready(function () {
-        $("#exampleModalCenter").modal("show");
-      });
-    </script> -->
-
     <title class="trans-vynas"></title>
   </head>
   <body>
@@ -110,9 +104,11 @@
                       >
                     </button>
                     <button
+                      id="age_confirmation_button"
                       type="button"
                       class="btn btn-primary"
                       data-dismiss="modal"
+                      onclick="saveAgeConfirmationToSession()"
                     >
                       Taip
                     </button>
@@ -146,5 +142,6 @@
     <div id="footer"></div>
 
     <script src="assets/scripts/vynas.js" type="module"></script>
+    <script src="assets/scripts/functions.js" type="module"></script>
   </body>
 </html>

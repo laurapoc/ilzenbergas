@@ -29,8 +29,6 @@ runTranslationMutation();
 changeLangValue();
 setupTranslations();
 
-
-
 // IMPORTING MAIN MENU
 importTemplate("./header.html", "header", null).then(() => {
   setupHeader(pageName);

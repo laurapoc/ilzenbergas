@@ -404,3 +404,9 @@ export const showAgeAlertModal = () => {
     jQuery("#exampleModalCenter").modal("show");
   });
 };
+
+export function saveAgeConfirmationToSession() {
+  const confirmationButton = document.querySelector("#age_confirmation_button");
+  console.log(confirmationButton, " clicked");
+}
+window.saveAgeConfirmationToSession = saveAgeConfirmationToSession;
