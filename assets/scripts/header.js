@@ -47,7 +47,7 @@ export function setupHeader(pageName) {
       break;
     case "ekatamaranas":
       document.querySelector("#ekatamaranas").src =
-        "assets/img/round_icons/vynas_yelow.png";
+        "assets/img/round_icons/ekatamaranas_round_yelow.png";
       break;
     case "excursions":
       document.querySelector("#excursions").src =
@@ -75,7 +75,7 @@ export function setupHeader(pageName) {
       break;
     case "vynas":
       document.querySelector("#vynas").src =
-        "assets/img/round_icons/vynas_yelow.png";
+        "assets/img/round_icons/vynas_round_yelow.png";
       break;
   }
 
