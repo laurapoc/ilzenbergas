@@ -400,13 +400,17 @@ export function setupPageHead(pageData) {
 }
 
 export const showAgeAlertModal = () => {
-  jQuery(function () {
-    jQuery("#exampleModalCenter").modal("show");
-  });
+  const isAgeValid = sessionStorage.getItem("ageValid");
+  if (!isAgeValid) {
+    jQuery(function () {
+      jQuery("#exampleModalCenter").modal("show");
+    });
+  }
+  return;
 };
 
 export function saveAgeConfirmationToSession() {
-  const confirmationButton = document.querySelector("#age_confirmation_button");
-  console.log(confirmationButton, " clicked");
+  let ageValid = "valid";
+  sessionStorage.setItem("ageValid", ageValid);
 }
 window.saveAgeConfirmationToSession = saveAgeConfirmationToSession;
