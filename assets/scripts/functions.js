@@ -174,7 +174,10 @@ export function changeLangValue() {
 
 export function setupTranslations(nodeToCheck) {
   let checkingNode = nodeToCheck ? nodeToCheck : document;
-  if (checkingNode.nodeType == Node.ELEMENT_NODE || checkingNode.nodeType == Node.DOCUMENT_NODE) {
+  if (
+    checkingNode.nodeType == Node.ELEMENT_NODE ||
+    checkingNode.nodeType == Node.DOCUMENT_NODE
+  ) {
     checkingNode.querySelectorAll("[class*='trans-']").forEach((element) => {
       translateElement(element);
     });
@@ -193,9 +196,11 @@ function translateElement(element) {
     });
     if (translationClass) {
       if (element.tagName == "IMG") {
-        element.alt = translations[lang][translationClass.replace("trans-", "")];
+        element.alt =
+          translations[lang][translationClass.replace("trans-", "")];
       } else {
-        element.innerText = translations[lang][translationClass.replace("trans-", "")];
+        element.innerText =
+          translations[lang][translationClass.replace("trans-", "")];
       }
     }
   }
@@ -211,7 +216,8 @@ const transLt = {
   lessAboutEvent: "Suskleisti",
   newsPrevious: "Ankstesnis",
   newsNext: "Sekantis",
-  cookies: "Siekiant geresnių naršymo sąlygų, šioje svetainėje yra naudojami slapukai (angl. cookies).",
+  cookies:
+    "Siekiant geresnių naršymo sąlygų, šioje svetainėje yra naudojami slapukai (angl. cookies).",
   cookiesRead: "Sužinoti daugiau",
   cookieClose: "Supratau",
   eventsTitle: "Ilzenbergo dvaras - Renginiai",
@@ -240,6 +246,9 @@ const transLt = {
   areasAlt: "Krautuvėlių vietos nuoroda",
   agricultureAlt: "Augalininkystė-gyvulininkystė nuoroda",
   principlesAlt: "10 ūkininkavimo principų nuoroda",
+  checkAgeText: "Man jau yra 20 metų",
+  yes: "Taip",
+  no: "Ne",
 };
 const transEn = {
   news: "News",
@@ -280,6 +289,9 @@ const transEn = {
   areasAlt: "Stack location reference",
   agricultureAlt: "Crop and animal production",
   principlesAlt: "10 farming principles reference",
+  heckAgeText: "I am already 20 years old",
+  yes: "Yes",
+  no: "No",
 };
 const transLv = {
   news: "Šviežums",
@@ -291,7 +303,8 @@ const transLv = {
   lessAboutEvent: "Rādīt mazāk",
   newsPrevious: "Iepriekšējās ziņas",
   newsNext: "Nākamās ziņas",
-  cookies: "Šī vietne izmanto sīkfailus, lai uzlabotu jūsu pārlūkošanas pieredzi.",
+  cookies:
+    "Šī vietne izmanto sīkfailus, lai uzlabotu jūsu pārlūkošanas pieredzi.",
   cookiesRead: "Uzzināt vairāk",
   cookieClose: "Sapratu",
   eventsTitle: "Ilzenbergas muiža - Notikumi",
@@ -320,6 +333,9 @@ const transLv = {
   areasAlt: "Norāde uz steka atrašanās vietu",
   agricultureAlt: "Augkopība un lopkopība",
   principlesAlt: "Atsauce uz 10 lauksaimniecības principiem",
+  heckAgeText: "Man jau ir 20 gadi",
+  yes: "Jā",
+  no: "Nē",
 };
 
 export const translations = {
@@ -382,3 +398,25 @@ export function setupPageHead(pageData) {
   metaParent.appendChild(metaOgImageTag);
   metaParent.appendChild(metaTwitterCardTag);
 }
+
+export const showAgeAlertModal = () => {
+  const isAgeValid = sessionStorage.getItem("ageValid");
+  if (!isAgeValid) {
+    jQuery(function () {
+      jQuery("#exampleModalCenter").modal(
+        {
+          backdrop: "static",
+          keyboard: false,
+        },
+        "show"
+      );
+    });
+  }
+  return;
+};
+
+export function saveAgeConfirmationToSession() {
+  let ageValid = "valid";
+  sessionStorage.setItem("ageValid", ageValid);
+}
+window.saveAgeConfirmationToSession = saveAgeConfirmationToSession;
