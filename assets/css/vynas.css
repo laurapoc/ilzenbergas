@@ -1,0 +1,18 @@
+#noValidAgeButton,
+#age_confirmation_button {
+  background-color: rgb(108, 117, 125);
+  border: 1px solid rgb(108, 117, 125);
+}
+
+#noValidAgeButton:hover,
+#age_confirmation_button:hover {
+  background-color: rgba(179, 171, 73);
+}
+
+.anchor {
+  color: white;
+}
+.anchor:hover {
+  color: white;
+  text-decoration: none;
+}

@@ -31,6 +31,7 @@
     <link href="assets/css/basis_templ1.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/basis_templ2.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/basis_templ3.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/vynas.css" rel="stylesheet" type="text/css" />
 
     <link
       rel="stylesheet"
@@ -88,6 +89,7 @@
               role="dialog"
               aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true"
+              style="background-color: rgba(108, 117, 125, 0.9)"
             >
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -98,8 +100,12 @@
                   </div>
 
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">
-                      <a href="javascript:history.back()" style="color: white"
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="noValidAgeButton"
+                    >
+                      <a href="javascript:history.back()" class="anchor"
                         >Ne</a
                       >
                     </button>
@@ -109,6 +115,7 @@
                       class="btn btn-primary"
                       data-dismiss="modal"
                       onclick="saveAgeConfirmationToSession()"
+                      
                     >
                       Taip
                     </button>
