@@ -77,6 +77,10 @@ export function setupHeader(pageName) {
       document.querySelector("#vynas").src =
         "assets/img/round_icons/vynas_round_yelow.png";
       break;
+    case "vynas":
+      document.querySelector("#kukuruzu_labirintas").src =
+        "assets/img/round_icons/kukuruzu_labirintas_round_yelow.png";
+      break;
   }
 
   // hiding menu items after clicking

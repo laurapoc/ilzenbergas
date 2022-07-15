@@ -24,7 +24,7 @@ changeLangValue();
 setupTranslations();
 
 // IMPORTING MAIN MENU
-importTemplate("./farm_header.html", "farm_header", null).then(() => {
+importTemplate("./header.html", "header", null).then(() => {
   setupHeader(pageName);
 });
 
