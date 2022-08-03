@@ -246,9 +246,11 @@ const transLt = {
   areasAlt: "Krautuvėlių vietos nuoroda",
   agricultureAlt: "Augalininkystė-gyvulininkystė nuoroda",
   principlesAlt: "10 ūkininkavimo principų nuoroda",
+  wine: "Vynas",
   checkAgeText: "Man jau yra 20 metų",
   yes: "Taip",
   no: "Ne",
+  eKatamaran: "eKatamaranas",
 };
 const transEn = {
   news: "News",
@@ -289,9 +291,11 @@ const transEn = {
   areasAlt: "Stack location reference",
   agricultureAlt: "Crop and animal production",
   principlesAlt: "10 farming principles reference",
-  heckAgeText: "I am already 20 years old",
+  wine: "Wine",
+  checkAgeText: "I am 20 years old",
   yes: "Yes",
   no: "No",
+  eKatamaran: "eKatamaran",
 };
 const transLv = {
   news: "Šviežums",
@@ -333,9 +337,11 @@ const transLv = {
   areasAlt: "Norāde uz steka atrašanās vietu",
   agricultureAlt: "Augkopība un lopkopība",
   principlesAlt: "Atsauce uz 10 lauksaimniecības principiem",
-  heckAgeText: "Man jau ir 20 gadi",
+  wine: "Vīns",
+  checkAgeText: "Man ir 20 gadi",
   yes: "Jā",
   no: "Nē",
+  eKatamaran: "eKatamarānu",
 };
 
 export const translations = {
