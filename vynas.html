@@ -67,7 +67,7 @@
       href="assets/img/round_icons/parkas_grey.png"
     />
 
-    <title class="trans-park"></title>
+    <title class="trans-wine"></title>
   </head>
   <body>
     <!-- ******************************************* -->
@@ -94,8 +94,11 @@
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">
-                      Man jau yra 20 metų
+                    <h5
+                      class="modal-title trans-checkAgeText"
+                      id="exampleModalLongTitle"
+                    >
+                      <!-- translated text -->
                     </h5>
                   </div>
 
@@ -105,16 +108,20 @@
                       class="btn btn-primary"
                       id="noValidAgeButton"
                     >
-                      <a href="javascript:history.back()" class="anchor">Ne</a>
+                      <a
+                        href="javascript:history.back()"
+                        class="anchor trans-no"
+                        ><!-- translated text --></a
+                      >
                     </button>
                     <button
                       id="age_confirmation_button"
                       type="button"
-                      class="btn btn-primary"
+                      class="btn btn-primary trans-yes"
                       data-dismiss="modal"
                       onclick="saveAgeConfirmationToSession()"
                     >
-                      Taip
+                      <!-- translated text -->
                     </button>
                   </div>
                 </div>
