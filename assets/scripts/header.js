@@ -77,9 +77,13 @@ export function setupHeader(pageName) {
       document.querySelector("#vynas").src =
         "assets/img/round_icons/vynas_round_yelow.png";
       break;
-    case "vynas":
+    case "agriculture":
       document.querySelector("#kukuruzu_labirintas").src =
         "assets/img/round_icons/kukuruzu_labirintas_round_yelow.png";
+      break;
+    case "activities":
+      document.querySelector("#activities").src =
+        "assets/img/round_icons/pramogos_round_yelow.png";
       break;
   }
 

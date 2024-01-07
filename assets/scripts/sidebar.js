@@ -3,7 +3,7 @@ import { loadBasisTempl1 } from "./basis_templ1.js";
 import { loadBasisTempl2 } from "./basis_templ2.js";
 import { loadBasisTempl3 } from "./basis_templ3.js";
 import { importTemplate, setupPageHead } from "./functions.js";
-import { loadGalleryContent } from "./gallery.js";
+import { loadCamera, loadGalleryContent } from "./gallery.js";
 
 export class SideBar {
   constructor(sideBarData, pageName) {
@@ -83,11 +83,19 @@ export class SideBar {
         setupPageHead(menuItemData);
       }
     });
-    //load gallery if its defined
+    //load gallery and camera if data is provided
     let galleryParent = document.getElementById("gallery-parent");
     galleryParent.textContent = "";
+
+    let streamCam = document.getElementById("stream-cam");
+    if (streamCam){
+      let streamCam = videojs("stream-cam");
+      streamCam.dispose();
+    }
+    
     if (menuItemData.acf.photoGallery) {
       loadGalleryContent(menuItemData.acf.photoGallery);
+      loadCamera(menuItemData.acf.camera);
     }
   }
 

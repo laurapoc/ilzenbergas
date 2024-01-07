@@ -113,4 +113,9 @@
 	<url>
 		<loc>https://ilzenbergas.lt/water.html</loc>
 	</url>
+	<url>
+		<loc>https://ilzenbergas.lt/activities.html</loc>
+		<lastmod>2020-05-25T18:38:09+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
 </urlset>

@@ -251,6 +251,7 @@ const transLt = {
   yes: "Taip",
   no: "Ne",
   eKatamaran: "eKatamaranas",
+  activities: "Pramogos",
 };
 const transEn = {
   news: "News",
@@ -296,6 +297,7 @@ const transEn = {
   yes: "Yes",
   no: "No",
   eKatamaran: "eKatamaran",
+  activities: "Entertainment",
 };
 const transLv = {
   news: "Šviežums",
@@ -342,6 +344,7 @@ const transLv = {
   yes: "Jā",
   no: "Nē",
   eKatamaran: "eKatamarānu",
+  activities: "Izklaide",
 };
 
 export const translations = {

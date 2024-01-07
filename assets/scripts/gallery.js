@@ -27,3 +27,34 @@ export function loadGalleryContent(galleryData) {
     }
   });
 }
+
+export function loadCamera(cameraUrl) {
+  waitForElement("#photo-gallery-content", document.body).then(() => {
+    let streamCamParent = document.getElementById("stream-cam-parent");
+    if (cameraUrl && cameraUrl != "" && streamCamParent) {
+      let options = {
+        controls: true,
+        autoplay: false,
+        preload: "auto",
+        width: "640",
+        height: "360",
+        experimentalSvgIcons: true,
+      };
+
+      let streamCamElement = document.createElement("video-js");
+      streamCamElement.id = "stream-cam";
+      streamCamElement.classList.add("vjs-big-play-centered");
+      streamCamParent.appendChild(streamCamElement);
+
+      let streamCam = videojs("stream-cam", options);
+      streamCam.src({
+        type: "application/x-mpegURL",
+        src: cameraUrl
+      });
+      streamCam.ready(function () {
+        console.log("Video component ready");
+        streamCam.play();
+      });
+    }
+  });
+}

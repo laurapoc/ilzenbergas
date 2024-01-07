@@ -1,0 +1,13 @@
+{
+  "server": {
+    "httpPort": 8000,
+    "httpsPort": 8001,
+    "encoderPort": ":8002",
+    "iceServers": [],
+    "webrtcMinPort": 32768,
+    "webrtcMaxPort": 65535,
+    "retryConnectSec": 10,
+    "startStreamServer": true,
+    "hostname": "192.168.0.202"
+  }
+}
